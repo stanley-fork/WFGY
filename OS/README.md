@@ -177,7 +177,7 @@ No signup. No tracking. No ads. Virus-free. Pure logic.</em>
 
 ---
 <details>
-  <summary>🌐 TXT OS – Cross-Platform Test Results (Tested: July 18, 2025) </summary>
+  <summary>🌐 TXT OS – Cross-Platform Test Results (Tested: October 10, 2025) </summary>
 <br>
 
 
