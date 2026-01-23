@@ -1,608 +1,737 @@
 # Q001 · Riemann Hypothesis
 
-**BH Code**: `BH_MATH_NUM_L2_001`  
-**Domain**: Mathematics  
-**Family**: Number theory (analytic number theory)  
-**Rank**: S  
-**Projection**: L2 (information), with P / M / C projections noted  
-**Status**: Open problem (since 1859)  
-**First stated by**: Bernhard Riemann (1859)
-
----
-
-## Effective layer disclaimer
-
-All statements in this entry are made strictly at the TU Effective layer.
-
-- We specify observables, constraints, tension indicators, functional families, and discriminating tests.
-- We do not specify any TU Deep axioms, generators, or hidden construction rules.
-- We do not specify any explicit mapping from raw data to internal TU fields beyond the declared observable definitions in this document.
-- Any mention of a TU compatible model uses existence language only: "assume there exists a model" with stated properties.
-
-Falsifying this TU encoding is not the same as solving the underlying mathematical statement.
-
----
-
-## 0. Model semantics and operator declarations
-
-### 0.1 Semantics choice
-
-This document uses **continuous manifold semantics**.
-
-- State space: the complex plane represented as a real 2D coordinate space
-  - Coordinate: `s = sigma + i*t`
-  - Where `sigma` and `t` are real numbers
-
-We treat this as the problem specific TU semantic state space for Q001. It is not a raw token space.
-
-### 0.2 Metric and basic operators
-
-Metric:
-
-- We use the standard Euclidean metric on the `(sigma, t)` plane.
-- This fixes how we interpret distances and squared norms used in indicators.
-
-Operators:
-
-- For any scalar field `f(sigma, t)` defined on a domain `Omega`,
-  - `d_f_dsigma` means the partial derivative with respect to `sigma`
-  - `d_f_dt` means the partial derivative with respect to `t`
-  - `d2_f_dt2` means the second derivative with respect to `t`
-  - `d2_f_dsigma_dt` means the mixed second derivative
-
-All derivatives are classical derivatives on the declared domain `Omega`.
-
-### 0.3 Singular set rule and working domain
-
-Some observables below are undefined where `zeta(s) = 0`, or at `s = 1`, or where a branch choice breaks continuity for `log` or `arg`.
-
-We explicitly define the singular set:
+## 0. Header metadata
 
 ```txt
-[S_sing definition]
-S_sing = { s : zeta(s) = 0 } U { s : s = 1 } U { branch_cut_points_for_log_or_arg }
+ID: Q001
+Code: BH_MATH_NUM_L3_001
+Domain: Mathematics
+Family: Number theory (analytic)
+Rank: S
+Projection_dominance: I
+Field_type: analytic_field
+Tension_type: spectral_tension
+Status: Open
+Semantics: continuous
+E_level: E2
+N_level: N2
+Last_updated: 2026-01-23
 ````
-
-We restrict the working domain:
-
-```txt
-[Domain restriction]
-Omega = C \ S_sing
-```
-
-All fields, indicators, and integrals in this entry are defined on `Omega`.
 
 ---
 
 ## 1. Canonical problem and status
 
-### 1.1 Standard definition of the Riemann zeta function
+### 1.1 Canonical statement
 
-For `Re(s) > 1`, the Riemann zeta function is defined by the series:
+Let zeta(s) be the Riemann zeta function, initially defined for real part of s greater than 1 by the convergent series
 
-```txt
-[Eq 1] zeta(s) = sum_{n=1..infty} 1 / (n^s)
-```
+`zeta(s) = sum_{n=1 to infinity} 1 / n^s`
 
-Outside `Re(s) > 1`, `zeta(s)` is defined by analytic continuation, with a simple pole at `s = 1`.
+and extended to a meromorphic function on the complex plane with a single simple pole at `s = 1`.
 
-Notes:
+The nontrivial zeros of zeta(s) are the zeros in the critical strip
 
-* This entry does not construct analytic continuation. It treats `zeta(s)` as the standard object from analytic number theory.
+`0 < Re(s) < 1`.
 
-### 1.2 Canonical statement of RH
+The Riemann Hypothesis (RH) is the statement:
 
-Define the critical strip:
+> Every nontrivial zero of zeta(s) has real part exactly `1/2`.
 
-```txt
-[Eq 2] critical_strip = { s : 0 < Re(s) < 1 }
-```
+Equivalently, if `zeta(s) = 0` and `0 < Re(s) < 1`, then `Re(s) = 1/2`.
 
-Define the critical line:
+This is a central open problem of analytic number theory and of modern mathematics as a whole.
 
-```txt
-[Eq 3] critical_line = { s : Re(s) = 1/2 }
-```
+### 1.2 Status and difficulty
 
-The Riemann Hypothesis (RH) states:
+RH has remained open since Riemann’s 1859 memoir. Partial results include:
 
-```txt
-[Eq 4] for every nontrivial zero rho of zeta(s) in the critical_strip, Re(rho) = 1/2
-```
+* All but finitely many zeros lie in the critical strip `0 < Re(s) < 1`.
+* Infinitely many zeros lie on the critical line `Re(s) = 1/2`.
+* A positive proportion of zeros are known to lie on the critical line.
+* Many deep theorems in prime number theory (for example about error terms in the prime number theorem) are equivalent to, or would follow from, RH.
 
-Equivalent phrasing used in many references:
+No proof or disproof is known. The problem is widely believed to be extremely difficult and is one of the Clay Mathematics Institute Millennium Prize Problems.
 
-```txt
-[Eq 5] if zeta(s0) = 0 and s0 is not a negative even integer, then s0 = 1/2 + i*t for some real t
-```
+### 1.3 Role in the BlackHole project
 
-### 1.3 Status (minimal, non-story)
+Within the BlackHole S-problem collection, Q001 plays three roles:
 
-* RH remains open.
-* Many partial results are known:
+1. It is the root example of a **spectral_tension** problem, where analytic spectral data and arithmetic structure must cohere.
+2. It anchors the family of L-function and number-theoretic spectral problems (Q002, Q003, Q015, Q018, Q019).
+3. It provides a clean setting to test the Tension Universe encoding of:
 
-  * infinitely many zeros on the critical line
-  * a positive proportion of zeros on the critical line
-  * explicit zero-free regions inside the critical strip
-* This entry does not survey those results in detail. It encodes RH into TU Effective layer objects and tests.
+   * spectral fields,
+   * arithmetic observables,
+   * tension functionals and counterfactual worlds.
 
----
+### References
 
-## 2. Authoritative sources
-
-Minimum anchor references (for verification of the canonical statement and standard context):
-
-* Clay Mathematics Institute: Millennium Prize Problem statement for the Riemann Hypothesis
-* E. C. Titchmarsh: *The Theory of the Riemann Zeta-function*
-* H. M. Edwards: *Riemann's Zeta Function*
-
-This entry is not a literature review. These references exist so readers can check that the canonical statement is not distorted.
+1. Clay Mathematics Institute, “The Riemann Hypothesis”, Millennium Prize Problems, official problem description, 2000.
+2. H. M. Edwards, “Riemann’s Zeta Function”, Academic Press, 1974.
+3. E. C. Titchmarsh, “The Theory of the Riemann Zeta-Function”, 2nd edition, revised by D. R. Heath-Brown, Oxford University Press, 1986.
+4. “List of unsolved problems in mathematics”, standard encyclopedia entry on unsolved problems and the Riemann Hypothesis.
 
 ---
 
-## 3. Position in the BlackHole graph
+## 2. Position in the BlackHole graph
 
-### 3.1 Node and classification
+This block records how Q001 sits inside the BlackHole graph as nodes and edges among Q001–Q125. Each edge is listed with a one-line reason that points to a concrete component or tension type.
 
-* Node: `Q001`
-* Code: `BH_MATH_NUM_L2_001`
-* Primary cluster: spectral and analytic field problems in number theory
-* Primary projection: information (I)
+### 2.1 Upstream problems
 
-### 3.2 Local coupling inside the BlackHole set (non-exhaustive)
+These problems provide prerequisites, tools, or general foundations that Q001 relies on at the effective layer.
 
-This entry is structurally coupled to problems of three types:
+* Q016 (BH_MATH_ZFC_CH_L3_016)
+  Reason: Provides foundational perspective on set theory and continuum structure that underlies the analytic_field used in the RH encoding.
+* Q018 (BH_MATH_RANDOM_MATRIX_ZEROS_L3_018)
+  Reason: Supplies the random matrix perspective used to define spectral_tension baselines for the zero distribution.
+* Q019 (BH_MATH_DIOPH_DENSITY_L3_019)
+  Reason: Encodes general frameworks for rational point distributions that parallel how prime distributions are linked to zeta zeros.
 
-1. Generalizations of RH:
+### 2.2 Downstream problems
 
-   * GRH style problems for other L-functions
-2. Finer structure of zeros:
+These problems are direct reuse targets of Q001 components or depend on Q001’s tension structure.
 
-   * statistics, correlations, and universality patterns
-3. Consequences and analogs:
+* Q002 (BH_MATH_GRH_L3_002)
+  Reason: Reuses the SpectralTensionScore_RH component as a template for L-function families.
+* Q003 (BH_MATH_BSD_L3_003)
+  Reason: Uses zeta and L-function spectral tension to constrain ranks of elliptic curves.
+* Q015 (BH_MATH_RANK_BOUNDS_L3_015)
+  Reason: Depends on spectral_tension ideas to relate global L-function behavior to uniform rank bounds.
+* Q018 (BH_MATH_RANDOM_MATRIX_ZEROS_L3_018)
+  Reason: Uses Q001’s spectral_tension functional as the reference object for comparing actual zero statistics with model ensembles.
 
-   * prime counting error structure, spectral analogies, and alignment-axis patterns in other domains
+### 2.3 Parallel problems
 
-This section is a graph placeholder. Specific cross-links are declared in section 10.
+Parallel nodes share similar tension types but no direct component dependence.
 
----
+* Q036 (BH_PHYS_HIGH_TC_MECH_L3_036)
+  Reason: Both Q001 and Q036 are governed by hidden spectral structures that must match macroscopic observables under spectral_tension.
+* Q039 (BH_PHYS_QTURBULENCE_L3_039)
+  Reason: Both are governed by complex fields with intricate structure where global laws emerge from local spectral patterns.
 
-## 4. TU encoding at the effective layer
+### 2.4 Cross-domain edges
 
-### 4.1 Observable fields
+Cross-domain edges connect Q001 to problems in other domains that can reuse its components.
 
-We build TU effective observables from `zeta(s)`.
-
-Define an amplitude-like field:
-
-```txt
-[Eq 6] Phi(s) = log( abs( zeta(s) ) )
-```
-
-Define a phase-like field:
-
-```txt
-[Eq 7] Theta(s) = arg( zeta(s) )
-```
-
-Domain constraints:
-
-* `Phi(s)` is defined only where `zeta(s) != 0` and where the logarithm is well-defined with the chosen branch convention.
-* `Theta(s)` is defined only where `zeta(s) != 0` with a fixed branch convention on each connected component of `Omega`.
-
-Both are treated as effective observables. We do not assign them any TU Deep meaning.
-
-### 4.2 TU Beta primitives compatibility (typed existence only)
-
-We require the existence of a TU compatible semantic gap for this problem:
-
-```txt
-[Eq 8] DeltaS_RH(s1, s2, time) >= 0
-```
-
-This can be used to build a canonical Beta stress tensor form when needed:
-
-```txt
-[Eq 9] T_ij = S_i * C_j * DeltaS_RH * lambda * kappa
-```
-
-Notes:
-
-* `S_i` and `C_j` are placeholders for semantic source and coupling factors (problem dependent).
-* `lambda` and `kappa` are scalar controls (problem dependent).
-* This entry does not fix explicit `S_i`, `C_j`, `lambda`, `kappa`, and does not define a TU Deep generator.
-* The only requirement is reduction to the canonical Beta form.
+* Q032 (BH_PHYS_QTHERMO_L3_032)
+  Reason: Can reuse tension-style functionals on spectra to relate microscopic energy distributions to macroscopic thermodynamic behavior.
+* Q040 (BH_PHYS_QBLACKHOLE_INFO_L3_040)
+  Reason: Can reuse spectral_tension tools to study how field spectra encode information in black hole models.
+* Q059 (BH_CS_INFO_THERMODYN_L3_059)
+  Reason: Reuses the notion of tension between spectral structure and information-theoretic observables.
+* Q123 (BH_AI_INTERP_L3_123)
+  Reason: Uses RH spectral_tension encoding as a model for interpreting internal AI representations as structured spectra.
 
 ---
 
-## 5. Tension indicators (local, line, global)
+## 3. Tension Universe encoding (effective layer)
 
-This section defines concrete indicators from the observables and declared operators.
+All content in this block is at the effective layer. We only describe:
 
-### 5.1 Local indicators
+* state spaces,
+* observables and fields,
+* invariants and tension scores,
+* singular sets and domain restrictions.
 
-Let `s = sigma + i*t`.
+We do not describe any hidden generative rules or construction of internal TU fields from raw data.
 
-Define curvature-like indicator along the vertical direction:
+### 3.1 State space
 
-```txt
-[Eq 10] K(sigma0, t) = d2_Phi_dt2 evaluated at s = sigma0 + i*t
-```
+We assume the existence of a semantic state space
 
-Define gradient intensity indicator:
+`M`
 
-```txt
-[Eq 11] G(sigma0, t) = (d_Phi_dsigma)^2 + (d_Phi_dt)^2 evaluated at s = sigma0 + i*t
-```
+with the following interpretation at the effective layer:
 
-Define mixed indicator:
+* Each element `m` in `M` represents a coherent “zeta-world configuration” for the Riemann zeta function, consisting of:
 
-```txt
-[Eq 12] H(sigma0, t) = d2_Phi_dsigma_dt evaluated at s = sigma0 + i*t
-```
+  * local spectral data for zeta(s) in a bounded region of the critical strip,
+  * local arithmetic data related to primes or prime powers in corresponding ranges,
+  * coarse meta-information about the regularity of the spectral data.
 
-Symbol notes:
+We do not specify how these configurations are constructed from raw numerical computations or proofs. We only assume that:
 
-* `d_Phi_dsigma` means the partial derivative of `Phi` with respect to `sigma`.
-* `d_Phi_dt` means the partial derivative of `Phi` with respect to `t`.
-* All derivatives are taken on the working domain `Omega`.
+* For any bounded region of interest `R` in the critical strip, there exist states `m` in `M` that encode the spectral and arithmetic summaries restricted to `R`.
 
-### 5.2 Line-averaged tension index
+### 3.2 Effective fields and observables
 
-For a height window `T > 0` and a vertical line `sigma = sigma0`:
+We introduce the following effective fields and observables on `M`.
 
-```txt
-[Eq 13]
-tau(sigma0; T) =
-  (1/T) * integral_{t=0..T} [ alpha * (K(sigma0, t))^2 + beta * G(sigma0, t) ] dt
-```
-
-Constraints to avoid undefined expressions:
-
-* `T > 0`
-* the integration path `sigma0 + i*t` must stay in `Omega` for `t in [0, T]`
-* `alpha >= 0`, `beta >= 0`
-* `Phi` and required derivatives must be integrable on the path
-
-### 5.3 Family of tension functionals
-
-We define a family of admissible global functionals that aggregate local information across a band of `sigma` values.
-
-Let `Sigma_band = [sigma_min, sigma_max]` where:
-
-* `0 < sigma_min < 1/2 < sigma_max < 1`
-
-A typical functional has the form:
+1. Local spectral density observable
 
 ```txt
-[Eq 14]
-T_global[Phi] =
-  integral_{sigma in Sigma_band} integral_{t=0..T}
-    F( Phi, d_Phi_dsigma, d_Phi_dt, d2_Phi_dt2 )
-  dt d_sigma
+rho_zero(m; R)  >= 0
 ```
 
-Admissibility constraints for `F`:
+* Input: a state `m` in `M` and a bounded region `R` in the critical strip.
+* Output: an effective scalar quantity summarizing the density of nontrivial zeros of zeta(s) in `R` as encoded in `m`.
+* Interpretation: if RH is true and the usual conjectures about zero statistics hold, `rho_zero` should be close to a known reference profile.
 
-* `F` must be local in the listed arguments
-* `F` must satisfy growth bounds that keep the integrals finite on `Omega`
-* exact choice of `F` is not unique at the effective layer
+2. Local arithmetic profile observable
 
-We define:
+```txt
+A_prime(m; I)
+```
 
-* `F_family` as the set of admissible `F`
-* `F_good` as a non-empty subset that produces stable discrimination patterns required by section 6
+* Input: a state `m` and an interval `I` of positive real numbers.
+* Output: an effective vector or tuple that summarizes the distribution of primes and related arithmetic quantities in `I`, such as prime counting deviations.
+* We only assume that such summaries exist and are finite for the states considered.
 
-We do not claim uniqueness of `F_good`.
+3. Spectral mismatch observable
+
+```txt
+DeltaS_spec(m; R)
+```
+
+* Input: a state `m` and a region `R` in the critical strip.
+* Output: a nonnegative scalar measuring the deviation of the zero distribution in `R` from a certain reference profile consistent with RH.
+* Properties:
+
+  * `DeltaS_spec(m; R) >= 0`
+  * `DeltaS_spec(m; R) = 0` if the encoded zero statistics in `m` exactly match the reference RH-compatible profile on `R`.
+
+4. Arithmetic mismatch observable
+
+```txt
+DeltaS_arith(m; I)
+```
+
+* Input: a state `m` and an interval `I`.
+* Output: a nonnegative scalar measuring the deviation of the encoded arithmetic profile `A_prime(m; I)` from a reference prime distribution that is known to be RH-compatible.
+* Properties:
+
+  * `DeltaS_arith(m; I) >= 0`
+  * `DeltaS_arith(m; I) = 0` if the prime-related statistics in `m` match the RH-compatible reference profile on `I`.
+
+5. Combined RH mismatch
+
+For a chosen coupling between regions `R` and intervals `I` we define:
+
+```txt
+DeltaS_RH(m) = w_spec * DeltaS_spec(m; R) + w_arith * DeltaS_arith(m; I)
+```
+
+where `w_spec` and `w_arith` are fixed positive weights at the effective layer. The exact choice of weights is part of the encoding design and not fixed by the underlying mathematics.
+
+### 3.3 Effective tension tensor components
+
+We assume an effective semantic tension tensor `T_ij` over `M`, consistent with the general TU core decision:
+
+```txt
+T_ij(m) = S_i(m) * C_j(m) * DeltaS_RH(m) * lambda(m) * kappa
+```
+
+where:
+
+* `S_i(m)` is a source-like factor representing the strength of the ith semantic source component in the configuration `m` (for example, how strongly the configuration expresses certain analytic or arithmetic statements).
+* `C_j(m)` is a receptivity-like factor representing how sensitive the jth cognitive or downstream component is to deviations in RH-related structure.
+* `DeltaS_RH(m)` is the combined mismatch defined above.
+* `lambda(m)` is a convergence-state factor from the TU core, taking values in a fixed range that encodes whether local reasoning is convergent, recursive, divergent, or chaotic.
+* `kappa` is a coupling constant that sets the overall scale of RH-related spectral tension for this encoding.
+
+The exact indexing sets of `i` and `j` are not needed at the effective layer. It is sufficient that, for each `m` in `M`, `T_ij(m)` is well defined and finite for all relevant indices.
+
+### 3.4 Invariants and effective constraints
+
+We define the following effective invariants.
+
+1. Critical line invariance
+
+Let `R_line` be a family of thin vertical regions approximating the line `Re(s) = 1/2`. We define an invariant:
+
+```txt
+I_line(m) = sup over R in R_line of DeltaS_spec(m; R)
+```
+
+If there exists a model of the world in which RH is true and the encoding is well aligned, we expect:
+
+```txt
+I_line(m_true) is close to 0
+```
+
+for states `m_true` that accurately reflect the true world.
+
+2. Spectral statistics invariance
+
+Define
+
+```txt
+I_stats(m) = sup over R in admissible_regions of
+             |stat_zero(m; R) - stat_ref(R)|
+```
+
+where:
+
+* `stat_zero(m; R)` is a chosen summary of zero statistics from `m` restricted to `R`,
+* `stat_ref(R)` is a reference statistic predicted from RH-compatible random matrix models,
+* all absolute values and suprema are taken in the usual real sense.
+
+In RH-compatible worlds, `I_stats(m)` is expected to stay within known or conjectured bounds that shrink as the quality of data or models increases.
+
+### 3.5 Singular set and domain restrictions
+
+Some observables may become undefined or unbounded if the encoded data are incomplete or inconsistent. To handle this, we define a singular set:
+
+```txt
+S_sing = { m in M : DeltaS_RH(m) is undefined or not finite }
+```
+
+We impose the following rule:
+
+* All RH-related tension analysis at the effective layer is restricted to `M_reg = M \ S_sing`.
+* When an experiment or protocol would attempt to evaluate `DeltaS_RH(m)` for a state in `S_sing`, the result is treated as “out of domain” rather than as physical evidence about RH.
 
 ---
 
-## 6. Tension principle for Q001 (extremality and alignment)
+## 4. Tension principle for this problem
 
-This is the TU effective reformulation.
+This block states how Q001 is characterized as a tension problem within TU, at the effective layer.
 
-### 6.1 Alignment axis hypothesis (effective layer)
+### 4.1 Core tension functional
 
-TU encoding hypothesis:
-
-* There exists a non-empty set `F_good` of admissible functionals such that, for sufficiently large `T`,
-  the map `sigma0 -> tau(sigma0; T)` has a stable, sharply defined minimum near `sigma0 = 1/2`.
-
-We write this as an existence constraint:
+We define an effective RH tension functional:
 
 ```txt
-[Eq 15]
-exists F_good subset of F_family such that for each choice F in F_good,
-tau(sigma0; T) has a stable minimum near sigma0 = 1/2 for large T
+Tension_RH(m) = F(DeltaS_spec(m; R), DeltaS_arith(m; I))
 ```
 
-What "stable minimum" means in this document:
-
-* The minimizer location stays near `1/2` under small changes of:
-
-  * `alpha`, `beta`
-  * the integration window `T` (increasing)
-  * the band `Sigma_band` (within a reasonable neighborhood)
-* The minimum is not a numerical artifact caused by sampling or branch discontinuities.
-
-This is a structural claim about the tension encoding, not a proof of RH.
-
-### 6.2 Counterfactual tension pattern requirement (RH failure signature)
-
-If RH is false, there exists at least one nontrivial zero `rho*` with `Re(rho*) != 1/2`.
-
-The TU effective requirement is:
-
-* In any TU compatible encoding consistent with known explicit-formula behavior,
-  at least one of the following must occur.
+where `F` is a fixed nonnegative function, for example:
 
 ```txt
-[CF pattern list]
-(CF1) sigma-direction blow-up:
-      for some F in F_good, tau(sigma0; T) loses a single stable minimum and develops competing minima,
-      or develops gradients in sigma that violate admissibility bounds.
-
-(CF2) information-control break:
-      tension indices built from Phi can no longer correlate with stable prime-counting error control
-      under explicit-formula constraints.
-
-(CF3) projection incoherence:
-      keeping low tension in the information projection forces large tension in at least one of P/M/C,
-      violating cross-projection coherence.
+Tension_RH(m) = alpha * DeltaS_spec(m; R) + beta * DeltaS_arith(m; I)
 ```
 
-This does not assert RH is true. It states what the tension world must look like if RH were false, under the encoding rules.
+with `alpha > 0` and `beta > 0`. The detailed form of `F` is an encoding choice, as long as:
 
----
+* `Tension_RH(m) >= 0` for all `m` in `M_reg`,
+* `Tension_RH(m)` is small when both spectral and arithmetic mismatches are small,
+* `Tension_RH(m)` grows when either mismatch grows.
 
-## 7. Four projections P / I / M / C (effective readings)
+### 4.2 RH as a low-tension principle
 
-This section gives four consistent readings of the same encoding. Each projection must remain coherent with the others.
+At the effective layer, the Riemann Hypothesis can be phrased as:
 
-### 7.1 Physical projection (P)
+> In all physically relevant and mathematically coherent world models that reflect the true universe, there exist states `m` in `M_reg` such that the RH tension functional `Tension_RH(m)` is within a narrow low-tension band, consistent across scales.
 
-Effective claim:
-
-* Treat nontrivial zeros as a spectral fingerprint of a hypothetical system.
-* The critical line corresponds to a unique alignment axis where the spectral-tension indices become minimal.
-
-In this projection, the tension index `tau(sigma0; T)` plays the role of an effective "stability energy" profile across vertical lines.
-
-### 7.2 Information projection (I)
-
-Key structural link:
-
-* prime counting error terms can be written in explicit formulas that depend on zeros of `zeta(s)`.
-* shifting zeros off the critical line changes the qualitative error behavior.
-
-TU reading:
-
-* the low-tension alignment near `sigma = 1/2` is interpreted as the most information-efficient configuration for controlling error structure derived from zeros.
-* persistent horizontal displacement of zeros corresponds to systematic information inefficiency, detectable by tension indices built from `Phi`.
-
-### 7.3 Mind projection (M)
-
-Effective cognitive cost claim:
-
-* A finite reasoning system (human or AI) that maintains a global field representation of arithmetic must keep internal coherence across many local tasks.
-
-TU reading:
-
-* World T (RH true): a single alignment axis allows a stable global representation.
-* World F (RH false): the system must track competing alignment behaviors, increasing internal reconfiguration cost.
-
-This projection does not assume any specific mental architecture. It only states that coherence maintenance can be measured by tension-style penalties.
-
-### 7.4 Civilizational projection (C)
-
-Effective dependency claim:
-
-* Many long-horizon estimates in analytic number theory, cryptography, and risk bounds are shaped by RH-like error expectations.
-
-TU reading:
-
-* World T: civilization-level systems behave as if a single stable alignment exists.
-* World F: some tail-risk estimates would require systematic revision, because the underlying error structure becomes less regular.
-
-No claim is made about immediate practical collapse. This is about long-horizon structural dependence.
-
-### 7.5 Projection coherence note
-
-These four projections are not independent stories. They are four readings of the same tension encoding:
-
-* P reads it as an effective spectral stability profile.
-* I reads it as compression and error-control structure.
-* M reads it as the cost of maintaining global coherence in a finite model.
-* C reads it as long-horizon structural dependence.
-
-A TU compatible model of Q001 must keep these readings mutually coherent. Any "fix" that reduces tension in one projection while forcing uncontrolled tension in another is treated as incomplete.
-
----
-
-## 8. Falsifiability and discriminating tests (TU encoding itself)
-
-This section satisfies the TU Effective layer falsifiability rule.
-
-### 8.1 Core statement
-
-Falsifying this encoding is not the same as proving or disproving RH.
-
-* This section proposes tests that can fail even if RH remains open.
-
-### 8.2 Discriminating test TU_RH_ENC_1 (tension profile robustness)
-
-Goal:
-
-* test whether the TU claim "critical line is a stable low-tension alignment axis" is numerically compatible with the observed behavior of `zeta(s)`.
-
-Setup:
-
-* Choose a height window `T` large enough to include many known zero neighborhoods.
-* Choose a band `Sigma_band` around `sigma = 1/2`.
-* Choose multiple `(alpha, beta)` pairs.
-* Compute `Phi(s)` and required derivatives on a grid that avoids `S_sing` and respects `Omega`.
-
-Protocol:
-
-1. Compute `tau(sigma0; T)` for many `sigma0` across `Sigma_band`.
-2. Measure:
-
-   * location of minimizer `sigma_min(T)`
-   * depth of the minimum
-   * stability of `sigma_min(T)` under:
-
-     * varying `(alpha, beta)`
-     * increasing `T`
-     * moderate changes of sampling resolution
-3. Attempt to find a non-empty stable class `F_good` where the minimum stays near `1/2`.
-
-Falsification condition:
-
-* If no robust minimum near `sigma = 1/2` exists across reasonable choices consistent with admissibility,
-  then the TU encoding claim in section 6.1 fails, even if RH itself is not resolved.
-
-### 8.3 Discriminating test TU_RH_ENC_2 (synthetic off-line perturbation)
-
-Purpose:
-
-* test whether the encoding reacts correctly to a controlled counterfactual.
-
-Construction:
-
-* Use a known table of nontrivial zeros on the critical line: `rho_k = 1/2 + i*t_k`.
-* Create a synthetic perturbed set:
+More concretely, for any fixed admissible encoding of regions `R` and intervals `I`, there should exist world-representing states `m_true` such that:
 
 ```txt
-[Eq 16]
-rho_k' = (1/2 + eps_k) + i*t_k
-where eps_k in {+eps, -eps, 0}
+Tension_RH(m_true) <= epsilon_RH
 ```
 
-Protocol:
+for some small threshold `epsilon_RH` that depends on the precision of the encoding and data, but does not grow unbounded as more precise information is added.
 
-1. Build a surrogate field `Phi_surr(s)` whose singular structure approximates zeros at `rho_k` or `rho_k'`.
-2. Compute `tau_surr(sigma0; T)` as in Eq 13.
-3. Compare the minimum structure between:
+### 4.3 RH failure as persistent high tension
 
-   * the unperturbed set
-   * the perturbed set
-
-Expected discrimination:
-
-* the unperturbed configuration should produce a sharper and more stable minimum near `1/2` than typical perturbed configurations, for a broad class of admissible indicators.
-
-Failure of this pattern falsifies the TU "alignment axis as low tension" claim for the chosen indicator family, without proving anything about RH.
-
----
-
-## 9. AI / WFGY engineering spec
-
-This section is an engineering specification, not a philosophical hook.
-
-### 9.1 Training signals
-
-The following are candidate training signals derived from Q001.
-
-1. Alignment margin loss:
-
-* Encourage `tau(1/2; T)` to be smaller than `tau(sigma0; T)` for `sigma0` away from `1/2`.
+If RH is false, then in any encoding that remains faithful to the actual zero distribution and arithmetic data, world-representing states would eventually exhibit persistent high tension:
 
 ```txt
-[Eq 17]
-L_align =
-  E_{sigma0 in Sigma_band} max( 0, tau(1/2; T) - tau(sigma0; T) + margin )
+Tension_RH(m_false) >= delta_RH
 ```
 
-2. Robustness loss:
+for some strictly positive `delta_RH` that cannot be driven arbitrarily close to zero when encodings are refined and more accurate spectral and arithmetic data are incorporated.
 
-* Penalize changes in the minimizer location under small perturbations of weights and sampling.
-
-```txt
-[Eq 18]
-L_robust =
-  E_{config_variations} abs( sigma_min(config) - 1/2 )
-```
-
-Notes:
-
-* These losses are templates. They can be computed from a model's internal field representation, not necessarily from true `zeta(s)`.
-
-### 9.2 Architectural patterns
-
-Recommended patterns a TU-compatible AI system should support:
-
-* Field-like latent memory: represent structured objects as a field over a 2D latent manifold.
-* Alignment axis module: learn and maintain a preferred stable axis that minimizes a tension score.
-* Global consistency checker: compute tension indices across slices and enforce coherence.
-
-This is consistent with WFGY style multi-step systems that stabilize long-horizon reasoning via consistency checks.
-
-### 9.3 Evaluation harness
-
-A benchmark harness for AI systems using Q001 as a toy universe should include:
-
-* perturbation stability tests (synthetic off-axis perturbations)
-* cross-slice consistency tests (many `sigma0` values)
-* long-horizon stability tests (increasing `T`)
-* transfer tests to related problems (Q002, Q018)
-
-The goal is to measure whether the system maintains a coherent low-tension structure across many constraints.
+Thus, at the effective layer, Q001 is the statement that the universe belongs to a low-tension spectral world rather than to a high-tension one, for a given family of encodings satisfying the TU constraints.
 
 ---
 
-## 10. Cross-links inside BlackHole (graph edges)
+## 5. Counterfactual tension worlds
 
-This entry is tightly coupled to at least the following BlackHole nodes:
+We now outline two counterfactual worlds, both described strictly at the effective layer:
 
-* `Q002` (Generalized Riemann Hypothesis): extension of the same alignment-axis tension picture to Dirichlet L-functions.
-* `Q018` (Pair correlation of zeros): the local statistics of zeros provide a finer fingerprint for the same field.
-* `Q003` (Birch and Swinnerton-Dyer): shares an L-function core, but with different observables and tension signatures.
-* `Q0xx` (Prime counting error structure): downstream consequences that encode the same spectral tension into explicit error behavior.
+* World T: RH is true.
+* World F: RH is false.
 
-A future BlackHole graph index should treat Q001 as an anchor node for the spectral-tension cluster.
+Each world is described through patterns of observables, not through any hidden construction rules.
+
+### 5.1 World T (RH true, low spectral tension)
+
+In World T:
+
+1. Critical line behavior
+
+* For states `m_T` that reflect the actual world with sufficient resolution, the critical line invariant satisfies:
+
+  ```txt
+  I_line(m_T) is small and stable across scales
+  ```
+
+  as more data or higher-resolution encodings are incorporated.
+
+2. Spectral statistics
+
+* The statistic invariant `I_stats(m_T)` matches, within known or conjectured error bounds, the reference statistics from well-studied random matrix ensembles that are compatible with RH.
+
+3. Arithmetic profiles
+
+* The arithmetic mismatch `DeltaS_arith(m_T; I)` stays within ranges consistent with best-known error terms for prime number theorems and related results under the assumption of RH, for a wide range of intervals `I`.
+
+4. Global tension
+
+* The functional `Tension_RH(m_T)` remains in a controlled low band:
+
+  ```txt
+  Tension_RH(m_T) <= epsilon_RH
+  ```
+
+  for resolutions and domains where the encoding is known to be reliable.
+
+### 5.2 World F (RH false, high spectral tension)
+
+In World F:
+
+1. Critical line deviation
+
+* There exist regions `R` in the critical strip and states `m_F` representing the actual world such that:
+
+  ```txt
+  I_line(m_F) is bounded away from 0
+  ```
+
+  in the sense that the spectral mismatch on some vertical region cannot be made arbitrarily small without contradicting the encoded zero positions.
+
+2. Spectral statistics anomaly
+
+* The statistic invariant `I_stats(m_F)` eventually deviates significantly from the RH-compatible random matrix reference in a way that does not shrink under higher precision.
+
+3. Arithmetic distortion
+
+* There exist intervals `I` where `DeltaS_arith(m_F; I)` fails to stay within known or conjectured RH-based error margins, yielding sustained high arithmetic tension.
+
+4. Global tension
+
+* For some minimal resolution level of the encoding, the tension functional satisfies:
+
+  ```txt
+  Tension_RH(m_F) >= delta_RH
+  ```
+
+  with `delta_RH > 0` that cannot be removed by any refinement that remains faithful to the observed or computed data.
+
+### 5.3 Interpretive note
+
+These counterfactual worlds do not claim to construct internal TU fields from raw data. They only assert that if such models existed that faithfully represent either a RH-true or RH-false universe, then the observable tension patterns would differ in the ways described above.
 
 ---
 
-## 11. TU roadmap and verification levels
+## 6. Falsifiability and discriminating experiments
 
-### 11.1 TU penetration level (E0 to E4)
+This block specifies experiments and protocols at the effective layer that can:
 
-This entry currently targets:
+* test the coherence of the Q001 encoding,
+* distinguish between different RH-related tension models,
+* provide evidence for or against particular parameter choices.
 
-* E1: achieved here (fields, indicators, functionals, counterfactual patterns are defined)
-* E2: achievable when TU_RH_ENC_1 and TU_RH_ENC_2 are implemented and documented with reproducible code and data
-* E3: not claimed (no explicit PDE/ODE/difference evolution law is specified in this entry)
-* E4: not claimed (no external reproduction is provided here)
+These experiments do not prove or disprove RH, but they can falsify specific TU encodings related to Q001.
 
-### 11.2 Internal maturity level (N0 to N4)
+### Experiment 1: Numerical spectral tension profile
 
-* N1: this document aims to be a complete effective-layer skeleton
-* N2: requires numerical experiments and recorded results
-* N3: requires an engineering prototype that uses these signals for measurable advantage
-* N4: requires third-party reproduction
+*Goal:*
+Test whether the chosen `Tension_RH` functional aligns with existing high-precision computations of zeta zeros and prime distributions.
+
+*Setup:*
+
+* Input data: published tables of nontrivial zeros of zeta(s) in the critical strip up to a given imaginary height, and associated prime counting data over corresponding ranges.
+* Choose a family of regions `R` and intervals `I` that match the available numerical data.
+* Choose fixed weights `alpha`, `beta`, and reference statistics for `DeltaS_spec` and `DeltaS_arith`.
+
+*Protocol:*
+
+1. For each pair `(R, I)` supported by the data, construct an effective state `m_data` in `M_reg` encoding the observed spectral and arithmetic summaries (without describing the construction method in TU terms).
+2. Compute `DeltaS_spec(m_data; R)` and `DeltaS_arith(m_data; I)` as defined in Block 3.
+3. Compute `Tension_RH(m_data)` for each state.
+4. Record the distribution of tension values and compare it against a prior band of acceptable values based on theoretical expectations and uncertainties.
+
+*Metrics:*
+
+* Distribution of `Tension_RH(m_data)` over all available regions.
+* Maximum observed tension value within the tested domain.
+* Stability of the tension distribution when the resolution is refined or additional data are added.
+
+*Falsification conditions:*
+
+* If, for all reasonable choices of weights and reference statistics that are compatible with standard analytic number theory, the observed `Tension_RH(m_data)` consistently exceeds a pre-defined upper bound for a RH-compatible world, then the current encoding of `DeltaS_spec`, `DeltaS_arith`, or `Tension_RH` is considered falsified at the effective layer.
+* If small changes in the encoding parameters produce arbitrarily different tension profiles without clear mathematical justification, the encoding is considered unstable and rejected.
+
+*Semantics implementation note:*
+The experiment assumes that all quantities are represented in a continuous-field sense consistent with the metadata semantics. No discrete or hybrid semantics are introduced in this block.
+
+*Boundary note:*
+Falsifying TU encoding != solving canonical statement. This experiment can reject specific tension encodings, but it does not prove or disprove the Riemann Hypothesis itself.
 
 ---
 
-## 12. Elementary but precise explanation (no metaphors)
+### Experiment 2: Model-world comparison with mock zeta-like functions
 
-* `zeta(s)` is a function built from integers.
-* It has zeros in the critical strip `0 < Re(s) < 1`.
-* RH says all those nontrivial zeros sit exactly on the line `Re(s) = 1/2`.
+*Goal:*
+Assess whether the Q001 tension encoding can systematically distinguish between artificial “RH-like” and “non-RH-like” zeta-type functions at the effective layer.
 
-TU Effective encoding does not prove RH. It does this instead:
+*Setup:*
 
-1. Define observable fields from `zeta(s)`:
+* Construct or select several families of zeta-like functions:
 
-   * `Phi(s) = log(abs(zeta(s)))`
-   * `Theta(s) = arg(zeta(s))`
-2. Build tension indicators from how `Phi` bends and changes.
-3. Average those indicators along vertical lines to get `tau(sigma0; T)`.
-4. The TU encoding claim is:
+  * Family T: functions whose zero distributions are constrained to lie on a single vertical line in a way that mimics RH behavior.
+  * Family F: functions engineered so that a positive fraction of zeros lie off the central line.
+* For each family, generate synthetic spectral and arithmetic-like summaries.
 
-   * the line `sigma0 = 1/2` should be the stable low-tension alignment axis for a broad class of reasonable indicators.
-5. If RH were false, the encoding predicts the tension picture must become structurally less coherent in at least one measurable way (multiple minima, unstable gradients, or cross-projection incoherence).
+*Protocol:*
 
-That is the whole point of the encoding: define observables and tests that can fail, even before RH is solved.
+1. For each function in Family T and Family F, generate a state `m_T_model` or `m_F_model` in `M_reg` that encodes its spectral and arithmetic summaries at a chosen resolution.
+2. Evaluate `DeltaS_spec`, `DeltaS_arith`, and `Tension_RH` for each model state.
+3. Compare the distributions of `Tension_RH` across the two families.
+4. Repeat for several encoding parameter choices to test robustness.
+
+*Metrics:*
+
+* Mean and variance of `Tension_RH` for Family T and Family F.
+* Separation between the two distributions (for example, by a simple distance metric in tension space).
+* Sensitivity of the separation to changes in encoding parameters.
+
+*Falsification conditions:*
+
+* If the encoding consistently fails to separate Family T and Family F in terms of `Tension_RH` under reasonable parameter choices, then the encoding is considered ineffective and rejected for Q001.
+* If the encoding attributes lower tension to obviously non-RH-like spectra than to RH-like spectra, the encoding is considered misaligned with the intended spectral_tension type.
+
+*Semantics implementation note:*
+The mock functions and their observables are treated in the same continuous-field framework as the real zeta(s) case, maintaining consistency with the metadata semantics.
+
+*Boundary note:*
+Falsifying TU encoding != solving canonical statement. Success or failure on artificial model families only tests the quality of the encoding, not the truth value of RH for the actual zeta function.
 
 ---
 
+## 7. AI and WFGY engineering spec
+
+This block describes how Q001 can be used as an engineering module for AI systems within the WFGY framework, at the effective layer.
+
+### 7.1 Training signals
+
+We define several training signals that can be used in AI models to encourage RH-aware and tension-aware reasoning.
+
+1. `signal_zero_spectrum_stability`
+
+   * Definition: a penalty signal proportional to `DeltaS_spec(m; R)` across a set of regions `R`.
+   * Purpose: encourage internal representations that align with RH-compatible spectral patterns when the context requires it.
+
+2. `signal_prime_error_profile`
+
+   * Definition: a signal derived from `DeltaS_arith(m; I)` for intervals `I` where prime distribution properties are discussed.
+   * Purpose: penalize internal states that imply prime counting error profiles incompatible with RH-based bounds when such bounds are explicitly assumed.
+
+3. `signal_spectral_tension_score`
+
+   * Definition: directly equal to `Tension_RH(m)` for a given state `m`.
+   * Purpose: provide a scalar tension indicator that can be minimized in contexts where consistency with RH is part of the assumed background.
+
+4. `signal_counterfactual_consistency`
+
+   * Definition: a signal that measures how stable the model’s answers remain when switching between World T and World F style prompts at the effective layer.
+   * Purpose: encourage the model to clearly separate RH-true and RH-false assumptions rather than mixing them.
+
+### 7.2 Architectural patterns
+
+We outline module patterns that can reuse Q001 structures without revealing any deep TU generative rules.
+
+1. `SpectralTensionHead`
+
+   * Role: a module that, given an internal representation of a mathematical context, produces an estimate of `Tension_RH(m)` as an auxiliary output.
+   * Interface: takes internal embeddings as input, outputs a scalar tension estimate and possibly a small vector of decomposed mismatch components.
+
+2. `ArithmeticConsistencyFilter`
+
+   * Role: a module that checks whether statements about primes and related objects in the current context are compatible with RH-based bounds at the effective layer.
+   * Interface: takes candidate statements or intermediate representations and returns a soft mask or score indicating their tension with RH-compatible arithmetic profiles.
+
+3. `TU_SpecField_Observer`
+
+   * Role: a generalized observer module that extracts simplified versions of `rho_zero` and related spectral summaries from internal representations.
+   * Interface: maps internal embeddings to a low-dimensional summary suitable for tension evaluation.
+
+### 7.3 Evaluation harness
+
+We suggest an evaluation harness for AI models augmented with the Q001 modules.
+
+1. Task selection
+
+   * Select a benchmark of analytic number theory questions where RH plays a known role in strengthening results or sharpening bounds.
+
+2. Conditions
+
+   * Baseline condition: the model operates without explicit SpectralTensionHead or ArithmeticConsistencyFilter modules.
+   * TU condition: the model uses these modules and their signals as auxiliary guidance.
+
+3. Metrics
+
+   * Accuracy on questions where RH is explicitly assumed.
+   * Internal consistency: frequency of contradictions between answers given under RH-assumed prompts and RH-denying prompts.
+   * Stability of reasoning chains: how often the model maintains coherent spectral and arithmetic narratives across multi-step reasoning.
+
+### 7.4 60-second reproduction protocol
+
+A minimal protocol to let external users experience the impact of Q001 encoding in an AI system.
+
+* Baseline setup
+
+  * Prompt: ask the AI to explain how RH connects to prime distribution, error terms in the prime number theorem, and random matrix models, with no mention of WFGY or tension.
+  * Observation: record whether the explanation is fragmented, inconsistent, or missing key links.
+
+* TU encoded setup
+
+  * Prompt: same question, but with an additional instruction to the AI to use “spectral tension” and “tension between zero distribution and prime distribution” as organizing concepts, plus the RH tension functional at the effective layer.
+  * Observation: record whether the explanation becomes more structured, with clear links between spectral patterns and arithmetic consequences.
+
+* Comparison metric
+
+  * Use a simple rubric to rate structure, explicit linkages, and internal consistency for both setups.
+  * Optionally, ask independent evaluators to rate which explanation better reflects the known relationships in analytic number theory.
+
+* What to log
+
+  * The prompts, full responses, and any auxiliary tension scores produced by Q001-related modules.
+  * This allows later inspection without exposing any internal generative rules of TU.
+
+---
+
+## 8. Cross problem transfer template
+
+This block describes the reusable components produced by Q001 and how they transfer to other problems.
+
+### 8.1 Reusable components produced by this problem
+
+1. ComponentName: `SpectralTensionScore_RH`
+
+   * Type: functional
+   * Minimal interface:
+
+     * Inputs: `local_zero_data`, `local_arithmetic_data`
+     * Output: `tension_value` (a nonnegative scalar)
+   * Preconditions:
+
+     * Inputs must encode coherent summaries of zero positions and prime-related statistics over matched regions and intervals.
+
+2. ComponentName: `ZetaSpectrumField_Descriptor`
+
+   * Type: field
+   * Minimal interface:
+
+     * Inputs: `analytic_region` description
+     * Output: `summary_features` describing spectral properties in that region (for example density estimates, spacing statistics, and low-order correlation summaries).
+   * Preconditions:
+
+     * The analytic region is bounded and lies in the critical strip or a related domain where such summaries make sense.
+
+3. ComponentName: `CounterfactualSpectralWorld_Template`
+
+   * Type: experiment_pattern
+   * Minimal interface:
+
+     * Inputs: `model_class` describing a family of zeta-like or L-function-like objects.
+     * Output: a pair of experiment definitions for a World T variant and a World F variant, each with a specified tension evaluation procedure.
+   * Preconditions:
+
+     * The model class must allow generation or access to spectral and arithmetic-like summaries at the effective layer.
+
+### 8.2 Direct reuse targets
+
+1. Q002 (Generalized Riemann Hypothesis)
+
+   * Reused component: `SpectralTensionScore_RH` and `ZetaSpectrumField_Descriptor`.
+   * Why it transfers: GRH extends the same type of spectral_tension from zeta(s) to Dirichlet and other L-functions, so the same functional structure can be reused with adjusted inputs.
+   * What changes: the underlying `local_zero_data` and `local_arithmetic_data` are now taken from families of L-functions indexed by characters or other parameters.
+
+2. Q003 (Birch and Swinnerton-Dyer conjecture)
+
+   * Reused component: `CounterfactualSpectralWorld_Template`.
+   * Why it transfers: BSD fundamentally links spectral behavior of L-functions to arithmetic invariants (ranks of elliptic curves), which can be framed using world T and world F scenarios.
+   * What changes: the outputs are tension evaluations on elliptic curve data rather than on prime distributions.
+
+3. Q018 (Pair correlation of zeros of zeta functions)
+
+   * Reused component: `ZetaSpectrumField_Descriptor`.
+   * Why it transfers: Q018 focuses directly on fine-grained spectral statistics, so the descriptor’s summary features become primary observables for that problem.
+   * What changes: additional emphasis is placed on higher-order correlation features within `summary_features`.
+
+4. Q036 (High temperature superconductivity mechanism)
+
+   * Reused component: `CounterfactualSpectralWorld_Template`.
+   * Why it transfers: spectral_tension patterns in quantum systems can be probed via analogous world T and world F constructions, even though the underlying operators differ from zeta(s).
+   * What changes: the model class is now physical Hamiltonians instead of arithmetic L-functions, and the observables describe energy spectra rather than zeta zeros.
+
+---
+
+## 9. TU roadmap and verification levels
+
+This block explains how Q001 is positioned along the TU verification ladder and what the next measurable steps are.
+
+### 9.1 Current levels
+
+* E_level: E2
+
+  * A coherent effective encoding of RH in terms of spectral_tension has been specified.
+  * Clear experimental protocols exist to test and potentially falsify specific choices of encoding parameters.
+
+* N_level: N2
+
+  * The narrative linking spectral data, arithmetic data, and tension functionals is explicit and internally coherent at the effective layer.
+  * Counterfactual worlds have been described in a way that can be instantiated in artificial model families.
+
+### 9.2 Next measurable step toward E3
+
+To move from E2 to E3, at least one of the following should be implemented in practice:
+
+1. A working prototype that, given numerical zero and prime data, computes `Tension_RH(m_data)` across a range of regions and intervals and publishes the resulting tension profiles as open data.
+2. A set of artificial zeta-like model families where Q001’s tension encoding is systematically tested against known RH-like and non-RH-like spectra, with results that are reproducible by independent groups.
+
+Both steps are compatible with the effective-layer constraints, because they operate on observable summaries and do not require exposing any deep TU generative rule.
+
+### 9.3 Long-term role in the TU program
+
+In the long run, Q001 is expected to serve as:
+
+* The reference node for all spectral_tension problems in mathematics and physics.
+* A calibration ground for how far TU-style encodings can go in structuring reasoning about extremely hard open problems without claiming proofs.
+* A bridge node connecting pure mathematics, mathematical physics, and AI interpretability, by framing each as a special case of structured tension on spectra and arithmetic-like observables.
+
+---
+
+## 10. Elementary but precise explanation
+
+This block gives an explanation suitable for non-experts, while still aligned with the effective-layer description.
+
+The classical version of the Riemann Hypothesis says:
+
+> When you look at a special function called zeta(s), all its important zeros in a certain strip of the complex plane should line up exactly on a single vertical line.
+
+Why does this matter? Because those zeros secretly control how prime numbers are spread out along the number line. If the zeros behave in a very regular way, then the primes behave in a more regular way too.
+
+In the Tension Universe view, we do not try to prove or disprove RH. Instead, we ask:
+
+* How “tense” is the relationship between the pattern of zeros and the pattern of primes?
+* Can we define a number, called `Tension_RH`, that becomes small when zeros and primes fit together well, and becomes large when they do not?
+
+We imagine a space of states, where each state summarizes:
+
+* what the zeros look like in a certain region,
+* what the primes look like in a matching interval.
+
+For each state, we measure:
+
+* how much the zero pattern deviates from a reference pattern that would be natural if RH were true,
+* how much the prime pattern deviates from a reference pattern that would be natural if RH were true.
+
+We combine these two deviations into a single number. That number is the RH tension.
+
+Then we consider two kinds of worlds:
+
+* In a “RH-true” world, as we refine our data and look more closely, the RH tension can be kept small and stable.
+* In a “RH-false” world, no matter how we refine our data, we eventually see parts of the spectrum where RH tension stays large.
+
+This does not tell us which world we live in. It does not serve as a proof. But it gives us:
+
+* a way to express RH as a low-tension principle,
+* a way to define observables and experiments that test whether a given encoding of tension is reasonable,
+* a set of tools that can be reused in other problems where hidden spectral structure and visible arithmetic or physical behavior must fit together.
+
+Q001 is therefore the prototype for all such spectral tension problems in the Tension Universe framework, and a benchmark for how to encode a world-class open problem without crossing the boundary into deep generative rules.
