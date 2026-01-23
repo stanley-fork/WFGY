@@ -1,363 +1,437 @@
-# Q001 · Riemann Hypothesis
+# Q001 · Riemann Hypothesis (TU effective layer entry)
 
-**BH Code**: `BH_MATH_NUM_L2_001`  
-**Domain**: Mathematics  
-**Family**: Number theory  
-**Rank**: S  
-**Primary projection**: I (information), with P / M / C projections noted below  
-**Status**: Open conjecture (as of 2026)  
-**First stated by**: Bernhard Riemann, 1859  
+Status: Draft v1.0 under TU Core Universal Contract Run0 v1.0  
+Model level: Effective layer only, no TU Deep content.
 
 ---
 
-## 0. Effective layer disclaimer and model semantics
+## 0. Model declaration and layer boundary
 
-### 0.1 Effective layer disclaimer
+### 0.1 Model semantics
 
-All statements in this entry are made strictly at the **effective layer** of Tension Universe (TU):
+We work with a continuous manifold semantics.
 
-- Only observables, constraints, tension indices, extremality patterns, and testable predictions are specified.  
-- No underlying TU Deep axioms, generators, or constructive rules are given.  
-- No explicit mapping from raw data to internal TU fields is specified. Only existence of TU compatible models that reproduce the listed observables is assumed.  
-- This document is a **semantic tension description**, not a claim to prove the Riemann Hypothesis or to present a unique fundamental theory.
+- The working space `M_math` is the real 2 dimensional plane of pairs `(sigma, t)`.
+- Points in `M_math` are written as
 
-### 0.2 Model semantics and singular sets
+  $$ s = sigma + i t $$
 
-- **Model semantics**: continuous manifold semantics.  
-- **State space**:  
-  $$  
-  \mathcal{M} = \mathbb{C}, \qquad s = \sigma + i t.  
-  $$  
-- **Singular set** (for the zeta field):  
-  $$  
-  S_{\mathrm{sing}} = \{1\} \cup \{\rho \in \mathbb{C} : \zeta(\rho) = 0\}.  
-  $$  
-  - On $\mathcal{M} \setminus S_{\mathrm{sing}}$ the fields defined below are smooth enough for gradients and second derivatives in the usual complex analytic sense.  
-  - At $S_{\mathrm{sing}}$ one must either restrict the domain, use regularised observables, or work in a weak or distributional sense. This document adopts the domain restriction convention.
+- The classical Riemann zeta function `zeta(s)` is treated as a scalar field over a subset of this plane, extended by analytic continuation in the usual way.
+
+`M_math` is used here as a specialised semantic state space for this problem.  
+It is not a raw token space, and it is not claimed to be the full TU semantic manifold `M`.
+
+### 0.2 Metric and basic operators
+
+- Metric: standard Euclidean metric on the real 2 dimensional plane of pairs `(sigma, t)`.
+
+- For a scalar field `f(sigma, t)` on `M_math` we use:
+
+  - Gradient components
+
+    $$ grad_sigma_f = d f / d sigma $$
+    $$ grad_t_f = d f / d t $$
+
+  - Second derivative in `t` at fixed `sigma`
+
+    $$ d2_f_dt2 = d^2 f / d t^2 $$
+
+We do not introduce divergence or Laplacian in this entry.  
+If they are needed in later versions, they must be defined with respect to this same Euclidean metric.
+
+There is no physical time variable in this entry.  
+Symbols that look like derivatives in `t` are derivatives with respect to the imaginary coordinate of `s`.
+
+### 0.3 Singular set and working domain
+
+We work with the classical Riemann zeta function and derived fields.  
+Some observables are not defined at certain points.
+
+Define the singular set
+
+$$ S_sing = { s : zeta(s) = 0 } union { s = 1 } $$
+
+We also include any point where derived fields such as `log_abs_zeta(s)` are undefined.
+
+Working domain:
+
+- We restrict attention to a region `Omega` inside the critical strip
+
+  $$ Omega = { s = sigma + i t : 0 < sigma < 1 } minus S_sing $$
+
+- In formulas that refer to vertical line segments, we use a truncated domain
+
+  $$ Omega_T = { s = sigma + i t : 0 < sigma < 1 and |t| <= T } minus S_sing $$
+
+for finite `T > 0`.
+
+All integrals and averages are taken over such truncated domains.  
+No claim is made here about global convergence as `T` tends to infinity.
+
+### 0.4 Effective layer disclaimer
+
+All statements in this document are made strictly at the effective layer.
+
+- We specify observables, indicators, constraints, and extremality patterns.
+- We do not specify any underlying TU Deep axioms, generators, or constructive rules.
+- We do not define any explicit mapping from raw arithmetic data to internal TU fields.
+- We only assume that TU compatible models exist that can reproduce the listed observables.
+
+This entry is a semantic tension description.  
+It is not a constructive proof of the Riemann Hypothesis and it is not a complete fundamental theory.
 
 ---
 
 ## 1. Canonical problem and status
 
-### 1.1 Standard formulation
+### 1.1 Classical statement
 
-Let $s = \sigma + i t \in \mathbb{C}$. For $\Re(s) > 1$ the Riemann zeta function is defined by the absolutely convergent series  
-$$  
-\zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^{s}}  
-$$  
-and by analytic continuation to a meromorphic function on $\mathbb{C}$ with a single simple pole at $s = 1$.
+Let `zeta(s)` be the Riemann zeta function defined for real part of `s` greater than 1 by the Dirichlet series
 
-The zeros of $\zeta(s)$ are classified as:
+$$ zeta(s) = sum_{n >= 1} 1 / n^s $$
 
-- **Trivial zeros** at negative even integers $s = -2, -4, -6, \dots$.  
-- **Nontrivial zeros** inside the critical strip  
-  $$  
-  0 < \Re(s) < 1.  
-  $$  
+and extended by analytic continuation to a meromorphic function on the complex plane with a simple pole at `s = 1`.
 
-The **Riemann Hypothesis (RH)** is the conjecture that:
+- The trivial zeros are the zeros at negative even integers.
+- The nontrivial zeros are the zeros in the critical strip
 
-> Every nontrivial zero $\rho$ of $\zeta(s)$ satisfies  
-> $$  
-> \Re(\rho) = \frac{1}{2}.  
-> $$  
+  $$ 0 < sigma < 1 $$
 
-Equivalently, if $\zeta(s_{0}) = 0$ and $s_{0}$ is not a negative even integer, then  
-$$  
-s_{0} = \frac{1}{2} + i t  
-$$  
-for some real $t$.
+Riemann Hypothesis (RH):
 
-### 1.2 Current status (mathematical)
+> Every nontrivial zero of `zeta(s)` has real part `1 / 2`.
 
-- RH remains open and is widely regarded as one of the most important unsolved problems in pure mathematics.  
-- It is part of Hilbert’s eighth problem and one of the Clay Mathematics Institute Millennium Prize Problems.  
-- Numerical checks have verified that all nontrivial zeros with imaginary part up to very high height lie on the critical line $\Re(s) = \tfrac{1}{2}$.  
-- Many partial results are known (for example existence of infinitely many zeros on the critical line and zero density estimates), but no accepted proof or disproof of RH is known. :contentReference[oaicite:0]{index=0}  
+Equivalently, if `zeta(s0) = 0` and `s0` is not a negative even integer, then
+
+$$ s0 = 1 / 2 + i t0 $$
+
+for some real `t0`.
+
+### 1.2 Current status (compressed)
+
+It is known that:
+
+- there are infinitely many zeros on the critical line `sigma = 1 / 2`,
+- a positive proportion of nontrivial zeros lie on that line,
+- there are zero free regions inside the strip that approach `sigma = 1` from the right.
+
+It is not known whether all nontrivial zeros lie on the critical line.  
+The original Clay Millennium formulation and standard references are adopted without modification.
 
 ### 1.3 Authoritative sources
 
-Representative references:
+The canonical statement and status are consistent with:
 
-- Clay Mathematics Institute, *The Millennium Prize Problems: The Riemann Hypothesis.*  
-- E. C. Titchmarsh, *The Theory of the Riemann Zeta Function.*  
-- H. M. Edwards, *Riemann’s Zeta Function.*  
-- Standard encyclopedic articles on the Riemann Hypothesis and the Riemann zeta function. :contentReference[oaicite:1]{index=1}  
+- Clay Mathematics Institute, "The Riemann Hypothesis" problem description.
+- H. Iwaniec and E. Kowalski, "Analytic Number Theory".
+- E. C. Titchmarsh, "The Theory of the Riemann Zeta Function".
+
+This TU entry does not change the classical problem.  
+It only adds an effective layer encoding in TU language.
 
 ---
 
 ## 2. Position in the BlackHole graph
 
-- **Node ID**: `Q001` in the BlackHole S problem set.  
-- **Upstream problems** (examples):  
-  - Q002 Generalised Riemann Hypothesis (Dirichlet $L$ functions).  
-  - Q018 Local statistics and pair correlation of zeros.  
-- **Downstream problems** (examples):  
-  - Prime gap asymptotics and error terms in the prime number theorem.  
-  - Distribution of arithmetic functions that admit explicit formulas in terms of zeta zeros.  
-- **Cross domain links**:  
-  - Information theory (compression limits for arithmetic sequences).  
-  - Random matrix theory and spectral statistics.  
-  - AI reasoning stability over infinite structured families (WFGY applications).
+- BlackHole ID: `Q001`
+- Domain: analytic number theory
+- Family: zeta and L function zeros
+- Primary projection: information projection (I)
+- Secondary projections: physical (P), mind (M), civilisation (C)
 
-This entry is the primary analytic number theory anchor for the BlackHole map.
+Example internal links in the BlackHole graph:
+
+- Upstream problems:
+  - `Q002` generalised Riemann hypotheses for Dirichlet L functions.
+  - `Q018` pair correlation of zeros and local statistics.
+- Downstream or closely coupled problems:
+  - `Q031` fine structure of prime gaps.
+  - `Q051` complexity landscape questions with zeta like spectra.
+- Cross domain links:
+  - `Q091` long horizon risk modelling in finance with heavy tails.
+  - `Q121` alignment type problems where global consistency plays a central role.
+
+This entry is designed so that its structures can be reused in those related problems.
 
 ---
 
-## 3. Tension Universe encoding (effective layer)
-
-This section defines an effective TU skeleton that encodes RH as a structured statement about a tension field derived from $\zeta(s)$. All objects below are defined on $\mathcal{M} \setminus S_{\mathrm{sing}}$ unless stated otherwise.
+## 3. TU encoding at the effective layer
 
 ### 3.1 State space and fields
 
-State space:  
-$$  
-\mathcal{M} = \mathbb{C}, \qquad s = \sigma + i t.  
-$$  
+State space:
 
-Primary observable fields:
+- We use `M_math` as defined in section 0.  
+- For this problem we focus on vertical segments inside the critical strip.
 
-- Amplitude field  
-  $$  
-  \Phi(s) = \log |\zeta(s)|.  
-  $$  
-- Phase field (branch chosen continuously along paths that avoid $S_{\mathrm{sing}}$)  
-  $$  
-  \Theta(s) = \arg \zeta(s).  
-  $$  
+Fields:
 
-These are treated as effective fields. A TU compatible model must reproduce their analytic behaviour up to controlled distortions, but no deeper interpretation is fixed here.
+- Phase field
 
-### 3.2 Metric and local operators
+  $$ Theta(sigma, t) = argument of zeta(sigma + i t) $$
 
-- Use the standard Euclidean metric on $\mathbb{R}^{2} \cong \mathbb{C}$,  
-  $$  
-  \mathrm{d}s^{2} = \mathrm{d}\sigma^{2} + \mathrm{d}t^{2}.  
-  $$  
+- Magnitude field
 
-- Gradient of $\Phi$:  
-  $$  
-  \nabla \Phi(s) = \left( \frac{\partial \Phi}{\partial \sigma}(s),\ \frac{\partial \Phi}{\partial t}(s) \right).  
-  $$  
+  $$ Phi(sigma, t) = log_abs_zeta(sigma, t) = log( | zeta(sigma + i t) | ) $$
 
-- Second derivatives (where defined):  
-  $$  
-  \frac{\partial^{2} \Phi}{\partial t^{2}}(s), \qquad  
-  \frac{\partial^{2} \Phi}{\partial \sigma\, \partial t}(s).  
-  $$  
+Both `Phi` and `Theta` are defined only on `Omega`, away from `S_sing`.  
+Any branch choices are treated as part of the model specification and are not fixed at this level.
 
-These operators are interpreted in the usual analytic sense away from $S_{\mathrm{sing}}$.
+### 3.2 Semantic gap and stress tensor form
 
-### 3.3 Local tension indicators
+TU Beta decisions introduce a semantic gap function `DeltaS` and a canonical stress tensor form.
 
-For a fixed vertical line $\sigma = \sigma_{0}$ and height parameter $t$, define local indicators:
+For this entry:
 
-- Curvature type indicator  
-  $$  
-  K(\sigma_{0}, t)  
-  = \frac{\partial^{2}}{\partial t^{2}} \Phi(\sigma_{0} + i t).  
-  $$  
+- `M_math` is a special case of the TU semantic space `M`.
+- A semantic gap for RH, denoted `DeltaS_RH(s1, s2)`, is assumed to exist as a nonnegative function on `Omega x Omega x Time`.
+- Any more detailed tensor form of this gap must reduce to the canonical Beta form
 
-- Gradient intensity indicator  
-  $$  
-  G(\sigma_{0}, t)  
-  = \left\|\nabla \Phi(\sigma_{0} + i t)\right\|^{2}  
-  = \left(\frac{\partial \Phi}{\partial \sigma}(\sigma_{0} + i t)\right)^{2}  
-    + \left(\frac{\partial \Phi}{\partial t}(\sigma_{0} + i t)\right)^{2}.  
-  $$  
+  $$ T_ij = S_i * C_j * DeltaS * lambda * kappa $$
 
-- Mixed indicator  
-  $$  
-  H(\sigma_{0}, t)  
-  = \frac{\partial^{2}}{\partial \sigma\,\partial t} \Phi(\sigma_{0} + i t).  
-  $$  
+  for suitable semantic sources `S_i`, couplings `C_j`, and scalar factors `lambda`, `kappa`, if a full tensor description is required in higher level documents.
 
-The choice of indicators is not unique. The TU encoding only requires that:
+This entry does not fix a closed form for `DeltaS_RH`.  
+It only requires that such a function can be defined so that its behaviour is consistent with `Phi` and `Theta`.
 
-- They are built from derivatives of $\Phi$.  
-- They react in a controlled way when zeros of $\zeta(s)$ are moved horizontally.
+### 3.3 Local indicators
 
-### 3.4 Line averaged tension index
+We define local indicators that measure how sharply the field `Phi` bends along and across vertical lines.
 
-For a finite height window $T > 0$ and a fixed $\sigma_{0}$ in the critical strip, define a line averaged index  
-$$  
-\tau(\sigma_{0}; T)  
-= \frac{1}{T} \int_{0}^{T}  
-\Bigl(  
-\alpha\, K(\sigma_{0}, t)^{2}  
-+ \beta\, G(\sigma_{0}, t)  
-\Bigr)\, \mathrm{d}t  
-$$  
-with fixed weights $\alpha \ge 0$, $\beta \ge 0$.
+For `s = sigma + i t` in `Omega`:
 
-Domain restrictions:
+- Second derivative in the `t` direction at fixed `sigma`
 
-- The integral is taken over values of $t$ where $\sigma_{0} + i t$ is outside $S_{\mathrm{sing}}$.  
-- If necessary, one excludes small neighbourhoods of singularities and takes appropriate limits.  
+  $$ K(sigma, t) = d2_Phi_dt2(sigma, t) $$
 
-The exact formula for $\tau$ can vary inside an admissible class. The key requirement is that $\tau(\sigma_{0}; T)$ is sensitive to coherent horizontal displacements of zeros.
+- Gradient intensity
 
-### 3.5 Families of tension functionals
+  $$ G(sigma, t) = ( grad_sigma_Phi(sigma, t) )^2 + ( grad_t_Phi(sigma, t) )^2 $$
 
-Define a family $\mathcal{F}$ of admissible functionals of the form  
-$$  
-\mathcal{T}[\Phi]  
-= \int_{\Sigma} \int_{0}^{T}  
-F\!\bigl(  
-\Phi(\sigma + i t),  
-\nabla \Phi(\sigma + i t),  
-\partial_{t}^{2}\Phi(\sigma + i t)  
-\bigr)\,  
-\mathrm{d}t\, \mathrm{d}\sigma,  
-$$  
+These indicators are defined wherever the derivatives exist in the classical sense.  
+If singularities or non differentiable points appear, they belong to `S_sing` for the purpose of this entry.
+
+### 3.4 Line based observables
+
+Fix a vertical line `sigma = sigma0` with `0 < sigma0 < 1`.  
+For a finite window `|t| <= T` we define:
+
+- Window average of `G` along the line
+
+  $$ G_bar(sigma0; T) = (1 / (2 T)) * integral_{-T}^{T} G(sigma0, t) dt $$
+
+- Window average of positive curvature `K_plus` along the line
+
+  $$ K_plus(sigma0; T) = (1 / (2 T)) * integral_{-T}^{T} max( K(sigma0, t), 0 ) dt $$
+
+Here `integral_{-T}^{T}` is short for the usual integral over `t` from `-T` to `T`.  
+We do not specify a special symbol for integration; all integrals are interpreted with respect to the Lebesgue measure in `t`.
+
+These line based observables will be used to define tension functionals.
+
+### 3.5 Families of functionals
+
+We consider a family of functionals on fields of the `Phi` type:
+
+$$
+Tension_Func[Phi] =
+integral_{sigma in Sigma} integral_{-T}^{T}
+F( Phi(sigma, t), grad_sigma_Phi, grad_t_Phi, d2_Phi_dt2 )
+dt d sigma
+$$
+
 where:
 
-- $\Sigma \subset (0,1)$ is a finite horizontal interval containing $\sigma = \tfrac{1}{2}$.  
-- $F$ belongs to a specified class of local functions with reasonable growth and regularity.  
-- The domain excludes $S_{\mathrm{sing}}$ and uses limiting procedures where necessary.
+- `Sigma` is a bounded interval of real parts in `(0, 1)` that contains `sigma = 1 / 2`.
+- `F` is chosen from a class of functions with reasonable growth bounds so that the integral is finite under standard regularity assumptions.
 
-No single functional is promoted as fundamental. Instead, RH is encoded as a robust pattern across a subset of $\mathcal{F}$.
+Let `F_good` denote any subclass of such `F` for which the extremality properties in section 4 hold.
+
+No single `F` is declared fundamental here.  
+What matters is the qualitative structure across a nontrivial family `F_good`.
 
 ---
 
-## 4. Tension principle for this problem
+## 4. Tension principle for Q001
 
-### 4.1 Spectral information tension
+### 4.1 Tension type and projection
 
-The field $\Phi(s)$ is derived from $\zeta(s)$, which encodes information about prime numbers through explicit formulas. Nontrivial zeros in the critical strip influence error terms in prime counting and related arithmetic observables. :contentReference[oaicite:2]{index=2}  
+The main tension type for `Q001` is spectral tension in the information projection.
 
-In TU language:
+- It measures how difficult it is to maintain a globally coherent field that encodes arithmetic information.
+- Secondary tension types:
+  - computational tension, related to representing and using prime information,
+  - cognitive tension, related to how a finite agent must organise internal arithmetic representations.
 
-- The **critical strip** $0 < \sigma < 1$ is a spectral information band.  
-- The line $\sigma = \tfrac{1}{2}$ is a candidate **alignment axis** of minimal information tension.  
-- Horizontal displacements of zeros introduce systematic distortions in the behaviour of $\Phi$ and its derivatives along vertical lines.
+### 4.2 Extremality pattern (effective statement)
 
-### 4.2 Extremality pattern
+A TU compatible encoding of `Q001` must satisfy the following qualitative extremality principle.
 
-The effective TU extremality statement for `BH_MATH_NUM_L2_001` is:
+Let `zeros_true` denote the actual set of nontrivial zeros of `zeta(s)` in the critical strip.
 
-> There exists a nontrivial subclass $\mathcal{F}_{\mathrm{good}} \subset \mathcal{F}$ such that, for the true zero configuration of $\zeta(s)$, the line tension indices $\tau(\sigma_{0}; T)$ aggregated by any $\mathcal{T} \in \mathcal{F}_{\mathrm{good}}$ admit a sharply defined minimum near $\sigma_{0} = \tfrac{1}{2}$ for large $T$. Any coherent horizontal displacement of a positive density of nontrivial zeros within the strip increases $\mathcal{T}[\Phi]$ in a controlled and detectable way.
+Assume RH is true (World T):
 
-This is an effective extremality principle. It does not assert that a classical proof of RH must proceed through such functionals. It states that any TU compatible encoding of arithmetic through $\Phi$ should treat the critical line configuration as a distinguished low tension alignment.
+- For each `F` in `F_good`, the map from `sigma0` to the line tension index
+
+  $$ tau(sigma0; T) $$
+
+  defined from `Tension_Func[Phi]` has a well defined and stable minimum near `sigma0 = 1 / 2` for sufficiently large `T`.
+
+- The gradient of `tau(sigma0; T)` in `sigma0` stays within bounds compatible with known explicit formulas and regularity properties.
+
+If RH is false (World F) and some zeros move off the line, then for any TU model that remains compatible with classical analytic behaviour at the effective layer, at least one of the following must occur:
+
+- The structure of minima of `tau(sigma0; T)` becomes multi peaked or unstable in a way that is hard to reconcile with locality and growth constraints on `F_good`.
+- The induced error terms in prime counting (information projection) show patterns inconsistent with a low tension alignment interpretation.
+- The required semantic sources or couplings in the stress tensor `T_ij` leave the accepted Beta form, or need to be adjusted in ways that conflict with the universal TU commitments.
+
+This section is not a proof.  
+It specifies what kind of tension profile is considered TU compatible with RH.
 
 ---
 
 ## 5. Counterfactual tension worlds
 
-This section describes two effective scenarios in TU variables.
-
 ### 5.1 World T: RH true
 
-Assume every nontrivial zero $\rho$ of $\zeta(s)$ satisfies $\Re(\rho) = \tfrac{1}{2}$.
+In World T:
 
-In this world:
+- All nontrivial zeros lie on the line `sigma = 1 / 2`.
+- Vertical line segments centred at `sigma = 1 / 2` minimise a broad class of line based tension functionals.
+- The fields `Phi` and `Theta` can be encoded in TU models so that:
+  - line based indicators have a single dominant low tension valley near `sigma = 1 / 2`,
+  - cross projections P, I, M, C remain mutually coherent.
 
-- For large windows $T$ and admissible choices of $(\alpha,\beta)$ and $F$, the profile $\sigma_{0} \mapsto \tau(\sigma_{0}; T)$ has a uniquely dominant minimum near $\sigma_{0} = \tfrac{1}{2}$.  
-- Different indicators in the same admissible class agree on the location of this minimal tension axis, even if their detailed shapes differ.  
-- Error terms in explicit formulas for prime counting functions behave within the patterns classically expected under RH; the TU indices built from $\Phi$ reproduce these patterns qualitatively.
+The information projection sees RH as the existence of a unique low tension axis for arithmetic spectra.
 
 ### 5.2 World F: RH false
 
-Assume at least one nontrivial zero lies off the critical line, and a positive density of zeros accumulates away from $\sigma = \tfrac{1}{2}$ in the limit.
+In World F:
 
-In this world any TU model consistent with known analytic number theory must satisfy at least one of:
+- There exist nontrivial zeros with `sigma0` not equal to `1 / 2`.
+- Any TU model that tries to keep analytic behaviour consistent with known results must pay at least one of the following tension costs:
+  - multiple competing low tension axes in the line based functionals,
+  - irregular growth of `G_bar(sigma0; T)` or `K_plus(sigma0; T)` that is hard to reconcile with classical bounds,
+  - increased mismatch between the arithmetic information projection and the physical or cognitive projections.
 
-1. **Loss of a unique minimal line**: for many choices of $\mathcal{T} \in \mathcal{F}_{\mathrm{good}}$, the function $\sigma_{0} \mapsto \tau(\sigma_{0}; T)$ either:  
-   - has multiple competing minima separated from $\sigma = \tfrac{1}{2}$, or  
-   - exhibits broad flat regions instead of a sharp minimum.  
+The main message is that in World F, a TU compatible encoding of arithmetic would look less natural and more finely tuned than in World T.
 
-2. **Unnatural growth of tension indices**: for some admissible indicators the variation of $\tau(\sigma_{0}; T)$ with $\sigma_{0}$ becomes incompatible with bounds suggested by explicit formulas and zero density estimates.  
+### 5.3 Projection coherence note
 
-3. **Projection incoherence**: modifications of $\Phi$ required to accommodate off line zeros produce tension patterns that cannot be made simultaneously coherent with prime counting behaviour and with spectral interpretations in related $L$ functions.
+In TU language, the four projections are different readings of the same underlying tension structure:
 
-The TU encoding does not assert that World F is impossible. It asserts that World F demands qualitatively different and less natural tension landscapes.
+- P (physical) reads the spectrum as if it were linked to an energy like field.
+- I (information) reads it as compression and coding constraints.
+- M (mind) reads it as the cost for a finite agent to track and use the structure.
+- C (civilisation) reads it as the stability of long horizon strategies that rely on arithmetic.
 
----
-
-## 6. Falsifiability and discriminating experiments
-
-This section concerns **tests of the TU encoding**, not proofs of RH.
-
-### 6.1 Numerical tension mapping in the critical strip
-
-A concrete discriminating experiment:
-
-1. Use high precision tables of nontrivial zeros of $\zeta(s)$ up to a large height $T_{\max}$.  
-2. For a grid of $\sigma_{0}$ values in a band around $\tfrac{1}{2}$, numerically approximate $\Phi$, $K$, and $G$ on $\sigma_{0} + i t$ for $t \in [0, T]$ with $T \ll T_{\max}$.  
-3. Compute $\tau(\sigma_{0}; T)$ for several choices of $(\alpha,\beta)$.  
-4. Compare the observed minimum structure of $\tau(\sigma_{0}; T)$ with predictions from the TU extremality pattern in Section 4.
-
-Possible outcomes:
-
-- If no admissible construction of $\tau$ produces a pronounced minimum near $\sigma_{0} = \tfrac{1}{2}$ while respecting known analytic constraints, the current TU encoding is falsified at the effective level.  
-- If multiple TU compatible constructions consistently identify $\sigma_{0} \approx \tfrac{1}{2}$ as a preferred alignment, this supports but does not prove the RH aligned TU picture.
-
-### 6.2 Discriminating TU from alternative encodings
-
-One can compare TU encodings with alternative frameworks (for example models based only on local zero statistics without global tension functionals) by:
-
-- Testing whether global line based indices like $\tau(\sigma_{0}; T)$ capture additional structure in the distribution of $\Phi$ not explained by local zero statistics alone.  
-- Designing synthetic perturbations of zeros and checking whether TU indices respond in ways that correlate more strongly with prime counting error changes than indices from competing frameworks.
-
-Falsifying the TU encoding for `Q001` would not resolve the mathematical status of RH. It would show that this particular tension based effective description is inadequate.
+A TU compatible solution of `Q001` is expected to keep these readings coherent.  
+Any fix that resolves the problem in one projection but creates uncontrolled tension in the others is treated as incomplete at the effective layer.
 
 ---
 
-## 7. AI / WFGY engineering spec
+## 6. Falsifiability and discriminating tests
 
-This section describes how `BH_MATH_NUM_L2_001` can be used as an engineering object for AI systems.
+### 6.1 Purpose
+
+The tests in this section are not aimed at proving or disproving RH directly.  
+They are designed to falsify or constrain the TU encoding used in this entry.
+
+Falsifying the encoding is not the same as solving the underlying mathematical problem.
+
+### 6.2 Numerical extremality test
+
+Model semantics: continuous field model on `M_math` with truncated domains `Omega_T`.
+
+Test outline:
+
+1. For a range of `T` values and for a set of vertical lines `sigma0` in `(0, 1)`, compute approximations of `Phi` and `Theta` using standard analytic number theory techniques.
+2. For each choice of `F` in a specified `F_good_sample`, compute the line based tension index `tau(sigma0; T)`.
+3. Empirically check whether:
+   - the minima of `tau(sigma0; T)` cluster near `sigma = 1 / 2`,
+   - the gradient of `tau` in `sigma` respects simple regularity bounds that follow from the TU assumptions.
+
+If repeated experiments show persistent and robust minima far away from `sigma = 1 / 2` for many reasonable choices of `F` and large `T`, this would falsify the simplest TU encoding of spectral tension for `Q001`.
+
+### 6.3 Cross projection consistency test
+
+A second class of tests compares:
+
+- information side indicators derived from `Phi` and `Theta`, and
+- cognitive or computational side indicators derived from models that try to represent arithmetic internally.
+
+If it is systematically easier for artificial systems to achieve stable internal representations that behave as if RH were false, while still respecting the same TU constraints on tension, that would be evidence against the current encoding.
+
+---
+
+## 7. AI / WFGY engineering specification
+
+This section describes how `Q001` can be used as a specification for AI and WFGY style systems.
 
 ### 7.1 Training signals
 
-Possible tension based signals:
+Examples of training signals derived from the tension picture.
 
-- **Line tension loss**: given a model that predicts or approximates $\Phi(\sigma + i t)$, penalise deviations from a learned low tension profile that has a unique minimum near $\sigma = \tfrac{1}{2}$.  
-- **Perturbation sensitivity loss**: train embeddings or reasoning modules so that synthetic horizontal displacements of zeros produce monotone and predictable increases in tension indices.  
-- **Consistency loss with arithmetic observables**: couple predictions of $\Phi$ based indices with predictions for prime counting error terms, and penalise inconsistent joint behaviour.
+1. Spectral tension alignment loss
 
-These signals do not require RH to be true. They require only that the model tracks the known analytic structure encoded by $\zeta(s)$ and its zeros.
+   For a model that represents arithmetic data by an internal field `Phi_model(sigma, t)`, define
+
+   $$ L_spec = E_{sigma0, T} [ ( tau_model(sigma0; T) - tau_model(1 / 2; T) )_+ ] $$
+
+   where
+
+   - `tau_model` is defined from `Phi_model` by the same formulas as `tau` for the classical field,
+   - `[x]_+` denotes `max(x, 0)`,
+   - the expectation is taken over windows and bands.
+
+   This loss penalises models whose internal tension profile does not have a preferred alignment near `sigma = 1 / 2`.
+
+2. Perturbation consistency loss
+
+   - Construct synthetic perturbations of zeros in the model's internal field representation.
+   - Recompute the induced tension profiles.
+   - Penalise models where small perturbations away from the critical line do not cause the expected increase in tension.
 
 ### 7.2 Architectural patterns
 
-`Q001` encourages architectures that:
+Architectural patterns encouraged by this problem:
 
-- Maintain a **field like internal representation** over a two dimensional domain (here $\sigma$ and $t$).  
-- Include **global consistency checkers** that compare line based summaries across different $\sigma_{0}$ values.  
-- Support **adversarial perturbation analysis** where synthetic changes to zero configurations are propagated through internal fields and measured at the level of observables.
+- field like internal memories with coordinates analogous to `(sigma, t)`,
+- modules for computing line based indicators and tension functionals,
+- global controllers that align internal low tension axes across multiple tasks.
 
-In the WFGY context this problem can be used as a canonical test bed for modules that must keep a single coherent picture of an infinite structured domain.
+These patterns are compatible with the TU Beta commitments on `DeltaS` and `T_ij`.
 
 ### 7.3 Evaluation harness
 
-Possible evaluation protocol:
+A minimal evaluation harness for `Q001` can include:
 
-1. Fix a collection of windows in the critical strip.  
-2. Provide an AI model with access to numerical samples related to $\zeta(s)$ or to prime counting functions.  
-3. Ask the model to construct internal fields and to output line tension indices analogous to $\tau(\sigma_{0}; T)$.  
-4. Measure:  
-   - how sharply the model’s indices favour the critical line,  
-   - how stable this preference is under synthetic perturbations,  
-   - how well prime counting error predictions remain coherent under these perturbations.
+- tasks that require reasoning about synthetic data generated to mimic zeta like spectra,
+- stress tests where the model must maintain stable predictions under controlled perturbations of zero patterns,
+- metrics based on how close the model's internal low tension axis is to a target axis representing `sigma = 1 / 2`.
 
-This yields a quantitative benchmark of **global analytic coherence**.
+The goal is not to solve RH.  
+The goal is to measure whether the system can maintain a TU compatible spectral tension representation.
 
 ---
 
 ## 8. Cross problem transfer template
 
-Reusable components contributed by `Q001` include:
+`Q001` contributes several reusable components to the wider TU toolkit:
 
-- A **spectral tension functional family** on complex domains.  
-- The concept of a **single alignment axis** (here $\sigma = \tfrac{1}{2}$) identified by line averaged indices.  
-- A set of **counterfactual patterns** for how global fields deform when a conjectural alignment fails.  
-- An evaluation template where synthetic perturbations of hidden structure are used to stress test AI models.
+- Field type: complex valued scalar field over a strip in a plane, with phase and magnitude components.
+- Tension indicators: curvature based `K`, gradient based `G`, and line based averages.
+- Functionals: families of tension functionals over line segments and strips, with a distinguished low tension axis.
+- Tests: numerical extremality tests and perturbation consistency tests.
 
-These elements can be re used in:
+These components can be reused in at least the following problems:
 
-- Q002 (Generalised Riemann Hypothesis): extension to Dirichlet $L$ functions.  
-- Problems on pair correlation and local statistics of zeros.  
-- Complexity theoretic problems where alignment axes represent phase transition boundaries in configuration space.  
-- Multi agent problems where global coherence requires a shared tension minimising configuration.
+- `Q002` generalised Riemann hypotheses for families of L functions.
+- `Q018` pair correlation and local statistics of zeros.
+- `Q051` complexity landscapes where an alignment axis plays a similar role.
+- `Q091` models of heavy tail risks where alignment of spectra with a reference axis matters.
+
+The transfer is at the level of structure and testing patterns, not at the level of detailed formulas.
 
 ---
 
@@ -365,40 +439,66 @@ These elements can be re used in:
 
 ### 9.1 TU penetration level
 
-Provisional penetration level for `Q001`:
+For `Q001` the current TU penetration level is:
 
-- **E1**: state space and tension functionals are clearly defined at the effective layer.  
-- Partial progress toward **E2**: there are explicit numerical experiments that could be carried out using existing zeta zero tables and numerical libraries.
+- `E1` to `E2` on the effective scale:
 
-This entry does not claim higher levels such as fully implemented PDE or agent models.
+  - `E1`: well defined fields, observables, and tension functionals at the effective layer.
+  - moving towards `E2`: some concrete numerical tests can be defined and implemented in principle.
 
-### 9.2 Internal maturity level
+The document does not yet specify a full PDE or agent model that reaches `E3`.
 
-Internal document maturity rating:
+Internal document maturity level:
 
-- **N1**: TU skeleton complete at the definition and constraint level.  
-- Future upgrades to **N2** would require running the MVP experiments and publishing numerical results in a reproducible form.
+- `N1` to `N2`:
+
+  - `N1`: TU skeleton is present and consistent with the Beta decisions.
+  - partial `N2`: some experiments are sketched but not fully executed or validated.
+
+### 9.2 Engineering acceptance
+
+We do not yet claim full "PDE engineerable" status for this entry.
+
+- Explicit state variables and observables are defined.
+- Evolution laws are only sketched through tension functionals and extremality patterns.
+
+According to the TU Core Universal Contract, this is labelled as "conceptual mapping only" for now.
 
 ---
 
 ## 10. Elementary but precise explanation
 
-In simple terms:
+This section is written for a reader who knows basic complex numbers and calculus, but not analytic number theory.
 
-- There is a special function $\zeta(s)$ built from the integers.  
-- In a certain vertical strip of the complex plane, this function has many zeros.  
-- All known nontrivial zeros sit exactly on a single vertical line.  
-- The Riemann Hypothesis says that **every** such zero is on that line.
+1. The classical problem
 
-The TU encoding takes a conservative position:
+   - There is a special function `zeta(s)` that encodes deep information about prime numbers.
+   - It has many zeros in a vertical strip `0 < real part of s < 1`.
+   - The Riemann Hypothesis says that all important zeros in this strip lie exactly on the middle line `real part = 1 / 2`.
 
-- It does not try to prove or disprove RH.  
-- It treats values of $\zeta(s)$ as a field over the complex plane and measures how the field bends and changes along vertical lines.  
-- From this it builds tension indices that summarise how “strained” the field is at each horizontal location.
+2. The TU viewpoint
 
-Then it asks two concrete questions:
+   - We look at this strip as a plane with coordinates `(sigma, t)`.
+   - Over each point we define numbers that describe how big `zeta(s)` is and how quickly it changes.
+   - From these numbers we build simple indicators of "tension" along vertical lines, such as how curved and how rough the field is.
 
-1. If all zeros really are on one line, do broad classes of tension indices see that line as a uniquely calm place.  
-2. If some zeros were off that line, would the resulting field look much more contorted than what we expect from known analytic facts.
+3. Low tension axis
 
-For AI and WFGY systems this problem is a structured test of whether a model can maintain a single global picture over infinitely many related local calculations. The model does not need to solve the Riemann Hypothesis. It needs to keep its internal field and its predictions about primes consistent in a way that matches the observed tension patterns of $\zeta(s)$.
+   - For each vertical line we can measure an average tension value.
+   - The TU idea is that in a world where RH is true, many reasonable ways to define such averages will prefer the same line, near `sigma = 1 / 2`.
+   - In a world where RH is false, keeping everything consistent would typically require more complicated and less natural patterns.
+
+4. Tests for the encoding
+
+   - We can run numerical experiments that approximate these tension quantities and see whether a clear minimum near `sigma = 1 / 2` appears.
+   - If not, this does not prove RH false, but it would show that our current way of encoding the problem in TU language is not adequate.
+
+5. Use for AI and WFGY
+
+   - We can ask an AI system to build its own internal field that behaves like `zeta(s)`.
+   - We then measure whether this system also finds a stable low tension axis near `sigma = 1 / 2`.
+   - This turns `Q001` into a benchmark for how well the system can represent and align a complex but structured mathematical object.
+
+The entire document stays at the effective layer.  
+It does not claim to know the true deep rules of the universe.  
+It only specifies what a TU compatible encoding of the Riemann Hypothesis should look like and how that encoding can be tested and used.
