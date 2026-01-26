@@ -1,57 +1,20 @@
 # Q078 · From genotype to phenotype
 
-**BH Code**: `BH_BIO_DEVELOPMENTAL_L3_078`
-**Domain**: Biology
-**Family**: Developmental genetics / evo-devo
-**Rank**: S
-**Projection**: L3 (dynamics) with L2 (information) as the primary effective projection
-**Status**: Open problem (no general predictive genotype-to-phenotype theory)
-
----
-
-## 0. Header metadata (Constitution Block)
+## 0. Header metadata
 
 ```txt
-BH_code: BH_BIO_DEVELOPMENTAL_L3_078
-Title: From genotype to phenotype
+ID: Q078
+Code: BH_BIO_DEVELOPMENTAL_L3_078
 Domain: Biology
-Family: Developmental genetics and evo-devo
+Family: Developmental and systems biology
 Rank: S
-Projection_dominance: L2 (information) over L3 (developmental dynamics)
-Field_type: dynamical_field on (genotype × developmental_state × environment)
-Tension_type: consistency_tension between robustness, modularity, and evolvability
-
+Projection_dominance: P
+Field_type: dynamical_field
+Tension_type: consistency_tension
+Status: Open
 Semantics: hybrid
-  - Genotype is discrete (finite alphabet sequences and variants).
-  - Phenotype is encoded as a finite-dimensional continuous / categorical vector of traits.
-  - Development is a time-indexed process that updates cell states and tissue geometry.
-
-S_sing:
-  - Singular configurations occur when small perturbations in genotype or early developmental conditions
-    lead to large, topology-changing jumps in the encoded phenotype space (catastrophic bifurcations),
-    and when no member of a fixed, low-complexity modular reference family can approximate the local
-    genotype-to-phenotype map without loss exploding.
-
-Domain_restriction:
-  - DNA-based organisms with:
-      * a stable, heritable genome,
-      * a recognizable developmental program (cell lineages, regulatory networks, morphogen fields),
-      * phenotypes describable by a finite trait vector (shape, organs, key functions),
-      * environments that can be represented by a finite-dimensional context vector.
-  - We restrict attention to windows in genotype space where:
-      * recombination and mutation rates are within empirically observed biological ranges,
-      * selection is not so extreme that only a single genotype is viable,
-      * developmental noise is bounded (non-pathological stochasticity).
-
 E_level: E1
-  - We specify a concrete tension functional and finite reference family for the effective map.
-  - We give experimental designs that could estimate or falsify this encoding.
-  - We do not claim a complete or solved general theory.
-
 N_level: N2
-  - Narrative is structured and cross-linked to the BlackHole problem graph.
-  - TU terms and objects are defined only at the effective layer.
-
 Last_updated: 2026-01-25
 ```
 
@@ -59,484 +22,850 @@ Last_updated: 2026-01-25
 
 ## 1. Canonical problem and status
 
-**Canonical statement (field-neutral).**
+### 1.1 Canonical statement
 
-Given a DNA genotype and an environment, biology would like a theory that can:
+The canonical problem behind Q078 is to understand, at a scientific and engineering level, how genetic information, regulatory systems, and environments jointly determine organismal phenotypes.
 
-1. Predict the resulting organism-level phenotype (form, physiology, behavior) with controlled approximation error.
-2. Explain how robustness to mutations and environmental noise coexists with the ability to evolve new forms.
-3. Organize the immense combinatorial space of genotypes into a smaller number of functional “developmental programs”.
+In classical terms:
 
-This is often framed as the problem of understanding the **genotype-phenotype (G-P) map** and its structure. In practice, this involves at least three coupled questions:
+* The **genotype** is the heritable specification (for example genomic sequence and its structural organization).
+* The **phenotype** is the realized structure and function of an organism at one or more scales (morphology, physiology, behavior and so on).
+* The **genotype to phenotype map** is the collection of regularities that link variation in genotype and environment to variation in phenotype through development.
 
-* How gene regulatory networks, signaling pathways, and physical cell interactions transform genomic information into morphogenesis and functional tissues.([ScienceDirect][1])
-* How epistasis, pleiotropy, and modularity shape the topology of fitness landscapes and the accessible evolutionary paths.([ScienceDirect][2])
-* How to construct quantitative models where changes in sequence (mutations, recombination) can be mapped to probabilistic changes in phenotypes across environments.([scholar.google.es][3])
+Key questions include:
 
-**Status.**
+* How structured and low dimensional is this map, once expressed in appropriate variables.
+* How robustness and modularity emerge from underlying biochemical and developmental dynamics.
+* To what extent the map can be compressed into reusable principles, as opposed to being effectively idiosyncratic for each organism and context.
 
-There are many powerful partial models:
+Q078 does not attempt to solve these biological questions inside TU. Instead it encodes them at the effective layer in terms of observable maps, robustness and consistency tension between genetic information and realized phenotype.
 
-* Quantitative genetics and GWAS for complex traits in model organisms and humans.([scholar.google.es][3])
-* Empirical fitness landscape studies of small genotype neighborhoods.([ScienceDirect][2])
-* Network models and evo-devo frameworks that explain specific developmental mechanisms and constraints.([ScienceDirect][1])
+### 1.2 Status and difficulty
 
-However, there is **no generally accepted, cross-system theory** that:
+From the external scientific viewpoint:
 
-* provides a compact, predictive description of the full map from genotype to phenotype, and
-* unifies robustness, modularity, and evolvability under a small set of structural principles,
-* while remaining quantitatively testable across very different organisms and traits.
+* There is no universally accepted, complete theory of the genotype to phenotype map, even for well studied model organisms.
+* There are strong partial theories:
 
-In this entry we stay within the effective layer of the Tension Universe (TU). We propose:
+  * gene regulatory networks and developmental pathways,
+  * quantitative genetics and statistical models of trait architecture,
+  * evo devo accounts of modularity, robustness and innovation,
+  * systems biology descriptions of multiscale regulation.
 
-* a specific way to encode “tension” in the genotype-to-phenotype problem,
-* an associated set of observables and reference models,
-* and experiments that could falsify this encoding without claiming to solve the canonical biological question itself.
+However:
 
-**Canonical references (field level, not TU-specific).**
+* The mapping is high dimensional, context dependent and strongly shaped by development and environment.
+* Many observed traits are influenced by large numbers of loci and interactions.
+* For complex traits, predictive power from genotype alone is often limited or fragile.
 
-[1] Dowell et al., “Genotype to phenotype: a complex problem,” Science 328, 469 (2010).([scholar.google.es][3])
-[2] de Vienne, “The genotype–phenotype relationship and evolutionary systems biology,” Chapter in Evolutionary Systems Biology (2023).([ScienceDirect][1])
-[3] Fragata et al., “Evolution in the light of fitness landscape theory,” Trends in Ecology & Evolution 34, 69–82 (2019).([ScienceDirect][2])
-[4] Weiss, “Structural Properties of Genotype–Phenotype Maps: Models, Estimates, and Evolution,” PhD thesis, 2021.([repository.cam.ac.uk][4])
+This makes Q078 an S rank problem in the BlackHole collection. It is not a single conjecture like Q001, but a structural question about whether the genotype to phenotype map admits a low tension, reusable effective description.
+
+### 1.3 Role in the BlackHole project
+
+Within the BlackHole S problem collection, Q078 plays three roles:
+
+1. It is the primary biological node where genetic information, development and environment are tied together into a single effective map.
+2. It anchors a cluster of downstream problems about aging, microbiomes, origin of eukaryotes and biosphere level adaptability that all depend on how structured or brittle this map is.
+3. It provides a biological template for TU style consistency_tension between low level codes and emergent configurations that can be reused in neuroscience and AI interpretability.
+
+### References
+
+1. National Human Genome Research Institute (NHGRI). "A Brief Guide to Genotype and Phenotype." Official educational resource, latest revision.
+2. Carroll, S. B. (2005). *Endless Forms Most Beautiful: The New Science of Evo Devo.* W. W. Norton.
+3. Alberts, B. et al. *Molecular Biology of the Cell.* Latest edition, Garland Science. Chapters on gene regulation and development.
+4. Wagner, A. (2011). *The Origins of Evolutionary Innovations: A Theory of Transformative Change in Living Systems.* Oxford University Press.
+5. Wagner, G. P., Pavlicev, M., Cheverud, J. M. (2007). "The road to modularity." *Nature Reviews Genetics*, 8(12), 921–931.
+6. Stern, D. L., Orgogozo, V. (2008). "The loci of evolution: how predictable is genetic evolution?" *Evolution*, 62(9), 2155–2177.
 
 ---
 
 ## 2. Position in the BlackHole graph
 
-**Upstream dependencies (problems that feed into Q078).**
+This block records Q078 as a node in the BlackHole graph. Each edge has a single line reason and points to planned components or tension types.
 
-* Q071 · Origin of life
-  How replicating chemical systems first acquired information-bearing structures and heredity.
-* Q072 · Origin of the genetic code
-  Why the mapping from codons to amino acids has its current structure and redundancy.
-* Q073 · Mechanisms of major evolutionary transitions
-  How new levels of organization (multicellularity, sociality) emerge.
-* Q074 · Robustness of cell differentiation
-  How stable cell fates arise from noisy molecular processes.
-* Q063 · Full physical solution of protein folding
-  How primary amino acid sequences map to folded structures and local dynamics.
+### 2.1 Upstream problems
 
-Q078 assumes that these ingredients exist in some form. It then asks how they assemble into an organism-scale map from genotype and environment to phenotype.
+These provide prerequisites or tools for Q078 at the effective layer.
 
-**Downstream and coupled problems (that rely on Q078’s structure).**
+* Q071 `BH_BIO_ORIGIN_L3_071`
+  Reason: supplies origin of self replicating informational systems that make genotype spaces meaningful for the `DevMap_field`.
 
-* Q075 · Fundamental mechanisms of aging
-  Requires a notion of how accumulated genotypic and epigenetic changes map to age-dependent phenotypes.
-* Q076 · Full immune repertoire dynamics
-  Needs a structured map from receptor sequences to binding specificities and functional immune phenotypes.
-* Q077 · Host microbiome co-evolution
-  Depends on how host and microbial genotypes jointly shape host phenotypes.
-* Q080 · Limits of biosphere adaptability
-  Relies on how genotype-phenotype maps constrain adaptation to extreme conditions.
-* Q083 · Neural coding principles
-  Involves a nested G-P map from genome to neural architectures and coding schemes.
+* Q072 `BH_BIO_GENETIC_CODE_L3_072`
+  Reason: fixes the basic symbolic mapping from codons to amino acids that underlies all later genotype to phenotype encodings.
 
-**Cross-domain analogues.**
+* Q074 `BH_BIO_CELL_DIFFER_L3_074`
+  Reason: provides mechanisms of cell fate and differentiation that act as local modules inside the global genotype to phenotype map.
 
-Q078 also shares a structural pattern with:
+* Q076 `BH_BIO_IMMUNE_CODE_L3_076`
+  Reason: contributes examples of highly plastic but rule governed mappings in somatic diversification and immune repertoires.
 
-* Q041 · Nature of dark matter (hidden degrees of freedom inferred from observed structure).
-* Q083 · Neural coding principles (map from microscopic spiking patterns to macroscopic representations).
-* Q095 · Drivers of biodiversity loss and recovery (how genotype and phenotype distributions respond to perturbations).
+### 2.2 Downstream problems
 
-From a TU viewpoint, Q078 is a central “map-from-micro-to-macro” node that informs many other S-problems.
+These reuse components of Q078 or depend on its tension structure.
+
+* Q075 `BH_BIO_AGING_L3_075`
+  Reason: reuses `DevMap_robustness_profile` to study how genotype to phenotype mappings degrade or reconfigure over aging trajectories.
+
+* Q077 `BH_BIO_MICROBIOME_L3_077`
+  Reason: uses `HostPheno_state` and `DevMap_environment_coupling` to model host phenotype constraints on microbiome composition.
+
+* Q079 `BH_BIO_ORIGIN_EUKARYOTES_L3_079`
+  Reason: builds on `DevMap_compartment_structure` to understand how endosymbiosis reshapes genotype to phenotype mappings.
+
+* Q080 `BH_BIO_BIOSPHERE_LIMITS_L3_080`
+  Reason: uses `DevMap_adaptability_index` to relate genomic diversity to phenotypic range and biosphere level adaptability limits.
+
+### 2.3 Parallel problems
+
+Parallel nodes share similar tension types without direct component dependence.
+
+* Q063 `BH_CHEM_PROTEIN_FOLDING_L3_063`
+  Reason: both address maps from sequence space to structured functional states under `Map_complex_energy_landscape` type tension.
+
+* Q083 `BH_NEURO_CODE_L3_083`
+  Reason: both encode high dimensional maps from low level codes to emergent functional configurations under consistency_tension.
+
+* Q081 `BH_NEURO_CONSCIOUS_HARD_L3_081`
+  Reason: both discuss mappings from physical substrates to emergent properties, but Q078 stays at a mechanistic biological layer.
+
+### 2.4 Cross domain edges
+
+Cross domain edges connect to other disciplines that reuse Q078 style components.
+
+* Q059 `BH_CS_INFO_THERMODYN_L3_059`
+  Reason: reuses `Information_to_state_tension` to quantify thermodynamic and informational costs of genotype to phenotype transformations.
+
+* Q031 `BH_PHYS_QINFO_L3_031`
+  Reason: shares `Channel_capacity_vs_robustness` observables for mappings from input information to constrained output states.
+
+* Q123 `BH_AI_INTERP_L3_123`
+  Reason: borrows `DevMap_modularity_pattern` to interpret internal neural network representations as learned genotype to phenotype like mappings.
 
 ---
 
 ## 3. Tension Universe encoding (effective layer)
 
-We now describe how Q078 is represented inside the TU effective layer, without exposing any TU bottom-layer axioms or generation rules.
+All content in this block is at the effective layer. We describe only:
 
-### 3.1 Basic objects
+* state spaces,
+* observables and fields,
+* invariants and tension scores,
+* singular sets and domain restrictions.
 
-We work with the following effective objects.
+No rules are given for how to construct TU internal fields from raw biological data.
 
-* Genotype space
-  A genotype is a vector
-  g in G = {0,1,...,A-1}^L
-  representing alleles at L loci (A can vary per locus but is encoded into a fixed alphabet).
+### 3.1 State space
 
-* Environment space
-  An environment is a vector
-  e in E_env = R^d_env
-  collecting controlled external variables (nutrients, temperature, signals) and coarse internal states (hormones, microbiome indices, etc.).
+We introduce an effective developmental state space:
 
-* Developmental program state
-  A developmental state is a vector
-  x_t in X_dev
-  capturing cell types, gene expression fields, tissue geometry and other coarse-grained variables at developmental time t.
+```txt
+M_dev
+```
 
-* Phenotype space
-  A phenotype is encoded as
-  y in P = R^d_pheno × C_cat
-  where R^d_pheno are quantitative traits (sizes, shapes, timing, functional scores) and C_cat are categorical labels (e.g. presence/absence of organs, discrete behaviors).
+Each state `m` in `M_dev` represents a coherent genotype to phenotype configuration at one chosen scale. We assume that each `m` can be written as an effective tuple:
 
-We assume there exists a ground truth map
+```txt
+m = (G_eff(m), R_eff(m), E_eff(m), P_eff(m))
+```
 
-* F_real : (g, e) -> distribution over trajectories x_0:T and phenotypes y.
+where:
 
-We never access F_real directly. We only see empirical samples (g_i, e_i, y_i) and possibly partial developmental observables.
+* `G_eff(m)` is an effective genomic descriptor (for example modules of genes and regulatory elements).
+* `R_eff(m)` is an effective regulatory landscape descriptor (for example network motifs and signaling modules).
+* `E_eff(m)` is an effective environment descriptor at developmental scales.
+* `P_eff(m)` is an effective phenotypic descriptor at the same scale (traits, morphologies, functional profiles).
 
-### 3.2 Admissible encodings and reference family
+We assume:
 
-To avoid “free lunch” encodings, we restrict both how we represent data and what reference models are allowed.
+* Each component lives in a finite dimensional parameter space that can be treated as a subset of some R^k.
+* For the class of states considered, all four components are well defined and finite.
 
-**Genotype encoding.**
+We do not describe how these effective descriptors are computed from sequences, experiments or simulations.
 
-We only allow encoders Enc_G in a finite class E_dev that:
+### 3.2 Finite libraries and admissible encoding class
 
-1. Map g to a finite-dimensional feature vector z = Enc_G(g) in R^d_z.
-2. Are **local** in genomic coordinates up to a fixed radius r_loc (e.g., they can aggregate variants within windows, but cannot introduce arbitrary cross-genome wiring).
-3. Have bounded description length (e.g., a fixed architecture template with at most K parameters per locus window, with K and r_loc fixed in advance for a given experimental program).
+To avoid free tuning and to keep encodings auditable, we specify:
 
-**Phenotype encoding.**
+1. A finite library of genotype modules:
 
-We use a finite library of phenotype encoders Enc_P that:
+```txt
+Lib_G = {g_1, g_2, ..., g_NG}
+```
 
-1. Map raw phenotype descriptions (images, time series, anatomical measurements) into vectors y in R^d_pheno × C_cat.
-2. Are defined by fixed protocols and algorithms (e.g., landmark-based shape descriptors, PCA of standardized measurements) that do not depend on individual genotypes.
-3. Have bounded complexity and are fixed before fitting any genotype-phenotype model.
+2. A finite library of phenotypic traits or modules:
 
-**Developmental kernels (reference family).**
+```txt
+Lib_P = {p_1, p_2, ..., p_NP}
+```
 
-We posit a finite library K_dev = {K_1,...,K_M} of **developmental kernels**. Each kernel K_m has the form
+3. A library of environmental and regulatory modules:
 
-* K_m : (local_genotype, local_state, local_env) -> update_in_state_or_trait
+```txt
+Lib_E = {e_1, ..., e_NE}
+Lib_R = {r_1, ..., r_NR}
+```
+
+An **admissible developmental encoding** is any mapping in the class:
+
+```txt
+E_dev = { Gamma_r : (G_eff, R_eff, E_eff) -> P_eff  | r in R_res }
+```
 
 with the following constraints:
 
-1. Locality. Each kernel only sees a bounded neighborhood in genotype and developmental space.
-2. Lipschitz continuity in its continuous arguments up to fixed constants.
-3. Bounded parameter count per kernel (independent of genome length or population size).
-4. No explicit time-dependent or genotype-dependent rewiring of the network topology.
+* For each resolution index `r` in a fixed index set `R_res`, `Gamma_r` uses only modules from `Lib_G`, `Lib_R`, `Lib_E` and outputs traits from `Lib_P`.
+* The functional form of `Gamma_r` is fixed before any experiment or dataset is selected.
+* `Gamma_r` cannot depend on the specific empirical states `m` on which we later evaluate tension.
+* Refinement means moving from a coarser index `r` to a finer one in `R_res`, not arbitrarily changing the library.
 
-A **reference genotype-to-phenotype map** F_ref in our admissible family F_adm is constructed by:
+This defines a concrete encoding class that can be checked externally.
 
-* choosing a small number of kernels from K_dev (with repetition allowed),
-* wiring them together in a fixed, acyclic template of developmental stages,
-* and composing their actions over a fixed number of time steps T_ref to produce an encoded phenotype y_ref.
+### 3.3 Effective observables
 
-The library K_dev and the wiring template are part of the experimental program and are not adjusted per dataset after seeing outcomes.
+On `M_dev` we define the following observables, always as effective layer maps.
 
-### 3.3 Tension functional for Q078
+1. Developmental coherence observable
 
-We now define a TU tension functional that measures how far F_real is from this constrained modular family F_adm.
+```txt
+DevMap_coherence(m; r) >= 0
+```
 
-Given:
+* Input: state `m`, resolution index `r`.
+* Output: a scalar summarizing how predictably `Gamma_r` maps `G_eff(m), R_eff(m), E_eff(m)` to `P_eff(m)`.
+* Interpretation: higher values indicate better match between encoded mapping and observed phenotype.
 
-* an empirical distribution mu over (g, e, y), defined by a designed set of genotypes and environments;
-* an admissible encoding (Enc_G, Enc_P) chosen from the finite libraries above;
-* a loss function L_y that measures discrepancy between predicted and observed encoded phenotypes,
+2. Developmental robustness observable
 
-we define the **genotype-to-phenotype tension** at resolution scale r as
+```txt
+DevMap_robustness(m; r) >= 0
+```
 
-1. Fit the best reference model in F_adm:
+We fix in advance a finite set of standardized perturbations:
 
-   T1. Encode data:
-   z_i = Enc_G(g_i),
-   y_i_enc = Enc_P(y_i).
+```txt
+Perturb_set(r) = {delta_1, ..., delta_K(r)}
+```
 
-   T2. Consider all models F in F_adm with at most r_ref kernels from K_dev (r_ref is the “resolution” parameter).
+Each `delta_k` describes a small change in `G_eff` or `E_eff` allowed at resolution `r`. Then:
 
-   T3. Among these, choose F_ref*(r) that minimizes expected loss
+* `DevMap_robustness(m; r)` is defined using only `Perturb_set(r)` and measures how stable `P_eff(m)` remains under these perturbations when propagated through `Gamma_r`.
 
-   ```
-   Loss_ref(r) = E_mu[ L_y( F(z,e; r), y_enc ) ].
-   ```
+3. Modularity observable
 
-2. Fit an unconstrained but still finite-capacity baseline family F_flex (e.g., a generic black-box regressor with capacity matched to K_dev but without local wiring constraints) and obtain its minimal loss Loss_flex.
+```txt
+DevMap_modularity(m; r) >= 0
+```
 
-3. Define the normalized tension
+* Summarizes how well phenotype modules in `P_eff(m)` can be explained as combinations of genotype and regulatory modules from `Lib_G` and `Lib_R` under `Gamma_r`.
+* Values are constrained to a fixed interval, for example `[0, 1]`, where higher values indicate stronger modular structure.
 
-   T_G2P(r) = (Loss_ref(r) - Loss_flex) / (Loss_flex + epsilon)
+4. Developmental mismatch observable
 
-where epsilon is a small positive constant for numerical stability.
+We fix a reference class of structured genotype to phenotype maps:
 
-**Interpretation.**
+```txt
+Ref_dev = { Gamma_r^ref | r in R_res }
+```
 
-* T_G2P(r) near 0 means the genotype-to-phenotype map can be approximated, at this resolution and within this domain restriction, by a small number of local, modular developmental kernels.
-* Large T_G2P(r) means that any such modular approximation systematically fails compared to a flexible black-box model. This indicates strong, irreducible high-order epistasis or nonlocal developmental effects relative to our chosen reference class.
+This reference class is chosen once, using standard developmental models and known examples, and does not depend on later data. For each `m` and `r` we define:
 
-**Singular tension S_sing.**
+```txt
+DeltaS_dev(m; r) >= 0
+```
 
-We call a regime singular if, even as we increase r_ref up to a pre-fixed large bound r_max,
+as a scalar measuring how far the observed mapping encoded in `m` deviates from the reference class predictions at resolution `r`.
 
-* T_G2P(r) stays above a high threshold T_crit across all scales r in [1, r_max],
-* while Loss_flex remains low.
+We require:
 
-In that case, the system behaves like a genotype-to-phenotype map that cannot be compressed into our finite modular dictionary. This is a singular pattern for this TU encoding of Q078.
+* `DeltaS_dev(m; r) = 0` if the encoded mapping matches a reference mapping within pre specified tolerance at that resolution.
+* `DeltaS_dev` is computed using only `Gamma_r`, `Gamma_r^ref` and the library elements, not by tuning after seeing results.
 
-We emphasize:
+### 3.4 Tension tensor component and regular subset
 
-* The choice of K_dev, Enc_G, Enc_P, and F_flex is part of the **experiment definition**, not part of the unknown biology.
-* Different experimental programs may choose different (but still finite and pre-registered) libraries.
-* E_level = E1 means we stop at specifying this functional and its required ingredients.
+We define a developmental tension tensor component at the effective layer:
+
+```txt
+T_dev(m; r) = S_dev(m; r) * C_dev(m; r) * DeltaS_dev(m; r) * lambda_dev(m; r) * kappa_dev
+```
+
+where:
+
+* `S_dev(m; r)` is a source like factor summarizing how many genotype and regulatory modules are actively engaged.
+* `C_dev(m; r)` is a receptivity factor summarizing how sensitive downstream phenotypic modules are to mismatch.
+* `DeltaS_dev(m; r)` is the developmental mismatch defined above.
+* `lambda_dev(m; r)` indicates the local convergence state of developmental reasoning about this map, constrained to a fixed interval.
+* `kappa_dev` is a constant setting the overall scale for this problem.
+
+Some states may lead to undefined or non finite observables (for example if `Gamma_r` is not applicable at a chosen resolution). We define the singular set:
+
+```txt
+S_sing_dev = { m in M_dev : for some r, DeltaS_dev(m; r) or DevMap_coherence(m; r) is not finite or not defined }
+```
+
+We then restrict analysis to the regular subset:
+
+```txt
+M_dev_reg = M_dev \ S_sing_dev
+```
+
+All later invariants and experiments are defined only on `M_dev_reg`.
+
+### 3.5 Invariants
+
+We define two invariants using the resolution index set `R_res`.
+
+1. Multi scale coherence invariant
+
+```txt
+I_coh(m) = max over r in R_res of DevMap_coherence(m; r)
+```
+
+Since `R_res` is finite or countable and fixed, this is a well defined maximum or supremum over a constrained set.
+
+2. Multi scale mismatch invariant
+
+```txt
+I_mismatch(m) = max over r in R_res of DeltaS_dev(m; r)
+```
+
+In low tension worlds we expect that for world representing states:
+
+* `I_coh(m)` stays high across `R_res`.
+* `I_mismatch(m)` can be kept within a bounded range that does not grow without bound as resolution increases.
 
 ---
 
 ## 4. Tension principle for this problem
 
-At the effective layer, TU encodes Q078 through a three-way tension:
+This block states how Q078 is framed as a tension problem inside TU.
 
-1. **Robustness.** Many small genetic and environmental perturbations leave the phenotype essentially unchanged.
-2. **Evolvability.** There exist directions in genotype space where perturbations can produce large, coherent phenotypic innovations.
-3. **Compressibility.** The map from genotype to phenotype is generated by a small number of reusable developmental kernels and constraints, not by an arbitrary lookup table.
+### 4.1 Core tension functional
 
-The **tension principle** is:
+We define a developmental tension functional on `M_dev_reg`:
 
-> A biologically realistic genotype-to-phenotype map simultaneously satisfies strong robustness in most local directions, high evolvability along a sparse set of “developmental ridge” directions, and high compressibility into a finite modular kernel family. When this triple is impossible within a given reference family, the residual mismatch is measured as T_G2P(r).
+```txt
+Tension_dev(m) = F(DevMap_coherence(m; r), DevMap_robustness(m; r),
+                   DevMap_modularity(m; r), DeltaS_dev(m; r), r in R_res)
+```
 
-In other words:
+For practical use we take a linear example:
 
-* If we try to explain robustness and evolvability without modular structure, we need extremely fine tuning, which should show up as high tension.
-* If we insist on too rigid a modular structure, we may predict robustness but fail to capture real phenotypic diversity, again increasing tension.
-* The “good” regime is where a small modular family suffices to reproduce both stiffness (robustness) and flexibility (evolvability) over the tested domain.
+```txt
+Tension_dev(m) = a_coh * (C_max - I_coh(m))
+               + a_rob * R_penalty(m)
+               + a_mod * (M_max - avg_r DevMap_modularity(m; r))
+               + a_mis * I_mismatch(m)
+```
 
-Q078 asks whether such a “good regime” exists in nature and, if so, how it can be characterized and generalized.
+where:
+
+* `a_coh, a_rob, a_mod, a_mis` are fixed positive weights chosen once before experiments.
+* `C_max` and `M_max` are fixed upper reference values for coherence and modularity.
+* `R_penalty(m)` is a nonnegative function of `DevMap_robustness(m; r)` values.
+* `avg_r` is an average over `R_res` using a fixed weight scheme.
+
+This functional satisfies:
+
+* `Tension_dev(m) >= 0` for all `m` in `M_dev_reg`.
+* If the map is highly coherent, robust, modular and close to reference, then `Tension_dev(m)` is small.
+* If any of these properties fail badly across scales, `Tension_dev(m)` grows.
+
+The functional form and all constants are part of the encoding and must be fixed before applying the scheme to real datasets.
+
+### 4.2 Low tension developmental worlds
+
+At the effective layer, a world is **low tension for Q078** if the following holds:
+
+* There exists at least one admissible encoding in `E_dev` and at least one choice of fixed parameters for `Tension_dev` such that for world representing states `m_world`:
+
+```txt
+Tension_dev(m_world) <= epsilon_dev
+```
+
+for some small threshold `epsilon_dev` that does not grow without bound when resolution is increased within `R_res`.
+
+Intuitively:
+
+* Small structured changes in genotype and environment lead to predictable phenotypic changes.
+* Modularity and robustness indicators are stable and interpretable.
+* Developmental rules compress most observed genotype to phenotype variation at the chosen scales.
+
+### 4.3 High tension developmental worlds
+
+A world is **high tension for Q078** if, for any encoding in `E_dev` that respects the libraries and fairness constraints, and for any admissible fixed parameter choice:
+
+* For world representing states `m_world` there exists a positive lower bound `delta_dev` such that:
+
+```txt
+Tension_dev(m_world) >= delta_dev > 0
+```
+
+that cannot be reduced arbitrarily by refining resolution or modestly adjusting encoding parameters.
+
+Intuitively:
+
+* Genotype to phenotype relationships remain effectively brittle or opaque across scales.
+* Robuster modular developmental rules do not emerge under any fair encoding.
+* The map cannot be compressed without losing essential structure or predictive power.
+
+Q078 then asks whether the biological universe we observe looks more like a low tension or high tension developmental world under this effective description.
 
 ---
 
 ## 5. Counterfactual tension worlds
 
-To clarify what is at stake, we list several fully coherent but mutually incompatible “worlds” that resolve Q078 in very different ways.
+We now describe two counterfactual worlds, both strictly at the effective layer and only in terms of observables and tension patterns.
 
-1. **World A: Purely additive genes.**
+### 5.1 World T: structured genotype to phenotype map
 
-   * Phenotypes are linear functions of genotype plus noise.
-   * Epistasis is negligible after reparameterization.
-   * A small additive model fits Loss_ref(r) almost as well as any flexible model.
-     In this world T_G2P(r) would be near zero for very small r. Real data already contradict this in many systems.
+World T assumptions:
 
-2. **World B: Completely idiosyncratic lookup table.**
+1. Existence of a good encoding
 
-   * Every genotype-environment pair has its own independent phenotype, with no shared structure.
-   * No modular compression is possible, and robustness is extremely rare.
-     T_G2P(r) would stay high even for very large r, and Loss_flex would be almost as high as Loss_ref. This world is incompatible with observed robustness and modularity.
+There exists an admissible encoding `Gamma_r` in `E_dev` and fixed parameters for `Tension_dev` such that for world representing states `m_T`:
 
-3. **World C: Fully chaotic development.**
+```txt
+Tension_dev(m_T) is small and stable across r in R_res
+```
 
-   * Small perturbations in genotype or early development cause essentially random phenotypic outcomes.
-   * There is no stable notion of phenotype class under small changes.
-     Singular tension S_sing would be ubiquitous because local stability fails.
+2. Predictable perturbations
 
-4. **World D: Perfect developmental grammar.**
+For standardized perturbations in `Perturb_set(r)`:
 
-   * There exists a simple, finite generative grammar such that all real genotype-to-phenotype maps in our domain can be generated by composing a tiny set of primitives.
-   * For appropriate K_dev drawn from that grammar, T_G2P(r) would approach zero for moderate r.
+* Changes in `G_eff` and `E_eff` propagate to `P_eff` through `Gamma_r` in a way that can be compressed into a small set of rules, reflected in high `DevMap_coherence(m_T; r)` and acceptable `DevMap_robustness(m_T; r)`.
 
-The real world likely lies between B and D with elements of A and C. TU’s role at E1 is to give a language in which:
+3. Stable modularity
 
-* these possibilities are distinguishable by finite experiments, and
-* “how close we are” to the idealized modular grammar scenario can be quantified.
+`DevMap_modularity(m_T; r)` remains in a high band across `R_res`:
+
+* genotype modules in `Lib_G` and regulatory modules in `Lib_R` map to phenotypic modules in `Lib_P` in a relatively stable way across related organisms and environments.
+
+4. Cross species compression
+
+The same encoding can be reused to explain variation across related species with only moderate increases in `DeltaS_dev`, providing a cross species low tension map.
+
+### 5.2 World F: essentially unstructured map
+
+World F assumptions:
+
+1. No low tension encoding
+
+For any encoding in `E_dev` and any fixed parameter choice for `Tension_dev`:
+
+* there exists a positive lower bound `delta_dev` such that `Tension_dev(m_F) >= delta_dev` for world representing states `m_F`, regardless of which resolution indices are used.
+
+2. Fragile or chaotic perturbations
+
+Standardized perturbations lead to:
+
+* large, irregular or context specific changes in `P_eff(m_F)`,
+* low `DevMap_coherence(m_F; r)` and problematic `DevMap_robustness(m_F; r)` across scales.
+
+3. Broken modularity
+
+`DevMap_modularity(m_F; r)` oscillates or remains low:
+
+* phenotypic modules cannot be consistently connected to genotype and regulatory modules,
+* attempts to construct modular accounts yield high `DeltaS_dev` even with generous tolerance.
+
+4. Poor cross species compression
+
+No single encoding in `E_dev` can compress genotype to phenotype variation across related species without `DeltaS_dev` blowing up or `Tension_dev` moving into a clearly high tension band.
+
+### 5.3 Interpretive note
+
+These descriptions do not claim that TU constructs or simulates full developmental dynamics. They only state how observables and tension patterns would differ if the biological universe behaved like World T or World F at the effective layer.
 
 ---
 
 ## 6. Falsifiability and discriminating experiments
 
-We now describe experiments that could **falsify this TU encoding** of Q078, not the canonical biological problem itself.
+This block specifies experiments that can test and potentially falsify specific Q078 encodings. They do not solve the biological problem, but they can rule out or support particular tension encodings.
 
-### 6.1 Experiment 1: Local modularity in a developmental gene network
+### Experiment 1: Multi scale perturbation and prediction
 
-**System.**
+*Goal:*
+Test whether a fixed admissible encoding and tension functional can predict phenotypic outcomes of standardized genotype and environment perturbations better than baselines.
 
-* Choose a developmental module with known key regulators (for example, a transcription factor network controlling limb development in a model organism).
-* Construct a library of genotypes where K loci in this module are systematically mutated or recombined, yielding N genotypes g_i that densely cover a local region of genotype space.
+*Setup:*
 
-**Design.**
+* Choose a model organism with mapped developmental genetics and accessible perturbation tools.
+* Fix an encoding `Gamma_r` in `E_dev`, a set `R_res`, and all parameters in `Tension_dev` before seeing new perturbation data.
+* Predefine `Perturb_set(r)` for each `r` based on realistic experimental manipulations.
 
-1. For each genotype g_i and a small set of controlled environments e_j, measure the resulting phenotypes y_ij using a standardized protocol.
-2. Encode (g_i, y_ij) using pre-registered Enc_G and Enc_P.
-3. Define mu as the empirical distribution over (g_i, e_j, y_ij).
-4. Fit F_ref*(r) in F_adm and F_flex in F_flex as in Block 3, for a pre-registered sequence of r values (e.g. r in {2, 4, 8, 16}).
-5. Estimate T_G2P(r) for each r with confidence intervals obtained by resampling.
+*Protocol:*
 
-**Falsification condition (for this encoding).**
+1. For each perturbation in `Perturb_set(r)` at each chosen resolution, construct a state `m_data` in `M_dev_reg` that encodes `G_eff`, `R_eff`, `E_eff` before and after perturbation, plus observed `P_eff`.
+2. Use `Gamma_r` to produce predicted `P_eff` summaries from the pre perturbation side.
+3. Compute:
 
-* Choose thresholds 0 < T_low < T_high (for example, T_low = 0.05, T_high = 0.3).
-* If, for all r up to a pre-registered r_max, the **lower confidence bound** of T_G2P(r) remains above T_high, while the **upper confidence bound** of Loss_flex stays below a pre-registered small value (e.g. 0.05 of trait variance), then:
+   * prediction error statistics between predicted and observed `P_eff`,
+   * `DevMap_coherence(m_data; r)`,
+   * `DevMap_robustness(m_data; r)`,
+   * `DeltaS_dev(m_data; r)` and `Tension_dev(m_data)`.
+4. Aggregate results over all perturbations and resolutions.
 
-  * The specific modular reference family F_adm and encoding scheme are falsified as an adequate TU representation for this developmental module.
-  * This does not falsify the existence of some other, more expressive F_adm; it only disproves this particular E1 ansatz.
+*Metrics:*
 
-If instead T_G2P(r) drops below T_low for some moderate r and remains stable, this supports the claim that the map is compressible into a finite modular family at that scale.
+* Fraction of perturbations where prediction error is below a fixed threshold.
+* Distribution of `DevMap_coherence` and `DevMap_robustness` values.
+* Distribution of `Tension_dev` values across the experiment set.
 
-### 6.2 Experiment 2: Cross-context portability of developmental kernels
+*Falsification conditions:*
 
-**System.**
+Let:
 
-* Select two related developmental contexts (for example, two limb types or closely related species where homologous structures exist).
+* `theta_err` be an acceptable prediction error bound.
+* `phi_ok` be a minimum acceptable fraction of perturbations that should be predicted within `theta_err`.
+* `T_max` be a maximum acceptable median tension value for an encoding to be considered low tension in this setting.
 
-**Design.**
+Then:
 
-1. In context A, run an experiment like 6.1 to fit a set of kernels K_dev^A and obtain F_ref^A.
-2. Without changing the internal parameters of K_dev^A, only allowing relabeling and simple rescaling, attempt to reuse these kernels to fit data from context B.
-3. Measure T_G2P^A(r) and T_G2P^B(r) using the same F_adm template, and compare to a flexible baseline Loss_flex^A, Loss_flex^B.
+* If the fraction of perturbations with error below `theta_err` falls below `phi_ok`, and at the same time the median `Tension_dev` across the experiment set exceeds `T_max`, the current encoding is rejected for Q078.
+* If small adjustments of `Gamma_r` within `E_dev` lead to arbitrarily different tension profiles while keeping libraries fixed, the encoding is deemed unstable and rejected.
 
-**Falsification condition.**
+*Semantics implementation note:*
+All quantities are implemented using hybrid representations of discrete genotype like variables and continuous phenotype and environment variables, in accordance with the metadata summary.
 
-If there is no choice of finite kernel library and wiring template (constructed according to the constraints of Block 3) for which:
+*Boundary note:*
+Falsifying TU encoding != solving canonical statement. This experiment can reject specific effective encodings and parameter choices, but it does not prove or disprove any deep biological theory of genotype to phenotype mappings.
 
-* T_G2P^A(r) and T_G2P^B(r) are both simultaneously small for some moderate r,
-* while Loss_flex remains low in both contexts,
+---
 
-then our E1 encoding that assumes a reusable modular kernel family across closely related developmental systems is falsified.
+### Experiment 2: Cross species compression test
 
-Again, this only refutes this TU encoding choice. It does not claim the biological problem is solved or unsolved.
+*Goal:*
+Assess whether a single admissible encoding can compress genotype to phenotype relationships across a set of related species.
 
-### 6.3 Boundary of interpretation
+*Setup:*
 
-In both experiments:
+* Select several related species with genomic, developmental and phenotypic datasets.
+* Fix a single encoding family `Gamma_r` in `E_dev`, `R_res`, and `Tension_dev` parameters before cross species evaluation.
+* Choose a common set of modules from `Lib_G`, `Lib_R`, `Lib_E`, `Lib_P` that applies to all chosen species.
 
-* A failure of this encoding means “this particular finite modular kernel family is not sufficient as an effective TU representation for the tested systems under the chosen encodings and scales”.
-* It **does not mean** that the canonical S-problem “From genotype to phenotype” is solved or disproved. It only constrains which kinds of TU encodings remain viable at E1.
+*Protocol:*
+
+1. For each species and resolution index `r`, construct states `m_species` in `M_dev_reg` representing typical genotype, regulatory and environmental conditions and observed phenotypes.
+2. Use `Gamma_r` to fit or approximate the mapping from genotype and environment modules to phenotypic modules, subject to the fixed libraries.
+3. Compute:
+
+   * a compression ratio `C_ratio` comparing the description length of the mapping to the description length of a naive lookup table over observed conditions,
+   * `DeltaS_dev(m_species; r)` and `Tension_dev(m_species)` for each species.
+
+*Metrics:*
+
+* Distribution of `C_ratio` across species.
+* Distribution of `Tension_dev` values across species and resolutions.
+* Relation between compression ratio and tension: whether better compression systematically corresponds to lower tension.
+
+*Falsification conditions:*
+
+Let:
+
+* `C_min` be a minimum acceptable compression ratio indicating a successful structured encoding.
+* `T_band` be a band of tension values considered low for this context.
+
+Then:
+
+* If no encoding in `E_dev` achieves `C_ratio >= C_min` for more than a small fraction of species while also keeping `Tension_dev` mostly within `T_band`, this style of encoding is rejected for Q078.
+* If encodings that perform well in one species systematically fail in closely related species, with `Tension_dev` jumping into clearly high tension bands, the claim that the map is cross species low tension is rejected.
+
+*Semantics implementation note:*
+All species specific variables are represented using the same hybrid effective representation scheme as in Experiment 1, so that differences in results are not artifacts of inconsistent encodings.
+
+*Boundary note:*
+Falsifying TU encoding != solving canonical statement. Success or failure in this test only informs whether a particular effective encoding class is adequate for cross species genotype to phenotype maps.
 
 ---
 
 ## 7. AI and WFGY engineering spec
 
-We now specify what a BlackHole_Q078 module would do in an AI / WFGY system, still at the effective layer.
+This block specifies how Q078 is used as an engineering module for AI systems under WFGY, at the effective layer.
 
-### 7.1 Inputs and outputs
+### 7.1 Training signals
 
-**Inputs.**
+We define four training signals.
 
-* A dataset D of tuples (g_i, e_i, y_i) for one biological system, with:
+1. `signal_dev_coherence`
 
-  * genotypes g_i in a standard format (e.g. VCF or sequence strings),
-  * environmental descriptors e_i,
-  * phenotype observations y_i (images, measurements, categorical traits).
-* A pre-registered experimental program specification that includes:
+   * Definition: a positive penalty proportional to `(C_max - DevMap_coherence(m; r))` aggregated over relevant `r`.
+   * Purpose: encourage internal states in which genotype and environment descriptions imply phenotypes coherently under the chosen encoding.
 
-  * choice of Enc_G, Enc_P libraries and hyperparameters,
-  * choice of K_dev library and F_adm template,
-  * choice of F_flex baseline architecture,
-  * thresholds T_low, T_high, r_max, sample sizes, and resampling strategy.
+2. `signal_dev_robustness`
 
-**Outputs.**
+   * Definition: a positive penalty when small changes in effective genotype or environment representations lead to large changes in predicted phenotypic representations.
+   * Purpose: steer models toward encodings where Phenotype predictions are robust under standardized perturbations.
 
-* Encoded observables:
+3. `signal_dev_modularity`
 
-  * estimates of T_G2P(r) over a set of r values,
-  * estimates of Loss_ref(r), Loss_flex, and their confidence intervals,
-  * robustness and evolvability indices derived from the fitted models (e.g. local sensitivity, ridge directions).
-* A decision report indicating:
+   * Definition: a reward term proportional to `DevMap_modularity(m; r)`, favoring explanations built from stable modules.
+   * Purpose: promote modular internal structure that can be transferred across tasks and species.
 
-  * whether this TU encoding is falsified for the tested system at pre-registered significance levels,
-  * which scales r (if any) exhibit low tension,
-  * which directions in genotype space correspond to robust vs transformative changes.
+4. `signal_dev_tension`
 
-### 7.2 Behavioral contract (for AI implementations)
+   * Definition: a penalty proportional to `Tension_dev(m)`.
+   * Purpose: summary signal for how well the model maintains a structured genotype to phenotype map in contexts where such structure is assumed.
 
-A compliant AI module that claims to implement BlackHole_Q078 at E1 must:
+All signals are computed from internal representations mapped into the effective layer variables, without exposing any TU deep construction rules.
 
-1. Treat the choice of Enc_G, Enc_P, K_dev, F_adm template, and F_flex as part of its **configuration**, not something it re-tunes after seeing test outcomes.
-2. Keep training and evaluation splits strictly separated; it must not tune F_adm or K_dev on the evaluation phenotypes.
-3. Provide explicit numeric outputs for T_G2P(r), Loss_ref(r), and Loss_flex, with confidence intervals.
-4. Emit a clear flag when the falsification conditions defined in the experiment protocol are met.
-5. Refrain from claiming that Q078 (as an S-problem) is “solved”. It may only state that “for the tested system, this particular modular TU encoding passes or fails the defined tests”.
+### 7.2 Architectural patterns
 
-This spec is deliberately narrow. It encodes a testable TU slice of Q078 rather than an all-purpose biological model.
+We specify three architectural patterns.
+
+1. `DevMapHead`
+
+   * Role: auxiliary head that outputs effective summaries of genotype, environment and phenotype along with tension estimates.
+   * Interface:
+
+     * Input: internal embeddings from a base model given genomic and environmental context.
+     * Outputs:
+
+       * estimated `G_eff`, `E_eff` and `P_eff`,
+       * `DevMap_coherence`, `DevMap_robustness`, `DevMap_modularity`,
+       * `Tension_dev`.
+
+2. `GenotypePhenoConsistencyFilter`
+
+   * Role: filter module that evaluates candidate explanations or predictions about genotype to phenotype links.
+   * Interface:
+
+     * Input: internal or textual representation of a proposed genotype to phenotype relationship.
+     * Output: a score or mask indicating whether the relationship implies high or low tension under the current encoding.
+
+3. `DevMapTransferBridge`
+
+   * Role: bridge module for transferring insight from one species or dataset to another by reusing `E_dev` and associated observables.
+   * Interface:
+
+     * Inputs: source and target context representations.
+     * Output: suggested shared modules and an estimate of transfer tension, used to decide how aggressively to transfer patterns.
+
+### 7.3 Evaluation harness
+
+We outline an evaluation harness for models augmented with Q078 style modules.
+
+1. Task families
+
+   * Phenotype prediction from genetic and environmental inputs.
+   * Explanation of known genotype to phenotype associations.
+   * Generalization of developmental rules across related species.
+
+2. Conditions
+
+   * Baseline: model without Q078 modules or signals.
+   * TU augmented: same base model with DevMapHead, filters and Q078 signals active during training or fine tuning.
+
+3. Metrics
+
+   * Predictive accuracy on held out perturbations and species.
+   * Stability of predictions under small input perturbations.
+   * Consistency of explanations across related contexts.
+   * Reduction in `Tension_dev` for world like inputs when Q078 modules are active.
+
+### 7.4 60 second reproduction protocol
+
+To let external users experience Q078 directly:
+
+* **Baseline setup**
+
+  * Prompt: ask the model to describe how genetic changes and environmental conditions shape phenotypes in a chosen model organism.
+  * Observation: record whether explanations are fragmented, overconfident or inconsistent about robustness and modularity.
+
+* **TU encoded setup**
+
+  * Prompt: same biological question, but with an instruction that the explanation should be organized around:
+
+    * robust mappings from genotype modules to phenotype modules,
+    * explicit discussion of modularity and robustness across perturbations,
+    * an implicit low tension developmental map.
+  * Observation: record whether the explanation highlights modules, perturbations and robustness in a more structured way.
+
+* **Comparison metric**
+
+  * Use a rubric that scores:
+
+    * clarity of mapping from genotype and environment to phenotype,
+    * explicit handling of robustness and modularity,
+    * internal consistency across multiple paragraphs.
+
+* **What to log**
+
+  * Prompts, raw outputs, and any DevMapHead tension values.
+  * These logs allow external audit without revealing TU internals.
 
 ---
 
 ## 8. Cross problem transfer template
 
-The structure used here generalizes to other S-problems with “micro-to-macro” maps.
+This block describes the main reusable components from Q078 and how they transfer to other problems.
 
-**Template pattern.**
+### 8.1 Reusable components produced by this problem
 
-For any problem of the form:
+1. ComponentName: `DevMap_field`
 
-* micro_state in M (e.g. genotype, synaptic configuration, climate microstate),
-* macro_state in P (e.g. phenotype, neural code, climate index),
-* unknown map F_real : M -> distribution over P,
+   * Type: field
+   * Minimal interface:
 
-we can:
+     * Inputs: effective descriptors `G_eff`, `R_eff`, `E_eff` built from the agreed libraries.
+     * Output: `P_eff` summary and local `DeltaS_dev` at chosen resolutions.
+   * Preconditions:
 
-1. Specify admissible encoders Enc_M, Enc_P with finite complexity and fixed protocols.
+     * Inputs must be encoded using `Lib_G`, `Lib_R`, `Lib_E`.
+     * The chosen encoding `Gamma_r` must belong to `E_dev`.
 
-2. Choose a finite library of local kernels K_* and a modular reference family F_adm.
+2. ComponentName: `DevMap_tension_functional`
 
-3. Define a flexible baseline family F_flex.
+   * Type: functional
+   * Minimal interface:
 
-4. Construct a tension functional
+     * Input: state `m` in `M_dev_reg`.
+     * Output: scalar `Tension_dev(m)` and, optionally, a small vector of contributions (coherence, robustness, modularity, mismatch).
+   * Preconditions:
 
-   T_micro_to_macro(r) = (Loss_ref(r) - Loss_flex) / (Loss_flex + epsilon)
+     * All necessary observables for `m` are finite.
+     * Resolution set `R_res` and parameter values are fixed and known.
 
-   with singular regimes defined by persistent gaps between Loss_ref(r) and Loss_flex.
+3. ComponentName: `DevMap_modularity_profile`
 
-5. Design experiments that:
+   * Type: observable
+   * Minimal interface:
 
-   * estimate T_micro_to_macro(r) for specific systems,
-   * and falsify particular template choices when tension remains high.
+     * Input: state `m`, resolution index `r`.
+     * Output: a nonnegative scalar summarizing modularity plus optional discrete tags for module groupings.
+   * Preconditions:
 
-**Examples.**
+     * `Lib_G`, `Lib_R`, `Lib_P` have been instantiated and mapped into the problem at hand.
 
-* Q076 · Full immune repertoire dynamics
-  Map: receptor sequence -> binding phenotype and immune response.
-  Same template with different kernels (antigen recognition motifs, clonal expansion rules).
+### 8.2 Direct reuse targets
 
-* Q083 · Neural coding principles
-  Map: micro-circuit configuration and inputs -> firing patterns and behavioral outputs.
-  Kernels become microcircuit dynamics primitives.
+1. Q075 `BH_BIO_AGING_L3_075`
 
-* Q095 · Drivers of biodiversity loss and recovery
-  Map: community microstates and disturbances -> macro-biodiversity indices.
-  Kernels capture ecological interaction motifs.
+   * Reused components: `DevMap_field`, `DevMap_tension_functional`.
+   * Why it transfers:
 
-Q078 is the biological prototype for this template. Later TU entries can reuse the same formal structure and adjust only the spaces, kernels, and observables.
+     * Aging can be viewed as gradual changes in `R_eff` and `E_eff` that deform the same underlying genotype to phenotype map.
+   * What changes:
+
+     * State space extended to include time and damage variables.
+     * Additional observables track how `Tension_dev` shifts along individual lifespan trajectories.
+
+2. Q077 `BH_BIO_MICROBIOME_L3_077`
+
+   * Reused components: `DevMap_tension_functional`, `DevMap_modularity_profile`.
+   * Why it transfers:
+
+     * Host genotype, environment and microbiome composition jointly shape host phenotype; this can be treated as an extended mapping with similar consistency_tension.
+   * What changes:
+
+     * `E_eff` extended to include microbiome descriptors.
+     * New modules in `Lib_E` and `Lib_P` representing host microbe interactions.
+
+3. Q123 `BH_AI_INTERP_L3_123`
+
+   * Reused components: `DevMap_field`, `DevMap_modularity_profile`.
+   * Why it transfers:
+
+     * Interpreting neural networks can reuse genotype to phenotype style mappings, with network parameters as genotype and internal features as phenotype like objects.
+   * What changes:
+
+     * `G_eff` becomes an effective descriptor of network weights or architecture.
+     * `P_eff` becomes a descriptor of internal feature maps and output behavior.
+     * Libraries are redefined for AI contexts, but the consistency_tension structure is preserved.
 
 ---
 
 ## 9. TU roadmap and verification levels
 
-We restate the current and future levels in TU terms.
+This block situates Q078 in the TU verification ladder and sets concrete next steps.
 
-* **E1 (current entry).**
+### 9.1 Current levels
 
-  * Defined spaces G, E_env, X_dev, P in an effective way.
-  * Specified admissible encoders Enc_G, Enc_P and a finite kernel library K_dev.
-  * Defined F_adm, F_flex, and the tension functional T_G2P(r).
-  * Proposed explicit experiments and falsification conditions.
-  * Clarified singular regimes and interpretation boundaries.
+* E_level: E1
 
-* **E2 (future, not yet provided).**
+  * An effective encoding has been specified:
 
-  * Implement at least one full experimental program (like 6.1 or 6.2) in a specific system.
-  * Produce real numeric results for T_G2P(r) and publish a reproducible protocol.
-  * Show cross-context reuse of at least part of K_dev across related developmental systems.
+    * state space `M_dev` and its regular subset `M_dev_reg`,
+    * finite libraries and admissible encoding class `E_dev`,
+    * observables and tension functional `Tension_dev`,
+    * singular set `S_sing_dev` and domain restrictions.
+  * Discriminating experiment families are defined with falsification conditions.
 
-* **E3 (aspirational).**
+* N_level: N2
 
-  * Demonstrate that a small set of kernel families and encoding templates covers many biological systems (e.g. multiple organs, species, and environments).
-  * Integrate Q078-style tension metrics with other BlackHole nodes (aging, immune dynamics, microbiome, neural coding) into a shared modular TU layer.
+  * A coherent narrative links genotype, regulatory systems, environment and phenotype through consistency_tension.
+  * Counterfactual worlds T and F are described using observable patterns and tension bands.
+  * Q078 is connected to upstream origin and downstream biosphere questions.
 
-For now, this entry is explicitly at **E1**. Any claim of higher E-level requires actual data, code, and peer-visible results.
+### 9.2 Next measurable steps toward higher levels
+
+To move toward E2 and N3, the following steps are proposed:
+
+1. Implement a prototype tool that:
+
+   * takes simplified genotype, environment and phenotype data for a model organism,
+   * instantiates `E_dev`, `M_dev` and `Tension_dev`,
+   * outputs tension profiles for perturbation and cross species like experiments.
+
+2. Publish at least one open benchmark dataset with:
+
+   * standardized `Perturb_set(r)` for an organism,
+   * corresponding effective `M_dev` states,
+   * example computations of `DevMap_coherence`, `DevMap_robustness` and `Tension_dev`.
+
+3. Develop at least one AI model that uses Q078 style signals and modules, and compare its behavior against baselines on developmental genetics style tasks.
+
+Each step must remain within the effective layer and avoid exposing TU deep construction rules.
+
+### 9.3 Long term role in the TU program
+
+Long term, Q078 is expected to serve as:
+
+* The central biological node for consistency_tension between information bearing substrates and multicellular phenotypes.
+* A template for mapping from code spaces to emergent configurations in other domains, including neural coding and AI interpretability.
+* A test bed for whether TU encodings can handle systems where the map is high dimensional, context dependent and historically contingent, without defaulting to trivial or unfalsifiable descriptions.
 
 ---
 
 ## 10. Elementary but precise explanation
 
-We finish with a short, low-jargon explanation of what Q078 means in this TU encoding.
+This block is for non specialists, while staying aligned with the effective layer description.
 
-* Every living thing has a **genotype** (the DNA) and a **phenotype** (what it looks like and how it works).
-* Biologists know many pieces of the story, but there is still no single, general rulebook that says
-  “from this sequence and this environment, you get exactly this body plan and these functions”,
-  in a way that is both accurate and simple enough to apply across many species.
+In ordinary language:
 
-In this TU entry we:
+* The **genotype** is like a set of instructions written in the genome.
+* The **phenotype** is what the organism actually becomes and does: its body plan, organs, behaviors and so on.
+* Between these two sits development, which reads and interprets the instructions in specific environments.
 
-* do **not** claim to have such a rulebook;
-* instead, we propose a way to **measure how complicated the rulebook must be**.
+The hard question is:
 
-We do this by:
+Is there a reasonably simple, reusable set of rules that explains how changes in the instructions and in the environment lead to changes in the phenotype. Or is the relationship basically so complicated and context dependent that every case is special.
 
-1. Choosing a restricted “dictionary” of building blocks called developmental kernels.
-2. Asking whether combinations of these kernels can reproduce the observed mapping from genotypes and environments to phenotypes as well as a generic flexible model.
-3. Measuring the **tension** as the gap between the restricted dictionary and the flexible model.
+In the Tension Universe view for Q078:
 
-If a small dictionary works almost as well, tension is low. That suggests that the genotype-to-phenotype map is modular and compressible at the tested scale. If no small dictionary works, tension stays high. That tells us that any realistic theory of development and evolution in that system must be more complex than our current ansatz.
+* We do not try to simulate every molecule.
+* Instead we imagine a space of **effective states**. Each state summarizes:
 
-This is all done at the **effective layer**. We only talk about observable quantities, finite experiments, and concrete models. We leave any deeper TU structure or metaphysical claims outside the scope of this Q078 entry.
+  * which genetic and regulatory modules are present,
+  * which environmental conditions matter,
+  * which phenotypic traits show up.
 
+For each such state we measure:
+
+* how well a fixed set of developmental rules predicts the observed traits,
+* how robust those traits are when we make small changes in genes or environment,
+* how modular the system looks, meaning whether it is built from reusable building blocks.
+
+We combine these measurements into a single number called `Tension_dev`.
+
+Roughly:
+
+* If development is structured and understandable, `Tension_dev` can be kept small across different situations and species.
+* If development is opaque and brittle under every fair way of describing it, `Tension_dev` stays large.
+
+This framework does not tell us the detailed rules of development. It also does not say what evolution will do in the future. What it does give is:
+
+* a way to talk about the genotype to phenotype map as a structured object,
+* a way to design experiments that test whether a proposed description is reasonable or not,
+* reusable tools that can be applied to other mappings from low level codes to high level behavior, in brains or in artificial systems.
+
+Q078 is therefore the main biological test case for these ideas inside the Tension Universe: if we cannot find a low tension encoding here, that is important; if we can, that becomes a powerful template for many other problems.
