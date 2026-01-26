@@ -1,4 +1,4 @@
-Q104 · Dynamics of wealth and income inequality  
+# Q104 · Dynamics of wealth and income inequality  
 
 ---
 
