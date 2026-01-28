@@ -15,7 +15,7 @@ Status: Open
 Semantics: hybrid
 E_level: E1
 N_level: N2
-Last_updated: 2026-01-23
+Last_updated: 2026-01-28
 ```
 
 ---
@@ -26,18 +26,22 @@ Last_updated: 2026-01-23
 
 Let `a`, `b`, `c` be nonzero coprime integers that satisfy
 
-`a + b = c`.
+```txt
+a + b = c.
+```
 
-Define `rad(n)` for a nonzero integer `n` as the product of the distinct prime factors of `n`. For example,
+Define `rad(n)` for a nonzero integer `n` as the product of the distinct prime factors of `|n|`. For example,
 
 * `rad(18) = 2 * 3 = 6`
 * `rad(60) = 2 * 3 * 5 = 30`.
 
-The abc conjecture (one standard form) is:
+One standard form of the **abc conjecture** is:
 
 > For every real number `eps > 0` there exists a constant `K_eps > 0` such that for all coprime nonzero integers `a`, `b`, `c` with `a + b = c`, we have
 >
-> `|c| <= K_eps * rad(abc)^(1 + eps)`.
+> ```txt
+> |c| <= K_eps * rad(abc)^(1 + eps).
+> ```
 
 Intuitively:
 
@@ -45,14 +49,14 @@ Intuitively:
 * The radical `rad(abc)` encodes the distinct primes that appear in the product `abc`.
 * The conjecture says that if the product of distinct primes is small, then `c` cannot be much larger than that product, apart from a controlled power and a constant that depends only on `eps`.
 
-Equivalently, the conjecture says that triples where `c` is “too large” relative to `rad(abc)` should be extremely rare and controlled.
+Equivalently, the conjecture says that triples where `c` is “too large” relative to `rad(abc)` should be extremely rare and quantitatively controlled.
 
 ### 1.2 Status and difficulty
 
 The abc conjecture has been open since the early 1980s. It is central in modern Diophantine number theory because:
 
 * It unifies and implies many deep results and conjectures about Diophantine equations.
-* It explains, in a very compact way, how additive and multiplicative structures in the integers constrain each other.
+* It gives a compact explanation of how additive and multiplicative structures in the integers constrain each other.
 
 Many statements are known to follow from abc, including:
 
@@ -82,14 +86,16 @@ Within the BlackHole S problem collection, Q005 is:
 3. A template for hybrid encodings.
 
    * The underlying objects are discrete integers and primes.
-   * The effective summaries used for tension measurement are continuous quantities such as logarithmic heights and averaged qualities.
+   * The effective summaries used for tension measurement are continuous quantities such as logarithmic heights and averaged or quantile based qualities.
+
+Q005 therefore serves as the Diophantine consistency template inside the Tension Universe.
 
 ### References
 
 1. J. H. Silverman, “The Arithmetic of Elliptic Curves”, 2nd edition, Springer, 2009. See the discussion of the abc conjecture and its relation to Diophantine equations in later chapters.
 2. N. Elkies, survey articles on the abc conjecture in number theory collections, describing the conjecture, examples of high quality triples, and consequences for Diophantine problems.
-3. Textbook or survey on Diophantine geometry and arithmetic, containing a dedicated section on the abc conjecture and its implications for heights and radical inequalities.
-4. Standard encyclopedia style entry on “abc conjecture” in an authoritative mathematics reference, giving the canonical formulation and basic history.
+3. A standard text on Diophantine geometry and arithmetic, containing a dedicated section on the abc conjecture and its implications for heights and radical inequalities.
+4. An encyclopedia style entry on “abc conjecture” in an authoritative mathematics reference, giving the canonical formulation and basic history.
 
 ---
 
@@ -102,33 +108,33 @@ This block records how Q005 sits inside the BlackHole graph among Q001 to Q125. 
 These nodes provide prerequisites and conceptual tools that Q005 relies on at the effective layer.
 
 * Q016 (BH_MATH_ZFC_CH_L3_016)
-  Reason: Supplies the foundational view of sets and real valued quantities in which heights, radicals, and logarithmic profiles are treated as well defined analytic summaries.
+  Reason: supplies the foundational view of sets and real valued quantities in which heights, radicals, and logarithmic profiles are treated as well defined analytic summaries.
 
 * Q019 (BH_MATH_DIOPH_DENSITY_L3_019)
-  Reason: Provides general tools for describing densities of Diophantine sets, reused here to talk about the density and distribution of abc exceptional triples.
+  Reason: provides general tools for describing densities of Diophantine sets, reused here to talk about the density and distribution of abc exceptional triples.
 
 * Q014 (BH_MATH_BOMB_LANG_L3_014)
-  Reason: Encodes large scale Diophantine geometry constraints that overlap with abc style tension between rational points, heights, and complexity.
+  Reason: encodes large scale Diophantine geometry constraints that overlap with abc style tension between rational points, heights, and complexity.
 
 ### 2.2 Downstream problems
 
 These nodes reuse Q005 components or assume its tension structure.
 
 * Q015 (BH_MATH_RANK_BOUNDS_L3_015)
-  Reason: Reuses the HeightRadicalDescriptor and ABCQualityFunctional to express how bounds on heights and radicals influence rank bounds for elliptic curves.
+  Reason: reuses the HeightRadicalDescriptor and ABCQualityFunctional to express how bounds on heights and radicals influence rank bounds for elliptic curves.
 
 * Q003 (BH_MATH_BSD_L3_003)
-  Reason: Uses abc based consistency tension patterns when relating L function behavior to arithmetic invariants of elliptic curves.
+  Reason: uses abc based consistency_tension patterns when relating L function behavior to arithmetic invariants of elliptic curves.
 
 * A future node for Szpiro type conjectures (for example Q0xx)
-  Reason: Directly recasts Szpiro conditions as a special case of the abc tension functional on elliptic curve invariants.
+  Reason: directly recasts Szpiro conditions as a special case of the abc tension functional on elliptic curve invariants.
 
 ### 2.3 Parallel problems
 
 Parallel nodes share similar tension types but no direct component dependence.
 
 * Q001 (BH_MATH_NUM_L3_001)
-  Reason: Both Q001 and Q005 express strict compatibility conditions between hidden arithmetic structure and visible analytic summaries, and both use small tension bands versus persistent tension gaps as the organizing idea.
+  Reason: both Q001 and Q005 express strict compatibility conditions between hidden arithmetic structure and visible analytic summaries, and both use small tension bands versus persistent tension gaps as the organizing idea.
 
 * Q002 (BH_MATH_GRH_L3_002)
   Reason: Q002 describes consistency_tension between families of L functions and arithmetic data, in parallel to the way Q005 relates additive equations, radicals, and heights.
@@ -138,13 +144,13 @@ Parallel nodes share similar tension types but no direct component dependence.
 Cross domain edges connect Q005 to nodes outside pure number theory that can reuse its components.
 
 * Q059 (BH_CS_INFO_THERMODYN_L3_059)
-  Reason: Reuses the classical pattern “too many high quality exceptions cost global consistency” as an information theoretic tension between compression and constraint.
+  Reason: reuses the classical pattern “too many high quality exceptions cost global consistency” as an information theoretic tension between compression and constraint.
 
 * Q123 (BH_AI_INTERP_L3_123)
-  Reason: Uses the idea of sparse high quality configurations under a simple relation as a model for interpreting neural representations that satisfy simple constraints yet rarely achieve extreme scores.
+  Reason: uses the idea of sparse high quality configurations under a simple relation as a model for interpreting neural representations that satisfy simple constraints yet rarely achieve extreme scores.
 
-* Q036 like physical nodes involving sparse extreme configurations
-  Reason: Draws on the ABCQualityFunctional and ABCCounterfactualPattern to describe when physical systems exhibit too many extreme states relative to simple conservation laws.
+* Physical nodes such as Q036 that involve sparse extreme configurations
+  Reason: draw on the ABCQualityFunctional and ABCCounterfactualPattern to describe when physical systems exhibit too many extreme states relative to simple conservation laws.
 
 ---
 
@@ -156,11 +162,14 @@ All content in this block is at the effective layer. We describe:
 * observables and fields,
 * invariants and tension functionals,
 * the singular set and domain restrictions,
-* an admissible class of encodings with explicit fairness constraints.
+* an admissible class of encodings with explicit fairness constraints,
+* an MVP-E2 harness choice that freezes otherwise free parameters into a small finite library.
 
-We do not describe any deep generative rule or how states are constructed from raw data.
+We do not describe any deep generative rule or how states are constructed from raw data. We do not claim or use any proof or disproof of the canonical abc conjecture.
 
-### 3.1 State space
+All mismatch terms `DeltaS_*` and tension values in this file are treated as **dimensionless or normalized quantities**, defined up to a fixed monotone rescaling specified in the TU Tension Scale Charter.
+
+### 3.1 State space and triple library generation
 
 We define a state space
 
@@ -171,36 +180,86 @@ M_abc
 with this interpretation:
 
 * Each state `m` in `M_abc` represents a finite resolution snapshot of abc relevant data.
-* A state contains:
+* A state contains, at minimum:
 
   * a finite library of coprime integer triples `(a, b, c)` with `a + b = c` and `abc != 0`,
   * for each triple, a height summary `H(a, b, c)`,
   * for each triple, a radical summary `rad_abc(a, b, c)`,
-  * a finite list of scale indices that group triples into ranges of sizes.
+  * per scale band, aggregate summaries described below,
+  * metadata about the triple generation policy and coverage.
 
-We do not specify how such states are computed or generated. The only assumption is:
+We do not specify any deep TU rule for how such states are computed or generated. For the purpose of this problem, we treat the triple library as produced by a **frozen, auditable search policy**:
 
-* For every finite set of height bounds and scale definitions, there exist states in `M_abc` that encode the corresponding summaries of triples up to those bounds.
+```txt
+SearchPolicy_abc
+```
 
-### 3.2 Finite scale library
+which must satisfy:
+
+1. It is specified at the effective layer, for example
+
+   * “enumerate all coprime triples `(a, b, c)` with `a + b = c`, `abc != 0` and `H(a,b,c) <= H_max`, in lexicographic order”,
+
+   or another fully described deterministic procedure.
+
+2. The policy and all parameters (such as `H_max`) are recorded in the metadata of `m`, including a hash of the code or configuration file used, so that an external observer can in principle rerun the search and rebuild the same library.
+
+States that encode triple libraries not produced by a declared deterministic `SearchPolicy_abc` are considered out of the admissible class for Q005 experiments.
+
+### 3.2 Height, radical, quality and scale bands
+
+We fix the following effective definitions, using natural logarithms throughout.
+
+**Height.**
+
+For each triple we define the height as:
+
+```txt
+H(a, b, c) = max(|a|, |b|, |c|).
+```
+
+**Radical.**
+
+We define the radical based on absolute values:
+
+```txt
+rad_abc(a, b, c) = rad(|a b c|),
+```
+
+where `rad(n)` is the product of the distinct prime divisors of `n`.
+
+**Quality.**
+
+For a single triple we define the quality
+
+```txt
+q(a, b, c) = log(H(a, b, c)) / log(rad_abc(a, b, c)),
+```
+
+whenever both logarithms are defined and positive. Triples for which `log(rad_abc(a,b,c))` is not positive are excluded from quality based summaries and are handled separately in the singular set definition.
+
+**Scale bands.**
 
 We fix a finite index set
 
 ```txt
-Scale_abc = {k_1, k_2, ..., k_K}
+Scale_abc = {k_0, k_1, ..., k_{K-1}}
 ```
 
-where each `k` corresponds to a scale band in height, for example intervals of the form
+with bands based on geometric growth in height. For some choice of `H_min > 1` and `r > 1` we set
 
 ```txt
-B_k = { (a, b, c) : H(a, b, c) in [H_min(k), H_max(k)] }.
+B_k = { (a, b, c) :
+        H(a, b, c) in [H_min r^k, H_min r^(k+1)) },
 ```
 
-The definition of `Scale_abc` and the associated bands is part of the encoding choice and belongs to the admissible class defined below. It is fixed in advance and does not depend on the particular contents of a given state `m`.
+for `k = 0, 1, ..., K-1`.
 
-### 3.3 Observables and fields
+The values `H_min`, `r`, `K` and the corresponding bands are part of the encoding choice. In the MVP-E2 harness (Section 6.3) they are frozen to concrete numerical values taken from a small finite template library.
 
-For each state `m` in `M_abc` and each scale index `k` in `Scale_abc`, we define the following effective observables.
+### 3.3 Bandwise observables
+
+For each state `m` in `M_abc` and each scale index `k` in `Scale_abc`, the triple library determined by `SearchPolicy_abc` induces a finite subset of triples in band `B_k`. From this subset we define the following effective observables.
 
 1. Height observable
 
@@ -208,7 +267,7 @@ For each state `m` in `M_abc` and each scale index `k` in `Scale_abc`, we define
 H(m; k) >= 1
 ```
 
-* A scalar summary of the heights of triples in band `B_k`, such as an average or a typical value of `max(|a|, |b|, |c|)`.
+A scalar summary of the heights of triples in band `B_k`, for example the average or a typical value of `H(a, b, c)`. The exact form is part of the encoding choice but must be fixed independently of the particular state once an encoding is selected.
 
 2. Radical observable
 
@@ -216,27 +275,28 @@ H(m; k) >= 1
 R(m; k) >= 1
 ```
 
-* A scalar summary of the radicals in band `B_k`, where for each triple we consider `rad_abc(a, b, c)`, the product of distinct primes dividing `abc`.
+A scalar summary of the radicals `rad_abc(a, b, c)` in band `B_k`.
 
-3. Quality observable
+3. Quality observable (frozen definition)
 
-For a single triple we consider
-
-```txt
-q(a, b, c) = log(H(a, b, c)) / log(rad_abc(a, b, c))
-```
-
-whenever the logarithms are defined and positive. At the effective layer we work with an aggregate quantity
+At the level of individual triples we use `q(a, b, c)` as above. At the band level we **fix** the quality observable to be the upper quantile:
 
 ```txt
-Q(m; k)
+Q(m; k) = 95th percentile of q(a, b, c)
+          over triples in B_k produced by SearchPolicy_abc,
 ```
 
-that summarizes the distribution of `q(a, b, c)` over triples in band `B_k`, for example an average, median, or upper quantile.
+whenever at least a minimal number of triples are present in the band. This is a hard choice: `Q` is not allowed to be mean or median in this specification. It is an upper tail summary focusing on high quality triples.
 
 4. Exceptional density observable
 
-We fix, for each scale index `k`, a positive threshold `eps_k`. For a state `m`, we define
+We fix a positive threshold `eps > 0` and, for the MVP-E2 harness, we set
+
+```txt
+eps_k = eps  for all k in Scale_abc.
+```
+
+For a state `m`, we define
 
 ```txt
 D_exc(m; k) in [0, 1]
@@ -248,11 +308,36 @@ as the fraction of triples in band `B_k` that satisfy
 q(a, b, c) > 1 + eps_k.
 ```
 
-The precise notion of fraction depends on the finite library encoded in `m`, but for each `m` and `k` it is a real number between `0` and `1`.
+The fraction is taken relative to the number of triples in `B_k` generated by the frozen `SearchPolicy_abc`. It is not defined relative to arbitrary user-selected samples.
 
-### 3.4 Mismatch fields
+### 3.4 Coverage metadata
 
-We now define two nonnegative mismatch observables.
+To avoid hidden sampling bias, we attach a coverage observable to each band.
+
+For each state `m` and band index `k` we define
+
+```txt
+Cov(m; k) in [0, 1]
+```
+
+as an estimate of the coverage of band `B_k` by `SearchPolicy_abc`. Typical cases:
+
+* If `SearchPolicy_abc` provably enumerates all triples with `H(a,b,c) <= H_max` and the band lies below `H_max`, then `Cov(m; k) = 1`.
+* If `SearchPolicy_abc` uses a time limited or heuristic search, `Cov(m; k)` reflects the known or declared lower bound on the fraction of band `B_k` that has been explored.
+
+The encoding must specify a minimal coverage threshold `Cov_min in (0, 1]`. For any band with
+
+```txt
+Cov(m; k) < Cov_min
+```
+
+the observables `Q(m; k)` and `D_exc(m; k)` are not used in the global tension functional. That band is treated as out-of-domain for the purpose of tension aggregation.
+
+The values of `Cov_min` for specific harnesses are part of the encoding choice and are declared ahead of any data dependent evaluation.
+
+### 3.5 Mismatch fields
+
+We now define two nonnegative mismatch observables per band, treated as dimensionless quantities that live on the TU tension scale.
 
 1. Quality mismatch
 
@@ -260,7 +345,13 @@ We now define two nonnegative mismatch observables.
 DeltaS_quality(m; k) >= 0
 ```
 
-This measures how much `Q(m; k)` deviates from an abc compatible reference profile at scale `k`. The reference profile is chosen as part of the encoding and is not tuned to any specific state.
+This measures how much `Q(m; k)` deviates from an abc compatible reference profile at scale `k`. The reference profile
+
+```txt
+Q_ref(k; theta_Q)
+```
+
+is chosen from a **finite template library** of analytic curves indexed by a parameter `theta_Q` that belongs to a finite set. Once a template and parameter value are selected for a given encoding, they are fixed and recorded along with a version identifier.
 
 2. Density mismatch
 
@@ -268,61 +359,100 @@ This measures how much `Q(m; k)` deviates from an abc compatible reference profi
 DeltaS_density(m; k) >= 0
 ```
 
-This measures how much `D_exc(m; k)` deviates from an abc compatible upper bound at scale `k`. If `D_exc(m; k)` respects the chosen bound, `DeltaS_density(m; k)` is close to zero. If `D_exc(m; k)` is large, the mismatch grows.
-
-Both mismatch fields are defined so that:
+This measures how much `D_exc(m; k)` deviates from an abc compatible upper bound at scale `k`. For each scale we choose an upper bound of the form
 
 ```txt
-DeltaS_quality(m; k) = 0  and  DeltaS_density(m; k) = 0
+u_k(γ) = 1 / log(H_max(k))^γ
 ```
 
-when the observed summaries match the abc compatible profile at scale `k`.
+where `γ` is chosen from a small finite set (for example `{1, 2}`) and `H_max(k)` is a typical upper height for band `B_k`. The collection of `(γ, H_max(k))` values used in a given encoding is part of the encoding metadata.
 
-### 3.5 Combined abc tension functional
+For both mismatch fields we require:
 
-We define the abc tension functional as a finite weighted sum over the scale library:
+```txt
+DeltaS_quality(m; k) = 0 and DeltaS_density(m; k) = 0
+```
+
+when the observed summaries match the chosen abc compatible profiles for that encoding at scale `k`. Mismatch values grow as deviations increase, but their absolute scale is normalized according to the TU Tension Scale Charter.
+
+Bands with `Cov(m; k) < Cov_min` are excluded from mismatch computation or are treated as contributing an “undefined” value, which feeds into the singular set in Section 3.9.
+
+### 3.6 Combined abc tension functional
+
+We define the abc tension functional as a finite weighted sum over the scale library, restricted to bands with sufficient coverage.
+
+Let
+
+```txt
+Scale_abc_reg(m) =
+  { k in Scale_abc : Cov(m; k) >= Cov_min }.
+```
+
+We then define
 
 ```txt
 Tension_abc(m) =
-  sum over k in Scale_abc of
-    [ alpha_k * DeltaS_quality(m; k) + beta_k * DeltaS_density(m; k) ].
+  sum over k in Scale_abc_reg(m) of
+    [ alpha_k * DeltaS_quality(m; k)
+      + beta_k * DeltaS_density(m; k) ].
 ```
 
 The coefficients satisfy:
 
 ```txt
-alpha_k >= 0,  beta_k >= 0  for all k
-sum over k in Scale_abc of (alpha_k + beta_k) = 1.
+alpha_k >= 0,  beta_k >= 0  for all k in Scale_abc_reg(m),
+sum over k in Scale_abc_reg(m) of (alpha_k + beta_k) = 1.
 ```
 
-Thus `Tension_abc(m)` is a nonnegative scalar that summarizes, across scales, how far the observed data encoded in `m` are from the abc compatible pattern.
+The weights `(alpha_k, beta_k)` are part of the encoding and are fixed once and for all when an encoding in the admissible class is chosen. They are not allowed to depend on the particular state `m` or on the data in its triple library.
 
-### 3.6 Admissible encoding class and fairness constraints
+`Tension_abc(m)` is then a nonnegative scalar that summarizes, across scales with adequate coverage, how far the observed data encoded in `m` are from the abc compatible pattern.
+
+### 3.7 Admissible encoding class and fairness constraints
 
 We define an admissible class of encodings `E_abc` with the following properties.
 
 1. Finite scale library fixed in advance
 
-* The finite set `Scale_abc` and the corresponding height bands `B_k` are chosen using simple growth rules, such as geometric progression in height, and do not depend on the actual content of any particular state `m`.
+* The finite set `Scale_abc` and the corresponding height bands `B_k` are chosen using simple geometric growth rules as in Section 3.2.
+* The parameters `H_min`, `r`, `K` are selected from a finite menu and are recorded in the encoding metadata.
 
 2. Thresholds fixed in advance
 
-* For each `k` in `Scale_abc`, the threshold `eps_k` and any abc compatible upper bounds on `D_exc(m; k)` are specified using general Diophantine considerations and known partial results. These quantities depend only on the scale and theoretical input, not on the actual observed library of triples.
+* A single `eps > 0` is chosen from a finite menu (for example `{0.1, 0.01, 0.001}`) and then fixed for all bands as `eps_k = eps`.
+* Once chosen, `eps` is recorded with the encoding and not tuned after inspecting any particular state.
 
-3. Weights normalized and fixed
+3. Reference profiles and upper bounds from finite libraries
 
-* The weights `alpha_k` and `beta_k` satisfy the normalization rule above.
-* They are fixed when an encoding in `E_abc` is defined and are not tuned after inspecting the data in a state `m`.
+* The reference profile `Q_ref(k; theta_Q)` is chosen from a finite template library of curves, and the parameter `theta_Q` is chosen from a finite set. This pair is then fixed for the encoding.
+* Upper bounds `u_k(γ)` are chosen from a finite family parameterized by `γ` in a small finite set, with `H_max(k)` defined from the band bounds. These choices are fixed once selected.
 
-4. No data dependent tuning
+4. Weights normalized and fixed
 
-* No element of the encoding (scale bands, thresholds, reference profiles, or weights) is allowed to depend on the actual list of high quality triples in a given state.
+* Weights `alpha_k`, `beta_k` satisfy the normalization rule and are fixed once an encoding is chosen.
+* They may depend on `k` but not on any state `m` or on observed data for that encoding.
 
-This fairness constraint ensures that `Tension_abc(m)` cannot be made artificially small by altering the encoding after seeing the data. All tuning must happen at the level of defining an encoding in `E_abc` without access to the specific state whose tension is evaluated.
+5. Search policy and coverage declared
 
-### 3.7 Tension tensor link
+* The triple library in any state used for Q005 experiments must be generated by a fully specified deterministic `SearchPolicy_abc`.
+* The coverage observable `Cov(m; k)` must be defined in a way that can be audited from the search policy and its parameters.
+* Bands with `Cov(m; k) < Cov_min` are excluded from tension aggregation.
 
-At the effective layer, the abc tension functional feeds into the TU tension tensor in the standard way:
+6. No data dependent tuning
+
+* No element of the encoding (scale bands, thresholds, reference profiles, upper bounds, weights, coverage thresholds) is allowed to depend on the actual list of high quality triples in a given state.
+* All such choices are made at the encoding level, guided by general Diophantine considerations and public benchmark selections, but not by the unknown truth value of the abc conjecture.
+
+7. No hidden answer fields
+
+* No encoding in `E_abc` is allowed to hide the canonical answer to the abc conjecture as an uninterpreted field, label, or parameter.
+* The tension functional must be constructed from observable summaries only, with no direct label indicating “abc is true” or “abc is false”.
+
+These fairness constraints are subordinate to and consistent with the TU Effective Layer Charter and the TU Encoding and Fairness Charter. They ensure that `Tension_abc(m)` cannot be made artificially small by altering the encoding after seeing the data.
+
+### 3.8 Tension tensor link
+
+At the effective layer, the abc tension functional feeds into the TU tension tensor in the standard form:
 
 ```txt
 T_ij(m) = S_i(m) * C_j(m) * Tension_abc(m) * lambda(m) * kappa_abc.
@@ -333,25 +463,28 @@ Here:
 * `S_i(m)` encodes the strength of the ith source component of abc relevant structure in state `m`.
 * `C_j(m)` encodes the sensitivity of the jth cognitive or downstream component to abc related inconsistencies.
 * `lambda(m)` is the convergence or divergence factor from the TU core decisions.
-* `kappa_abc` is a fixed coupling constant that sets the scale of abc related consistency tension.
+* `kappa_abc` is a fixed coupling constant that sets the scale of abc related consistency tension within the TU tension scale.
 
 We do not specify the indexing sets for `i` and `j`, only that for each `m` all relevant tensor components are finite and well defined.
 
-### 3.8 Singular set and regular domain
+### 3.9 Singular set and regular domain
 
 Some observables may become undefined or unbounded, for example if:
 
 * a band contains no triples,
 * logarithms cannot be formed in a consistent way,
-* summary statistics fail to exist.
+* quality or density summaries fail to exist or are numerically unstable,
+* coverage falls below the minimal threshold.
 
 We collect such states into a singular set:
 
 ```txt
 S_sing_abc = {
   m in M_abc :
-  some H(m; k), R(m; k), Q(m; k), or D_exc(m; k)
-  is undefined or not finite for some k in Scale_abc
+    there exists k in Scale_abc such that
+      (H(m; k), R(m; k), Q(m; k), D_exc(m; k)) is undefined or not finite
+      while Cov(m; k) >= Cov_min,
+    or Cov(m; k) is undefined for some k
 }.
 ```
 
@@ -376,7 +509,7 @@ At the effective layer, abc is expressed as a principle about how additive and m
 We define two kinds of worlds:
 
 * abc compatible worlds, where high quality triples are sufficiently rare at every scale, and
-* abc violating worlds, where high quality triples appear too often or with too large quality.
+* abc violating worlds, where high quality triples appear too often or with too large quality across many scales.
 
 In terms of the tension functional:
 
@@ -386,7 +519,7 @@ In terms of the tension functional:
   Tension_abc(m_true) <= epsilon_abc
   ```
 
-  for some small bound `epsilon_abc` that depends on the chosen encoding but does not grow without control as the scale library is refined.
+  for some small bound `epsilon_abc` that depends on the chosen encoding but does not grow without control as the scale library is refined in a way consistent with the charters.
 
 * In a strongly abc violating world, any regular state that faithfully encodes the actual triple distribution would satisfy
 
@@ -400,8 +533,8 @@ In terms of the tension functional:
 
 When we refine the scale library by adding more bands or splitting existing bands, the encoding is updated within `E_abc` in a way that preserves the fairness constraints. The core expectations are:
 
-* In an abc compatible world, refinements that keep the same underlying distribution of triples should keep `Tension_abc(m_true)` within a controlled band.
-* In an abc violating world with infinitely many high quality triples, refinements should eventually expose bands where `DeltaS_quality` and `DeltaS_density` remain large, and therefore keep `Tension_abc(m_false)` bounded away from zero.
+* In an abc compatible world, refinements that keep the same underlying distribution of triples should keep `Tension_abc(m_true)` within a controlled band defined by the TU Tension Scale Charter.
+* In an abc violating world with infinitely many high quality triples, refinements should eventually expose bands where `DeltaS_quality(m_false; k)` and `DeltaS_density(m_false; k)` remain large, and therefore keep `Tension_abc(m_false)` bounded away from zero.
 
 The abc conjecture is therefore framed as the assertion that our universe belongs to the class of worlds in which low scale stable tension configurations exist for some encoding in `E_abc`.
 
@@ -414,7 +547,7 @@ We now describe two counterfactual worlds, strictly at the effective layer:
 * World T: abc is true.
 * World F: abc is false in a strong sense that produces many high quality exceptions.
 
-These worlds differ only in the observed patterns of the abc relevant observables.
+These worlds differ only in the observed patterns of the abc relevant observables on states in `M_abc_reg`.
 
 ### 5.1 World T (abc true, low consistency tension)
 
@@ -423,11 +556,11 @@ In World T:
 1. Sparse high quality triples
 
 * For each scale index `k` there are at most finitely many triples with `q(a, b, c) > 1 + eps_k`, and the fraction of such triples in band `B_k` is extremely small.
-* The observable `D_exc(m_T; k)` stays below abc compatible upper bounds at all scales.
+* The observable `D_exc(m_T; k)` stays below the abc compatible upper bounds `u_k(γ)` at all scales where coverage is adequate.
 
 2. Stability of aggregated quality
 
-* The aggregated quality `Q(m_T; k)` stays in a band compatible with abc, across all `k`.
+* The aggregated quality `Q(m_T; k)` stays in a band compatible with abc, across all `k` with sufficient coverage.
 * As more triples are included and the data are refined, the deviations encoded in `DeltaS_quality(m_T; k)` remain small.
 
 3. Global tension band
@@ -453,7 +586,7 @@ In World F:
 2. Large deviations in aggregated quality
 
 * The aggregated quality `Q(m_F; k)` significantly exceeds abc compatible values at infinitely many scales.
-* The mismatch `DeltaS_quality(m_F; k)` remains large in those scales even as the encoding is refined.
+* The mismatch `DeltaS_quality(m_F; k)` remains large in those scales even as the encoding is refined, within the permitted template library.
 
 3. Global tension gap
 
@@ -464,7 +597,7 @@ In World F:
   ```
 
   for some strictly positive `delta_abc`.
-* Attempts to refine the encoding within `E_abc` cannot reduce this lower bound without contradicting the observed patterns.
+* Attempts to refine the encoding within `E_abc` cannot reduce this lower bound without contradicting the observed patterns or violating fairness.
 
 ### 5.3 Interpretive note
 
@@ -483,27 +616,29 @@ This block specifies experiments and protocols that test:
 * the ability of `Tension_abc` to distinguish abc compatible models from abc violating models,
 * the robustness of parameter choices inside `E_abc`.
 
-These experiments cannot prove or disprove the abc conjecture, but they can falsify specific encodings.
+These experiments cannot prove or disprove the abc conjecture, but they can falsify specific encodings at the effective layer.
 
 ### Experiment 1: Numerical abc tension profile from known triples
 
-*Goal:*
+**Goal.**
 Test whether a given encoding in `E_abc` produces stable and interpretable `Tension_abc` values when applied to existing computational data of abc triples.
 
-*Setup:*
+**Setup.**
 
-* Input data: published or constructed databases of coprime triples `(a, b, c)` with `a + b = c` up to a height bound `H_max`.
+* Input data: published or constructed databases of coprime triples `(a, b, c)` with `a + b = c` up to a height bound `H_max`, generated by a documented `SearchPolicy_abc`.
 * Choose an encoding in `E_abc`:
 
   * fix a finite scale library `Scale_abc` with bands based on height ranges up to `H_max`,
-  * fix thresholds `eps_k`, reference profiles for `Q(m; k)`, and upper bounds for `D_exc(m; k)`,
-  * fix weights `alpha_k`, `beta_k` that satisfy the normalization rule.
+  * fix a single threshold `eps` and thus `eps_k = eps` for all `k`,
+  * choose reference profiles `Q_ref(k; theta_Q)` from a finite template library and upper bounds `u_k(γ)` from a finite family,
+  * fix weights `alpha_k`, `beta_k` that satisfy the normalization rule,
+  * fix a coverage threshold `Cov_min`.
 
-*Protocol:*
+**Protocol.**
 
-1. Build a state `m_data` in `M_abc` that encodes the triple library and the scale based summaries.
-2. Check whether `m_data` lies in `M_abc_reg`. If not, adjust the data or encoding to remove singular issues and rebuild.
-3. For each scale index `k` compute:
+1. Build a state `m_data` in `M_abc` that encodes the triple library, band membership, coverage estimates, and the chosen encoding metadata.
+2. Check whether `m_data` lies in `M_abc_reg`. If not, adjust the encoding or the data preprocessing to remove singular issues and rebuild.
+3. For each scale index `k` compute, whenever `Cov(m_data; k) >= Cov_min`:
 
    * `H(m_data; k)`,
    * `R(m_data; k)`,
@@ -511,42 +646,43 @@ Test whether a given encoding in `E_abc` produces stable and interpretable `Tens
    * `D_exc(m_data; k)`,
    * `DeltaS_quality(m_data; k)`,
    * `DeltaS_density(m_data; k)`.
-4. Compute `Tension_abc(m_data)` by the finite sum formula.
+4. Compute `Tension_abc(m_data)` by the finite sum formula over `Scale_abc_reg(m_data)`.
 5. Repeat for slightly varied encodings in `E_abc` that keep thresholds and weights in a reasonable band but do not depend on the actual triple list.
 
-*Metrics:*
+**Metrics.**
 
 * The full vector of `DeltaS_quality(m_data; k)` and `DeltaS_density(m_data; k)` across scales.
 * The value of `Tension_abc(m_data)` for each encoding tested.
 * Sensitivity of `Tension_abc(m_data)` to small changes in thresholds and weights within the constraints of `E_abc`.
 
-*Falsification conditions:*
+**Falsification conditions.**
 
-* If all fair encodings in `E_abc` with reasonable parameter ranges produce `Tension_abc(m_data)` far above any plausible `epsilon_abc` based on abc compatible expectations, then the current encoding approach is considered falsified at the effective layer.
+* If all fair encodings in `E_abc` with reasonable parameter ranges produce `Tension_abc(m_data)` far above any plausible `epsilon_abc` based on abc compatible expectations, then the current encoding approach is considered falsified at the effective layer. The correct response is to revise or retire that encoding, not to claim abc is false.
 * If small allowed modifications inside `E_abc` cause arbitrarily large swings in `Tension_abc(m_data)` without clear theoretical justification, the encoding is considered unstable and rejected.
 
-*Semantics implementation note:*
+**Semantics implementation note.**
 All observables are treated as functions that map discrete triple data into real valued summaries in a way that matches the hybrid description in the metadata. No change of representation beyond this is assumed.
 
-*Boundary note:*
-Falsifying TU encoding != solving canonical statement.
+**Boundary note.**
+Falsifying a TU encoding is not the same as solving the canonical abc conjecture.
 
 ---
 
 ### Experiment 2: Synthetic abc compatible and abc violating model worlds
 
-*Goal:*
+**Goal.**
 Check whether the abc tension encoding can reliably distinguish between synthetic worlds that are designed to mimic an abc compatible distribution and synthetic worlds that deliberately violate abc type sparsity.
 
-*Setup:*
+**Setup.**
 
 * Construct two synthetic model classes of triple distributions:
 
   * Class T (abc compatible models): triple distributions where only very few high quality triples are allowed in each scale band.
   * Class F (abc violating models): triple distributions where high quality triples occur with a positive density across infinitely many scales.
-* For each model instance, generate a finite triple library up to a chosen height bound and construct a corresponding state in `M_abc`.
 
-*Protocol:*
+* For each model instance, generate a finite triple library up to a chosen height bound using a documented model specific analog of `SearchPolicy_abc`, and construct a corresponding state in `M_abc`.
+
+**Protocol.**
 
 1. Choose a single encoding in `E_abc` that will be used for both Class T and Class F.
 2. For each model state `m_T_model` in Class T:
@@ -557,22 +693,85 @@ Check whether the abc tension encoding can reliably distinguish between syntheti
    * compute the same quantities.
 4. Aggregate the results into two distributions of tension values, one for Class T and one for Class F.
 
-*Metrics:*
+**Metrics.**
 
 * Mean and variance of `Tension_abc` for Class T and for Class F.
 * The separation between the two distributions, for example the difference between their means relative to their spreads.
 * The fraction of cases where Class T models have tension above a given threshold compared to the fraction for Class F models.
 
-*Falsification conditions:*
+**Falsification conditions.**
 
 * If the encoding assigns similar `Tension_abc` values to Class T and Class F across many model instances, failing to separate abc compatible from abc violating patterns, then that encoding in `E_abc` is considered ineffective and rejected.
 * If Class F models consistently receive lower `Tension_abc` values than Class T models, the encoding is misaligned with the intended consistency_tension interpretation and must be revised.
 
-*Semantics implementation note:*
+**Semantics implementation note.**
 The same representation and summaries used for actual integer triples are applied to synthetic models, keeping a consistent treatment of discrete and continuous aspects.
 
-*Boundary note:*
-Falsifying TU encoding != solving canonical statement.
+**Boundary note.**
+Again, falsifying a TU encoding is not the same as solving the canonical abc conjecture.
+
+---
+
+### 6.3 MVP-E2 harness specification
+
+For the **MVP-E2** level of Q005 within the TU program, we freeze one concrete encoding in `E_abc` as follows.
+
+1. Height
+
+```txt
+H(a, b, c) = max(|a|, |b|, |c|).
+```
+
+2. Scale bands
+
+* Choose `H_min` and `r` from a small finite menu, for example `H_min = 10`, `r = 10`.
+* Define bands
+
+  ```txt
+  B_k = { (a, b, c) :
+          H(a, b, c) in [H_min r^k, H_min r^(k+1)) }
+  ```
+
+  for `k = 0, 1, ..., K-1`, with `K` chosen so that the top band reaches the maximum height supported by the available data.
+
+3. Quality aggregator
+
+```txt
+Q(m; k) = 95th percentile of q(a, b, c)
+          over triples in B_k produced by SearchPolicy_abc.
+```
+
+4. eps and exceptional density
+
+* Fix a single constant `eps = 0.01` and set `eps_k = eps` for all `k`.
+* Define `D_exc(m; k)` as the fraction of triples in `B_k` with `q(a, b, c) > 1 + eps`, relative to the triple count under `SearchPolicy_abc`.
+
+5. Upper bounds and reference profiles
+
+* Choose `γ` from `{1, 2}` and define
+
+  ```txt
+  u_k(γ) = 1 / log(H_max(k))^γ
+  ```
+
+  with `H_max(k)` determined from the upper height of `B_k`.
+* Choose `Q_ref(k; theta_Q)` from a finite template library of simple decreasing functions of `k` with parameters restricted to a small finite set.
+
+6. Weights and coverage
+
+* Choose weights `alpha_k`, `beta_k` that satisfy the normalization rule and assign slightly higher weight to larger `k` bands, under a documented scheme.
+* Fix `Cov_min` to a value such as `0.9` when exhaustive search is guaranteed, or to a smaller documented value when partial search is used.
+
+7. Search policy
+
+* Fix `SearchPolicy_abc` to an explicit deterministic enumeration, for example:
+
+  * “enumerate all coprime triples `(a, b, c)` with `a + b = c`, `abc != 0` and `H(a,b,c) <= H_max` in lexicographic order”,
+
+  with `H_max` chosen so that data is manageable but nontrivial.
+* Record a hash of the implementation and parameters together with the tension profiles.
+
+This MVP-E2 harness is not unique, but it is a concrete, conservative configuration that external users can rerun and audit. It respects the TU charters and the fairness constraints set out for `E_abc`.
 
 ---
 
@@ -591,17 +790,17 @@ We define training signals that rely on the abc tension structure without exposi
 
 2. `signal_abc_exception_sparsity`
 
-   * Definition: a signal built from `D_exc(m; k)` and known abc compatible upper bounds.
+   * Definition: a signal built from `D_exc(m; k)` and the abc compatible upper bounds `u_k(γ)`.
    * Purpose: encourage the model to treat high quality exceptions as sparse and special rather than typical when working under abc type assumptions.
 
 3. `signal_abc_counterfactual_separation`
 
-   * Definition: a signal that measures whether the model correctly keeps separate the consequences of assuming abc and assuming a strong abc violation.
+   * Definition: a signal that measures whether the model correctly keeps separate the consequences of assuming abc and assuming a strong abc violation in controlled prompts.
    * Purpose: reduce mixing between World T and World F narratives in multi step reasoning.
 
 4. `signal_abc_tension_magnitude`
 
-   * Definition: directly sets the signal equal to `Tension_abc(m)` for states that summarize the model’s internal beliefs about triples.
+   * Definition: directly sets the signal equal to `Tension_abc(m)` for states that summarize the model’s internal beliefs about triples across scales.
    * Purpose: provide a scalar consistency indicator for use in auxiliary loss terms or interpretability tools.
 
 ### 7.2 Architectural patterns
@@ -670,13 +869,27 @@ A minimal procedure for external users to perceive the effect of Q005 encoding.
 * Baseline setup
 
   * Prompt the AI:
-    `"Explain the abc conjecture, give its standard statement, and list three important consequences. Do not mention any 'tension' concepts."`
+
+    ```txt
+    Explain the abc conjecture, give its standard statement,
+    and list three important consequences.
+    Do not mention any "tension" concepts.
+    ```
+
   * Record the answer, including how well it connects radical, height, and the rarity of high quality triples.
 
 * TU encoded setup
 
   * Prompt the AI:
-    `"Explain the abc conjecture using the idea of consistency tension between the additive relation a + b = c, the radical of abc, and the height of c. Describe how rare high quality triples should be if abc holds, and how you would summarize this as a tension functional."`
+
+    ```txt
+    Explain the abc conjecture using the idea of consistency tension
+    between the additive relation a + b = c, the radical of abc,
+    and the height of c. Describe how rare high quality triples
+    should be if abc holds, and how you would summarize this as
+    a tension functional.
+    ```
+
   * Record the answer and any auxiliary tension values if the system exposes them.
 
 * Comparison metric
@@ -704,21 +917,26 @@ This block records the reusable components produced by Q005 and where they trans
 1. ComponentName: `ABCQualityFunctional`
 
    * Type: functional
+
    * Minimal interface:
 
      * Inputs: a compact summary of triple distributions, including approximate height and radical statistics across several scale bands.
-     * Output: a vector of mismatch values `DeltaS_quality` and a combined quality contribution to `Tension_abc`.
+     * Output: a vector of mismatch values `DeltaS_quality(m; k)` and a combined quality contribution to `Tension_abc(m)`.
+
    * Preconditions:
 
      * The input summaries must correspond to coprime triples with `a + b = c` and well defined heights and radicals.
+     * Coverage information is available so that bands with unreliable statistics can be excluded.
 
 2. ComponentName: `HeightRadicalDescriptor`
 
    * Type: field
+
    * Minimal interface:
 
      * Inputs: a collection of integer equations or Diophantine patterns.
      * Output: feature vectors that encode approximate height and radical information suitable for use in functionals like `ABCQualityFunctional`.
+
    * Preconditions:
 
      * The input equations allow a meaningful notion of height and radical, even if presented in symbolic or textual form.
@@ -726,6 +944,7 @@ This block records the reusable components produced by Q005 and where they trans
 3. ComponentName: `ABCCounterfactualPattern`
 
    * Type: experiment_pattern
+
    * Minimal interface:
 
      * Inputs: a model class that generates or describes families of Diophantine objects.
@@ -733,6 +952,7 @@ This block records the reusable components produced by Q005 and where they trans
 
        * a low tension world where high quality exceptions are sparse,
        * a high tension world where they occur too often.
+
    * Preconditions:
 
      * The model class provides access to enough structure to define analogues of quality and exceptional density observables.
@@ -744,9 +964,11 @@ This block records the reusable components produced by Q005 and where they trans
    * Reused component:
 
      * `ABCQualityFunctional` and `HeightRadicalDescriptor`.
+
    * Why it transfers:
 
      * Bombieri–Lang style conjectures also express the idea that rational points with certain properties are rare relative to natural complexity measures.
+
    * What changes:
 
      * Instead of triples and `rad(abc)`, the descriptor focuses on rational points on varieties and geometric invariants.
@@ -756,9 +978,11 @@ This block records the reusable components produced by Q005 and where they trans
    * Reused component:
 
      * `HeightRadicalDescriptor` and `ABCCounterfactualPattern`.
+
    * Why it transfers:
 
      * Rank bounds can be linked to abc type inequalities, and the same pattern of “few very large height exceptions” versus “many exceptions” appears.
+
    * What changes:
 
      * The observables summarize heights and conductors of elliptic curves rather than triples, but the functional role is similar.
@@ -768,9 +992,11 @@ This block records the reusable components produced by Q005 and where they trans
    * Reused component:
 
      * `ABCCounterfactualPattern`.
+
    * Why it transfers:
 
-     * BSD connects analytic invariants to arithmetic invariants in a way that can be framed as consistency tension; abc style patterns become part of the constraint backdrop.
+     * BSD connects analytic invariants to arithmetic invariants in a way that can be framed as consistency_tension; abc style patterns become part of the constraint backdrop.
+
    * What changes:
 
      * The pattern is applied to L function data and ranks instead of pure triple data.
@@ -780,9 +1006,11 @@ This block records the reusable components produced by Q005 and where they trans
    * Reused component:
 
      * `ABCQualityFunctional` as an abstract template for counting rare high quality configurations against an overall complexity budget.
+
    * Why it transfers:
 
      * The idea that too many extreme configurations violate resource bounds is common to both settings.
+
    * What changes:
 
      * The meaning of “quality” and “radical” is replaced by information content and resource usage metrics.
@@ -802,8 +1030,10 @@ This block explains where Q005 currently sits in the TU program and what the nex
 
 * N_level: N2
 
-  * The narrative of abc as a consistency tension principle is explicit.
+  * The narrative of abc as a consistency_tension principle is explicit.
   * Counterfactual worlds and AI engineering modules are defined in a coherent way at the effective layer.
+
+The MVP-E2 harness specified in Section 6.3 gives a concrete path to raise E_level once implemented and exercised.
 
 ### 9.2 Next measurable step toward E2
 
@@ -811,10 +1041,10 @@ To advance Q005 from E1 to E2, one or more of the following steps should be carr
 
 1. Implement a prototype tool that:
 
-   * takes as input a finite database of abc triples,
+   * takes as input a finite database of abc triples generated by a documented `SearchPolicy_abc`,
    * constructs a regular state `m_data` in `M_abc_reg`,
    * computes `DeltaS_quality(m_data; k)`, `DeltaS_density(m_data; k)`, and `Tension_abc(m_data)`,
-   * publishes the resulting tension profiles along with the chosen encoding parameters in `E_abc`.
+   * publishes the resulting tension profiles along with the chosen encoding parameters and hashes in `E_abc`.
 
 2. Run synthetic experiments as in Experiment 2 and publish:
 
@@ -822,7 +1052,7 @@ To advance Q005 from E1 to E2, one or more of the following steps should be carr
    * the distribution of `Tension_abc` for each class,
    * a clear separation analysis.
 
-Both steps stay at the effective layer, since they operate on observable summaries and explicit encodings without exposing deeper TU generative mechanisms.
+Both steps stay at the effective layer, since they operate on observable summaries and explicit encodings without exposing deeper TU generative mechanisms or making any claim about the truth of abc.
 
 ### 9.3 Long term role in the TU program
 
@@ -842,11 +1072,13 @@ This block gives an accessible explanation that stays faithful to the effective 
 
 The abc conjecture starts from a very simple equation:
 
-`a + b = c`
+```txt
+a + b = c,
+```
 
-where `a`, `b`, and `c` are whole numbers that share no common prime factor.
+where `a`, `b`, and `c` are whole numbers that share no common prime factor and none of them is zero.
 
-There are two very different ways to look at the triple `(a, b, c)`:
+There are two very different ways to look at the triple `(a, b, c)`.
 
 1. Additive side
 
@@ -860,14 +1092,23 @@ There are two very different ways to look at the triple `(a, b, c)`:
 
 Now define:
 
-* the height `H(a, b, c)` as a measure of how large the triple is, for example `max(|a|, |b|, |c|)`,
+* the height
+
+  ```txt
+  H(a, b, c) = max(|a|, |b|, |c|),
+  ```
+
+  which measures how large the triple is,
+
 * the quality
 
   ```txt
-  q(a, b, c) = log(H(a, b, c)) / log(rad(abc)).
+  q(a, b, c) = log(H(a, b, c)) / log(rad(abc)),
   ```
 
-If `q(a, b, c)` is a little larger than `1`, it means that `c` is significantly larger than the product of the distinct primes that appear in `abc`, even after taking logarithms.
+  which compares the size of `c` to the product of the distinct primes in `abc`, after taking logarithms.
+
+If `q(a, b, c)` is a little larger than `1`, it means that `c` is significantly larger than the product of the distinct primes that appear in `abc`, even after using logarithms to compress both.
 
 The abc conjecture says, roughly:
 
@@ -884,21 +1125,78 @@ We do this by:
 1. Grouping triples into scale bands according to their height.
 2. Summarizing, in each band:
 
-   * how large the typical quality is,
-   * what fraction of triples have quality above a threshold.
+   * how large the typical quality is, using a fixed rule (for example, the 95th percentile of quality),
+   * what fraction of triples have quality above a fixed threshold.
 3. Comparing these summaries with what abc would lead us to expect if high quality triples were truly rare.
 
 This gives two mismatch quantities per band:
 
-* how far the average quality is from an abc compatible value,
-* how far the fraction of high quality triples is from an abc compatible limit.
+* how far the high-end quality is from an abc compatible profile,
+* how far the fraction of high quality triples is from an abc compatible upper bound.
 
-We combine these mismatches across bands into a single nonnegative number called `Tension_abc`. In an abc compatible world, for some reasonable way of choosing bands and weights, this tension number should stay small and stable when we look at more data. In a world where abc fails in a strong way, the tension should eventually become large and stay large, no matter how we choose the bands and weights as long as we use fair rules.
+We combine these mismatches (with fixed weights) across bands into a single nonnegative number called `Tension_abc`. In an abc compatible world, for some reasonable way of choosing bands and weights that is fixed in advance, this tension number should stay small and reasonably stable when we look at more and more data. In a world where abc fails in a strong way, the tension should eventually become large and stay large, no matter how we choose bands and weights, as long as we respect fairness.
 
-This approach does not answer the original yes or no question. Instead it does three things:
+This approach does not answer the original yes or no question for abc. Instead it does three things:
 
-1. It turns abc into a statement about low tension versus high tension patterns in observable summaries.
-2. It defines experiments that can reject bad encodings of this idea and sharpen good ones.
+1. It turns abc into a statement about low tension versus high tension patterns in observable summaries of triples.
+2. It defines experiments that can reject bad encodings of this idea and sharpen good ones, without pretending to prove abc.
 3. It produces reusable tools for other problems where a simple relation and a complexity measure must fit together without allowing too many extreme exceptions.
 
-Q005 is therefore the Diophantine consistency template inside the Tension Universe, capturing the idea that “too many miracles” in number theory would show up as persistent, measurable tension in any coherent encoding of the arithmetic world.
+Q005 is therefore the Diophantine consistency template inside the Tension Universe, capturing the idea that “too many miracles” in number theory would show up as persistent, measurable tension in any coherent effective layer encoding of the arithmetic world.
+
+---
+
+## Tension Universe effective-layer footer
+
+This page is part of the **WFGY / Tension Universe** S-problem collection. It follows the shared TU charters and the Q001–Q125 S-problem constitution.
+
+### Scope of claims
+
+* The goal of this document is to specify an **effective-layer encoding** of the abc conjecture as a consistency_tension problem.
+* It does not claim to prove or disprove the canonical statement in Section 1.
+* It does not introduce any new theorem beyond what is already established in the cited literature.
+* It should not be cited as evidence that the abc conjecture has been solved.
+
+### Effective-layer boundary
+
+* All objects used here (state spaces `M`, observables, invariants, tension scores, counterfactual “worlds”) live at the effective layer.
+* No step in this file gives a constructive mapping from raw experimental or simulation data into internal TU fields.
+* No step exposes any TU deep generative rule, first-principle axiom system, or internal semantic wiring.
+* Falsifying or revising a TU encoding is not the same as deciding the truth value of the abc conjecture.
+
+### Encoding and fairness
+
+* Admissible encoding classes, reference profiles, upper bounds and weight families used in this page are constrained by shared Tension Universe charters:
+
+  * [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+  * [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+  * [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
+
+* For every encoding class referenced here:
+
+  * its definition, parameter ranges, template families, and reference profiles are fixed at the charter or encoding level before any problem-specific tuning;
+  * these choices may depend on general mathematical considerations and on public benchmark selections, but not on the unknown truth value of the abc conjecture;
+  * no encoding is allowed to hide the canonical answer as an uninterpreted field, label or parameter.
+
+### Tension scale and thresholds
+
+* All mismatch terms `DeltaS_*` and tension functionals in this file are treated as **dimensionless or normalized quantities**, defined up to a fixed monotone rescaling specified in the TU Tension Scale Charter.
+* Thresholds such as `epsilon_abc`, `delta_abc`, `eps`, and experiment cutoffs are always interpreted relative to that fixed scale.
+* Changing the tension scale requires an explicit update of the TU Tension Scale Charter, not an edit of individual problem files.
+
+### Falsifiability and experiments
+
+* Experiments described in this document are **tests of TU encodings**, not tests of the underlying canonical problem itself.
+* The rule “falsifying a TU encoding is not the same as solving the canonical statement” applies globally, even where it is not restated in the main text.
+* When required observables cannot be reliably estimated in practice, the outcome of the corresponding experiment is recorded as “inconclusive”, not as confirmation of abc or its negation.
+
+### Interaction with established results
+
+* All encodings and counterfactual worlds described here are required to respect known theorems and hard constraints in Diophantine number theory and related fields.
+* If a later analysis finds a concrete conflict with established results, the correct procedure is to update or retire the encoding under the TU charters, not to reinterpret those results.
+
+### Program note
+
+* This page is an experimental specification within the ongoing **WFGY / Tension Universe** research program.
+* All structures and parameter choices are provisional and may be revised in future versions, subject to the constraints above.
+* Any future revision must preserve the separation between effective-layer encodings and deeper TU mechanisms, and must continue to avoid embedding the truth value of the abc conjecture directly into the encoding.
