@@ -16,20 +16,21 @@ Semantics: continuous
 E_level: E1
 N_level: N1
 Last_updated: 2026-01-29
-```
+````
 
 ---
 
-## 0. Effective layer scope
+## 0. Effective layer disclaimer
 
 All statements in this entry are made strictly at the effective layer of the Tension Universe (TU) framework.
 
-* This file specifies an effective-layer encoding of the Yang Mills existence and mass gap problem.
+* This file specifies an effective layer encoding of the Yang Mills existence and mass gap problem.
 * It does not claim to prove or disprove the canonical mathematical statement.
 * It does not construct any four dimensional Yang Mills theory and does not claim that such a construction has been completed.
-* All references to state spaces, observables, tension functionals, and counterfactual worlds are internal to TU and are not direct claims about the real universe.
+* All references to state spaces, observables, invariants, tension functionals, and counterfactual worlds are internal to TU and are not direct claims about the physical universe.
+* Any apparent reference to “the world” or “the universe” inside this file is shorthand for TU internal worlds described at the effective layer.
 
-The canonical problem description in Section 1 is quoted in ordinary mathematical language only to set the target that this effective-layer encoding is meant to track.
+The canonical problem description in Section 1 is quoted in ordinary mathematical language only to set the target that this effective layer encoding is meant to track. Nothing in this document upgrades that target to a solved status.
 
 ---
 
@@ -94,7 +95,7 @@ These problems provide prerequisites, tools, or conceptual foundations for Q012.
   Reason: supplies foundational viewpoints on set theoretic universes and real models that underlie the analytic_field semantics used for Yang Mills state spaces.
 
 * Q011 (BH_MATH_NS_L3_011)
-  Reason: provides a parallel template for treating nonlinear PDE existence and regularity as an effective-layer tension problem, which Q012 reuses in the gauge theory setting.
+  Reason: provides a parallel template for treating nonlinear PDE existence and regularity as an effective layer tension problem, which Q012 reuses in the gauge theory setting.
 
 * Q032 (BH_PHYS_QTHERMO_L3_032)
   Reason: offers tools for relating microscopic quantum field spectra to macroscopic thermodynamic behavior, needed when interpreting mass gaps and confinement as spectral_tension patterns.
@@ -145,7 +146,12 @@ Cross domain edges connect Q012 to problems in other domains that can reuse its 
 
 ## 3. Tension Universe encoding (effective layer)
 
-All content in this block is at the effective layer. We describe state spaces, observables, mismatch functionals, tension tensors, invariants, singular sets, and encoding classes. We do not describe any hidden generative rules or any explicit mapping from raw gauge fields or path integrals to internal TU fields.
+All content in this block is at the effective layer. It describes internal TU objects such as state spaces, observables, mismatch functionals, tension tensors, invariants, singular sets, and encoding classes.
+
+Throughout this section:
+
+* all observables and tension values are interpreted with continuous semantics, in line with `Semantics: continuous` in the header metadata,
+* nothing in this section describes how to construct a Yang Mills theory from first principles, only how to organize summaries if such a theory or approximation exists.
 
 ### 3.1 State space
 
@@ -225,8 +231,8 @@ We define nonnegative mismatch observables that measure deviations from referenc
 
 Both mismatches are defined using a fixed admissible reference class:
 
-* Reference profiles are chosen once for a given encoding and do not depend on the specific state `m` that is evaluated.
-* The reference class respects basic symmetries and physical constraints such as gauge invariance and locality.
+* reference profiles are chosen once for a given encoding and do not depend on the specific state `m` that is evaluated,
+* the reference class respects basic symmetries and physical constraints such as gauge invariance and locality.
 
 ### 3.4 Combined Yang Mills mismatch
 
@@ -239,7 +245,7 @@ DeltaS_YM(m) = w_spec * DeltaS_spec_YM(m; window_set)
 
 where:
 
-* `window_set` and `scale_set` represent finite collections of spectral windows and scales that are chosen in advance.
+* `window_set` and `scale_set` represent finite collections of spectral windows and scales that are chosen in advance,
 * `w_spec` and `w_conf` are fixed positive weights satisfying
 
   ```txt
@@ -260,10 +266,10 @@ T_ij(m) = S_i(m) * C_j(m) * DeltaS_YM(m) * lambda(m) * kappa_YM
 
 where:
 
-* `S_i(m)` represents the strength of the ith semantic source component, such as how strongly the configuration carries Yang Mills related content.
-* `C_j(m)` represents the receptivity of the jth cognitive or downstream component to Yang Mills related tension.
-* `DeltaS_YM(m)` is the combined mismatch defined above.
-* `lambda(m)` is a convergence state factor in a fixed range that encodes whether local reasoning is stable, marginal, or unstable.
+* `S_i(m)` represents the strength of the ith semantic source component, such as how strongly the configuration carries Yang Mills related content,
+* `C_j(m)` represents the receptivity of the jth cognitive or downstream component to Yang Mills related tension,
+* `DeltaS_YM(m)` is the combined mismatch defined above,
+* `lambda(m)` is a convergence state factor in a fixed range that encodes whether local reasoning is stable, marginal, or unstable,
 * `kappa_YM` is a positive constant that sets the scale of Yang Mills related spectral_tension in this encoding.
 
 We also define three effective invariants.
@@ -316,7 +322,7 @@ and impose the following domain restriction:
   M_YM_reg = M_YM \ S_sing_YM
   ```
 
-* When an experiment or protocol would attempt to evaluate `DeltaS_YM(m)` or the invariants for a state in `S_sing_YM`, the result is treated as “out of domain” rather than as evidence about the existence of the theory or the presence of a mass gap.
+* When an experiment or protocol would attempt to evaluate `DeltaS_YM(m)` or the invariants for a state in `S_sing_YM`, the result is treated as out of domain rather than as evidence about the existence of the theory or the presence of a mass gap.
 
 This makes the singular set explicit and prevents accidental use of undefined or divergent quantities as if they were meaningful observables.
 
@@ -337,9 +343,10 @@ For Q012 we work inside an explicit encoding class.
 
 * An encoding for Q012 is admissible only if:
 
-  * It selects window sets, scale sets, reference profiles, and weight pairs from the predefined finite libraries.
-  * These choices are made before any particular data instance or world state is evaluated.
-  * No parameter is adjusted in response to tension outputs for individual states.
+  * it selects window sets, scale sets, reference profiles, and weight pairs from the predefined finite libraries,
+  * these finite libraries and their internal parameter ranges are themselves specified and versioned at the charter level, in particular by the TU Encoding and Fairness Charter and the TU Tension Scale Charter,
+  * these choices are made before any particular data instance or world state is evaluated,
+  * no parameter is adjusted in response to tension outputs for individual states while keeping the same encoding label.
 
 We denote the resulting finite family of admissible encodings by
 
@@ -347,7 +354,7 @@ We denote the resulting finite family of admissible encodings by
 Encoding_YM_Class
 ```
 
-Whenever this file refers to an “admissible encoding” for Q012 it means an element of `Encoding_YM_Class`. All fairness statements in later sections are understood with respect to this class and with respect to the TU Encoding and Fairness Charter.
+Whenever this file refers to an admissible encoding for Q012 it means an element of `Encoding_YM_Class`. All fairness statements in later sections are understood with respect to this class and with respect to the TU Encoding and Fairness Charter. Any change to `Encoding_YM_Class` itself requires a charter level update and cannot be introduced silently inside this page.
 
 ---
 
@@ -367,13 +374,13 @@ Tension_YM(m) =
 
 where:
 
-* `alpha > 0` and `beta > 0` are fixed coefficients with `alpha + beta = 1`.
+* `alpha > 0` and `beta > 0` are fixed coefficients with `alpha + beta = 1`,
 * `window_set` and `scale_set` are taken from the admissible sets described in Section 3.7 and are part of the chosen encoding in `Encoding_YM_Class`.
 
 For all `m` in `M_YM_reg` the functional satisfies:
 
-* `Tension_YM(m) >= 0`.
-* `Tension_YM(m)` is small when both spectral and confinement mismatches are small.
+* `Tension_YM(m) >= 0`,
+* `Tension_YM(m)` is small when both spectral and confinement mismatches are small,
 * `Tension_YM(m)` increases when either mismatch grows, with relative influence controlled by `alpha` and `beta`.
 
 Once an encoding in `Encoding_YM_Class` is chosen these parameters are fixed and are not altered on a per instance basis.
@@ -399,11 +406,11 @@ indexed by a refinement parameter `k` such that for all sufficiently large `k`
 Tension_YM(m_true(k)) <= epsilon_YM
 ```
 
-for some small threshold `epsilon_YM` that does not diverge as `k` increases.
+for some small threshold `epsilon_YM` that does not diverge as `k` increases. The numerical choice and interpretation of `epsilon_YM` must follow the TU Tension Scale Charter and cannot be tuned after observing specific data.
 
 Informally, if a consistent gapped Yang Mills theory exists and the encoding is faithful, then the corresponding world representing states should lie in a controlled low tension band across admissible refinements.
 
-This effective-layer statement is conditional. It does not assert that such a theory exists. It only asserts that if it exists and if the encoding is faithful, then its observable behavior can be organized as a low tension configuration in `Encoding_YM_Class`.
+This effective layer statement is conditional. It does not assert that such a theory exists. It only asserts that if it exists and if the encoding is faithful, then its observable behavior can be organized as a low tension configuration in `Encoding_YM_Class`.
 
 ### 4.3 Failure scenarios as persistent high tension
 
@@ -418,9 +425,7 @@ Then for any admissible encoding and any sequence of world representing states `
 Tension_YM(m_false(k)) >= delta_YM
 ```
 
-and this `delta_YM` cannot be made arbitrarily small by choosing a different encoding inside `Encoding_YM_Class`.
-
-In words, if a consistent gapped Yang Mills theory does not exist or does not describe the world, then any faithful encoding in `Encoding_YM_Class` should encounter persistent high tension along realistic refinement paths.
+and this `delta_YM` cannot be made arbitrarily small by choosing a different encoding inside `Encoding_YM_Class` while respecting the TU Tension Scale Charter and the faithfulness requirement.
 
 Neither Section 4.2 nor Section 4.3 claims to know which conditional applies to the real universe. They only describe how low tension or high tension patterns would look under the two broad possibilities.
 
@@ -432,6 +437,8 @@ We outline two counterfactual worlds for Q012, described strictly at the effecti
 
 * World T: there exists a mathematically consistent four dimensional Yang Mills theory with a positive mass gap that approximates the relevant sector of the physical world, and the encoding in use is faithful to this behavior.
 * World F: no such consistent gapped Yang Mills theory exists, or every consistent version is effectively gapless in the continuum limit, and the encoding in use is faithful to this fact.
+
+Both worlds are TU internal constructs. They are not declarations about what the actual physical universe is like.
 
 ### 5.1 World T (existence with mass gap, low tension)
 
@@ -457,7 +464,7 @@ In World T the following pattern is expected for some faithful encoding in `Enco
 
 4. Global tension
 
-   * For some small threshold `epsilon_YM` and all sufficiently large `k` one has
+   * For some small threshold `epsilon_YM` determined by the TU Tension Scale Charter and for all sufficiently large `k` one has
 
      ```txt
      Tension_YM(m_T(k)) <= epsilon_YM
@@ -483,7 +490,7 @@ In World F the expected pattern is different. For any faithful encoding in `Enco
 
 4. Global tension
 
-   * There exists a positive constant `delta_YM` such that for infinitely many `k`
+   * There exists a positive constant `delta_YM`, interpreted within the TU Tension Scale Charter, such that for infinitely many `k`
 
      ```txt
      Tension_YM(m_F(k)) >= delta_YM
@@ -493,18 +500,20 @@ In World F the expected pattern is different. For any faithful encoding in `Enco
 
 ### 5.3 Interpretive note
 
-World T and World F are effective-layer constructs. They organize possible patterns in observable summaries and tension values under different assumptions about the underlying theory.
+World T and World F are effective layer constructs. They organize possible patterns in observable summaries and tension values under different assumptions about the underlying theory.
 
 * If a consistent gapped Yang Mills theory exists and approximates nature, and if an encoding from `Encoding_YM_Class` is faithful, then realistic data along refinement paths should exhibit World T type tension profiles.
 * If no such theory exists or if it fails to approximate nature in the required way, then any faithful encoding should eventually exhibit World F type persistent high tension.
 
-These counterfactual worlds do not construct Yang Mills theories and do not claim to know which scenario holds in reality. They give a structured way to talk about how different possibilities would manifest at the effective layer.
+These counterfactual worlds do not construct Yang Mills theories and do not claim to know which scenario holds in reality. They give a structured way to talk about how different possibilities would manifest at the effective layer and inside TU.
 
 ---
 
 ## 6. Falsifiability and discriminating experiments
 
-This block describes effective-layer experiments that can test and potentially falsify specific Q012 encodings. These experiments do not solve the Yang Mills existence and mass gap problem. They only test whether chosen tension encodings behave in a reasonable and stable way under realistic inputs.
+This block describes effective layer experiments that can test and potentially falsify specific Q012 encodings. These experiments do not solve the Yang Mills existence and mass gap problem. They only test whether chosen tension encodings behave in a reasonable and stable way under realistic inputs.
+
+All experiments in this section interpret observables and tension values with continuous semantics, as stated in the header metadata and in Section 3.
 
 ### Experiment 1: Lattice scaling tension profile
 
@@ -523,7 +532,7 @@ Test whether a chosen `Tension_YM` encoding remains low and stable along lattice
 
   * fixes a finite set of spectral windows and length scales,
   * fixes reference gapped profiles and confinement patterns,
-  * fixes weights `w_spec`, `w_conf`, `alpha`, and `beta` satisfying the constraints in Sections 3.4 and 4.1.
+  * fixes weights `w_spec`, `w_conf`, `alpha`, and `beta` satisfying the constraints in Sections 3.4, 3.7, and 4.1.
 
 **Protocol**
 
@@ -553,12 +562,16 @@ Test whether a chosen `Tension_YM` encoding remains low and stable along lattice
 
 **Falsification conditions**
 
-* If across all considered lattice trajectories and across an admissible encoding class the observed `Tension_YM(m_latt)` values systematically exceed any reasonable upper bound for a gapped world and show no trend toward stabilization, then the encoding library used for Q012 is considered falsified at the effective layer.
+* If across all considered lattice trajectories and across an admissible encoding class the observed `Tension_YM(m_latt)` values systematically exceed upper bounds for a gapped world defined in the TU Tension Scale Charter and show no trend toward stabilization, then the encoding library used for Q012 is considered falsified at the effective layer.
 * If small changes of encoding parameters inside `Encoding_YM_Class` produce qualitatively different and mutually incompatible tension profiles without clear physical justification, the encoding is considered unstable and rejected for Q012.
+
+**Semantics implementation note**
+
+All observables and tension values in this experiment are treated as continuous real quantities. No discrete or hybrid reinterpretation is used here, and any comparison to threshold values must use the same tension scale as defined in the TU Tension Scale Charter.
 
 **Boundary note**
 
-Passing this experiment only shows that a particular encoding is not ruled out by current lattice data. It does not prove that a rigorous Yang Mills theory with a mass gap exists. Failing this experiment shows that a specific encoding behaves poorly; it does not show that the Yang Mills mass gap problem has a negative solution.
+Passing this experiment only shows that a particular encoding is not ruled out by current lattice data. It does not prove that a rigorous Yang Mills theory with a mass gap exists. Failing this experiment shows that a specific encoding behaves poorly. It does not show that the Yang Mills mass gap problem has a negative solution.
 
 ---
 
@@ -604,7 +617,11 @@ Assess whether a Q012 encoding can reliably distinguish between artificial gauge
 **Falsification conditions**
 
 * If the encoding consistently fails to assign lower tension to Family T than to Family F across `Encoding_YM_Class`, then the encoding is considered ineffective for Q012 and should be rejected.
-* If there exist parameter choices within `Encoding_YM_Class` that reverse the expected ordering, so that Family F models systematically receive lower tension than Family T models without a physically justified explanation, the encoding is considered misaligned with the intended spectral_tension type.
+* If there exist parameter choices within `Encoding_YM_Class` that reverse the expected ordering, so that Family F models systematically receive lower tension than Family T models without a physically justified explanation, the encoding is considered misaligned with the intended spectral_tension type and must be revised at the charter level.
+
+**Semantics implementation note**
+
+All observables in this experiment are treated with continuous semantics, and the same tension scale is used across Family T and Family F. Any threshold that separates low tension from high tension must be chosen in advance according to the TU Tension Scale Charter and cannot be tuned after inspecting the results.
 
 **Boundary note**
 
@@ -614,7 +631,7 @@ Success on these artificial model families shows that a chosen encoding can trac
 
 ## 7. AI and WFGY engineering spec
 
-This block describes how Q012 can be used as an engineering module for AI systems within the WFGY framework at the effective layer, without exposing any deep TU generative rules.
+This block describes how Q012 can be used as an engineering module for AI systems within the WFGY framework at the effective layer, without exposing any deep TU generative rules or claiming to solve the Yang Mills mass gap problem.
 
 ### 7.1 Training signals
 
@@ -633,11 +650,11 @@ We define several training signals that AI models can use when reasoning about g
 3. `signal_YM_tension_score`
 
    * Definition: equal to `Tension_YM(m)` for a state that summarizes the current Yang Mills related context.
-   * Purpose: provide a scalar indicator of how well the model’s internal state aligns with the low tension gapped world versus a high tension inconsistent world.
+   * Purpose: provide a scalar indicator of how well the model’s internal state aligns with the low tension gapped world versus a high tension inconsistent world, as defined within the TU Tension Scale Charter.
 
 4. `signal_counterfactual_separation_YM`
 
-   * Definition: a signal measuring how clearly the model separates answers given under World T assumptions from answers given under World F assumptions, with penalties for mixing the two.
+   * Definition: a signal measuring how clearly the model separates answers given under World T assumptions from answers given under World F assumptions, with penalties for mixing the two without explicit disclaimers.
    * Purpose: enforce a clean distinction between reasoning under the existence plus gap hypothesis and reasoning under its negation.
 
 When these signals are used the model must still treat the underlying mathematical problem as open. The signals are guidance for internal coherence, not a license to claim that Yang Mills with mass gap has been proved.
@@ -678,7 +695,7 @@ We suggest an evaluation harness for AI models augmented with Q012 tension modul
 
    * Accuracy on questions where the assumption of a positive mass gap is important for a correct answer or explanation.
    * Internal consistency between answers given under explicit “mass gap exists” prompts and “mass gap does not exist” prompts.
-   * Stability of explanations across multistep reasoning chains that require combining spectral and confinement information.
+   * Stability of explanations across multistep reasoning chains that require combining spectral and confinement information, while keeping the problem’s open status explicit.
 
 The model should always explicitly mark the Yang Mills existence and mass gap problem as open when relevant, regardless of its internal tension guidance.
 
@@ -799,18 +816,18 @@ This block explains where Q012 currently sits in the TU verification ladder and 
 
 * E_level: E1
 
-  * A complete effective-layer encoding of the Yang Mills mass gap problem has been specified, including:
+  * A complete effective layer encoding of the Yang Mills mass gap problem has been specified. This means that at the effective layer, and not at the level of constructive quantum field theory, Q012 provides:
 
-    * state space `M_YM`,
+    * a state space `M_YM`,
     * mismatch observables `DeltaS_spec_YM` and `DeltaS_conf`,
-    * combined tension functional `Tension_YM`,
-    * explicit singular set `S_sing_YM` and domain restriction,
+    * a combined tension functional `Tension_YM`,
+    * an explicit singular set `S_sing_YM` and domain restriction,
     * experiments with clear falsification conditions,
     * an explicit encoding class `Encoding_YM_Class` with fairness constraints.
 
 * N_level: N1
 
-  * The narrative connecting spectral gaps, confinement behavior, and tension functionals is explicit and coherent.
+  * The narrative connecting spectral gaps, confinement behavior, and tension functionals is explicit and coherent at the effective layer.
   * Counterfactual worlds and transfer components have been described.
   * Detailed refinement schemes and finite encoding libraries are outlined conceptually but not yet instantiated in a concrete public implementation.
 
@@ -832,7 +849,7 @@ To upgrade Q012 from E1 to E2 the following concrete steps are envisioned:
 
    where each `encoding_k` specifies finer windows or scales and a clear relation between `Tension_YM(m_k)` and `Tension_YM(m_{k+1})` for world representing sequences `m_k`.
 
-3. Establish measurable conditions on how `Tension_YM(m_k)` should behave for World T like and World F like scenarios under these refinements, including explicit bounds and stability criteria.
+3. Establish measurable conditions on how `Tension_YM(m_k)` should behave for World T like and World F like scenarios under these refinements, including explicit bounds and stability criteria that are consistent with the TU Tension Scale Charter.
 
 These steps remain inside the effective layer. They do not require revealing TU generative rules or any explicit path from bare lattice data to internal fields.
 
@@ -840,28 +857,28 @@ These steps remain inside the effective layer. They do not require revealing TU 
 
 In the long run Q012 is expected to:
 
-* Serve as a flagship example of spectral_tension in mathematical physics, setting a standard for encoding nonperturbative existence problems.
-* Provide a bridge between rigorous quantum field theory, lattice gauge theory, and effective spectral descriptions that AI systems can handle.
-* Supply reusable components and patterns that generalize to other domains where spectral gaps and confinement like phenomena play a central role, such as condensed matter systems, holographic models, and information processing substrates.
+* serve as a flagship example of spectral_tension in mathematical physics, setting a standard for encoding nonperturbative existence problems,
+* provide a bridge between rigorous quantum field theory, lattice gauge theory, and effective spectral descriptions that AI systems can handle,
+* supply reusable components and patterns that generalize to other domains where spectral gaps and confinement like phenomena play a central role, such as condensed matter systems, holographic models, and information processing substrates.
 
 ---
 
 ## 10. Elementary but precise explanation
 
-This block gives an explanation for non specialists that stays aligned with the effective-layer description.
+This block gives an explanation for non specialists that stays aligned with the effective layer description.
 
 A Yang Mills theory is a mathematical model for certain forces in nature that uses gauge fields with a nonabelian symmetry group such as `SU(3)`. Physicists expect that the version of this theory describing the strong force has several key features:
 
 1. It exists as a well defined quantum field theory, not just as a formal recipe for perturbative calculations.
-2. It has a positive mass gap: there is a smallest nonzero energy level above the vacuum and no excitations with arbitrarily small positive energy.
-3. It exhibits confinement: isolated color charged particles cannot be observed and only neutral bound states appear.
+2. It has a positive mass gap. There is a smallest nonzero energy level above the vacuum and no excitations with arbitrarily small positive energy.
+3. It exhibits confinement. Isolated color charged particles cannot be observed and only neutral bound states appear.
 
 The Clay Millennium problem asks mathematicians to prove that a four dimensional Yang Mills theory with these properties really exists for a given compact gauge group.
 
-In the Tension Universe view, instead of trying to build the full theory directly inside this file, we ask two related questions.
+In the Tension Universe view, instead of trying to build the full theory directly inside this file, we ask two related questions:
 
-* If such a theory exists, what patterns should we see in its spectra and in its confinement behavior.
-* Can we define a tension number that is small when those patterns look right and large when something is inconsistent.
+* if such a theory exists, what patterns should we see in its spectra and in its confinement behavior,
+* can we define a tension number that is small when those patterns look right and large when something is inconsistent.
 
 We imagine a space of states. Each state summarizes:
 
@@ -869,17 +886,17 @@ We imagine a space of states. Each state summarizes:
 * how quickly gauge invariant quantities stop correlating over distance,
 * how Wilson loops behave, which is a standard diagnostic for confinement.
 
-From these summaries we compute two mismatch quantities.
+From these summaries we compute two mismatch quantities:
 
-* One measures how far the spectrum is from a reference gapped profile.
-* The other measures how far the confinement behavior is from a reference confining pattern.
+* one measures how far the spectrum is from a reference gapped profile,
+* the other measures how far the confinement behavior is from a reference confining pattern.
 
 We combine them into a single tension number `Tension_YM`.
 
-Then we consider two broad types of worlds at the effective layer.
+Then we consider two broad types of internal TU worlds at the effective layer:
 
-* In a world where a consistent Yang Mills theory with a mass gap exists and describes nature, and where the encoding is faithful, we should be able to follow realistic data through finer and finer approximations and see that `Tension_YM` stays within a controlled low range.
-* In a world where no such theory exists or where it cannot keep a true gap, any faithful attempt to encode the spectra and confinement behavior will eventually produce persistent high values of `Tension_YM` along some refinement paths.
+* in a world where a consistent Yang Mills theory with a mass gap exists and describes nature, and where the encoding is faithful, we should be able to follow realistic data through finer and finer approximations and see that `Tension_YM` stays within a controlled low range;
+* in a world where no such theory exists or where it cannot keep a true gap, any faithful attempt to encode the spectra and confinement behavior will eventually produce persistent high values of `Tension_YM` along some refinement paths.
 
 This framework does not solve the original problem. It does not construct Yang Mills theories and it does not claim to know whether a mass gap really exists. What it provides is:
 
@@ -887,27 +904,27 @@ This framework does not solve the original problem. It does not construct Yang M
 * a family of experiments that can test whether particular ways of encoding Yang Mills behavior are reasonable and stable,
 * reusable tools for AI systems and for other problems that also involve hidden spectra and observable behavior.
 
-Q012 is therefore the prototype of how to treat a deep open problem in mathematical physics inside the Tension Universe. It respects the boundary between effective descriptions and deep generative rules while still making the problem precise enough to be tested, discussed, and reused as a module in larger reasoning systems.
+Q012 is therefore a prototype for how to treat a deep open problem in mathematical physics inside the Tension Universe. It respects the boundary between effective descriptions and deep generative rules while still making the problem precise enough to be tested, discussed, and reused as a module in larger reasoning systems.
 
 ---
 
-## Tension Universe effective-layer footer
+## Tension Universe effective layer footer
 
-This page is part of the **WFGY / Tension Universe** S-problem collection.
+This page is part of the **WFGY / Tension Universe** S problem collection.
 
 ### Scope of claims
 
-* The goal of this document is to specify an effective-layer encoding of the named problem.
+* The goal of this document is to specify an effective layer encoding of the named problem.
 * It does not claim to prove or disprove the canonical statement in Section 1.
 * It does not introduce any new theorem beyond what is already established in the cited literature.
 * It should not be cited as evidence that the corresponding open problem has been solved.
 * Any use of the words “world”, “state”, or “encoding” refers to internal TU constructs and not directly to the physical universe.
 
-### Effective-layer boundary
+### Effective layer boundary
 
 * All objects used here (state spaces `M`, observables, invariants, tension scores, counterfactual worlds) live at the effective layer of the TU framework.
 * Deep generative rules, base axioms, and internal construction mechanisms for TU are intentionally not specified in this file.
-* Experiments and protocols described here test the behavior of effective-layer encodings only. They do not test or decide the truth of the canonical open problem itself.
+* Experiments and protocols described here test the behavior of effective layer encodings only. They do not test or decide the truth of the canonical open problem itself.
 * Nothing in this file should be interpreted as exposing or modifying any underlying TU generative rule.
 
 ### Encoding and fairness
@@ -915,9 +932,25 @@ This page is part of the **WFGY / Tension Universe** S-problem collection.
 * The encodings used in this page are constrained by the TU Encoding and Fairness Charter and by the TU Tension Scale Charter.
 * Any use of the phrases “low tension” or “high tension” follows the fixed scale and conventions defined in those charters.
 * All parameter choices described here are required to be set in advance at the encoding design stage and must not be tuned on individual instances in response to observed tension values.
+* Any modification to the admissible encoding class for this problem requires a charter level update and may not be introduced silently inside this page.
+
+### Tension scale and thresholds
+
+* All scalar tension quantities in this page, including `DeltaS_spec_YM`, `DeltaS_conf`, `DeltaS_YM`, `Tension_YM`, `epsilon_YM`, and `delta_YM`, live on the TU tension scale.
+* Numerical thresholds that distinguish low tension from high tension must be chosen in advance according to the TU Tension Scale Charter.
+* No experiment or protocol in this file is allowed to choose or adjust thresholds after inspecting particular data instances.
+
+### Versioning and non mutation policy
+
+* The `Last_updated` field in the header metadata marks the version of this effective layer encoding that is intended for public audit.
+* Once a version is published, its contents are considered frozen for the purpose of external verification. Substantive changes require a new version with an updated `Last_updated` date and a corresponding change log outside this file.
+* Silent modification of encodings, parameter libraries, or interpretation rules under an unchanged `Last_updated` date is not permitted within the TU framework.
 
 ### Reference charters
+
+This page should be read together with the following charters:
 
 * [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
 * [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
 * [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
+
