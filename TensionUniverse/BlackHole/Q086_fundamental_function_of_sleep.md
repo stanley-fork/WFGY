@@ -15,8 +15,20 @@ Status: Open
 Semantics: hybrid
 E_level: E1
 N_level: N2
-Last_updated: 2026-01-25
-````
+Last_updated: 2026-01-30
+```
+
+---
+
+## 0. Effective layer disclaimer
+
+All statements in this entry are made strictly at the **effective layer** of the Tension Universe (TU) framework:
+
+* We only specify observables, tension indicators, functionals, extremality patterns, and testable predictions.
+* We do **not** specify any underlying axiom system, generating rules, or constructive derivations of TU itself.
+* We do **not** provide any explicit mapping from raw neuroscience or behavioural data to internal TU fields; we only assume the existence of TU compatible models that reproduce the listed observables.
+
+This entry should be read together with the TU charters listed in the footer, which specify global constraints on effective layer encodings, fairness, and tension scales.
 
 ---
 
@@ -37,7 +49,7 @@ More concretely, the hard question is:
   * imposes vulnerability to predation and environmental hazards,
   * shows strongly regulated homeostatic and circadian control,
 
-what multi function role does sleep play such that species with complex nervous systems retain it, and what is the minimal set of functions that require sleep like states instead of purely waking or pharmacologic alternatives?
+  what multi function role does sleep play such that species with complex nervous systems retain it, and what is the minimal set of functions that require sleep like states instead of purely waking or pharmacologic alternatives?
 
 The canonical problem is not limited to one single function (for example "memory consolidation" only). It asks whether we can identify:
 
@@ -73,14 +85,15 @@ The problem is therefore considered open at the level of a unified, quantitative
 
 Within the BlackHole S problem collection, Q086 plays several roles:
 
-1. It is the central **sleep and systems neuroscience** node, where cognitive_tension and thermodynamic_tension interact.
+1. It is the central sleep and systems neuroscience node, where cognitive_tension and thermodynamic_tension interact.
 2. It links the "hard problem of consciousness" cluster (Q081–Q085) to neurodegeneration, development, and AI analogues of maintenance phases.
 3. It provides a prototype for encoding multi function biological processes within the Tension Universe (TU) at the effective layer:
 
    * combining architecture level observables,
    * cognitive and behavioural outcomes,
    * metabolic and clearance markers,
-     into a single tension functional.
+
+   into a single tension functional.
 
 ### References
 
@@ -166,7 +179,7 @@ We assume the existence of a semantic state space
 
 with the following effective interpretation:
 
-* Each element `m` in `M_sleep` represents a coherent “sleep world configuration” over some multi day time window for an organism or group, including:
+* Each element `m` in `M_sleep` represents a coherent sleep world configuration over some multi day time window for an organism or group, including:
 
   * sleep stage sequences and durations,
   * neural dynamical summaries,
@@ -183,44 +196,44 @@ We introduce the following effective observables and fields on `M_sleep`.
 
 1. Sleep architecture observable
 
-```txt
-Arch_stage(m)
-```
+   ```txt
+   Arch_stage(m)
+   ```
 
-* Output: a structured summary of sleep architecture in `m`, including total sleep time, fraction of time in each stage, fragmentation indices, and macro scale sequence patterns.
-* Interpretation: different values of `Arch_stage(m)` represent different high level sleep patterns, not the underlying raw time series.
+   * Output: a structured summary of sleep architecture in `m`, including total sleep time, fraction of time in each stage, fragmentation indices, and macro scale sequence patterns.
+   * Interpretation: different values of `Arch_stage(m)` represent different high level sleep patterns, not the underlying raw time series.
 
 2. Neural dynamical observable
 
-```txt
-Dyn_osc(m; region, band)
-```
+   ```txt
+   Dyn_osc(m; region, band)
+   ```
 
-* Output: effective measures of oscillatory power and pattern statistics for a specified brain region and frequency band, aggregated over sleep and wake segments within the time window represented by `m`.
+   * Output: effective measures of oscillatory power and pattern statistics for a specified brain region and frequency band, aggregated over sleep and wake segments within the time window represented by `m`.
 
 3. Metabolic and clearance observable
 
-```txt
-Met_clear(m; window)
-```
+   ```txt
+   Met_clear(m; window)
+   ```
 
-* Output: effective indicators of metabolic and clearance status across a chosen sub window within the overall time period, such as proxies for glymphatic activity or accumulated waste markers.
+   * Output: effective indicators of metabolic and clearance status across a chosen sub window within the overall time period, such as proxies for glymphatic activity or accumulated waste markers.
 
 4. Memory performance observable
 
-```txt
-Mem_perf(m; task)
-```
+   ```txt
+   Mem_perf(m; task)
+   ```
 
-* Output: effective performance metrics for specific learning and memory tasks that occur before and after sleep episodes within the window represented by `m`.
+   * Output: effective performance metrics for specific learning and memory tasks that occur before and after sleep episodes within the window represented by `m`.
 
 5. Cognitive and affective performance observable
 
-```txt
-Cog_perf(m; domain)
-```
+   ```txt
+   Cog_perf(m; domain)
+   ```
 
-* Output: effective measures of attention, decision making, mood regulation, and related functions across one or more domains, summarised over the same time window.
+   * Output: effective measures of attention, decision making, mood regulation, and related functions across one or more domains, summarised over the same time window.
 
 These observables are assumed to be well defined and finite for all `m` in the regular subset of `M_sleep` considered below.
 
@@ -230,45 +243,45 @@ We define three primary nonnegative mismatch quantities that measure how far a g
 
 1. Architecture mismatch
 
-```txt
-DeltaS_arch(m) >= 0
-```
+   ```txt
+   DeltaS_arch(m) >= 0
+   ```
 
-* Measures the deviation of `Arch_stage(m)` from an admissible reference class of architecture patterns that are hypothesised to be functionally adequate for the organism and context in question.
+   * Measures the deviation of `Arch_stage(m)` from an admissible reference class of architecture patterns that are hypothesised to be functionally adequate for the organism and context in question.
 
 2. Memory mismatch
 
-```txt
-DeltaS_memory(m) >= 0
-```
+   ```txt
+   DeltaS_memory(m) >= 0
+   ```
 
-* Measures the deviation between observed memory related outcomes encoded in `Mem_perf(m; task)` and a reference profile of outcomes that would be expected if sleep were performing an adequate consolidation and pruning function for the same tasks and exposures.
+   * Measures the deviation between observed memory related outcomes encoded in `Mem_perf(m; task)` and a reference profile of outcomes that would be expected if sleep were performing an adequate consolidation and pruning function for the same tasks and exposures.
 
 3. Metabolic mismatch
 
-```txt
-DeltaS_met(m) >= 0
-```
+   ```txt
+   DeltaS_met(m) >= 0
+   ```
 
-* Measures the deviation between metabolic and clearance indicators encoded in `Met_clear(m; window)` and a reference class of maintenance and clearance profiles associated with long term health.
+   * Measures the deviation between metabolic and clearance indicators encoded in `Met_clear(m; window)` and a reference class of maintenance and clearance profiles associated with long term health.
 
 To avoid non falsifiable definitions, we introduce finite encoding libraries:
 
 ```txt
-Lib_arch  = {ArchEncoding_1, ArchEncoding_2, ..., ArchEncoding_Ka}
+Lib_arch   = {ArchEncoding_1, ArchEncoding_2, ..., ArchEncoding_Ka}
 Lib_memory = {MemEncoding_1, MemEncoding_2, ..., MemEncoding_Km}
-Lib_met   = {MetEncoding_1, MetEncoding_2, ..., MetEncoding_Kc}
+Lib_met    = {MetEncoding_1, MetEncoding_2, ..., MetEncoding_Kc}
 ```
 
 Each element of these libraries is a concrete, finite specification of how to compute the corresponding mismatch from the relevant observables, including:
 
 * choice of normalisation and rescaling,
 * choice of reference classes,
-* and explicit functional forms.
+* explicit functional forms.
 
 Fairness constraints for experiments and analyses:
 
-* For any given study or model evaluation, one element from each library is selected in advance of detailed outcome inspection.
+* For any given study or model evaluation, one element from each library is selected **in advance** of detailed outcome inspection.
 * Once selected, these encodings must be held fixed for all subsequent analysis in that context.
 * No adaptive retuning of reference classes or encodings is permitted as a function of the measured mismatches.
 
@@ -277,24 +290,25 @@ Fairness constraints for experiments and analyses:
 We define a combined sleep tension functional:
 
 ```txt
-DeltaS_sleep(m) = w_arch * DeltaS_arch(m)
+DeltaS_sleep(m) = w_arch   * DeltaS_arch(m)
                   + w_memory * DeltaS_memory(m)
-                  + w_met * DeltaS_met(m)
+                  + w_met    * DeltaS_met(m)
 ```
 
 with the following constraints:
 
 * `w_arch`, `w_memory`, `w_met` are nonnegative real weights.
+
 * The weights satisfy:
 
-```txt
-w_arch + w_memory + w_met = 1
-0.2 <= w_arch  <= 0.6
-0.2 <= w_memory <= 0.6
-0.2 <= w_met    <= 0.6
-```
+  ```txt
+  w_arch + w_memory + w_met = 1
+  0.2 <= w_arch   <= 0.6
+  0.2 <= w_memory <= 0.6
+  0.2 <= w_met    <= 0.6
+  ```
 
-* For a given analysis or application, one specific triplet `(w_arch, w_memory, w_met)` is chosen within this admissible set before any evaluation of `DeltaS_sleep` on real or simulated data.
+* For a given analysis or application, one specific triplet `(w_arch, w_memory, w_met)` is chosen within this admissible set **before** any evaluation of `DeltaS_sleep` on real or simulated data.
 
 This ensures that:
 
@@ -347,7 +361,7 @@ would represent an idealised configuration where, under the chosen encodings and
 
 ### 4.2 Sleep as constrained low tension regime
 
-At the effective layer, the guiding principle for a "sleep has fundamental multi function role" view can be phrased as:
+At the effective layer, the guiding principle for a view where sleep has a fundamental multi function role can be phrased as:
 
 > For organisms with complex nervous systems, there exist families of sleep world configurations `m` in `M_sleep_reg` such that:
 >
@@ -378,7 +392,7 @@ under alternative conditions such as:
 
 * extremely short or fragmented sleep,
 * pharmacologic or technological substitutes,
-* or states with little resemblance to canonical sleep architecture,
+* states with little resemblance to canonical sleep architecture,
 
 without adding extra compensating mechanisms that would themselves be costly or implausible.
 
@@ -399,24 +413,24 @@ In World T, for a given species and context:
 
 1. Low tension region aligned with typical sleep
 
-* There exists a family of world representing states `m_T` in `M_sleep_reg` such that:
+   * There exists a family of world representing states `m_T` in `M_sleep_reg` such that:
 
-  * `Arch_stage(m_T)` falls within empirically observed ranges for total sleep time, stage proportions, and fragmentation.
-  * `DeltaS_sleep(m_T)` lies below a small threshold `epsilon_sleep_T` that reflects good cognitive and metabolic outcomes.
+     * `Arch_stage(m_T)` falls within empirically observed ranges for total sleep time, stage proportions, and fragmentation.
+     * `DeltaS_sleep(m_T)` lies below a small threshold `epsilon_sleep_T` that reflects good cognitive and metabolic outcomes.
 
 2. Perturbation sensitivity
 
-* Chronic partial restriction, selective stage deprivation, or substitution by pharmacologic states that only mimic some markers systematically move the world into configurations where:
+   * Chronic partial restriction, selective stage deprivation, or substitution by pharmacologic states that only mimic some markers systematically move the world into configurations where:
 
-```txt
-DeltaS_sleep(m_T_pert) >= delta_sleep_T
-```
+     ```txt
+     DeltaS_sleep(m_T_pert) >= delta_sleep_T
+     ```
 
-with `delta_sleep_T > epsilon_sleep_T`, for a substantial fraction of individuals and time windows.
+     with `delta_sleep_T > epsilon_sleep_T`, for a substantial fraction of individuals and time windows.
 
 3. Cross species and developmental coherence
 
-* Across species and developmental stages, when the environment and ecological niche are taken into account, empirically observed sleep architectures tend to cluster in regions of `Arch_stage(m)` where `DeltaS_sleep(m)` can be kept low without introducing implausible compensations elsewhere.
+   * Across species and developmental stages, when the environment and ecological niche are taken into account, empirically observed sleep architectures tend to cluster in regions of `Arch_stage(m)` where `DeltaS_sleep(m)` can be kept low without introducing implausible compensations elsewhere.
 
 ### 5.2 World F (sleep as substitutable or epiphenomenal)
 
@@ -424,18 +438,18 @@ In World F, the effective patterns are different:
 
 1. Existence of low tension non sleep or altered patterns
 
-* There exist configurations `m_F` in `M_sleep_reg` where:
+   * There exist configurations `m_F` in `M_sleep_reg` where:
 
-  * conventional sleep is minimal or absent, or sleep architecture is radically altered, and
-  * `DeltaS_sleep(m_F)` remains below a threshold comparable to `epsilon_sleep_T` of World T.
+     * conventional sleep is minimal or absent, or sleep architecture is radically altered, and
+     * `DeltaS_sleep(m_F)` remains below a threshold comparable to `epsilon_sleep_T` of World T.
 
 2. Robustness of low tension under sleep manipulation
 
-* Perturbations that remove or strongly reshape sleep do not produce persistent increases in `DeltaS_sleep(m)` beyond transient adaptation phases, except possibly in extreme or pathological cases.
+   * Perturbations that remove or strongly reshape sleep do not produce persistent increases in `DeltaS_sleep(m)` beyond transient adaptation phases, except possibly in extreme or pathological cases.
 
 3. Weak cross species constraints
 
-* There exist stable lineages and ecological niches where species with little canonical sleep or highly irregular sleep patterns show no systematic increase in cognitive or metabolic mismatch, as measured by the observables used to define `DeltaS_sleep`.
+   * There exist stable lineages and ecological niches where species with little canonical sleep or highly irregular sleep patterns show no systematic increase in cognitive or metabolic mismatch, as measured by the observables used to define `DeltaS_sleep`.
 
 ### 5.3 Interpretive note
 
@@ -451,23 +465,27 @@ This block specifies experiments and protocols at the effective layer that can:
 * distinguish between different sleep tension models under the same data,
 * provide evidence for or against particular parameter and library choices.
 
-These experiments cannot prove or disprove the fundamental function of sleep in a strict sense, but they can falsify specific TU encodings for Q086.
+All experiments are implicitly restricted to the regular domain `M_sleep_reg` defined in Section 3.5. Encoding choices in each experiment must come from the finite libraries in Section 3.3 and must respect the fairness constraints stated there.
+
+These experiments cannot prove or disprove the fundamental function of sleep in a strict sense. They can falsify specific TU encodings for Q086.
 
 ### Experiment 1: Multi function impact of staged sleep restriction
 
-*Goal:*
+**Goal**
 
 Test whether keeping `Arch_stage(m)` within systematically restricted patterns produces sustained increases in `DeltaS_memory(m)` and `DeltaS_met(m)` that cannot be explained by time awake alone.
 
-*Setup:*
+**Setup**
 
 * Population: human or animal subjects with controlled environments.
+
 * Arms:
 
   * normal sleep architecture,
   * chronic partial sleep restriction,
   * selective slow wave reduction,
   * selective REM reduction.
+
 * Collected observables:
 
   * `Arch_stage(m)` summaries for each subject and period,
@@ -475,17 +493,17 @@ Test whether keeping `Arch_stage(m)` within systematically restricted patterns p
   * `Met_clear(m; window)` related markers,
   * sufficient metadata to control for total time awake and task exposure.
 
-*Protocol:*
+**Protocol**
 
-1. Before the study, fix one encoding from each library:
+1. Before the study, fix one encoding from each library in Section 3.3:
 
-```txt
-ArchEncoding_k in Lib_arch
-MemEncoding_l  in Lib_memory
-MetEncoding_r  in Lib_met
-```
+   ```txt
+   ArchEncoding_k in Lib_arch
+   MemEncoding_l  in Lib_memory
+   MetEncoding_r  in Lib_met
+   ```
 
-and a particular weight triplet `(w_arch, w_memory, w_met)` within the admissible range.
+   and a particular weight triplet `(w_arch, w_memory, w_met)` within the admissible range defined in Section 3.4.
 
 2. For each subject and study period, construct an effective state `m` in `M_sleep_reg` that encodes the required observables (without specifying how the mapping is implemented).
 
@@ -493,41 +511,43 @@ and a particular weight triplet `(w_arch, w_memory, w_met)` within the admissibl
 
 4. Compare the distribution of `DeltaS_sleep(m)` across arms over time, controlling for total time awake and task exposure.
 
-*Metrics:*
+**Metrics**
 
 * Arm wise distributions of `DeltaS_arch(m)` and `DeltaS_sleep(m)`.
 * Changes in `DeltaS_memory(m)` and `DeltaS_met(m)` relative to baseline within each arm.
 * Effect sizes comparing restricted and selective deprivation arms against normal sleep.
 
-*Falsification conditions:*
+**Falsification conditions**
 
 * If, for the fixed encodings and weights chosen a priori, chronic partial restriction or selective stage deprivation does not produce any sustained increase in `DeltaS_sleep(m)` beyond a predefined tolerance band, even when cognitive and metabolic outcomes clearly diverge from normal sleep, then this particular encoding of `DeltaS_sleep` is considered falsified.
 * If small changes in encodings within the finite libraries can reverse conclusions in arbitrary ways without clear justification, the chosen library design for Q086 is considered inadequate and must be revised.
 
-*Semantics implementation note:*
+**Semantics implementation note**
 
 This experiment uses the hybrid interpretation indicated in Block 0: continuous time series and physiological quantities are summarised into continuous fields, while sleep stages and sequences are treated as discrete labels linked to those fields by fixed interface rules.
 
-*Boundary note:*
+**Boundary note**
 
-Falsifying TU encoding != solving canonical statement. This experiment can reject specific sleep tension encodings but does not by itself identify the fundamental function of sleep.
+Falsifying TU encoding is not the same as solving the canonical statement. This experiment can reject specific sleep tension encodings but does not by itself identify the fundamental function of sleep.
 
 ---
 
 ### Experiment 2: Natural sleep versus pharmacologic substitutes
 
-*Goal:*
+**Goal**
 
 Assess whether pharmacologic or technologically induced states that mimic some markers of sleep can substitute for natural sleep in keeping `DeltaS_sleep(m)` low.
 
-*Setup:*
+**Setup**
 
 * Population: subjects undergoing controlled interventions.
+
 * Arms:
 
   * normal sleep,
   * sedation or pharmacologic states that show sleep like markers without full natural architecture,
-  * potentially device assisted rest states with limited movement but altered neural dynamics.
+  * device assisted rest states with limited movement but altered neural dynamics.
+
 * Observables:
 
   * `Arch_stage(m)` including presence or absence of canonical stages,
@@ -536,44 +556,41 @@ Assess whether pharmacologic or technologically induced states that mimic some m
   * `Met_clear(m; window)`,
   * `Cog_perf(m; domain)` for relevant tasks.
 
-*Protocol:*
+**Protocol**
 
 1. Select encodings and weights as in Experiment 1, before examining comparative outcomes across arms.
-
 2. For each subject and condition, generate states `m` in `M_sleep_reg` representing defined time windows under each arm.
-
 3. Compute `DeltaS_arch(m)`, `DeltaS_memory(m)`, `DeltaS_met(m)`, and `DeltaS_sleep(m)`.
-
 4. Compare tension profiles between natural sleep and substitute states over time.
 
-*Metrics:*
+**Metrics**
 
 * Differences in `DeltaS_sleep(m)` between arms at matched time points.
 * Longitudinal behaviour of `DeltaS_memory(m)` and `DeltaS_met(m)` under prolonged substitution.
 * Correlations between `Dyn_osc(m; region, band)` patterns and tension measures.
 
-*Falsification conditions:*
+**Falsification conditions**
 
-* If substitute states can maintain `DeltaS_sleep(m)` within the same low band as natural sleep across long durations, while preserving cognitive and metabolic outcomes, then any encoding that predicts necessary large tension increases under substitution is falsified.
+* If substitute states can maintain `DeltaS_sleep(m)` within the same low band as natural sleep across long durations, while preserving cognitive and metabolic outcomes, then any encoding that predicts necessarily large tension increases under substitution is falsified.
 * Conversely, if substitute states clearly fail to prevent increases in `DeltaS_sleep(m)` yet the encoding maps them to low tension, the encoding is misaligned with observable outcomes and must be rejected.
 
-*Semantics implementation note:*
+**Semantics implementation note**
 
 The hybrid interpretation is again used: discrete labels for condition and stage are linked to continuous dynamical and metabolic summaries, without changing the core meaning of `DeltaS_sleep(m)`.
 
-*Boundary note:*
+**Boundary note**
 
-Falsifying TU encoding != solving canonical statement. This experiment tests whether particular encodings correctly differentiate natural sleep from its substitutes, not whether sleep has an irreplaceable function in an absolute sense.
+Falsifying TU encoding is not the same as solving the canonical statement. This experiment tests whether particular encodings correctly differentiate natural sleep from its substitutes, not whether sleep has an irreplaceable function in an absolute sense.
 
 ---
 
 ### Experiment 3: Cross species scaling and ecological constraints
 
-*Goal:*
+**Goal**
 
 Examine whether species level sleep architecture and duration can be understood as near minima of `DeltaS_sleep(m)` under ecological and metabolic constraints.
 
-*Setup:*
+**Setup**
 
 * Data: comparative datasets for multiple species including:
 
@@ -583,40 +600,38 @@ Examine whether species level sleep architecture and duration can be understood 
   * metabolic rate,
   * life history traits,
   * basic cognitive and health outcomes.
+
 * Observables:
 
-  * Species specific `Arch_stage(m)` summaries,
+  * species specific `Arch_stage(m)` summaries,
   * summarised `Mem_perf(m; task)` and `Met_clear(m; window)` indicators where available,
   * ecological and predation risk measures.
 
-*Protocol:*
+**Protocol**
 
 1. Select encodings from libraries and weights as in previous experiments.
-
 2. For each species and a canonical ecological niche, define representative states `m` in `M_sleep_reg` encapsulating typical patterns and outcomes.
-
 3. Compute `DeltaS_arch(m)`, `DeltaS_memory(m)`, `DeltaS_met(m)`, and `DeltaS_sleep(m)` for these representative states.
-
 4. Map species into a joint space of sleep parameters, ecological constraints, and `DeltaS_sleep(m)`.
 
-*Metrics:*
+**Metrics**
 
 * Distribution of `DeltaS_sleep(m)` across species after adjusting for known ecological and metabolic constraints.
 * Presence or absence of clustering near low tension regions compatible with observed niche constraints.
 * Identification of outlier species where sleep patterns appear to be far from low tension regimes.
 
-*Falsification conditions:*
+**Falsification conditions**
 
 * If the encoding predicts that many species with apparently normal cognitive and health outcomes reside in high `DeltaS_sleep(m)` regions without clear compensatory mechanisms, the encoding is considered misaligned with cross species evidence.
 * If the encoding cannot distinguish between obviously constrained and unconstrained sleep patterns when ecological and metabolic factors are controlled, it fails to provide meaningful tension structure and should be revised.
 
-*Semantics implementation note:*
+**Semantics implementation note**
 
 Continuous traits such as body size and metabolic rate are treated as continuous fields, while species identity and niche are discrete labels linked through fixed rules to the interpretation of low versus high `DeltaS_sleep(m)`.
 
-*Boundary note:*
+**Boundary note**
 
-Falsifying TU encoding != solving canonical statement. This experiment only tests whether Q086 encodings yield a coherent cross species picture, not whether a single universal function of sleep exists.
+Falsifying TU encoding is not the same as solving the canonical statement. This experiment only tests whether Q086 encodings yield a coherent cross species picture, not whether a single universal function of sleep exists.
 
 ---
 
@@ -640,7 +655,7 @@ We define several training signals that can be used in AI models to encourage sl
 
 3. `signal_multi_obj_maintenance`
 
-   * Definition: a composite signal that simultaneously monitors `DeltaS_memory(m)` and `DeltaS_met(m)` and penalises inconsistent combinations (for example claiming perfect cognition with clearly compromised metabolic maintenance).
+   * Definition: a composite signal that simultaneously monitors `DeltaS_memory(m)` and `DeltaS_met(m)` and penalises inconsistent combinations, such as claiming perfect cognition with clearly compromised metabolic maintenance.
    * Purpose: promote multi objective coherence in reasoning about sleep.
 
 4. `signal_counterfactual_separation_sleep`
@@ -713,7 +728,8 @@ A minimal protocol to let external users experience the qualitative impact of Q0
     * architecture level patterns,
     * memory and learning effects,
     * metabolic and clearance considerations,
-      and to describe how an internal multi objective tension indicator would behave across scenarios.
+
+    and to describe how an internal multi objective tension indicator would behave across scenarios.
 
   * Observation: record whether the explanation becomes more structured, explicitly separates short term and long term effects, and explicitly recognises multi function roles of sleep.
 
@@ -724,13 +740,15 @@ A minimal protocol to let external users experience the qualitative impact of Q0
     * structural clarity,
     * coverage of cognitive and metabolic dimensions,
     * internal consistency across related prompts.
+
   * Compare ratings between baseline and TU encoded setups.
 
 * What to log
 
   * Prompts and full responses for both setups.
   * Any auxiliary tension estimates produced by Q086 modules.
-  * This allows external reviewers to inspect behaviour without exposing TU internal generative mechanisms.
+
+This allows external reviewers to inspect behaviour without exposing TU internal generative mechanisms.
 
 ---
 
@@ -743,28 +761,34 @@ This block describes the reusable components produced by Q086 and how they trans
 1. ComponentName: `SleepArchitectureField`
 
    * Type: field
+
    * Minimal interface:
 
      * Inputs: structured descriptors of sleep stage sequences, durations, fragmentation indices, and circadian alignment.
      * Output: a normalised representation suitable for computing `DeltaS_arch(m)` and related quantities.
+
    * Preconditions: inputs must represent one or more completed cycles for a given organism and context.
 
 2. ComponentName: `SleepMultiFunctionTension`
 
    * Type: functional
+
    * Minimal interface:
 
      * Inputs: outputs of `SleepArchitectureField`, memory related summaries, and metabolic or clearance summaries compatible with `DeltaS_memory(m)` and `DeltaS_met(m)`.
      * Output: a scalar `DeltaS_sleep(m)` together with optional decomposed components.
+
    * Preconditions: inputs must come from consistent encodings selected from the finite libraries defined for Q086.
 
 3. ComponentName: `MaintenanceCycleExperiment_Template`
 
    * Type: experiment_pattern
+
    * Minimal interface:
 
      * Inputs: specification of work rest patterns, manipulation types, and observables to be recorded.
      * Output: a protocol that defines subject allocation, measurement windows, and rules for computing tension quantities.
+
    * Preconditions: the specified manipulations must be ethically and practically implementable, and observables must be measurable in finite time.
 
 ### 8.2 Direct reuse targets
@@ -808,12 +832,15 @@ This block explains how Q086 is positioned along the TU verification ladder and 
     * key observables and mismatch quantities,
     * a combined tension functional,
     * a singular set and domain restrictions.
+
   * At least one explicit experiment template with falsification conditions has been described.
 
 * N_level: N2
 
   * The narrative relating architecture, memory, metabolic maintenance, and multi objective tension is explicit and self consistent at the effective layer.
   * Counterfactual worlds (World T and World F) are defined in terms of observable patterns rather than deep mechanisms.
+
+These levels match the flags in the header metadata of Block 0.
 
 ### 9.2 Next measurable step toward E2
 
@@ -823,26 +850,28 @@ To move from E1 to E2, at least one of the following should be achieved:
 
    * instantiates specific encodings from `Lib_arch`, `Lib_memory`, and `Lib_met`,
    * computes `DeltaS_sleep(m)` for real datasets under controlled scenarios,
-   * and publishes both procedures and anonymised tension summaries.
+   * publishes both procedures and anonymised tension summaries.
 
 2. Execution of at least one partial version of Experiment 1 or Experiment 2, where:
 
    * the arm structure and observables are clearly defined,
    * encodings and weights are fixed before analysis,
-   * and the resulting tension profiles and falsification outcomes are documented.
+   * the resulting tension profiles and falsification outcomes are documented.
 
 Both steps operate entirely at the effective layer and do not require specifying how TU internal fields are generated from raw data.
 
-### 9.3 Long term role in the TU program
+### 9.3 Long term role in the TU programme
 
 In the long term, Q086 is expected to serve as:
 
 * The central node for sleep related tension modelling, connecting hard problems in neuroscience with health, risk, and AI maintenance analogues.
+
 * A template for encoding multi function biological processes with overlapping cognitive and thermodynamic roles, using:
 
   * finite encoding libraries,
   * explicit fairness constraints,
-  * and well defined singular sets.
+  * well defined singular sets.
+
 * A benchmark for AI systems and analytical frameworks that must reason about complex trade offs between short term gains from reducing sleep and long term costs expressed through `DeltaS_sleep(m)`.
 
 ---
@@ -855,14 +884,14 @@ Many animals, including humans, spend a large part of their lives asleep. While 
 
 * cannot search for food,
 * cannot actively avoid danger,
-* and still use energy to keep the brain and body running.
+* still use energy to keep the brain and body running.
 
 So the puzzle is simple to state:
 
 > If sleep is so costly and risky, why did evolution keep it?
 > What does sleep do that is so important that it is worth those costs?
 
-In this document, we do not try to answer that question with one magic sentence. Instead, we do three more modest things:
+In this document, we do not try to answer that question with one magic sentence. Instead, we do three more modest things.
 
 1. We describe the kinds of things that clearly change with sleep:
 
@@ -871,7 +900,7 @@ In this document, we do not try to answer that question with one magic sentence.
    * how well their bodies clear waste and recover,
    * how stable their mood and attention are.
 
-2. We define a single number, called `DeltaS_sleep(m)`, that tells us how "out of balance" a given situation is with respect to what looks like healthy sleep:
+2. We define a single number, called `DeltaS_sleep(m)`, that tells us how out of balance a given situation is with respect to what looks like healthy sleep:
 
    * if this number is small, sleep architecture, memory, and body maintenance all look reasonably good,
    * if this number is large, at least one of these parts seems to be under strain.
@@ -887,7 +916,7 @@ If we live in a world where sleep has a truly fundamental multi function role, w
 
 * When sleep is roughly normal, `DeltaS_sleep(m)` stays small and stable.
 * When sleep is cut short or strongly reshaped, `DeltaS_sleep(m)` goes up and stays high, and people or animals do worse on thinking tasks, health, or long term outcomes.
-* Across species, typical sleep patterns line up with regions where `DeltaS_sleep(m)` can be kept low, given each species’ lifestyle and environment.
+* Across species, typical sleep patterns line up with regions where `DeltaS_sleep(m)` can be kept low, given each species lifestyle and environment.
 
 If instead sleep were easy to replace, we would expect to find situations where:
 
@@ -899,6 +928,37 @@ We do not claim here which world is the real one. Instead, Q086 gives:
 
 * a clear way to describe data about sleep,
 * a way to summarise how well different sleep patterns work using `DeltaS_sleep(m)`,
-* and specific experiments that can show whether a given way of measuring this is reasonable or not.
+* specific experiments that can show whether a given way of measuring this is reasonable or not.
 
-This is what it means, in the Tension Universe programme, to treat the fundamental function of sleep as an S level problem: we build a careful effective description and tension structure first, before making any stronger claims about what sleep "really is" at a deeper level.
+This is what it means, in the Tension Universe programme, to treat the fundamental function of sleep as an S level problem. We build a careful effective description and tension structure first, then any stronger claims about what sleep really is at a deeper level must be argued separately, using these definitions as constraints rather than shortcuts.
+
+---
+
+## Tension Universe effective layer footer
+
+This page is part of the **WFGY / Tension Universe** S problem collection.
+
+### Scope of claims
+
+* The goal of this document is to specify an effective layer encoding of the named problem.
+* It does not claim to prove or disprove the canonical statement in Section 1.
+* It does not introduce any new theorem beyond what is already established in the cited literature.
+* It should not be cited as evidence that the corresponding open problem has been solved.
+* Any engineering suggestions in Sections 7 and 8 are proposals for tools and benchmarks, not guarantees of performance in safety critical applications.
+
+### Effective layer boundary
+
+* All objects used here (state spaces `M`, observables, invariants, tension scores, counterfactual worlds) live inside the effective layer of the TU framework.
+* They are one candidate family of encodings compatible with current evidence; they are not asserted to be unique, final, or literally realised in biology or physics.
+* No claim is made that `DeltaS_sleep(m)` or any other tension functional corresponds to a directly measurable quantity without additional modelling assumptions.
+* When this page is used in empirical or AI work, all mappings from raw data into the objects defined here must be documented separately and can themselves be tested or falsified.
+
+### Relation to TU charters
+
+This page should be read together with the following charters:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
+
+These charters define global constraints on how effective layer objects are introduced, how encoding families and weights are selected, and how tension scales are compared across problems.
