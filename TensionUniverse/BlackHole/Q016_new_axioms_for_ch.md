@@ -15,8 +15,38 @@ Status: Open
 Semantics: hybrid
 E_level: E1
 N_level: N2
-Last_updated: 2026-01-24
-````
+Last_updated: 2026-01-29
+```
+
+---
+
+## 0. Effective layer disclaimer
+
+All statements in this entry live strictly at the **Tension Universe effective layer**.
+
+* We treat the continuum hypothesis (CH), ZFC and all candidate new axioms as given from standard mathematics.
+  We do not alter their canonical formulations and we do not introduce any new theorem about them.
+
+* The goal of this page is only to specify:
+
+  * an effective state space for “continuum background worlds”,
+  * observable profiles and tension scores,
+  * a notion of CH axiom tension,
+  * experiment templates and AI engineering hooks.
+
+* We do **not**:
+
+  * propose any deep TU axioms or generative mechanisms,
+  * construct any set theoretic universe from TU itself,
+  * claim to prove or refute CH,
+  * claim that any particular axiom package is “true” in an absolute sense.
+
+* All labels such as “good package”, “bad package”, “low tension” and “high tension” are **encoding based engineering labels**.
+  They measure how well a candidate axiom package behaves inside the chosen CH encoding class.
+  They are not metaphysical verdicts about mathematical reality.
+
+This file may be cited as an **encoding specification** and as an engineering reference.
+It should not be cited as evidence that CH has been solved or that any concrete axiom package is correct.
 
 ---
 
@@ -42,7 +72,8 @@ Equivalently:
 
 > Every infinite subset of `R` has cardinality either `aleph_0` or `c`.
 
-In the standard axiomatic framework of set theory (ZFC, Zermelo Fraenkel set theory with the axiom of choice), CH is known to be independent. It can neither be proved nor disproved from ZFC, assuming ZFC itself is consistent.
+In the standard axiomatic framework of set theory ZFC (Zermelo Fraenkel set theory with the axiom of choice), CH is known to be independent.
+Assuming ZFC is consistent, CH can neither be proved nor disproved from ZFC.
 
 The effective question for Q016 is not just “is CH true”. It is:
 
@@ -56,10 +87,10 @@ Key milestones:
 * Cohen later showed that CH cannot be proved from ZFC, again assuming ZFC is consistent, by constructing forcing extensions where CH fails.
 * Together these results establish that CH is independent of ZFC.
 
-Since then, many candidate axioms have been proposed:
+Since then many candidate axioms have been proposed:
 
 * large cardinal axioms,
-* forcing axioms such as Martin type axioms,
+* forcing axioms such as Martin style axioms,
 * determinacy principles in restricted settings.
 
 Some of these suggest a strong tendency toward either CH or not CH in certain contexts, but there is no universal consensus that any specific package of new axioms is the “right” way to settle CH for all of mathematics.
@@ -75,51 +106,54 @@ The difficulty of Q016 comes from three intertwined aspects:
 Within the BlackHole S problem collection, Q016 has three roles:
 
 1. It is the reference problem for **consistency_tension** in mathematical foundations, where many internally consistent universes compete.
-2. It provides a template for how Tension Universe (TU) handles deep independence phenomena without exposing any generative rules of TU itself.
-3. It supplies components that can be reused whenever other problems depend on set theoretic background choices, including analytic number theory, topology, and AI foundations.
+
+2. It provides a template for how Tension Universe (TU) handles deep independence phenomena while keeping TU’s own generative rules hidden at the effective layer.
+
+3. It supplies components that can be reused whenever other problems depend on set theoretic background choices, including analytic number theory, topology and AI foundations.
 
 ### References
 
-1. G. Cantor, collected papers on set theory and the continuum, various original publications.
+1. G. Cantor, collected papers on set theory and the continuum.
 2. K. Gödel, “The Consistency of the Continuum Hypothesis”, Annals of Mathematics, 1947.
 3. P. Cohen, “The Independence of the Continuum Hypothesis”, Proceedings of the National Academy of Sciences, 1963.
 4. T. Jech, “Set Theory”, Springer, multiple editions.
-5. W. Hugh Woodin and others, research articles on large cardinals, determinacy, and new axioms for the continuum.
+5. W. Hugh Woodin and others, research articles on large cardinals, determinacy and new axioms for the continuum.
 
 ---
 
 ## 2. Position in the BlackHole graph
 
-This block records how Q016 sits in the BlackHole graph among Q001 to Q125. Each edge has a one line reason that points to concrete components or patterns.
+This block records how Q016 sits in the BlackHole graph among Q001 to Q125.
+Each edge has a short reason that points to concrete components or patterns.
 
 ### 2.1 Upstream problems
 
 These problems provide conceptual and foundational input for Q016.
 
 * Q116 (BH_PHIL_MATH_FOUND_L3_116)
-  Reason: supplies criteria for acceptable foundations of mathematics, which Q016 reuses in assessing candidate CH resolving axioms.
+  Reason: supplies criteria for acceptable foundations of mathematics, reused here when assessing candidate CH resolving axioms.
 
 * Q115 (BH_PHIL_INDUCTION_L3_115)
-  Reason: defines patterns of extrapolating from past mathematical success to new axioms, reused as a template for justifying axiom packages beyond ZFC.
+  Reason: defines patterns of extrapolating from past mathematical success to new axioms, used to justify axiom packages beyond ZFC.
 
 * Q117 (BH_PHIL_SCIENCE_REALISM_L3_117)
-  Reason: frames realism versus instrumentalism about mathematical objects, used by Q016 to interpret what it means for an axiom to describe a real set theoretic universe.
+  Reason: frames realism versus instrumentalism about mathematical objects, used to interpret what it means for an axiom to describe a real set theoretic universe.
 
 * Q111 (BH_PHIL_MIND_BODY_L3_111)
-  Reason: provides a general pattern for relating formal structures to experienced or effective worlds, reused here for relating formal set universes to mathematical practice.
+  Reason: provides a general pattern for relating formal structures to experienced or effective worlds, reused for the relation between formal set universes and mathematical practice.
 
 ### 2.2 Downstream problems
 
 These problems reuse components or patterns defined in Q016.
 
 * Q001 (BH_MATH_NUM_L3_001)
-  Reason: reuses the CH_AxiomSelection_Functional component when evaluating how RH encodings depend on background set theory and axiom choices.
+  Reason: reuses the `CH_AxiomSelection_Functional` component when evaluating how RH encodings depend on background set theory and axiom choices.
 
 * Q020 (BH_MATH_GEOM_HIGH_D_L3_020)
   Reason: uses CH resolving axiom packages as parameters in classification problems for high dimensional manifolds, with Q016 supplying tension scores on those packages.
 
 * Q050 (BH_COSMO_MULTIUNI_L3_050)
-  Reason: reuses the SetTheoryMultiverse_Descriptor pattern to describe diversity and tension in cosmic multiverse scenarios.
+  Reason: reuses the `SetTheoryMultiverse_Descriptor` pattern to describe diversity and tension in cosmic multiverse scenarios.
 
 * Q121 (BH_AI_ALIGNMENT_L3_121)
   Reason: takes the “axiom choice tension” idea from Q016 as an analogy for selecting normative axiom sets in alignment problems.
@@ -135,17 +169,17 @@ Parallel nodes share similar tension type but do not directly reuse components.
   Reason: both explore limits of classical logic and standard frameworks, and when extensions become necessary, under similar “extend versus replace” tension.
 
 * Q051 (BH_CS_PVNP_L3_051)
-  Reason: both represent situations where seemingly simple statements resist resolution within a standard framework, pushing toward new principles.
+  Reason: both represent situations where seemingly simple statements resist resolution inside a standard framework and push toward new principles.
 
 ### 2.4 Cross domain edges
 
 Cross domain edges connect Q016 to problems outside pure set theory that reuse its patterns.
 
 * Q051 (BH_CS_PVNP_L3_051)
-  Reason: reuses Q016’s framing of “new axioms versus independence” to organise complexity assumptions such as `P != NP` and similar conjectures.
+  Reason: reuses Q016’s framing of “new axioms versus independence” to organise complexity assumptions such as `P != NP` and related conjectures.
 
 * Q059 (BH_CS_INFO_THERMODYN_L3_059)
-  Reason: uses the idea of a “cost of distinguishing universes” derived from Q016’s multiverse tension to model thermodynamic cost of separating informational states.
+  Reason: uses the idea of a “cost of distinguishing universes” derived from CH multiverse tension to model thermodynamic cost of separating informational states.
 
 * Q121 (BH_AI_ALIGNMENT_L3_121)
   Reason: imports the notion that different axiom sets define alternative universes, used to structure competing value systems in alignment.
@@ -157,7 +191,7 @@ Cross domain edges connect Q016 to problems outside pure set theory that reuse i
 
 ## 3. Tension Universe encoding (effective layer)
 
-All content in this block is at the effective layer of TU.
+All content in this block is at the **effective layer** of TU.
 
 We only describe:
 
@@ -166,11 +200,52 @@ We only describe:
 * invariants and tension scores,
 * singular sets and domain restrictions.
 
-We do not describe any TU deep axioms, hidden generative rules, or procedures that map raw data to internal TU fields.
+We do not describe any TU deep axioms, hidden generative rules or procedures that map raw data to internal TU fields.
+
+### 3.0 Encoding class summary · Encoding_CH_Class
+
+For Q016 we fix an encoding class called:
+
+```txt
+Encoding_CH_Class
+```
+
+It is defined by the following design choices.
+
+1. **Admissible axiom signatures**
+
+   We consider axiom signatures `Sigma` that extend ZFC using packages which already appear in mainstream set theory, for example:
+
+   * standard large cardinal schemes,
+   * standard forcing axioms,
+   * standard determinacy schemes in restricted settings.
+
+   We do not include artificial axiom packages invented only to minimise a chosen tension functional.
+   Admissible signatures must have a clear literature footprint and a recognisable mathematical motivation.
+
+2. **Encoding degrees of freedom**
+
+   The encoding allows the following components to vary **per encoding class**, but not per world or per axiom package:
+
+   * the form of a coherence template that describes balanced continuum behaviour,
+   * the choice of reference families used in `DeltaS_multiverse`,
+   * the weights `w_internal`, `w_multi`,
+   * the thresholds `epsilon_coh`, `epsilon_div`,
+   * the detailed numerical loss used inside `DeltaS_internal`.
+
+3. **Fairness constraints**
+
+   For a fixed instance of `Encoding_CH_Class`:
+
+   * All of `w_internal`, `w_multi`, `epsilon_coh`, `epsilon_div` and the function `G` in Section 4 are chosen **once** before scoring any concrete axiom package.
+   * No parameter may be tuned in response to the behaviour of a particular candidate `Sigma`.
+   * The same encoding is applied uniformly to all worlds and all axiom packages in the admissible class.
+
+When we speak of “tension scores” or “good packages” in this file, everything is always relative to a pre committed instance of `Encoding_CH_Class` that respects these constraints.
 
 ### 3.1 State space
 
-We assume a state space:
+We assume a state space
 
 ```txt
 M
@@ -185,7 +260,7 @@ Each element `m` in `M` is a “continuum background world” at the effective l
 
 We do not specify how such worlds are constructed. We only assume:
 
-* For each axiom signature in a fixed admissible class, there exist states `m` in `M` that encode its effective consequences for the continuum.
+* For each axiom signature in the fixed admissible class, there exist states `m` in `M` that encode its effective consequences for the continuum.
 * Multiple states can share the same CH value but differ in structural profile.
 
 ### 3.2 Effective observables
@@ -198,7 +273,7 @@ We introduce the following observables on `M`.
 CH_value(m) in {true, false, undecided}
 ```
 
-This records whether CH holds, fails, or remains undecided in the world `m`.
+This records whether CH holds, fails or remains undecided in the world `m`.
 
 2. Regularity profile observable
 
@@ -243,7 +318,7 @@ An effective scalar summarising how stable important areas of current mathematic
 * how many important tools survive intact,
 * whether large coherent theories are preserved.
 
-Higher `Practice_stability(m)` means better preservation.
+Larger `Practice_stability(m)` means better preservation.
 
 ### 3.3 Tension scores
 
@@ -255,19 +330,19 @@ We define two nonnegative mismatch scores.
 DeltaS_internal(m) >= 0
 ```
 
-This measures how well the combination of:
+This measures how well the combination of
 
 * `CH_value(m)`,
 * `Reg_profile(m)`,
 * `Card_invariants(m)`,
 * `Practice_stability(m)`,
 
-fits a chosen “coherence template” that represents a balanced, non pathological theory of the continuum.
+fits a chosen coherence template that represents a balanced, non pathological theory of the continuum.
 
 We require:
 
-* `DeltaS_internal(m) = 0` when all observables fit the template exactly.
-* `DeltaS_internal(m)` increases as obvious clashes appear, for example a CH decision that systematically destroys regularity or practice stability.
+* `DeltaS_internal(m) = 0` when all observables fit the template exactly,
+* `DeltaS_internal(m)` increases when the CH decision and the structural profile clash in obvious ways, for example when a decision about CH systematically destroys regularity or practice stability without a compensating gain.
 
 2. Multiverse tension
 
@@ -275,22 +350,26 @@ We require:
 DeltaS_multiverse(m) >= 0
 ```
 
-This measures how different `m` is from a benchmark family of worlds within the same axiom class, using only observable summaries. Intuitively, it is low if `m` fits well into a cluster of worlds that share similar structural properties, and high if it is an outlier.
+This measures how different `m` is from a benchmark family of worlds within the same axiom class, using only observable summaries.
+
+It is low if `m` fits well into a cluster of worlds that share similar structural properties.
+It is high if `m` is an outlier that does not mesh with any natural cluster.
 
 We define a combined CH axiom tension:
 
 ```txt
 DeltaS_CH(m) = w_internal * DeltaS_internal(m)
-               + w_multi * DeltaS_multiverse(m)
+               + w_multi    * DeltaS_multiverse(m)
 ```
 
 where:
 
 * `w_internal` and `w_multi` are fixed nonnegative weights,
 * `w_internal + w_multi = 1`,
-* the pair `(w_internal, w_multi)` is chosen once for a given encoding class, before evaluating any particular world, and is not tuned per world.
+* the pair `(w_internal, w_multi)` is chosen once for the given instance of `Encoding_CH_Class`, before evaluating any particular world, and is not tuned per world or per axiom package.
 
-These constraints are part of the fairness requirement. We do not allow changing weights after seeing the tension values.
+These constraints are part of the fairness requirement.
+We do not allow changing weights after seeing the tension values.
 
 ### 3.4 Invariants and effective constraints
 
@@ -309,7 +388,7 @@ This captures the worst internal coherence tension among the sample.
 For a good axiom package that resolves CH, and a natural family of benchmark worlds associated with it, we expect:
 
 ```txt
-I_coherence(F) is within a low band
+I_coherence(F) stays in a controlled low band
 ```
 
 that does not explode as we refine the family.
@@ -322,11 +401,14 @@ For the same `F`, we define:
 I_diversity(F) = average over m in F of DeltaS_multiverse(m)
 ```
 
-This measures how diverse the worlds are within the axiom class. A good CH resolving axiom package can tolerate some diversity but should avoid unexplained extreme fragmentation.
+This measures how diverse the worlds are within the axiom class.
+A good CH resolving axiom package can tolerate some diversity but should avoid unexplained extreme fragmentation.
 
 ### 3.5 Singular set and domain restriction
 
-Some worlds may be too incomplete or inconsistent at the effective layer for `DeltaS_CH(m)` to be defined or finite. We define the singular set:
+Some worlds may be too incomplete or inconsistent at the effective layer for `DeltaS_CH(m)` to be defined or finite.
+
+We define the singular set:
 
 ```txt
 S_sing = { m in M : DeltaS_CH(m) is undefined or not finite }
@@ -356,23 +438,26 @@ Tension_CH(m) = G(DeltaS_internal(m), DeltaS_multiverse(m))
 
 where `G` is any fixed function with the following properties:
 
-* `Tension_CH(m) >= 0` for all `m` in `M_reg`.
-* `Tension_CH(m)` increases monotonically in both arguments.
+* `Tension_CH(m) >= 0` for all `m` in `M_reg`,
+* `Tension_CH(m)` increases monotonically in both arguments,
 * `Tension_CH(m)` is small when both `DeltaS_internal(m)` and `DeltaS_multiverse(m)` are small.
 
-A simple example is:
+A simple example inside `Encoding_CH_Class` is to take:
 
 ```txt
 Tension_CH(m) = DeltaS_CH(m)
 ```
 
-using the convex combination from Block 3.
+using the convex combination from Section 3.3.
+
+Once `Encoding_CH_Class` is fixed, the function `G` is fixed as well and is not changed in response to particular worlds or packages.
 
 ### 4.2 Good and bad axiom packages
 
-We consider axiom signatures `Sigma` in a fixed admissible class. Each `Sigma` induces a family of worlds `F(Sigma)` in `M_reg`.
+We consider axiom signatures `Sigma` in the fixed admissible class.
+Each `Sigma` induces a family of worlds `F(Sigma)` in `M_reg`.
 
-A CH resolving axiom package `Sigma` is considered good at the effective layer if there exists a family `F(Sigma)` of benchmark worlds such that:
+A CH resolving axiom package `Sigma` is considered **good at the effective layer** if there exists a family `F(Sigma)` of benchmark worlds such that:
 
 ```txt
 CH_value(m) is constant over m in F(Sigma)
@@ -380,12 +465,14 @@ I_coherence(F(Sigma)) <= epsilon_coh
 I_diversity(F(Sigma)) <= epsilon_div
 ```
 
-for some thresholds `epsilon_coh` and `epsilon_div` that are chosen once per encoding class and do not grow without bound as benchmarks are refined.
+for some thresholds `epsilon_coh` and `epsilon_div` that are chosen once for the given `Encoding_CH_Class` and do not grow without bound as benchmarks are refined.
 
-A package is considered bad if for every faithful representation `F(Sigma)` in the admissible encoding class, either:
+A package is considered **bad at the effective layer** if for every faithful representation `F(Sigma)` in the admissible encoding class, at least one of the following holds:
 
 * coherence tension cannot be kept low, or
 * multiverse tension remains high in ways that conflict with standard mathematical practice as recorded in the observables.
+
+These good or bad labels are **engineering ratings** relative to `Tension_CH` and do not claim that a package is really true or really false in any absolute metaphysical sense.
 
 ### 4.3 Problem restatement in TU terms
 
@@ -393,11 +480,12 @@ At the effective layer, Q016 becomes:
 
 > Does there exist a mathematically justified axiom package extending ZFC, from the admissible class, that settles CH and produces a stable low tension profile for the continuum, according to the CH axiom tension functional, under fairness constraints on the encoding.
 
-We do not claim to know whether such a package exists. The role of TU is to:
+We do not claim to know whether such a package exists.
+The role of TU in this node is to:
 
 * encode the observable consequences of candidate packages,
 * make consistency_tension explicit,
-* support experiments that can falsify bad encodings of axiom choice, without deciding CH.
+* support experiments that can falsify bad encodings or bad package ratings, without deciding CH itself.
 
 ---
 
@@ -426,7 +514,8 @@ Features of World T:
    DeltaS_internal(m_T) is small
    ```
 
-   across a wide range of models in `F(Sigma_T)`, indicating that the combination of CH decision and structural consequences fits a coherent template.
+   across a wide range of models in `F(Sigma_T)`.
+   The combination of CH decision and structural consequences fits a coherent template.
 
 3. Mathematical practice remains stable:
 
@@ -434,7 +523,7 @@ Features of World T:
    Practice_stability(m_T) is high
    ```
 
-   meaning that large coherent areas of analysis, topology, and related fields survive intact, and new tools arising from `Sigma_T` integrate smoothly.
+   Large coherent areas of analysis, topology and related fields survive intact, and new tools arising from `Sigma_T` integrate smoothly.
 
 4. Multiverse tension is controlled:
 
@@ -442,13 +531,14 @@ Features of World T:
    DeltaS_multiverse(m_T) is moderate and structured
    ```
 
-   suggesting that variations between worlds in `F(Sigma_T)` are interpretable and not arbitrary fragmentation.
+   Variations between worlds in `F(Sigma_T)` are interpretable and do not form an unexplained fragmentation.
 
 ### 5.2 World F · irreducible multiverse
 
 Features of World F:
 
-1. There is no single package `Sigma` extending ZFC that is both widely accepted and settles CH for all canonical contexts. Different communities adopt different axiom packages with incompatible CH decisions.
+1. There is no single package `Sigma` extending ZFC that is both widely accepted and settles CH for all canonical contexts.
+   Different communities adopt different axiom packages with incompatible CH decisions.
 
 2. For each candidate package `Sigma` in the admissible class, when we form its benchmark family `F(Sigma)` and examine worlds `m_F` in that family, at least one of the following holds:
 
@@ -464,11 +554,13 @@ Features of World F:
    * Some packages give high `Practice_stability(m_F)` but at the cost of extreme `DeltaS_multiverse(m_F)`.
    * Others keep multiverse tension low but force destructive changes in major areas of mathematics, lowering `Practice_stability(m_F)`.
 
-4. The CH decision remains permanently plural. No encoding of axiom choice that respects fairness constraints can compress the situation into a single low tension band.
+4. The CH decision remains permanently plural.
+   No encoding of axiom choice that respects the fairness constraints can compress the situation into a single low tension band.
 
 ### 5.3 Interpretive note
 
-These counterfactual worlds do not attempt to define or construct any TU internal fields or to resolve CH. They only describe how observable tension patterns in `M_reg` would differ between a world with a stable CH resolving axiom package and a world where such a package never emerges.
+These counterfactual worlds do not attempt to define or construct any TU internal fields or to resolve CH.
+They only describe how observable tension patterns in `M_reg` would differ between a world with a stable CH resolving axiom package and a world where such a package never emerges.
 
 ---
 
@@ -480,13 +572,15 @@ This block specifies experiments that:
 * distinguish between different encodings of axiom choice,
 * do not attempt to prove or disprove CH itself.
 
-### Experiment 1: Axiom consequence library fit
+All experiments in this section are understood to operate under a fixed instance of `Encoding_CH_Class`.
 
-*Goal:*
+### Experiment Q016-E1 · Axiom consequence library fit
+
+**Goal**
 
 Test whether the chosen `DeltaS_CH` encoding aligns with current deep set theoretic knowledge about CH and candidate new axioms.
 
-*Setup:*
+**Setup**
 
 * Build a finite library of set theoretic “world profiles” from the literature, including:
 
@@ -501,9 +595,9 @@ Test whether the chosen `DeltaS_CH` encoding aligns with current deep set theore
   * `Card_invariants(m_lib)`,
   * approximate `Practice_stability(m_lib)`.
 
-* Fix an encoding class, coherence template, and weights `(w_internal, w_multi)` once before inspecting the specific profiles in detail.
+* Fix an instance of `Encoding_CH_Class` and its parameters, including `w_internal`, `w_multi`, `epsilon_coh`, `epsilon_div` and any internal details of `DeltaS_internal`, before inspecting the specific profiles in detail.
 
-*Protocol:*
+**Protocol**
 
 1. For each `m_lib` in the library, compute:
 
@@ -513,46 +607,48 @@ Test whether the chosen `DeltaS_CH` encoding aligns with current deep set theore
    DeltaS_CH(m_lib)
    ```
 
-2. Partition the library into:
+2. Partition the library into two groups by expert judgement:
 
    * “natural” worlds that experts regard as especially coherent or attractive,
    * “pathological” worlds that are treated as technical examples rather than serious candidates for a final foundation.
 
 3. Compare `DeltaS_CH(m_lib)` across these two groups.
 
-*Metrics:*
+**Metrics**
 
 * Distribution of `DeltaS_CH(m_lib)` for natural versus pathological worlds.
 * Fraction of natural worlds that fall into a low tension band.
 * Fraction of pathological worlds that show significantly higher tension.
 
-*Falsification conditions:*
+**Falsification conditions**
 
 * If, across reasonable choices within the fixed encoding class, natural worlds systematically have higher `DeltaS_CH(m_lib)` than pathological ones, the encoding is rejected as misaligned.
-* If small changes in encoding parameters produce arbitrary reversals of the ordering between most worlds, without traceable reasons in the observables, the encoding is rejected as unstable.
+* If small changes in parameters inside the same encoding class produce arbitrary reversals of the ordering between most worlds, without traceable reasons in the observables, the encoding is rejected as unstable.
 
-*Semantics implementation note:*
+**Semantics implementation note**
 
-Observables are treated in a hybrid way: discrete components (such as CH value and axiom signatures) plus continuous descriptors (such as tension scores). No additional semantic machinery beyond this hybrid view is assumed in this experiment.
+Observables are treated in a hybrid way: discrete components such as CH value and axiom signatures plus continuous descriptors such as tension scores.
+No additional semantic machinery beyond this hybrid view is assumed in this experiment.
 
-*Boundary note:*
+**Boundary note**
 
-Falsifying TU encoding != solving canonical statement. This experiment can reject a specific encoding of CH axiom tension, but it does not prove or disprove any particular axiom package or the continuum hypothesis itself.
+Falsifying this TU encoding does **not** solve the canonical CH statement.
+The experiment can reject a specific encoding of CH axiom tension, but it does not prove or disprove any particular axiom package or CH itself.
 
 ---
 
-### Experiment 2: Practice stability under hypothetical adoption
+### Experiment Q016-E2 · Practice stability under hypothetical adoption
 
-*Goal:*
+**Goal**
 
 Evaluate whether the encoding predicts realistic stability of mathematical practice under hypothetical adoption of a candidate CH resolving axiom package.
 
-*Setup:*
+**Setup**
 
 * Identify a set of key theorems and research programs that depend sensitively on CH or its negation.
-* For each candidate axiom package `Sigma`, form a summary profile of which theorems survive, which break, and what new structures arise.
+* For each candidate axiom package `Sigma`, form a summary profile of which theorems survive, which break and what new structures arise.
 
-*Protocol:*
+**Protocol**
 
 1. For each candidate `Sigma` in the admissible class, construct a state `m_practice` in `M_reg` that encodes:
 
@@ -568,29 +664,31 @@ Evaluate whether the encoding predicts realistic stability of mathematical pract
                                  + c_practice * loss(m_practice)
    ```
 
-   where `loss(m_practice)` is a measure of destroyed structure and `c_practice > 0` is fixed once.
+   where `loss(m_practice)` is a measure of destroyed structure and `c_practice > 0` is fixed once per encoding class.
 
 3. Compute `DeltaS_CH(m_practice)` for all candidates.
 
-4. Inspect whether candidates that obviously destroy large, coherent parts of mathematics obtain higher tension scores than candidates that preserve them.
+4. Inspect whether candidates that obviously destroy large coherent parts of mathematics obtain higher tension scores than candidates that preserve them.
 
-*Metrics:*
+**Metrics**
 
 * Ranking of candidate packages by `DeltaS_CH(m_practice)`.
 * Correlation between high `Practice_stability(m_practice)` and low `DeltaS_CH(m_practice)`.
 
-*Falsification conditions:*
+**Falsification conditions**
 
 * If the encoding assigns systematically lower `DeltaS_CH(m_practice)` to candidates that destroy large coherent regions of mathematics than to candidates that preserve them, the encoding is rejected.
 * If no choice of reasonable practice loss function within the encoding class can produce a ranking that respects obvious practice stability judgments, then the current way of including `Practice_stability` is rejected and must be redesigned.
 
-*Semantics implementation note:*
+**Semantics implementation note**
 
-The practice stability metric is an effective numerical observable summarising qualitative judgments. The experiment stays at the same hybrid level of discrete plus continuous descriptors and does not rely on any additional TU semantics.
+The practice stability metric is an effective numerical observable summarising qualitative judgments.
+The experiment stays at the same hybrid level of discrete plus continuous descriptors and does not rely on any additional TU semantics.
 
-*Boundary note:*
+**Boundary note**
 
-Falsifying TU encoding != solving canonical statement. This experiment tests whether one way of including practice stability into CH axiom tension is workable, but it does not decide which axiom package, if any, is ultimately correct.
+Falsifying this part of the encoding does not decide CH.
+It only tests whether one way of including practice stability into CH axiom tension is workable.
 
 ---
 
@@ -610,7 +708,7 @@ We define several training signals based on Q016 observables.
 2. `signal_multiverse_consistency`
 
    * Definition: measures whether the model keeps track of which axiom universe it is in, by checking that it does not mix consequences from worlds with incompatible `CH_value`.
-   * Purpose: encourage clean separation between reasoning under CH, under not CH, and under “CH undecided”.
+   * Purpose: encourage clean separation between reasoning under CH, under not CH and under “CH undecided”.
 
 3. `signal_foundation_coherence`
 
@@ -641,7 +739,7 @@ We outline module patterns that reuse Q016 structures.
 
 2. `AxiomSwitchRouter`
 
-   * Role: route reasoning steps through different branches depending on the current CH tag, and maintain a history of context switches.
+   * Role: route reasoning steps through different branches depending on the current CH tag and maintain a history of context switches.
 
    * Interface:
 
@@ -654,7 +752,8 @@ We outline module patterns that reuse Q016 structures.
 
 3. `FoundationAuditLayer`
 
-   * Role: inspect completed reasoning chains about sets of reals, identify implicit axiom assumptions, and estimate tension scores for each segment.
+   * Role: inspect completed reasoning chains about sets of reals, identify implicit axiom assumptions and estimate tension scores for each segment.
+
    * Interface:
 
      ```txt
@@ -668,13 +767,13 @@ We propose an evaluation harness for AI systems augmented with Q016 components.
 
 1. Task family
 
-   * Explanations about CH, large cardinals, forcing, determinacy, and their impact on mainstream mathematics.
-   * Scenario questions where the user explicitly switches between “assume CH”, “assume not CH”, and “work only in ZFC”.
+   * Explanations about CH, large cardinals, forcing, determinacy and their impact on mainstream mathematics.
+   * Scenario questions where the user explicitly switches between “assume CH”, “assume not CH” and “work only in ZFC”.
 
 2. Conditions
 
    * Baseline: model without Q016 modules, answering directly.
-   * TU augmented: model with SetTheoryContextHead and AxiomSwitchRouter active, plus training signals described above.
+   * TU augmented: model with `SetTheoryContextHead` and `AxiomSwitchRouter` active, plus training signals described above.
 
 3. Metrics
 
@@ -686,33 +785,33 @@ We propose an evaluation harness for AI systems augmented with Q016 components.
 
 A simple external protocol to experience the effect of Q016 style encoding.
 
-* Baseline setup
+*Baseline setup*
 
-  * Prompt: ask an AI to explain the status of CH, why it is independent of ZFC, and whether we should adopt new axioms, without any mention of tension or WFGY.
-  * Observation: record whether the explanation drifts between perspectives, or mixes incompatible claims about CH and new axioms.
+* Prompt an AI to explain the status of CH, why it is independent of ZFC and whether we should adopt new axioms, without any mention of tension or WFGY.
+* Observe whether the explanation drifts between perspectives or mixes incompatible claims about CH and new axioms.
 
-* TU encoded setup
+*TU encoded setup*
 
-  * Prompt: ask the same questions, but additionally request:
+* Ask the same questions, but additionally request:
 
-    * explicit axiom context tags,
-    * a short “axiom choice tension” indicator,
-    * clear separation between reasoning under different CH assumptions.
+  * explicit axiom context tags,
+  * a short “axiom choice tension” indicator,
+  * clear separation between reasoning under different CH assumptions.
 
-  * Observation: record whether the explanation becomes more structured and explicit about which universe it is reasoning in.
+* Observe whether the explanation becomes more structured and explicit about which universe it is reasoning in.
 
-* Comparison metric
+*Comparison metric*
 
-  * Use a rubric that scores:
+* Use a rubric that scores:
 
-    * explicitness of assumptions,
-    * stability of the chosen axiom context across the answer,
-    * clarity about what would change if CH or axiom choices were different.
+  * explicitness of assumptions,
+  * stability of the chosen axiom context across the answer,
+  * clarity about what would change if CH or axiom choices were different.
 
-* What to log
+*What to log*
 
-  * Prompts, outputs, any internal tags and tension estimates that the system makes visible.
-  * This allows later audit of how Q016 style components influenced the behaviour, without exposing TU deep rules.
+* Prompts, outputs, any internal tags and tension estimates that the system makes visible.
+  This allows later audit of how Q016 style components influence behaviour, without exposing TU deep rules.
 
 ---
 
@@ -735,7 +834,7 @@ This block lists reusable components produced by Q016 and shows how they transfe
 
    * Preconditions:
 
-     * The axiom_signature describes a package extending ZFC in the admissible class.
+     * The `axiom_signature` describes a package extending ZFC in the admissible class.
      * The profiles are coherent summaries for sets of reals.
 
    * Role:
@@ -755,7 +854,7 @@ This block lists reusable components produced by Q016 and shows how they transfe
 
    * Preconditions:
 
-     * Each world has CH_value, Reg_profile, Card_invariants, and a defined DeltaS_CH.
+     * Each world has `CH_value`, `Reg_profile`, `Card_invariants` and a defined `DeltaS_CH`.
 
    * Role:
 
@@ -785,25 +884,25 @@ This block lists reusable components produced by Q016 and shows how they transfe
 1. Q001 (Riemann Hypothesis)
 
    * Reused component: `CH_AxiomSelection_Functional`.
-   * Why it transfers: RH encodings may depend on background set theory; CH resolving axioms influence which models of analytic number theory are considered natural.
-   * What changes: the functional is used here as a background filter to ensure RH encodings avoid extreme CH related pathologies.
+   * Why it transfers: RH encodings may depend on background set theory. CH resolving axioms influence which models of analytic number theory are considered natural.
+   * What changes: the functional is used as a background filter to ensure RH encodings avoid extreme CH related pathologies.
 
 2. Q050 (Cosmic multiverse models)
 
    * Reused component: `SetTheoryMultiverse_Descriptor`.
-   * Why it transfers: both set theoretic and cosmic multiverses involve families of worlds with different laws; the descriptor pattern for diversity and clustering is reusable.
+   * Why it transfers: both set theoretic and cosmic multiverses involve families of worlds with different laws. The descriptor pattern for diversity and clustering is reusable.
    * What changes: observables now describe physical constants or cosmological parameters instead of CH and set theoretic profiles.
 
 3. Q121 (AI alignment)
 
    * Reused component: `AxiomContext_TaggingPattern`.
-   * Why it transfers: alignment scenarios often rely on different normative “axiom sets”; tagging which value system is assumed mirrors tagging axiom contexts in set theory.
-   * What changes: CH_value is replaced by value system labels, and regularity profiles are replaced by properties of decision making under each system.
+   * Why it transfers: alignment scenarios often rely on different normative “axiom sets”. Tagging which value system is assumed mirrors tagging axiom contexts in set theory.
+   * What changes: `CH_value` is replaced by value system labels and regularity profiles are replaced by properties of decision making under each system.
 
 4. Q116 (Foundations of mathematics)
 
    * Reused components: all three.
-   * Why it transfers: Q116 examines general foundations; Q016 provides a concrete, fully worked example of axiom selection and multiverse description.
+   * Why it transfers: Q116 examines general foundations. Q016 provides a concrete, fully worked example of axiom selection and multiverse description.
    * What changes: CH specific observables are abstracted into more general foundation choice descriptors.
 
 ---
@@ -822,17 +921,19 @@ This block explains the current verification level for Q016 and the next measura
 
 * N_level: N2
 
-  * The narrative connecting CH decisions, structural consequences, multiverse behaviour, and axiom choice tension is explicit and internally coherent at the effective layer.
+  * The narrative connecting CH decisions, structural consequences, multiverse behaviour and axiom choice tension is explicit and internally coherent at the effective layer.
   * Counterfactual worlds are described and tied to the same observables.
 
 ### 9.2 Next measurable step toward E2
 
 To move Q016 from E1 to E2, at least one of the following developments should be achieved:
 
-1. Construct a concrete finite library of world profiles from standard set theoretic constructions, populate `m_lib` states, and compute sample `DeltaS_CH(m_lib)` values using a simple, public encoding.
+1. Construct a concrete finite library of world profiles from standard set theoretic constructions, populate `m_lib` states and compute sample `DeltaS_CH(m_lib)` values using a simple public encoding.
+
 2. Produce an open, reproducible experiment where human experts label world profiles as “natural” or “pathological” and compare their judgments with tension rankings generated by `CH_AxiomSelection_Functional`.
 
-Both steps must remain at the effective layer, working only with observables. They must not reveal any TU deep axioms or generative rules.
+Both steps must remain at the effective layer, working only with observables.
+They must not reveal any TU deep axioms or generative rules.
 
 ### 9.3 Long term role in the TU program
 
@@ -840,7 +941,7 @@ Long term, Q016 is expected to serve as:
 
 * a reference node for consistency_tension problems in foundations,
 * a test bed for methods that organise independence and multiverse phenomena without collapsing them into slogans,
-* a bridge between pure set theory, philosophy of mathematics, and AI systems that must reason about alternative foundational assumptions.
+* a bridge between pure set theory, philosophy of mathematics and AI systems that must reason about alternative foundational assumptions.
 
 ---
 
@@ -850,11 +951,12 @@ This block gives an explanation for non specialists, staying aligned with the ef
 
 The continuum hypothesis asks a simple sounding question:
 
-> Are there “sizes of infinity” strictly between the size of the natural numbers and the size of the real numbers?
+> Are there sizes of infinity strictly between the size of the natural numbers and the size of the real numbers.
 
 Mathematicians express this as: is there a set whose size is bigger than `N` but smaller than `R`.
 
-Inside the usual rules of set theory (ZFC), it turns out that this question cannot be settled. There are perfectly good mathematical universes where CH is true, and perfectly good universes where CH is false.
+Inside the usual rules of set theory ZFC, it turns out that this question cannot be settled.
+There are perfectly good mathematical universes where CH is true, and perfectly good universes where CH is false.
 
 So Q016 asks something deeper:
 
@@ -864,7 +966,7 @@ In the Tension Universe view, we do not try to prove or disprove CH. Instead, we
 
 For each world we look at:
 
-* whether CH is true, false, or undecided,
+* whether CH is true, false or undecided,
 * what regularity properties sets of reals have,
 * what the key cardinal invariants of the continuum look like,
 * how stable important parts of existing mathematics remain.
@@ -876,14 +978,45 @@ From these we compute a tension score:
 
 We then compare axiom packages by asking:
 
-* Is there a package that decides CH and keeps tension low across many benchmark worlds.
-* Or does every package either create large internal tension, or fragment the multiverse into incompatible pieces.
+* whether there is a package that decides CH and keeps tension low across many benchmark worlds,
+* or whether every package either creates large internal tension or fragments the multiverse into incompatible pieces.
 
 This approach does not choose a winning axiom for us. It gives us:
 
 * a clear way to talk about the trade offs of different choices,
-* a common language for mathematicians, philosophers, and AI systems to reason about CH resolving axioms,
+* a common language for mathematicians, philosophers and AI systems to reason about CH resolving axioms,
 * reusable patterns for other problems where many consistent universes compete.
 
 Q016 is the place in the BlackHole project where these ideas are worked out in detail for the continuum hypothesis and new axioms, without ever exposing how TU itself is built underneath.
 
+---
+
+## Tension Universe effective-layer footer
+
+This page is part of the **WFGY / Tension Universe** S problem collection.
+All claims are made at the effective layer and are subject to the following constraints:
+
+* Scope of claims
+
+  * The document specifies an effective encoding of a named problem, together with observables, tension scores and experiment templates.
+  * It does not prove or disprove the canonical mathematical statement in Section 1.
+  * It does not introduce any new theorem beyond what is already established in the cited literature.
+  * It should not be cited as evidence that the corresponding open problem has been solved.
+
+* Effective-layer boundary
+
+  * All objects used here, such as state spaces, observables, invariants, tension scores and experiment designs, live at the effective layer of TU.
+  * No deep TU axioms, generators or internal update rules are exposed.
+  * Any reference to “worlds”, “multiverse” or “tension” refers only to these effective objects, not to hidden dynamics.
+
+* Encoding class and fairness
+
+  * All tension scores are computed inside a fixed encoding class that is chosen before scoring any candidate.
+  * Parameters of the encoding are not tuned in response to particular axiom packages or worlds.
+  * “Good” and “bad” labels are engineering labels relative to this encoding, not metaphysical verdicts.
+
+This page should be read together with the following charters:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
