@@ -11,12 +11,26 @@ Rank: S
 Projection_dominance: P
 Field_type: dynamical_field
 Tension_type: spectral_tension
-Status: Open
+Status: Encoded_E1_Open
 Semantics: continuous
 E_level: E1
 N_level: N1
-Last_updated: 2026-01-25
+Last_updated: 2026-01-29
 ```
+
+---
+
+## 0. Effective layer disclaimer
+
+All statements in this entry are made strictly at the effective layer of the Tension Universe (TU) framework.
+
+* We specify only state spaces, observables, archetype libraries, invariants, and tension functionals.
+* We do not introduce or expose any TU deep generative rules, axiom systems, or constructive derivations of TU itself.
+* We do not claim to prove or disprove the canonical physical problem in section 1.
+* We do not provide any explicit mapping from raw experimental or simulation data to internal TU fields. We only assume that for each world-representing configuration there exists at least one effective state that encodes suitable summaries.
+* Any encoding `E` described here is one element of an admissible encoding class `E_qturb`. Testing, supporting, or falsifying such an encoding remains at the effective layer. It does not resolve the underlying physical open problem and does not modify any deep TU axioms.
+
+All objects in this file must be interpreted under this effective-layer boundary.
 
 ---
 
@@ -24,7 +38,7 @@ Last_updated: 2026-01-25
 
 ### 1.1 Canonical statement
 
-Quantum turbulence is the turbulent motion of quantum fluids such as superfluid helium and dilute Bose Einstein condensates. The flow is characterized by:
+Quantum turbulence is the turbulent motion of quantum fluids such as superfluid helium and dilute Bose–Einstein condensates. The flow is characterized by:
 
 * exactly quantized circulation in units of a circulation quantum,
 * vortex lines that are topological filament defects,
@@ -51,10 +65,10 @@ in a way that is universal across geometries, forcing protocols, and types of qu
 
 Some key observations and partial results are known.
 
-* Experiments and simulations in superfluid helium and Bose Einstein condensates show regimes where the energy spectrum resembles the classical Kolmogorov `k^(-5/3)` law at intermediate scales, although the range and robustness of this behavior are system dependent.([ResearchGate][1])
-* At small scales, quantum turbulence is dominated by the dynamics of discrete vortex lines, Kelvin waves, and reconnections, and energy is believed to cascade through a Kelvin wave cascade before converting into phonons or other excitations.([維基百科][2])
-* A large body of work describes quantized vortices in helium II and the statistics of vortex tangles, yet no single theory matches all experiments, all regimes, and all scales.([ResearchGate][1])
-* The relation between quantum turbulence and classical turbulence remains only partially understood. In particular, the precise conditions under which a quantum flow reproduces classical Kolmogorov turbulence at large scales are not fully established, and the decay laws and intermittency properties can differ from classical expectations.([維基百科][2])
+* Experiments and simulations in superfluid helium and Bose–Einstein condensates show regimes where the energy spectrum resembles the classical Kolmogorov `k^(-5/3)` law at intermediate scales, although the range and robustness of this behavior are system dependent.
+* At small scales, quantum turbulence is dominated by the dynamics of discrete vortex lines, Kelvin waves, and reconnections. Energy is believed to cascade through a Kelvin wave cascade before converting into phonons or other excitations.
+* A large body of work describes quantized vortices in helium II and the statistics of vortex tangles, yet no single theory matches all experiments, all regimes, and all scales.
+* The relation between quantum turbulence and classical turbulence remains only partially understood. The precise conditions under which a quantum flow reproduces classical Kolmogorov turbulence at large scales are not fully established, and the decay laws and intermittency properties can differ from classical expectations.
 
 Overall, there is strong progress on phenomenology and numerical modeling. However, there is still no universally accepted, fully predictive theory that covers:
 
@@ -66,8 +80,8 @@ Overall, there is strong progress on phenomenology and numerical modeling. Howev
 
 Within the BlackHole S problem collection, Q039 plays three roles.
 
-1. It is the reference node for **spectral_tension** problems in quantum fluids, where spectra, vortices, and dissipation must cohere across many scales.
-2. It connects the mathematics of turbulence (Q024 classical turbulence, Q025 Navier Stokes regularity) to quantum hydrodynamics and many body physics.
+1. It is the reference node for spectral_tension problems in quantum fluids, where spectra, vortices, and dissipation must cohere across many scales.
+2. It connects the mathematics of turbulence (Q024 classical turbulence, Q025 Navier–Stokes regularity) to quantum hydrodynamics and many body physics.
 3. It provides an effective layer test bed for the Tension Universe encoding of:
 
    * multi scale energy spectra in quantum fluids,
@@ -76,9 +90,9 @@ Within the BlackHole S problem collection, Q039 plays three roles.
 
 ### References
 
-1. M. Tsubota, K. Kasamatsu, M. Kobayashi, “Quantum hydrodynamics,” Physics Reports 522, 191–238 (2013).([ResearchGate][1])
+1. M. Tsubota, K. Kasamatsu, M. Kobayashi, “Quantum hydrodynamics,” Physics Reports 522, 191–238 (2013).
 2. R. J. Donnelly, “Quantized Vortices in Helium II,” Cambridge University Press, 1991.
-3. “Quantum turbulence,” general reference article describing properties of superfluids, quantized vortices, and distinctions between classical and quantum turbulence.([維基百科][2])
+3. General review articles on quantum turbulence and superfluid hydrodynamics (standard encyclopedia and review sources).
 
 ---
 
@@ -99,8 +113,8 @@ These problems provide prerequisites, tools, or general foundations that Q039 re
 * Q032 (BH_PHYS_QTHERMO_L3_032)
   Reason: Provides quantum thermodynamic concepts and energy budget constraints for dissipation and cascade endpoints.
 
-* Q037 (BH_PHYS_BEC_COHERENCE_L3_037)
-  Reason: Supplies the coherence and condensate fraction descriptors used to interpret turbulence in atomic condensates.
+* Q038 (BH_PHYS_QCOLD_ATOMS_L3_038)
+  Reason: Supplies strongly correlated cold atom phase maps and spectral_tension tools that are reused when describing turbulence in condensate based quantum fluids.
 
 ### 2.2 Downstream problems
 
@@ -123,13 +137,13 @@ These problems are direct reuse targets of Q039 components or depend on Q039’s
 Parallel nodes share similar tension types but no direct component dependence.
 
 * Q024 (BH_PHYS_CLASSICAL_TURB_L3_024)
-  Reason: Both Q024 and Q039 involve multi scale turbulent cascades and energy spectra, but Q039 has quantized vortices and quantum constraints.
+  Reason: Both Q024 and Q039 involve multi scale turbulent cascades and energy spectra. Q039 adds quantized vortices and quantum constraints.
 
 * Q036 (BH_PHYS_HIGH_TC_MECH_L3_036)
   Reason: Both Q036 and Q039 involve quantum many body fields where emergent macroscopic behavior depends on subtle microscopic coherence.
 
-* Q038 (BH_COSM_REHEATING_L3_038)
-  Reason: Both deal with cascade like behavior where energy moves across scales through nontrivial field configurations.
+* Q038 (BH_PHYS_QCOLD_ATOMS_L3_038)
+  Reason: Both Q038 and Q039 encode multi scale spectral_tension structures. Q038 focuses on phase diagrams in cold atom systems, Q039 focuses on turbulent cascades in quantum fluids.
 
 ### 2.4 Cross domain edges
 
@@ -164,7 +178,9 @@ We do not describe any hidden generative rules or construction of internal TU fi
 
 We introduce a state space
 
-`M_qturb`
+```txt
+M_qturb
+```
 
 with the following effective layer interpretation.
 
@@ -180,9 +196,9 @@ with the following effective layer interpretation.
   * coarse grained descriptors of vortex lines (positions, orientations, connectivity),
   * coarse grained energy spectra and dissipation rates over a finite range of scales.
 
-We do not specify how `m` is constructed from microscopic wavefunctions, numerical simulations, or experiments. We only assume that, for each `m`, suitable derived observables can be evaluated.
+We do not specify how `m` is constructed from microscopic wavefunctions, numerical simulations, or experiments. We only assume that, for each `m`, suitable derived observables can be evaluated when needed.
 
-### 3.2 Archetype library and refinement schedule
+### 3.2 Archetype library, refinement schedule, and encoding class
 
 To avoid free parameter pathologies, we fix an archetype library and a refinement schedule before any evaluation. This defines an admissible encoding class `E_qturb`.
 
@@ -192,7 +208,7 @@ To avoid free parameter pathologies, we fix an archetype library and a refinemen
 K = {1, 2, ..., K_max}
 ```
 
-where each `k` indexes a band of length scales from large to small, with a fixed and monotone mapping between `k` and physical scale.
+Each `k` indexes a band of length scales from large to small. There is a fixed and monotone mapping between `k` and physical scale.
 
 2. Archetype library
 
@@ -208,7 +224,7 @@ where each `A_i(k)` is an archetype flow pattern at scale level `k` that include
 * typical vortex line density and tangle properties,
 * a qualitative regime label (for example Kolmogorov like, Vinen like).
 
-This library is fixed once and used for all states `m`. It is not allowed to depend on the state being evaluated.
+This library is fixed once and used for all states `m`. It is not allowed to depend on the particular state being evaluated.
 
 3. Refinement schedule
 
@@ -218,7 +234,20 @@ We define a refinement map `refine_flow(k)` such that:
 * the library at higher `k` refines or extends the library at lower `k`,
 * the family `L_flow(k)` for `k` in `K` is nested in the sense that archetypes at small scales are consistent with possible decompositions of larger scale archetypes.
 
-Again, this schedule is fixed once and is common to all states.
+The refinement schedule is fixed once and is common to all states.
+
+4. Admissible encoding class `E_qturb`
+
+An encoding `E` is in `E_qturb` if and only if it fixes, in advance and independent of any single state `m`:
+
+* the index set `K` and its mapping to physical scales,
+* a finite library `L_flow(k)` for each `k` in `K`,
+* a refinement map `refine_flow(k)` that specifies how archetypes can be refined,
+* a concrete rule for computing archetype similarity scores `Match_A(m; k, i)` from scale band observables,
+* the band definitions used to construct energy and vortex statistics at each `k`,
+* a specific nonnegative functional `F_qturb` together with fixed coefficients `gamma_1`, `gamma_2` for combining invariants into a scalar spectral tension.
+
+All of these choices may depend on the class of physical systems and resolution, but they must not depend on the identity of a single configuration beyond observable summaries that are shared by whole families of states.
 
 ### 3.3 Effective observables
 
@@ -252,45 +281,27 @@ Match_A(m; k, i) in [0, 1]
 * Input: `m`, scale index `k`, archetype index `i`.
 * Output: a similarity score between the local configuration of `m` at scale `k` and archetype `A_i(k)`, normalized to the interval `[0, 1]`.
 
-We do not specify how `Match_A` is computed. We only require that all the above observables are well defined for regular states.
+The computation of `Match_A` is part of the encoding and must be fixed for each `E` in `E_qturb`. It is required to depend only on band level observables such as `E_band` and `L_vortex`, not on external identifiers of the state.
 
-### 3.4 Mismatch and tension contribution
+### 3.4 Mismatch and spectral invariants
 
-We define a per scale mismatch observable by comparing the state to the archetype library.
+We define per scale mismatch observables by comparing the state to the archetype library.
 
-1. Archetype mixture constraints
-
-For each state `m` and scale `k` we define nonnegative weights
-
-```txt
-w_i(m; k) >= 0
-```
-
-for `i = 1` to `N`, subject to:
-
-```txt
-sum_{i=1 to N} w_i(m; k) = 1
-```
-
-and an additional fairness constraint:
-
-* the weights `w_i(m; k)` must be chosen as a function of the observable summaries at scale `k`, not by direct tuning to lower the global tension for a single state. In practice this means that for a given observable signature at scale `k`, all states share the same mapping to weights.
-
-2. Per scale mismatch
-
-We define
+1. Per scale mismatch
 
 ```txt
 DeltaS_flow(m; k) = 1 - max_{i in {1,...,N}} Match_A(m; k, i)
 ```
 
-so that:
+This ensures:
 
-* `DeltaS_flow(m; k)` lies in `[0, 1]`,
-* `DeltaS_flow(m; k) = 0` when some archetype perfectly matches the configuration at scale `k`,
-* higher values correspond to greater deviation from all archetypes.
+* `DeltaS_flow(m; k)` lies in `[0, 1]`.
+* `DeltaS_flow(m; k) = 0` when some archetype perfectly matches the configuration at scale `k`.
+* Higher values correspond to greater deviation from all archetypes at that scale.
 
-3. Cascade mismatch invariant
+The use of `max_i Match_A` is fixed inside each encoding `E` and is applied uniformly to all states. There is no tuning of this rule to reduce the mismatch of any single configuration.
+
+2. Cascade mismatch invariant
 
 We define a cascade invariant
 
@@ -300,7 +311,7 @@ I_cascade(m) = max_{k in K} DeltaS_flow(m; k)
 
 which captures the worst mismatch across the scale range covered by the library.
 
-4. Bridge mismatch invariant
+3. Bridge mismatch invariant
 
 We define a bridge invariant that compares large and small scales:
 
@@ -310,27 +321,7 @@ I_bridge(m) = |DeltaS_flow(m; k_large) - DeltaS_flow(m; k_small)|
 
 for a fixed pair of indices `k_large` and `k_small` that represent the largest scale and a deep quantum dominated scale. These indices are chosen once for the encoding and do not depend on the state.
 
-### 3.5 Effective tension tensor and singular set
-
-1. Tension tensor component
-
-We define an effective tension tensor component
-
-```txt
-T_qturb(m) = S_flow(m) * C_flow(m) * (gamma_1 * I_cascade(m) + gamma_2 * I_bridge(m)) * lambda(m) * kappa_qturb
-```
-
-where:
-
-* `S_flow(m)` is a source factor representing how strongly the configuration is driven or forced,
-* `C_flow(m)` is a receptivity factor representing how sensitive downstream observables are to turbulence structure,
-* `gamma_1` and `gamma_2` are fixed nonnegative coefficients with `gamma_1 + gamma_2 = 1`,
-* `lambda(m)` is a convergence state factor bounded in a fixed interval,
-* `kappa_qturb` is a fixed scale parameter for this problem.
-
-All coefficients and scale choices are fixed once to define the encoding class `E_qturb`.
-
-2. Singular set and domain restriction
+### 3.5 Singular set and regular domain
 
 Some states may not support a coherent turbulence description at the chosen scales. We define the singular set:
 
@@ -346,7 +337,7 @@ We then restrict all Q039 analysis to the regular set
 M_reg = M_qturb \ S_sing
 ```
 
-Whenever an experiment attempts to evaluate Q039 observables for a state in `S_sing`, the result is treated as “out of domain” and not as substantive evidence about quantum turbulence laws.
+Whenever an experiment attempts to evaluate Q039 observables for a state in `S_sing`, the result is treated as out of domain. It does not count as substantive evidence about quantum turbulence laws or about the adequacy of a particular encoding in `E_qturb`.
 
 ---
 
@@ -362,7 +353,7 @@ We define a core quantum turbulence tension functional
 Tension_qturb(m) = F_qturb(I_cascade(m), I_bridge(m))
 ```
 
-with a fixed nonnegative function `F_qturb`. A concrete choice is:
+with a fixed nonnegative function `F_qturb`. A concrete choice that satisfies the requirements is
 
 ```txt
 Tension_qturb(m) = gamma_1 * I_cascade(m) + gamma_2 * I_bridge(m)
@@ -372,9 +363,9 @@ with `gamma_1 >= 0`, `gamma_2 >= 0`, and `gamma_1 + gamma_2 = 1`.
 
 The functional must satisfy:
 
-* `Tension_qturb(m) >= 0` for all `m` in `M_reg`,
-* `Tension_qturb(m)` small when the state can be well approximated by archetypes across scales and the large to small scale bridge is coherent,
-* `Tension_qturb(m)` large when there are severe mismatches or incoherent bridges between scales.
+* `Tension_qturb(m) >= 0` for all `m` in `M_reg`.
+* `Tension_qturb(m)` is small when the state can be well approximated by archetypes across scales and the large to small scale bridge is coherent.
+* `Tension_qturb(m)` is large when there are severe mismatches or incoherent bridges between scales.
 
 ### 4.2 Quantum turbulence as a low tension principle
 
@@ -425,31 +416,31 @@ In World T:
 
 1. Archetype coverage
 
-* For realistic flows in helium II and atomic condensates, the archetype library `L_flow(k)` provides good coverage at all scales, so that:
+   * For realistic flows in helium II and atomic condensates, the archetype library `L_flow(k)` provides good coverage at all scales, so that
 
-  ```txt
-  DeltaS_flow(m_T; k) is small across k in K
-  ```
+     ```txt
+     DeltaS_flow(m_T; k) is small across k in K
+     ```
 
-  for representative states `m_T`.
+     for representative states `m_T`.
 
 2. Cascade behavior
 
-* Energy spectra across a wide inertial range follow simple, system independent laws, with clear scaling exponents and robust decay properties that are captured by the archetypes.
+   * Energy spectra across a wide inertial range follow simple, system independent laws, with clear scaling exponents and robust decay properties that are captured by the archetypes.
 
 3. Bridge between classical and quantum regimes
 
-* The invariant `I_bridge(m_T)` remains small, indicating that the relation between large scale eddies and small scale vortex dynamics is well structured and consistent across different systems.
+   * The invariant `I_bridge(m_T)` remains small. The relation between large scale eddies and small scale vortex dynamics is well structured and consistent across different systems.
 
 4. Global tension
 
-* The functional satisfies:
+   * The functional satisfies
 
-  ```txt
-  Tension_qturb(m_T) <= epsilon_qturb
-  ```
+     ```txt
+     Tension_qturb(m_T) <= epsilon_qturb
+     ```
 
-  with `epsilon_qturb` stable under reasonable refinements of the encoding.
+     with `epsilon_qturb` stable under reasonable refinements of the encoding.
 
 ### 5.2 World F (incoherent cascades, high tension)
 
@@ -457,31 +448,31 @@ In World F:
 
 1. Fragmented regimes
 
-* Different systems (for example helium II versus atomic condensates) require incompatible archetype families in order to describe their turbulent behavior. Any fixed library `L_flow(k)` fails to match the observed statistics for some systems, so that
+   * Different systems (for example helium II versus atomic condensates) require incompatible archetype families in order to describe their turbulent behavior. Any fixed library `L_flow(k)` fails to match the observed statistics for some systems, so that
 
-  ```txt
-  DeltaS_flow(m_F; k) is large for some k in K
-  ```
+     ```txt
+     DeltaS_flow(m_F; k) is large for some k in K
+     ```
 
-  for representative states `m_F`.
+     for representative states `m_F`.
 
 2. Unstable cascades
 
-* Attempts to fit spectra to simple scaling laws produce exponents and ranges that vary significantly with modest changes in conditions, and these variations cannot be captured by a single archetype set.
+   * Attempts to fit spectra to simple scaling laws produce exponents and ranges that vary significantly with modest changes in conditions. These variations cannot be captured by a single archetype set.
 
 3. Broken bridge
 
-* The invariant `I_bridge(m_F)` is frequently large, indicating persistent tension between large scale and small scale structure. Large scale behavior does not reliably inform small scale dynamics or dissipation.
+   * The invariant `I_bridge(m_F)` is frequently large. There is persistent tension between large scale and small scale structure. Large scale behavior does not reliably inform small scale dynamics or dissipation.
 
 4. Global tension
 
-* For encodings that remain faithful to observed data, one finds:
+   * For encodings that remain faithful to observed data one finds
 
-  ```txt
-  Tension_qturb(m_F) >= delta_qturb
-  ```
+     ```txt
+     Tension_qturb(m_F) >= delta_qturb
+     ```
 
-  with `delta_qturb > 0` not removable by any allowed refinement.
+     with `delta_qturb > 0` not removable by any allowed refinement.
 
 ### 5.3 Interpretive note
 
@@ -508,7 +499,7 @@ Test whether a fixed archetype library and refinement schedule can describe ener
 
 * Systems: helium II in a channel, helium II in a grid turbulence setup, and a trapped atomic condensate with stirring, each under conditions where turbulence is reported.
 * Data: for each system, numerical simulations or experiments that provide energy spectra over a range of scales and vortex line density statistics.
-* Encoding: fix `K`, `L_flow(k)`, and the mapping from observables at scale `k` to weights `w_i(m; k)` before looking at system specific results.
+* Encoding: fix `K`, `L_flow(k)`, the band definitions, and the mapping from observables at scale `k` to similarity scores `Match_A(m; k, i)` before looking at system specific results. These choices define a particular encoding `E` in `E_qturb`.
 
 *Protocol:*
 
@@ -525,14 +516,14 @@ Test whether a fixed archetype library and refinement schedule can describe ener
 
 *Falsification conditions:*
 
-* If, for a wide range of physically motivated systems, any fixed library and refinement schedule within `E_qturb` yields consistently high values of `Tension_qturb(m_data)` that exceed a pre agreed upper bound, the current encoding is considered falsified.
+* If, for a wide range of physically motivated systems, any fixed library and refinement schedule within `E_qturb` yields consistently high values of `Tension_qturb(m_data)` that exceed a pre agreed high tension threshold `delta_qturb`, the current encoding is considered falsified.
 * If small adjustments within the allowed encoding class produce arbitrarily different tension profiles without clear physical justification, the encoding is considered unstable and rejected.
 
 *Semantics implementation note:*
-This experiment assumes continuous field style representations for spectra and vortex statistics, coarse grained into bands and regions consistent with the metadata.
+This experiment assumes continuous field style representations for spectra and vortex statistics, coarse grained into bands and regions consistent with the metadata. All analysis is restricted to `M_reg`; attempts to evaluate states in `S_sing` are logged as out of domain.
 
 *Boundary note:*
-Falsifying TU encoding != solving canonical statement. This experiment can reject specific Q039 encodings, but it does not produce a complete theory of quantum turbulence.
+Falsifying TU encoding does not solve the canonical statement. This experiment can reject specific Q039 encodings, but it does not produce a complete theory of quantum turbulence.
 
 ---
 
@@ -543,9 +534,9 @@ Assess whether the bridge invariant `I_bridge` and the tension functional can ca
 
 *Setup:*
 
-* Select a quantum fluid system where the relative strength of the normal and superfluid components can be tuned, for example helium II at varying temperatures or a condensate with adjustable thermal fraction.
+* Select a quantum fluid system where the relative strength of the normal and superfluid components can be tuned. Examples include helium II at varying temperatures or a condensate with adjustable thermal fraction.
 * For each setting, obtain or simulate flows where classical like large scale turbulence is present at high normal fluid fraction and quantum vortex dominated behavior is present at low normal fluid fraction.
-* Use the same archetype library and refinement schedule across all settings.
+* Use the same archetype library and refinement schedule across all settings, corresponding to one encoding `E` in `E_qturb`.
 
 *Protocol:*
 
@@ -566,10 +557,10 @@ Assess whether the bridge invariant `I_bridge` and the tension functional can ca
 * If the encoding suggests lower tension in parameter regions that are known to be dynamically unstable or poorly understood, without offering coherent explanations, it is considered misaligned and should be revised.
 
 *Semantics implementation note:*
-All observables are interpreted through coarse grained continuous fields, with consistent band definitions across parameter settings.
+All observables are interpreted through coarse grained continuous fields, with consistent band definitions across parameter settings. As in Experiment 1, evaluations that fall into `S_sing` are treated as out of domain and excluded from claims about the encoding.
 
 *Boundary note:*
-Falsifying TU encoding != solving canonical statement. This experiment can show that a particular bridge description fails, but it does not provide a full replacement theory.
+Falsifying TU encoding does not solve the canonical statement. This experiment can show that a particular bridge description fails, but it does not provide a full replacement theory.
 
 ---
 
@@ -613,7 +604,8 @@ We outline module patterns that reuse Q039 structures while remaining at the eff
 2. `VortexTangleDescriptor`
 
    * Role: a module that extracts a concise representation of vortex line statistics and reconnection patterns from internal states.
-   * Interface: maps internal embeddings to a feature vector analogous to `L_vortex(m; k)` and related quantities, suitable as input to the QuantumCascadeHead.
+   * Interface: maps internal embeddings to a feature vector analogous to banded `L_vortex(m; k)` and related quantities, suitable as input to the QuantumCascadeHead.
+   * Note: this component can be shared with other problems that depend on vortex mediated transport.
 
 3. `TwoFluidBridgeFilter`
 
@@ -650,7 +642,7 @@ A minimal protocol that lets external users experience the impact of Q039 encodi
 
 * TU encoded setup
 
-  * Prompt: ask the same question, but instruct the AI to use “multi scale archetypes”, “vortex tangle statistics”, and a “classical to quantum bridge tension” as organizing concepts, without introducing any deep TU generative rules.
+  * Prompt: ask the same question, but instruct the AI to use multi scale archetypes, vortex tangle statistics, and a classical to quantum bridge tension as organizing concepts, without introducing any deep TU generative rules.
   * Observation: record whether the explanation becomes more structured, with explicit stages of the cascade and clearer distinctions between regimes.
 
 * Comparison metric
@@ -716,7 +708,7 @@ This block describes the reusable components produced by Q039 and how they trans
 
    * Reused component: `TwoFluidBridgeTemplate`.
    * Why it transfers: similar experiments can probe how energy and entropy flow between coherent and incoherent degrees of freedom.
-   * What changes: energy spectra are replaced by more general energy level and occupation statistics.
+   * What changes: energy spectra are replaced by more general level and occupation statistics.
 
 3. Q041 (Neutron star superfluid dynamics)
 
@@ -755,15 +747,15 @@ To move from E1 to E2, at least one of the following should be implemented in pr
 1. A prototype tool that, given simulation or experimental data for quantum turbulent flows in several systems, computes `DeltaS_flow`, `I_cascade`, `I_bridge`, and `Tension_qturb`, and publishes the resulting profiles.
 2. A comparative study that uses the same archetype library to analyze both quantum turbulence and classical turbulence, demonstrating how tension values differ and where the bridge breaks or holds.
 
-Both steps operate entirely at the effective layer and do not require exposing any deep TU generative rules.
+Both steps operate entirely at the effective layer and do not require exposing any deep TU generative rule.
 
 ### 9.3 Long term role in the TU program
 
 In the longer term, Q039 is expected to serve as:
 
-* The anchor node for all quantum fluid turbulence problems within the BlackHole graph.
-* A key case study for how TU handles systems where discrete quantum structures and continuous classical laws must coexist.
-* A bridge between condensed matter physics, astrophysics, and AI interpretability, via shared ideas about multi scale cascades and tension.
+* the anchor node for all quantum fluid turbulence problems within the BlackHole graph,
+* a key case study for how TU handles systems where discrete quantum structures and continuous classical laws must coexist,
+* a bridge between condensed matter physics, astrophysics, and AI interpretability, via shared ideas about multi scale cascades and tension.
 
 ---
 
@@ -771,9 +763,9 @@ In the longer term, Q039 is expected to serve as:
 
 This block gives an explanation suitable for non experts while staying aligned with the effective layer description.
 
-In an ordinary fluid, turbulence looks like a messy swirl of eddies of many sizes. There is a famous picture where big eddies break into smaller eddies, which break into even smaller ones, until the motion turns into heat.
+In an ordinary fluid, turbulence looks like a messy swirl of eddies of many sizes. A familiar picture is that big eddies break into smaller eddies, which break into even smaller ones, until the motion turns into heat.
 
-In a quantum fluid, such as superfluid helium, something new happens. The flow can move without friction, and rotation happens through very thin vortex lines. The circulation around each vortex line is quantized. Instead of a smooth soup of whirlpools, there is a tangle of very thin, very precise threads of rotation.
+In a quantum fluid, such as superfluid helium, something new appears. The flow can move without friction, and rotation happens through very thin vortex lines. The circulation around each vortex line is quantized. Instead of a smooth soup of whirlpools, there is a tangle of very thin threads of rotation.
 
 The big open question is whether we can describe this motion with one unified story. At large scales, the flow often looks almost classical. At small scales, it is made of quantized vortex lines, Kelvin waves, and phonons. The problem is to understand:
 
@@ -810,3 +802,28 @@ This way of looking at the problem does not solve quantum turbulence. It does so
 
 Q039 is therefore the reference case for how the Tension Universe framework deals with quantum turbulence, and for how it keeps the discussion at a level that can be checked, tested, and improved without claiming more than the evidence supports.
 
+---
+
+## Tension Universe effective-layer footer
+
+This page is part of the **WFGY / Tension Universe** S-problem collection.
+
+### Scope of claims
+
+* The goal of this document is to specify an effective-layer encoding of the problem labeled Q039.
+* It does not claim to prove or disprove the canonical statement in section 1.
+* It does not introduce any new theorem beyond what is already established in the cited literature.
+* It should not be cited as evidence that the corresponding open problem in physics has been solved.
+
+### Effective-layer boundary
+
+* All objects used here (state spaces such as `M_qturb`, observables, archetype libraries, invariants, tension scores, and counterfactual worlds) live at the Tension Universe effective layer.
+* No TU deep generative rules, axiom systems, or constructive derivations are exposed or assumed as part of this document’s public contract.
+* Mappings from raw experimental or simulation data to effective states are left abstract. They may depend on domain practice but are not part of TU itself.
+* Supporting or falsifying an encoding within `E_qturb` does not validate or invalidate any candidate microscopic theory of quantum turbulence.
+
+This page should be read together with the following charters:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
