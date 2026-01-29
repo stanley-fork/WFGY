@@ -1,7 +1,3 @@
-好，下面直接給你 Q011 run2 完整英文版本，你可以整段貼進檔案用。
-
----
-
 # Q011 · Navier–Stokes existence and smoothness
 
 ## 0. Header metadata
