@@ -15,8 +15,29 @@ Status: Open
 Semantics: continuous
 E_level: E1
 N_level: N2
-Last_updated: 2026-01-25
+Last_updated: 2026-01-29
 ```
+
+---
+
+## 0. Effective layer disclaimer
+
+All statements in this entry are made strictly at the effective layer of the Tension Universe (TU) framework.
+
+* The document only specifies state spaces, observables, mismatch quantities, tension scores, singular sets, and experiment templates.
+* It does not specify any underlying TU axiom system, any deep generative rules, or any explicit TU field equations.
+* It does not provide any explicit mapping from raw biological data to internal TU fields. All such mappings are treated as black box procedures that produce effective summaries.
+* It does not claim to prove or disprove the canonical neuroscience problem in Section 1.
+* It does not introduce any new mathematical theorem beyond what is already established in the cited literature.
+* It should not be cited as evidence that the canonical long term memory storage problem has been solved at the biological or mathematical level.
+
+Throughout this page:
+
+* Symbols such as `M_mem`, `R_mem`, `DeltaS_mem`, and `Tension_mem` denote effective layer objects.
+* Counterfactual tension worlds are patterns of observables at the effective layer. They are not claims about the true microscopic structure of the brain.
+* Falsification clauses apply only to specific encodings and parameter choices within the admissible encoding class defined here.
+
+Detailed rules for effective layer work, encoding fairness, and tension scale choices are given in the TU charters referenced in the footer of this page.
 
 ---
 
@@ -34,24 +55,24 @@ More precisely, Q084 asks for a mechanistic account that explains, at the level 
 2. How this substrate remains sufficiently stable over long periods despite molecular turnover, noise, and ongoing plasticity.
 3. How this substrate remains compatible with continued learning and reorganization rather than saturating or collapsing.
 
-The question is not only about which brain regions are involved, but about the concrete storage mechanisms and their stability properties across multiple spatial and temporal scales.
+The question is not only about which brain regions are involved. It is about the concrete storage mechanisms and their stability properties across multiple spatial and temporal scales.
 
 ### 1.2 Status and difficulty
 
 Several classes of mechanisms have been proposed as candidates for long term memory storage, including:
 
-* persistent modifications of synaptic strength, for example through long term potentiation and long term depression,
-* structural changes in synaptic connectivity, such as formation and elimination of dendritic spines,
-* changes in intrinsic excitability of neurons,
-* cell assembly and engram theories, where specific neuron populations encode and retrieve particular memories,
-* molecular level mechanisms, such as persistent kinase activity, local protein synthesis, epigenetic marks, or prion like state changes.
+* Persistent modifications of synaptic strength, for example through long term potentiation and long term depression.
+* Structural changes in synaptic connectivity, such as formation and elimination of dendritic spines.
+* Changes in intrinsic excitability of neurons.
+* Cell assembly and engram theories, where specific neuron populations encode and retrieve particular memories.
+* Molecular level mechanisms, such as persistent kinase activity, local protein synthesis, epigenetic marks, or prion like state changes.
 
 Despite extensive experimental and theoretical work, there is no unified, quantitatively validated account that simultaneously explains:
 
-* how memories can remain stable over years,
-* how the underlying proteins and structures can be continuously renewed,
-* how networks can keep learning new information without catastrophic interference,
-* how storage capacity scales with brain size, energy, and structural constraints.
+* How memories can remain stable over years.
+* How the underlying proteins and structures can be continuously renewed.
+* How networks can keep learning new information without catastrophic interference.
+* How storage capacity scales with brain size, energy, and structural constraints.
 
 The problem is considered very hard because it couples molecular biology, synaptic biophysics, circuit level dynamics, systems level consolidation, and behavior. Many existing models address only a subset of these dimensions.
 
@@ -63,12 +84,17 @@ Within the BlackHole S problem collection, Q084 plays several roles:
 2. It provides a test case for cross scale tension between microscopic volatility and macroscopic stability.
 3. It anchors a cluster of problems on learning, plasticity, sleep, and neurodegeneration, including:
 
-   * Q083 (neural coding principles),
-   * Q085 (rules of synaptic plasticity),
-   * Q086 (fundamental function of sleep),
+   * Q083 (neural coding principles).
+   * Q085 (rules of synaptic plasticity).
+   * Q086 (fundamental function of sleep).
    * Q087 (mechanisms of neurodegenerative diseases).
 
-Q084 is also a bridge between neuroscience and AI problems on memory architectures, continual learning, and stability plasticity tradeoffs.
+Q084 is also a bridge between neuroscience questions about memory and AI problems on memory architectures, continual learning, and stability plasticity tradeoffs.
+
+Scope note for this project:
+
+* This entry only gives an effective layer encoding and associated experiments.
+* It does not assert that any particular biological mechanism is correct. It only specifies how to test whether candidate mechanisms can keep memory storage tension within a low band under the constraints defined later.
 
 ### References
 
@@ -89,10 +115,13 @@ These problems provide prerequisites, tools, or conceptual foundations that Q084
 
 * Q083 (BH_NEURO_CODE_L3_083)
   Reason: Supplies general neural coding principles that constrain what patterns can serve as memory traces in networks.
+
 * Q085 (BH_NEURO_PLASTICITY_RULES_L3_085)
   Reason: Provides effective rules for synaptic plasticity that underlie memory formation and modification.
+
 * Q082 (BH_NEURO_BINDING_L3_082)
   Reason: Constrains how distributed neural features can be bound into coherent memory episodes at the circuit level.
+
 * Q088 (BH_NEURO_DEV_PATTERN_L3_088)
   Reason: Describes how cortical maps develop, which sets initial structural conditions for where and how long term memories can be stored.
 
@@ -102,8 +131,10 @@ These problems reuse Q084 components or depend on its tension structure.
 
 * Q086 (BH_NEURO_SLEEP_FUNC_L3_086)
   Reason: Reuses memory stability and consolidation components to define how sleep stages support long term memory maintenance.
+
 * Q087 (BH_NEURO_DEGEN_DISEASE_L3_087)
   Reason: Uses Q084 invariants as baselines for identifying pathological breakdowns of long term memory storage.
+
 * Q089 (BH_NEURO_PREDICTIVE_CODE_L3_089)
   Reason: Depends on stable memory substrates to implement predictive coding across long timescales.
 
@@ -113,6 +144,7 @@ Parallel nodes share similar tension types but no direct component dependence.
 
 * Q081 (BH_NEURO_CONSCIOUS_HARD_L3_081)
   Reason: Both involve consistency_tension between neural processes and high level cognitive phenomena that persist over time.
+
 * Q091 (BH_EARTH_CLIMATE_SENS_L3_091)
   Reason: Both deal with long term stability of a system state under ongoing fluctuations and internal turnover.
 
@@ -122,8 +154,10 @@ Cross domain edges connect Q084 to problems in other domains that can reuse its 
 
 * Q104 (BH_AI_MEMORY_ARCH_L3_104)
   Reason: Reuses Q084 stability plasticity tension components as templates for AI memory architecture design.
+
 * Q105 (BH_AI_CONTINUAL_LEARN_L3_105)
   Reason: Uses Q084 invariants to define acceptable tradeoffs between retaining old information and learning new tasks.
+
 * Q120 (BH_AI_SAFETY_SPEC_L3_120)
   Reason: Reuses long term stability patterns as analogies for maintaining safety relevant information in AI systems over long deployment periods.
 
@@ -135,33 +169,27 @@ All cross domain references are via Q identifiers and do not require external li
 
 All content in this block is at the effective layer. We describe only:
 
-* state spaces,
-* observables and fields,
-* invariants and tension scores,
-* singular sets and domain restrictions.
+* State spaces.
+* Observables and fields.
+* Invariants and tension scores.
+* Singular sets and domain restrictions.
 
 We do not describe any hidden generative rules or any explicit mapping from raw biological data to internal TU fields.
 
 ### 3.1 State space
 
-We assume a state space
-
-`M_mem`
-
-with the following interpretation:
+We assume a state space `M_mem` with the following interpretation.
 
 * Each element `m` in `M_mem` represents a coherent configuration of a memory relevant neural system across a set of spatial and temporal scales.
 
 At the effective layer, a state `m` packages:
 
-* coarse summaries of synaptic strengths and connectivity patterns in selected brain regions,
-* summaries of structural features such as spine densities and network motifs,
-* summaries of molecular and cellular processes that influence stability, such as turnover rates and plasticity statistics,
-* summaries of behavioral performance on memory tasks over time.
+* Coarse summaries of synaptic strengths and connectivity patterns in selected brain regions.
+* Summaries of structural features such as spine densities and network motifs.
+* Summaries of molecular and cellular processes that influence stability, such as turnover rates and plasticity statistics.
+* Summaries of behavioral performance on memory tasks over time.
 
-We do not specify how these summaries are constructed from experimental measurements. We only assume that:
-
-* for any experimental condition and time window of interest, there exist states in `M_mem` that encode the corresponding effective summaries.
+We do not specify how these summaries are constructed from experimental measurements. We only assume that for any experimental condition and time window of interest, there exist states in `M_mem` that encode the corresponding effective summaries.
 
 ### 3.2 Effective fields and observables
 
@@ -169,62 +197,62 @@ We define several effective observables on `M_mem`. All observables are treated 
 
 1. Memory retention profile
 
-```txt
-R_mem(m; tau)
-```
+   ```txt
+   R_mem(m; tau)
+   ```
 
-* Input: a state `m` and a retention interval `tau` in a fixed range of timescales.
-* Output: a scalar summarizing how much of a reference memory can be retrieved after delay `tau`.
-* Interpretation: higher values indicate better retention.
+   * Input: a state `m` and a retention interval `tau` in a fixed range of timescales.
+   * Output: a scalar summarizing how much of a reference memory can be retrieved after delay `tau`.
+   * Interpretation: higher values indicate better retention.
 
 2. Substrate turnover profile
 
-```txt
-T_sub(m; tau)
-```
+   ```txt
+   T_sub(m; tau)
+   ```
 
-* Input: the same `m` and time interval `tau`.
-* Output: an estimate of how much of the underlying physical substrate for memory has been replaced during `tau`, for example through protein turnover or structural remodeling.
+   * Input: the same `m` and time interval `tau`.
+   * Output: an estimate of how much of the underlying physical substrate for memory has been replaced during `tau`, for example through protein turnover or structural remodeling.
 
 3. Stability mismatch observable
 
-```txt
-DeltaS_stability(m; tau)
-```
+   ```txt
+   DeltaS_stability(m; tau)
+   ```
 
-* Input: state `m` and `tau`.
-* Output: a nonnegative scalar measuring the mismatch between observed retention `R_mem(m; tau)` and what would be expected from the observed turnover `T_sub(m; tau)` under a simple baseline model that does not include special stabilizing mechanisms.
-* Properties:
+   * Input: state `m` and `tau`.
+   * Output: a nonnegative scalar measuring the mismatch between observed retention `R_mem(m; tau)` and what would be expected from the observed turnover `T_sub(m; tau)` under a simple baseline model that does not include special stabilizing mechanisms.
+   * Properties:
 
-  * `DeltaS_stability(m; tau) >= 0` for all `m` and `tau`,
-  * `DeltaS_stability(m; tau) = 0` when retention is fully explained by a baseline model given the turnover, within a tolerated error band.
+     * `DeltaS_stability(m; tau) >= 0` for all `m` and `tau`.
+     * `DeltaS_stability(m; tau) = 0` when retention is fully explained by a baseline model given the turnover, within a tolerated error band.
 
 4. Plasticity load observable
 
-```txt
-L_plast(m)
-```
+   ```txt
+   L_plast(m)
+   ```
 
-* Input: state `m`.
-* Output: a scalar summarizing the amount of new learning or plasticity events that occur within a fixed reference period.
-* Interpretation: high `L_plast(m)` means the system is strongly engaged in learning and adaptation.
+   * Input: state `m`.
+   * Output: a scalar summarizing the amount of new learning or plasticity events that occur within a fixed reference period.
+   * Interpretation: high `L_plast(m)` means the system is strongly engaged in learning and adaptation.
 
 5. Interference mismatch observable
 
-```txt
-DeltaS_interf(m)
-```
+   ```txt
+   DeltaS_interf(m)
+   ```
 
-* Input: state `m`.
-* Output: a nonnegative scalar summarizing the degree to which long term memories are degraded when substantial new learning occurs, beyond what a reference balanced plasticity model would predict.
-* Properties:
+   * Input: state `m`.
+   * Output: a nonnegative scalar summarizing the degree to which long term memories are degraded when substantial new learning occurs, beyond what a reference balanced plasticity model would predict.
+   * Properties:
 
-  * `DeltaS_interf(m) >= 0` for all `m`,
-  * `DeltaS_interf(m)` is small if the system manages stability plasticity tradeoffs well.
+     * `DeltaS_interf(m) >= 0` for all `m`.
+     * `DeltaS_interf(m)` is small if the system manages stability plasticity tradeoffs well.
 
 6. Combined memory storage mismatch
 
-Given fixed positive weights `w_stab` and `w_interf` that satisfy
+Given fixed positive weights `w_stab` and `w_interf` that satisfy:
 
 ```txt
 w_stab + w_interf = 1
@@ -233,7 +261,7 @@ w_stab + w_interf = 1
 we define:
 
 ```txt
-DeltaS_mem(m) = w_stab * DeltaS_stability(m; tau_ref)
+DeltaS_mem(m) = w_stab  * DeltaS_stability(m; tau_ref)
               + w_interf * DeltaS_interf(m)
 ```
 
@@ -243,7 +271,7 @@ The weights and `tau_ref` are part of an admissible encoding class defined at th
 
 ### 3.3 Effective tension tensor components
 
-We assume an effective tension tensor over `M_mem` consistent with the TU core decision:
+We now introduce an effective tension tensor over `M_mem` of a generic TU form at the effective layer:
 
 ```txt
 T_ij(m) = S_i(m) * C_j(m) * DeltaS_mem(m) * lambda_mem(m) * kappa_mem
@@ -257,22 +285,23 @@ where:
 * `lambda_mem(m)` encodes the current convergence class of the memory subsystem, for example stable, adapting, or failing, within a fixed bounded range.
 * `kappa_mem` is a coupling constant that sets the overall scale of consistency_tension for Q084.
 
-The detailed indexing sets for `i` and `j` are not needed at the effective layer. It is sufficient that each product is well defined and finite for all states in the regular domain.
+All factors in this expression are effective observables or bounded coefficients. No underlying TU axiom, field equation, or deep generative rule is specified here.
+
+The detailed indexing sets for `i` and `j` are not needed at the effective layer. It is sufficient that each product is well defined and finite for all states in the regular domain defined below.
 
 ### 3.4 Invariants, admissible encodings, and constraints
 
-To prevent hidden parameter tuning, we restrict attention to an admissible encoding class `E_mem` with the following properties:
+To prevent hidden parameter tuning, we restrict attention to an admissible encoding class `E_mem` with the following properties.
 
 1. Finite reference library
 
    * A fixed finite library of baseline models is specified for:
 
-     * how retention should decay as a function of substrate turnover in the absence of special stabilizing mechanisms,
-     * how interference should scale with plasticity load in a simple balanced plasticity model.
-
+     * How retention should decay as a function of substrate turnover in the absence of special stabilizing mechanisms.
+     * How interference should scale with plasticity load in a simple balanced plasticity model.
    * Each library element defines baseline predictions for `R_mem` and interference behaviour. The library is fixed before any evaluation of specific experimental datasets.
 
-2. Fixed parameter ranges
+2. Fixed parameter ranges for mismatch weights
 
    * The weights `w_stab` and `w_interf` satisfy:
 
@@ -282,26 +311,28 @@ To prevent hidden parameter tuning, we restrict attention to an admissible encod
      w_stab + w_interf = 1
      ```
 
-   * A particular choice within these ranges is selected once per study or protocol and not adjusted post hoc in response to observed results.
+   * A particular choice within these ranges is selected once per study or protocol and not adjusted after inspecting the detailed results.
 
 3. Resolution and refinement
 
    * The retention interval `tau_ref` is chosen from a discrete set of intervals that cover the long term range, for example a fixed set of days to months.
-   * Refinement corresponds to using more intervals from this discrete set and more detailed descriptions of the same domains, not to redefining the underlying variables.
+   * Refinement corresponds to using more intervals from this discrete set and more detailed descriptions of the same domains. It does not involve redefining the underlying variables.
 
 4. Encoding stability
 
    * Small changes in the summaries that define `m` lead to small changes in `DeltaS_stability`, `DeltaS_interf`, and `DeltaS_mem` in the usual sense of continuity for real valued functions.
 
+These constraints on `E_mem` are governed by the TU Effective Layer Charter and the TU Encoding and Fairness Charter. Numerical bands and ranges are chosen in a way that is compatible with the TU Tension Scale Charter.
+
 Under these constraints, the memory storage inconsistency described by `DeltaS_mem(m)` cannot be trivially removed by reselecting reference models, weights, or resolution after inspecting the data.
 
 ### 3.5 Singular set and domain restrictions
 
-Some states may yield undefined or unbounded mismatch measures, for example if:
+Some states may yield undefined or unbounded mismatch measures. Examples include:
 
-* retention data are missing or inconsistent,
-* substrate turnover or plasticity statistics are not measured in a compatible way,
-* the chosen baseline models do not apply to the regime represented by `m`.
+* Retention data that are missing or inconsistent.
+* Substrate turnover or plasticity statistics that are not measured in a compatible way.
+* Regimes where the chosen baseline models do not apply.
 
 We define the singular set:
 
@@ -334,14 +365,21 @@ Tension_mem(m) = G(DeltaS_stability(m; tau_ref),
                    DeltaS_interf(m))
 ```
 
-where `G` is a nonnegative function satisfying:
+where `G` is a nonnegative function that in the simplest admissible case has the form:
 
 ```txt
 Tension_mem(m) = alpha_mem * DeltaS_stability(m; tau_ref)
-               + beta_mem * DeltaS_interf(m)
+               + beta_mem  * DeltaS_interf(m)
 ```
 
-with fixed positive constants `alpha_mem` and `beta_mem` chosen in advance within a bounded range and not tuned to specific results.
+with positive constants `alpha_mem` and `beta_mem` chosen in advance within a bounded range, for example:
+
+```txt
+alpha_mem in [0.3, 3.0]
+beta_mem  in [0.3, 3.0]
+```
+
+For any given study or protocol, one pair `(alpha_mem, beta_mem)` is selected from this range according to the TU Tension Scale Charter and recorded in a pre-registered analysis plan. It is not tuned in response to specific experimental results.
 
 Basic properties:
 
@@ -349,13 +387,11 @@ Basic properties:
 * `Tension_mem(m)` is small when retention performance is consistent with substrate turnover and when interference is low relative to plasticity load.
 * `Tension_mem(m)` grows when retention appears too good or too fragile relative to turnover, or when interference is excessive relative to plasticity load.
 
-The exact numerical values of `alpha_mem` and `beta_mem` are part of the admissible encoding class `E_mem` and must be specified before running any experiments.
-
 ### 4.2 Low tension principle for viable memory storage
 
-At the effective layer, viable long term memory mechanisms are characterized by the following principle:
+At the effective layer, viable long term memory mechanisms are characterized by the following principle.
 
-> In a healthy biological system with functioning long term memory, there exist states in `M_reg_mem` that represent typical operating conditions, for which the memory storage tension `Tension_mem(m)` lies within a stable low tension band across a wide range of timescales and learning conditions.
+In a healthy biological system with functioning long term memory, there exist states in `M_reg_mem` that represent typical operating conditions for which the memory storage tension `Tension_mem(m)` lies within a stable low tension band across a wide range of timescales and learning conditions.
 
 More concretely, for any admissible encoding in `E_mem`, there should exist a family of states `{m_healthy}` such that:
 
@@ -363,7 +399,11 @@ More concretely, for any admissible encoding in `E_mem`, there should exist a fa
 Tension_mem(m_healthy) <= epsilon_mem
 ```
 
-for some small threshold `epsilon_mem` that does not grow unbounded as measurement resolution improves and as more data from similar conditions are incorporated.
+for some small threshold `epsilon_mem` that:
+
+* Is chosen using the TU Tension Scale Charter.
+* Is recorded in a pre-registered analysis plan before detailed evaluation.
+* Does not grow without bound as measurement resolution improves and as more data from similar conditions are incorporated.
 
 ### 4.3 Failure modes as persistent high tension
 
@@ -373,13 +413,16 @@ If a proposed memory storage mechanism is fundamentally inadequate, then for any
 Tension_mem(m_fail) >= delta_mem
 ```
 
-for some strictly positive `delta_mem` that cannot be driven to zero by refining the summaries or adding more data, as long as the encoding remains faithful.
+for some strictly positive `delta_mem` that:
+
+* Is set in advance according to the TU Tension Scale Charter and recorded in a pre-registered plan.
+* Cannot be driven to zero by refining the summaries or adding more data, as long as the encoding remains faithful and within `E_mem`.
 
 Examples of such failure modes include:
 
-* retention that decays much faster than expected given the observed substrate turnover,
-* retention that is only achievable at the cost of catastrophic interference when new learning occurs,
-* retention that requires unrealistic fine tuning of parameters or structures that are not robust to noise or biological variability.
+* Retention that decays much faster than expected given the observed substrate turnover.
+* Retention that is only achievable at the cost of catastrophic interference when new learning occurs.
+* Retention that requires unrealistic fine tuning of parameters or structures that are not robust to noise or biological variability.
 
 In this way, Q084 is framed as a distinction between worlds where long term memory can be implemented within a low tension regime and worlds where any implementation leads to unavoidable high tension.
 
@@ -387,10 +430,10 @@ In this way, Q084 is framed as a distinction between worlds where long term memo
 
 ## 5. Counterfactual tension worlds
 
-We describe two counterfactual worlds at the effective layer:
+We describe two counterfactual worlds at the effective layer.
 
 * World T_mem: biological systems possess robust, scalable long term memory mechanisms.
-* World F_mem: any apparent long term memory is fragile or requires unrealistic fine tuning, leading to persistent inconsistency.
+* World F_mem: any apparent long term memory is fragile or requires unrealistic fine tuning, which leads to persistent inconsistency.
 
 ### 5.1 World T_mem (robust long term memory)
 
@@ -420,16 +463,16 @@ In World F_mem:
 
 2. Interference dominated regime
 
-   * When plasticity load `L_plast(m_F)` increases, `DeltaS_interf(m_F)` grows rapidly, indicating that new learning severely disrupts previously stored memories.
+   * When plasticity load `L_plast(m_F)` increases, `DeltaS_interf(m_F)` grows rapidly, which indicates that new learning severely disrupts previously stored memories.
    * No encoding in `E_mem` can keep `Tension_mem(m_F)` below a modest threshold while both retention and ongoing learning are present.
 
 3. Refinement instability
 
-   * As data resolution improves or longer timescales are considered, estimates of `DeltaS_stability` or `DeltaS_interf` show systematic growth, suggesting that apparent stability at coarse scales hides deeper inconsistency.
+   * As data resolution improves or longer timescales are considered, estimates of `DeltaS_stability` or `DeltaS_interf` show systematic growth. This suggests that apparent stability at coarse scales hides deeper inconsistency.
 
 ### 5.3 Interpretive note
 
-These counterfactual worlds do not claim to construct internal TU fields from molecular or circuit level data. They only assert that, if models existed that faithfully summarize either robust or fragile memory regimes, then the effective tension patterns defined above would differ in the described ways.
+These counterfactual worlds do not claim to construct internal TU fields from molecular or circuit level data. They only assert that if models existed that faithfully summarize either robust or fragile memory regimes, then the effective tension patterns defined above would differ in the described ways.
 
 ---
 
@@ -437,97 +480,102 @@ These counterfactual worlds do not claim to construct internal TU fields from mo
 
 This block specifies experiments and protocols at the effective layer that can:
 
-* test the coherence of the Q084 encoding,
-* distinguish between different candidate memory storage mechanisms,
-* falsify specific parameter choices within `E_mem`.
+* Test the coherence of the Q084 encoding.
+* Distinguish between different candidate memory storage mechanisms.
+* Falsify specific parameter choices within `E_mem`.
 
 These experiments cannot fully solve Q084, but they can reject particular encodings or mechanistic hypotheses.
 
 ### Experiment 1: Retention versus substrate turnover in identified circuits
 
-*Goal:*
+**Goal**
 Test whether candidate mechanisms can maintain low stability mismatch `DeltaS_stability` when both retention and substrate turnover are measured in the same circuit over long timescales.
 
-*Setup:*
+**Setup**
 
 * Select a brain region and memory task where many studies already exist, for example hippocampal dependent spatial memory in rodents.
-
 * For the same animals, measure:
 
-  * behavioral retention performance `R_mem(m; tau)` at several long term intervals `tau`,
-  * molecular or structural turnover `T_sub(m; tau)` for synaptic proteins or spines in the relevant circuits.
+  * Behavioral retention performance `R_mem(m; tau)` at several long term intervals `tau`.
+  * Molecular or structural turnover `T_sub(m; tau)` for synaptic proteins or spines in the relevant circuits.
+* Define baseline models in the finite reference library for how retention should decay if no special stabilizing mechanisms are present.
 
-* Define baseline models in the reference library for how retention should decay if no special stabilizing mechanisms are present.
+All model choices, baseline variants from the library, and threshold values used in this experiment are specified in a pre-registered analysis plan, in line with the TU Encoding and Fairness Charter and the TU Tension Scale Charter.
 
-*Protocol:*
+**Protocol**
 
-1. For each animal and interval `tau`, construct a state `m_data` in `M_reg_mem` that packages the effective summaries of retention and turnover.
+1. For each animal and interval `tau`, construct a state `m_data` in `M_mem` that packages the effective summaries of retention and turnover. Discard any state that falls into `S_sing_mem`. Only regular states in `M_reg_mem` enter subsequent tension statistics.
 2. Using the fixed baseline models and parameter choices from `E_mem`, compute `DeltaS_stability(m_data; tau)` for each interval.
-3. Aggregate the values of `DeltaS_stability` across animals and intervals, and compute `Tension_mem(m_data)` using the fixed `alpha_mem` and `beta_mem`.
-4. Compare the observed distribution of `Tension_mem(m_data)` with the predefined low tension band and with predictions from candidate mechanistic models.
+3. Aggregate the values of `DeltaS_stability` across animals and intervals, and compute `Tension_mem(m_data)` using the fixed `alpha_mem` and `beta_mem` defined for this protocol.
+4. Compare the observed distribution of `Tension_mem(m_data)` with:
 
-*Metrics:*
+   * The predefined low tension band.
+   * Predictions from candidate mechanistic models.
+
+**Metrics**
 
 * Distribution of `DeltaS_stability(m_data; tau)` across intervals.
 * Fraction of states with `Tension_mem(m_data)` below the low tension band threshold.
 * Consistency of tension estimates across different baseline models in the finite reference library.
 
-*Falsification conditions:*
+**Falsification conditions**
 
-* If for all choices within `E_mem` the observed `Tension_mem(m_data)` is systematically above the low tension band for realistic parameter ranges, then the combination of candidate mechanisms and encoding is considered falsified at the effective layer.
+* Before any detailed analysis, a low tension band and a set of allowed parameter values in `E_mem` are selected and recorded in the pre-registered plan.
+* If for all choices within this pre-registered subset of `E_mem` the observed `Tension_mem(m_data)` is systematically above the low tension band for realistic parameter ranges, then the combination of candidate mechanisms and encoding is considered falsified at the effective layer.
 * If small changes in the choice of baseline model within the finite library lead to arbitrarily large changes in `Tension_mem(m_data)` without corresponding changes in the underlying data, the encoding is considered unstable and rejected.
 
-*Semantics implementation note:*
+**Semantics implementation note**
 All observables in this experiment are treated as continuous summaries, such as retention probabilities and turnover fractions, consistent with the continuous field type stated in the metadata.
 
-*Boundary note:*
-Falsifying TU encoding != solving canonical statement. This experiment can reject specific encodings or mechanistic combinations, but it does not by itself provide a complete solution to Q084.
+**Boundary note**
+Falsifying a TU encoding at the effective layer does not solve the canonical problem. It only rules out specific encoding choices within `E_mem` and the associated mechanistic combinations.
 
 ---
 
 ### Experiment 2: Stability plasticity tradeoff under controlled training regimes
 
-*Goal:*
+**Goal**
 Assess whether candidate memory storage mechanisms can keep `DeltaS_interf` and `Tension_mem` low when substantial new learning occurs over extended periods.
 
-*Setup:*
+**Setup**
 
 * Use an animal model or artificial neural network model where training protocols can be precisely controlled.
-
 * Design two regimes:
 
   * Regime A: moderate initial learning followed by long term maintenance with little new learning.
   * Regime B: comparable initial learning followed by sustained new learning in overlapping domains.
-
 * Measure:
 
-  * retention performance on initial memories in both regimes,
-  * plasticity load `L_plast(m)` in both regimes,
-  * any available correlates of substrate turnover.
+  * Retention performance on initial memories in both regimes.
+  * Plasticity load `L_plast(m)` in both regimes.
+  * Any available correlates of substrate turnover.
 
-*Protocol:*
+All regime definitions, model variants, and tension thresholds used in this experiment are specified in a pre-registered analysis plan, consistent with the TU Encoding and Fairness Charter and the TU Tension Scale Charter.
 
-1. For each condition and time point, construct states `m_A` and `m_B` in `M_reg_mem` encoding retention, plasticity load, and any turnover summaries.
-2. Compute `DeltaS_interf(m_A)` and `DeltaS_interf(m_B)` using the fixed reference library and encoding parameters.
-3. Compute `Tension_mem(m_A)` and `Tension_mem(m_B)` for each time point.
+**Protocol**
+
+1. For each condition and time point, construct states `m_A` and `m_B` in `M_mem` that encode retention, plasticity load, and any turnover summaries. Exclude any states that fall into `S_sing_mem`. Only regular states in `M_reg_mem` are used for computing tension.
+2. Compute `DeltaS_interf(m_A)` and `DeltaS_interf(m_B)` using the fixed reference library and encoding parameters chosen from `E_mem` for this protocol.
+3. Compute `Tension_mem(m_A)` and `Tension_mem(m_B)` for each time point using the pre-registered `alpha_mem` and `beta_mem`.
 4. Compare tension trajectories between regimes and against predictions of specific mechanistic models, for example models relying mainly on synaptic weight changes versus those relying more on structural changes.
 
-*Metrics:*
+**Metrics**
 
 * Time courses of `DeltaS_interf` and `Tension_mem` in regimes A and B.
 * Differences in tension between regimes for similar levels of plasticity load.
 * Robustness of results across different base models within the finite reference library.
 
-*Falsification conditions:*
+**Falsification conditions**
 
-* If a candidate mechanism predicts low interference under regime B but the observed `DeltaS_interf` and `Tension_mem` remain high across all admissible encodings, the candidate mechanism is considered falsified at the effective layer.
-* If no choice within `E_mem` yields a clear separation between mechanisms with high and low interference in this protocol, the current encoding may be considered too coarse or misaligned and should be revised.
+* Thresholds for acceptable tension levels in regimes A and B are chosen in advance using the TU Tension Scale Charter and included in the pre-registered plan.
+* If a candidate mechanism predicts low interference under regime B but the observed `DeltaS_interf` and `Tension_mem` remain high across all admissible encodings in the pre-registered subset of `E_mem`, the candidate mechanism is considered falsified at the effective layer.
+* If no choice within this subset of `E_mem` yields a clear separation between mechanisms with high and low interference in this protocol, the current encoding may be considered too coarse or misaligned and should be revised, while still keeping the work at the effective layer.
 
-*Semantics implementation note:*
+**Semantics implementation note**
 All quantities are treated as continuous summaries over time and across trials, consistent with the continuous field description of the observables.
 
-*Boundary note:*
-Falsifying TU encoding != solving canonical statement. This experiment tests the adequacy of specific mechanisms and encodings, not the entire space of possible long term memory solutions.
+**Boundary note**
+Again, falsifying a TU encoding or a candidate mechanism in this experiment does not solve the canonical problem Q084. It only shows that certain combinations of mechanisms and encodings cannot support low tension long term memory under the specified conditions.
 
 ---
 
@@ -566,7 +614,7 @@ We outline architecture level patterns that can reuse Q084 components.
 1. `MemoryStabilityMonitor`
 
    * Role: a module that monitors internal representations and performance metrics over time and computes an estimate of `Tension_mem(m_ai)`.
-   * Interface: takes as input summaries of performance on previous tasks, current training gradients, and resource usage; outputs a scalar tension score and a decomposition into stability and interference components.
+   * Interface: takes as input summaries of performance on previous tasks, current training gradients, and resource usage. Outputs a scalar tension score and a decomposition into stability and interference components.
 
 2. `ProtectedReplayBuffer`
 
@@ -576,7 +624,7 @@ We outline architecture level patterns that can reuse Q084 components.
 3. `DualStoreController`
 
    * Role: a control module that manages two or more memory subsystems, for example a fast plastic store and a slow stable store, using Q084 tension signals to decide when to transfer information between them.
-   * Interface: takes tension estimates and task level performance as inputs; outputs storage and consolidation actions.
+   * Interface: takes tension estimates and task level performance as inputs. Outputs storage and consolidation actions.
 
 ### 7.3 Evaluation harness
 
@@ -589,7 +637,7 @@ An evaluation harness for AI systems that incorporate Q084 inspired components c
 2. Conditions
 
    * Baseline condition: model with standard training procedures and no explicit Q084 modules.
-   * TU condition: model with MemoryStabilityMonitor, ProtectedReplayBuffer, and possibly DualStoreController.
+   * TU condition: model with `MemoryStabilityMonitor`, `ProtectedReplayBuffer`, and possibly `DualStoreController`.
 
 3. Metrics
 
@@ -604,17 +652,18 @@ A minimal protocol for external users to see the impact of Q084 inspired design.
 
 * Baseline setup
 
-  * Prompt: ask an AI model without Q084 modules to learn a small sequence of tasks and then test it on the initial tasks after further training.
-  * Observation: record performance drops and any visible signs of catastrophic forgetting.
+  * Prompt an AI model without Q084 modules to learn a small sequence of tasks.
+  * After further training on later tasks, test it on the initial tasks.
+  * Record performance drops and any visible signs of catastrophic forgetting.
 
 * TU encoded setup
 
-  * Prompt: use the same tasks, but with explicit instructions that the model should use an internal mechanism to monitor memory stability and interference, exposed through a high level description of Q084 inspired signals.
-  * Observation: record whether retention is improved and whether the explanation of the mechanism reflects the stability plasticity tradeoff.
+  * Use the same tasks, but with explicit high level instructions that the model should use an internal mechanism to monitor memory stability and interference, exposed through Q084 style signals.
+  * Record whether retention is improved and whether the explanation of the mechanism reflects the stability plasticity tradeoff.
 
 * Comparison metric
 
-  * Compare task accuracy and simple quantitative proxies for tension, such as drop in accuracy on early tasks divided by the amount of new training, between the two setups.
+  * Compare task accuracy and simple quantitative proxies for tension, such as the drop in accuracy on early tasks divided by the amount of new training, between the two setups.
 
 * What to log
 
@@ -631,39 +680,33 @@ This block describes reusable components produced by Q084 and how they transfer 
 
 1. ComponentName: `MemStorageTensionFunctional`
 
-   * Type: functional
-
+   * Type: functional.
    * Minimal interface:
 
-     * Inputs: `retention_profile`, `turnover_profile`, `plasticity_profile`
-     * Output: `tension_value` as a nonnegative scalar
-
+     * Inputs: `retention_profile`, `turnover_profile`, `plasticity_profile`.
+     * Output: `tension_value` as a nonnegative scalar.
    * Preconditions:
 
      * Profiles must be defined over compatible timescales and for the same system or model.
 
 2. ComponentName: `StabilityPlasticityInvariant`
 
-   * Type: observable
-
+   * Type: observable.
    * Minimal interface:
 
-     * Inputs: `task_performance_history`, `training_history`
-     * Output: `invariant_value` that combines retention and interference into a single stability plasticity indicator
-
+     * Inputs: `task_performance_history`, `training_history`.
+     * Output: `invariant_value` that combines retention and interference into a single stability plasticity indicator.
    * Preconditions:
 
      * Histories must be long enough to capture both initial learning and later interference.
 
 3. ComponentName: `MemSingularSetDetector`
 
-   * Type: experiment_pattern
-
+   * Type: experiment_pattern.
    * Minimal interface:
 
-     * Inputs: a candidate dataset or model description
-     * Output: a classification into regular domain or `S_sing_mem`, together with a short reason
-
+     * Inputs: a candidate dataset or model description.
+     * Output: a classification into regular domain or `S_sing_mem`, together with a short reason.
    * Preconditions:
 
      * The dataset or model must provide enough information to assess whether the required observables are defined and bounded.
@@ -678,7 +721,7 @@ This block describes reusable components produced by Q084 and how they transfer 
 
 2. Q087 (BH_NEURO_DEGEN_DISEASE_L3_087)
 
-   * Reused component: `StabilityPlasticityInvariant` and `MemSingularSetDetector`.
+   * Reused components: `StabilityPlasticityInvariant` and `MemSingularSetDetector`.
    * Why it transfers: neurodegenerative diseases can be characterized as trajectories that move systems into or near `S_sing_mem` and raise stability plasticity tension.
    * What changes: additional disease specific biomarkers are added to the inputs.
 
@@ -703,19 +746,14 @@ This block explains Q084’s current verification levels and next measurable ste
 ### 9.1 Current levels
 
 * E_level: E1
-
-  * The effective layer encoding of long term memory storage tension is specified.
-  * Observables, mismatch measures, and a core tension functional are defined, along with an admissible encoding class `E_mem`.
-  * At least one concrete experimental protocol is provided that could falsify specific encodings.
+  The effective layer encoding of long term memory storage tension is specified. Observables, mismatch measures, and a core tension functional are defined, along with an admissible encoding class `E_mem`. At least one concrete experimental protocol is provided that could falsify specific encodings.
 
 * N_level: N2
-
-  * The narrative linking microscopic turnover, macroscopic retention, and stability plasticity tradeoffs is explicit and internally coherent.
-  * Counterfactual robust and fragile worlds are described and tied to observable patterns.
+  The narrative linking microscopic turnover, macroscopic retention, and stability plasticity tradeoffs is explicit and internally coherent. Counterfactual robust and fragile worlds are described and tied to observable patterns.
 
 ### 9.2 Next measurable step toward E2
 
-To move from E1 to E2, at least one of the following should be implemented:
+To move from E1 to E2, at least one of the following should be implemented, while staying at the effective layer.
 
 1. A concrete analysis of existing experimental datasets that jointly report retention and substrate turnover, using `DeltaS_stability`, `DeltaS_interf`, and `Tension_mem` with a specified encoding from `E_mem`.
 2. A systematic study of artificial neural network models under continual learning regimes, where Q084 inspired tension metrics are used to compare different architectural mechanisms.
@@ -726,9 +764,9 @@ These steps require no changes to the effective layer definitions and do not exp
 
 In the longer term, Q084 is expected to serve as:
 
-* a reference node for all stability plasticity tradeoff problems, biological and artificial,
-* a template for how to encode cross scale tension between volatile substrates and stable information,
-* a bridge between neuroscience theories of memory and AI design of memory architectures.
+* A reference node for all stability plasticity tradeoff problems, biological and artificial.
+* A template for how to encode cross scale tension between volatile substrates and stable information.
+* A bridge between neuroscience theories of memory and AI design of memory architectures.
 
 ---
 
@@ -740,35 +778,67 @@ The simple question behind Q084 is:
 
 > How can the brain store memories for years when the parts that make up the brain are always changing?
 
-Proteins are replaced, synapses appear and disappear, activity patterns fluctuate, and yet many people can remember events from childhood. At the same time, the brain keeps learning new things without completely erasing everything it already knows.
+Proteins are replaced. Synapses appear and disappear. Activity patterns fluctuate. Yet many people can remember events from childhood. At the same time, the brain keeps learning new things without completely erasing everything it already knows.
 
-In the Tension Universe view, we do not try to guess every microscopic detail. Instead, we ask:
+In the Tension Universe view, we do not try to reconstruct every microscopic detail. Instead, we ask questions at the effective layer.
 
-* For a given brain or model, how well do long term memories survive compared to how fast the underlying parts change?
-* How much do old memories get damaged when new learning happens?
-* Can we wrap these effects into a single number called memory storage tension?
+* For a given brain or model, how well do long term memories survive compared to how fast the underlying parts change.
+* How much do old memories get damaged when new learning happens.
+* Can we wrap these effects into a single number called memory storage tension.
 
 We picture a space of states where each state summarizes:
 
-* how well a memory is remembered after some time,
-* how much the physical substrate has turned over in that time,
-* how much new learning has taken place.
+* How well a memory is remembered after some time.
+* How much the physical substrate has turned over in that time.
+* How much new learning has taken place.
 
 From these summaries we build:
 
-* a stability mismatch that measures whether retention looks too good or too fragile given the turnover,
-* an interference mismatch that measures how badly old memories suffer when new learning is heavy,
-* a combined tension score that is low when things look healthy and high when they do not.
+* A stability mismatch that measures whether retention looks too good or too fragile given the turnover.
+* An interference mismatch that measures how badly old memories suffer when new learning is heavy.
+* A combined tension score that is low when things look healthy and high when they do not.
 
 Then we compare two kinds of worlds.
 
-* In a robust memory world, there are many situations where tension stays low: memories survive for a long time, new learning is possible, and the picture remains consistent when we look more closely.
-* In a fragile memory world, tension cannot be kept low: either memories fade too fast, or they survive only by blocking new learning, or the picture falls apart when we add more detail.
+* In a robust memory world, there are many situations where tension stays low. Memories survive for a long time. New learning is possible. The picture remains consistent when we look more closely.
+* In a fragile memory world, tension cannot be kept low. Either memories fade too fast, or they survive only by blocking new learning, or the picture falls apart when we add more detail.
 
 This framing does not solve Q084. It does not tell us exactly which molecules or circuits are responsible. What it does is:
 
-* force us to be clear about what counts as success or failure,
-* give us practical ways to test candidate mechanisms and models,
-* create a common language that connects biology and AI work on long term memory.
+* Force us to be clear about what counts as success or failure.
+* Give us practical ways to test candidate mechanisms and models.
+* Create a common language that connects biology and AI work on long term memory.
 
 Q084 is therefore the memory storage counterpart of other high level consistency problems in the BlackHole and Tension Universe program, focused on the puzzle of how information can remain stable while the hardware that carries it never stops changing.
+
+---
+
+## Tension Universe effective-layer footer
+
+This page is part of the **WFGY / Tension Universe** S-problem collection.
+
+### Scope of claims
+
+* The goal of this document is to specify an effective-layer encoding of the named problem.
+* It does not claim to prove or disprove the canonical statement in Section 1.
+* It does not introduce any new theorem beyond what is already established in the cited literature.
+* It should not be cited as evidence that the corresponding open problem has been solved.
+
+### Effective-layer boundary
+
+* All objects used here (state spaces `M_mem`, observables, invariants, tension scores, counterfactual worlds) live at the effective layer.
+* No underlying TU axiom system, field equation, or generative rule is specified or assumed beyond what is needed to define the effective observables.
+* Any mapping from raw data to effective observables is treated as a black box that must respect the admissible encoding class for this page.
+
+### Encoding, fairness, and tension scale
+
+* The admissible encoding class `E_mem` is defined in Section 3 and is constrained by the TU Effective Layer Charter and the TU Encoding and Fairness Charter.
+* All numerical weights, bands, and thresholds for tension (including `w_stab`, `w_interf`, `alpha_mem`, `beta_mem`, `epsilon_mem`, and `delta_mem`) are chosen within bounded ranges and according to the TU Tension Scale Charter.
+* Thresholds, bands, and model selections used in experiments are specified in pre-registered analysis plans and are not tuned after inspecting detailed outcomes.
+* Falsification statements on this page apply only to specific encodings within `E_mem` and to the associated mechanistic hypotheses under the stated experimental conditions.
+
+This page should be read together with the following charters:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
