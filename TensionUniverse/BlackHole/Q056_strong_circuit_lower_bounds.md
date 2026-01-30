@@ -1,3 +1,4 @@
+<!-- QUESTION_ID: TU-Q056 -->
 # Q056 · Strong circuit lower bounds for explicit functions
 
 ---
