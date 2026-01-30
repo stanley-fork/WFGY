@@ -10,13 +10,61 @@ Family: Global migration and mobility
 Rank: S
 Projection_dominance: I
 Field_type: socio_technical_field
-Tension_type: incentive_tension
+Tension_type: incentive_tension + risk_tail_tension
 Status: Open
 Semantics: hybrid
 E_level: E1
 N_level: N2
-Last_updated: 2026-01-26
+Last_updated: 2026-01-30
 ```
+
+---
+
+## 0. Effective layer disclaimer
+
+All statements in this entry are made strictly at the effective layer of the Tension Universe (TU) framework.
+
+Scope and limits:
+
+* The goal of this document is to specify how Q109 is encoded as an effective layer tension problem inside TU.
+* It does not claim to solve the canonical migration problem in Section 1.
+* It does not claim to prove or disprove any theorem about global migration patterns.
+* It does not introduce any new theorem beyond what is already established in the cited literature.
+* It should not be cited as evidence that global migration has a complete, predictive theory.
+
+Effective layer only:
+
+* All objects used here, including the state space `M`, region and time index sets, flows, driver fields, barrier fields, feedback kernels, invariants, tension functionals, and counterfactual worlds, live at the effective layer.
+* We do not specify any underlying axiom system or generative rules for the full TU framework.
+* We do not specify how raw data or micro level decisions are mapped into `M` or into any of the fields defined on `M`.
+* We only assume that such mappings exist for suitable choices of resolution, and that they can produce coherent summaries compatible with this encoding.
+
+Hybrid semantics:
+
+* The semantics of this problem are hybrid.
+* Indices such as regions, time windows, and migration corridors are treated as discrete labels.
+* Flows, drivers, barriers, feedback summaries, mismatches, and tension values are treated as real valued observables defined on those discrete labels.
+
+Encoding class:
+
+* All encodings of Q109 considered in this page belong to a finite encoding class `E_MIG` defined in Section 3.4.
+* Each concrete encoding `e_MIG` in `E_MIG` fixes:
+
+  * a finite region partition,
+  * a finite set of time windows,
+  * a finite corridor library,
+  * a structural prediction rule for flows from a finite template family,
+  * aggregation rules for invariants and tension from a finite template family,
+  * and parameter values chosen from a finite grid.
+* For any experiment or dataset that uses Q109, an element `e_MIG` in `E_MIG` must be selected and recorded in advance.
+
+Versioning and non adaptive use:
+
+* Once an encoding `e_MIG` has been fixed for a given experiment, its template choices and parameter grid cannot be tuned using tension outputs from that same experiment.
+* Any change to templates or allowed parameter grids constitutes a distinct encoding `e_MIG'` and must be treated as a new version.
+* All tension values in this document should be read as `Tension_MIG(m; e_MIG)` for some fixed encoding `e_MIG` that is chosen before evaluation.
+
+This page is therefore an effective layer contract for how Q109 is allowed to appear inside TU, not a generative model of the migration system.
 
 ---
 
@@ -55,12 +103,12 @@ For these reasons, Q109 is treated as an open structural problem. It is not unso
 
 ### 1.3 Role in the BlackHole project
 
-Within the BlackHole S-problem collection Q109 plays several roles:
+Within the BlackHole S problem collection Q109 plays several roles:
 
-1. It is a flagship example of a socio_technical_field problem governed by incentive_tension and risk_tail_tension on flows over a network.
-2. It provides a template for encoding large scale human mobility as flows on a graph with multi-driver inputs and multi-scale feedbacks.
+1. It is a flagship example of a socio_technical_field problem governed by incentive_tension together with explicit attention to risk_tail_tension on flows over a network.
+2. It provides a template for encoding large scale human mobility as flows on a graph with multi driver inputs and multi scale feedbacks.
 3. It links economic, environmental, and institutional problems by acting as a conduit for their combined effects on human populations.
-4. It supplies reusable components such as MigrationFlow_Field and MigrationFeedback_Kernel that appear in multiple other S-problems.
+4. It supplies reusable components such as `MigrationFlow_Field` and `MigrationFeedback_Kernel` that appear in multiple other S problems.
 
 ### References
 
@@ -81,29 +129,29 @@ This block records how Q109 sits inside the BlackHole graph as nodes and edges a
 These problems provide prerequisites, tools, or general foundations that Q109 relies on at the effective layer.
 
 * Q104 (BH_SOC_INEQUALITY_L3_104)
-  Reason: Provides WealthInequality_Field and IncentiveGradient components that feed into migration drivers in Driver_Field.
+  Reason: Provides `WealthInequality_Field` and `IncentiveGradient` components that feed into migration drivers in `D_driver` and related parts of `Driver_Field`.
 
 * Q101 (BH_ECON_EQUITY_PREMIUM_L3_101)
-  Reason: Supplies structural insight into risk and return that shapes cross border capital and labor flows jointly with MigrationFlow_Field.
+  Reason: Supplies structural insight into risk and return that shapes cross border capital and labor flows jointly with `MigrationFlow_Field`.
 
 * Q098 (BH_EARTH_ANTHROPOCENE_L3_098)
-  Reason: Encodes large scale socio environmental regime shifts that change EnvironmentalStress inputs within Driver_Field.
+  Reason: Encodes large scale socio environmental regime shifts that change environmental stress inputs within `D_driver`.
 
 * Q099 (BH_EARTH_WATER_STRESS_L3_099)
-  Reason: Provides EnvironmentalStress_Field for water and agriculture that can act as push and pull factors for migration corridors.
+  Reason: Provides `EnvironmentalStress_Field` for water and agriculture that can act as push and pull factors for migration corridors.
 
 ### 2.2 Downstream problems
 
 These problems are direct reuse targets of Q109 components or depend on Q109 tension structure.
 
 * Q110 (BH_SOC_INSTITUTION_EVOLUTION_L3_110)
-  Reason: Reuses MigrationFeedback_Kernel and Tension_MIG_Functional as pressure terms driving institutional adaptation.
+  Reason: Reuses `MigrationFeedback_Kernel` and `Tension_MIG_Functional` as pressure terms that drive institutional adaptation.
 
 * Q100 (BH_HEALTH_PANDEMIC_RISK_L3_100)
-  Reason: Uses MigrationFlow_Field and SpatialMobility_Field as conduits for pathogen spread across regions.
+  Reason: Uses `MigrationFlow_Field` and `SpatialMobility_Field` as conduits for pathogen spread across regions.
 
 * Q125 (BH_AI_MULTI_AGENT_DYNAMICS_L3_125)
-  Reason: Treats agents moving in abstract policy or state spaces using a MobilityNetwork component patterned after MigrationFlow_Field.
+  Reason: Treats agents moving in abstract policy or state spaces using a `MobilityNetwork` component patterned after `MigrationFlow_Field`.
 
 ### 2.3 Parallel problems
 
@@ -120,13 +168,13 @@ Parallel nodes share similar tension types but no direct component dependence.
 Cross domain edges connect Q109 to problems in other domains that can reuse its components.
 
 * Q091 (BH_EARTH_CLIMATE_SENSITIVITY_L3_091)
-  Reason: ClimateSensitivity_Field interacts with Driver_Field via ClimateStressToMigration_Channel for certain regions.
+  Reason: `ClimateSensitivity_Field` interacts with `D_driver` via `ClimateStressToMigration_Channel` for certain regions.
 
 * Q092 (BH_EARTH_TIPPING_POINTS_L3_092)
-  Reason: Uses MigrationShock_Response to describe population redistribution after climate tipping events.
+  Reason: Uses `MigrationShock_Response` to describe population redistribution after climate tipping events.
 
 * Q032 (BH_PHYS_QTHERMO_L3_032)
-  Reason: Reuses non equilibrium flow language (flux, steady state, dissipation) to frame flow based invariants in Tension_MIG_Functional.
+  Reason: Reuses non equilibrium flow language, such as flux, steady state, and dissipation, to frame flow based invariants in `Tension_MIG_Functional`.
 
 ---
 
@@ -175,7 +223,7 @@ Each state `m` encodes:
 
 * Barrier summaries for each origin destination pair and time window.
 
-* Coarse information about feedback responses that link past flows to subsequent drivers and barriers.
+* Coarse information about feedback responses that link past flows to subsequent drivers and barriers for the same or related corridors.
 
 We also fix in advance a finite corridor library:
 
@@ -207,7 +255,7 @@ D_driver(m; i, tau)
 ```
 
 * Input: state `m`, region index `i`, time window index `tau`.
-* Output: vector of driver indicators for region `i` and time `tau`. Examples include income per capita, unemployment, conflict level, environmental stress, demographic pressure.
+* Output: vector of driver indicators for region `i` and time `tau`. Examples include income per capita, unemployment, conflict level, environmental stress, and demographic pressure.
 
 3. Policy barrier field
 
@@ -234,10 +282,12 @@ F_pred(m; i, j, tau)
 ```
 
 * Input: state `m`, corridor `(i, j)`, time window `tau`.
-* Output: predicted flow value from a simple structural relation that uses `D_driver` and `B_policy` as inputs. At the effective layer we only require that:
+* Output: predicted flow value from a simple structural relation that uses `D_driver` and `B_policy` as inputs.
 
-  * `F_pred(m; i, j, tau) >= 0` for all states in a regular domain.
-  * For fixed `R_set`, `Tau_set`, and `C_lib`, the mapping from driver and barrier summaries to `F_pred` is stable and does not depend on the realized flows `F_flow` in that same state.
+At the effective layer we only require that:
+
+* `F_pred(m; i, j, tau) >= 0` for all states in a regular domain.
+* For fixed `R_set`, `Tau_set`, and `C_lib`, the mapping from driver and barrier summaries to `F_pred` is stable and does not depend on the realized flows `F_flow` in that same state.
 
 ### 3.3 Mismatch observables and aggregated invariants
 
@@ -261,9 +311,8 @@ DeltaS_feedback(m; i, j, tau)
 
 * Defined as a nonnegative scalar whenever:
 
-  * The effect of past flows on drivers and barriers along `(i, j)` can be summarized, and
+  * The effect of past flows on drivers and barriers along `(i, j)` can be summarized in a finite vector.
   * A reference pattern with weak or no feedback can be specified.
-
 * It measures how strongly the observed evolution of drivers and barriers deviates from this weak feedback reference.
 
 3. Aggregated flow tension invariant
@@ -307,13 +356,21 @@ The exact functional form is part of the encoding choice, but it must be fixed i
 
 ### 3.4 Encoding class and singular set
 
-To prevent arbitrary tuning, we restrict attention to an admissible encoding class for Q109, denoted `E_MIG`. An element of `E_MIG` consists of:
+To prevent arbitrary tuning, we restrict attention to an admissible encoding class for Q109, denoted `E_MIG`.
+
+An element of `E_MIG` is called an encoding `e_MIG` and consists of:
 
 * A choice of region partition `R_set`, time windows `Tau_set`, and corridor library `C_lib`, all finite and fixed before tension evaluation.
-* A structural prediction rule for `F_pred` that uses only `D_driver` and `B_policy`, with parameters chosen without access to realized `F_flow` in the same state.
+* A structural prediction rule for `F_pred` that uses only `D_driver` and `B_policy` as inputs.
 * Fixed aggregation functions for `I_flow`, `I_feedback`, and `I_imbalance` across the libraries.
 
-Within any encoding in `E_MIG` all parameter choices and functional forms are fixed before tension values are computed for specific states.
+We impose the following finiteness constraints on `E_MIG`:
+
+* There is a finite template library of admissible structural prediction forms for `F_pred`, such as a finite list of gravity type, log linear, or piecewise linear templates.
+* There is a finite template library of admissible aggregation forms for `I_flow`, `I_feedback`, and `I_imbalance`.
+* For every template, all free parameters must take values in a finite parameter grid, for example rational values drawn from a bounded grid with fixed resolution.
+
+Within any encoding `e_MIG` in `E_MIG` all template choices and parameter values are fixed before tension values are computed for specific states. Once an experiment declares that it uses a particular `e_MIG`, all states in that experiment are evaluated using that same encoding.
 
 We define a singular set:
 
@@ -341,10 +398,10 @@ This block states how Q109 is characterized as a tension problem within TU, at t
 
 ### 4.1 Core migration tension functional
 
-Given an admissible encoding in `E_MIG`, we define a migration tension functional:
+Given an admissible encoding `e_MIG` in `E_MIG`, we define a migration tension functional:
 
 ```txt
-Tension_MIG(m) =
+Tension_MIG(m; e_MIG) =
     w_flow * I_flow(m) +
     w_feedback * I_feedback(m) +
     w_imbalance * I_imbalance(m)
@@ -363,9 +420,9 @@ The weights are part of the encoding and must be fixed before evaluating any sta
 
 Properties:
 
-* `Tension_MIG(m) >= 0` for all `m` in `M_reg`.
-* `Tension_MIG(m)` is small when flows, feedbacks, and imbalances all remain within their reference bands.
-* `Tension_MIG(m)` grows when mismatches or imbalances become large along any corridor or region.
+* `Tension_MIG(m; e_MIG) >= 0` for all `m` in `M_reg`.
+* `Tension_MIG(m; e_MIG)` is small when flows, feedbacks, and imbalances all remain within their reference bands.
+* `Tension_MIG(m; e_MIG)` grows when mismatches or imbalances become large along any corridor or region.
 
 ### 4.2 Low tension and sustainable migration regimes
 
@@ -375,10 +432,10 @@ At the effective layer, low tension migration regimes are characterized by:
 * Feedback mismatches that indicate either weak feedback or feedback that stabilizes drivers and barriers.
 * Structural imbalances that remain within tolerable ranges, without sustained extreme net flows out of already stressed regions.
 
-Formally, for a chosen encoding in `E_MIG` there exists a threshold `epsilon_MIG > 0` such that:
+Formally, for a chosen encoding `e_MIG` in `E_MIG` there exists a threshold `epsilon_MIG > 0` such that:
 
 ```txt
-Tension_MIG(m) <= epsilon_MIG
+Tension_MIG(m; e_MIG) <= epsilon_MIG
 ```
 
 for states `m` that represent sustainable migration configurations under the given partition and time horizon.
@@ -393,10 +450,10 @@ High tension migration regimes are characterized by one or more of the following
 * Strong and destabilizing feedbacks, where flows trigger rapid changes in drivers or barriers that further amplify flows.
 * Sustained structural imbalances, such as long periods where high stress regions experience large net outflows without corresponding improvements in conditions.
 
-For an admissible encoding in `E_MIG` we say that a regime is high tension if there exists a threshold `delta_MIG > 0` such that:
+For an admissible encoding `e_MIG` in `E_MIG` we say that a regime is high tension if there exists a threshold `delta_MIG > 0` such that:
 
 ```txt
-Tension_MIG(m) >= delta_MIG
+Tension_MIG(m; e_MIG) >= delta_MIG
 ```
 
 for states `m` representing that regime, and `delta_MIG` cannot be reduced arbitrarily by refining inputs or re partitioning while remaining within the same encoding class.
@@ -425,7 +482,7 @@ World S is a low tension regime with the following properties:
 2. Feedback behavior
 
    * The feedback mismatch `DeltaS_feedback(m_S; i, j, tau)` is small for most corridors.
-   * Where feedback exists it tends to be stabilizing: increased flows help ease driver pressures in origin regions or are absorbed by institutions in destination regions.
+   * Where feedback exists it tends to be stabilizing. Increased flows help ease driver pressures in origin regions or are absorbed by institutions in destination regions.
 
 3. Structural balance
 
@@ -433,7 +490,7 @@ World S is a low tension regime with the following properties:
 
 4. Global tension
 
-   * Overall, `Tension_MIG(m_S)` remains within a stable band with occasional peaks that correspond to isolated shocks rather than sustained structural mismatches.
+   * Overall, `Tension_MIG(m_S; e_MIG)` remains within a stable band with occasional peaks that correspond to isolated shocks rather than sustained structural mismatches.
 
 ### 5.2 World U: unstable and feedback dominated migration system
 
@@ -455,13 +512,13 @@ World U is a high tension regime with the following properties:
 
 4. Global tension
 
-   * `Tension_MIG(m_U)` remains high for long stretches, with sharp spikes aligned with crises such as multi country conflicts, sudden environmental shocks, or rapid institutional breakdowns.
+   * `Tension_MIG(m_U; e_MIG)` remains high for long stretches, with sharp spikes aligned with crises such as multi country conflicts, sudden environmental shocks, or rapid institutional breakdowns.
 
 ### 5.3 Interpretive note
 
 World S and World U are templates for observable patterns in the state space `M_reg` under different regimes. They do not specify how the states are generated from micro level decisions or policies. Their purpose is to provide:
 
-* a structured vocabulary for distinguishing stable and unstable migration regimes, and
+* a structured vocabulary for distinguishing stable and unstable migration regimes,
 * a test bed for encodings of `Tension_MIG` that should, in principle, separate S type regimes from U type regimes.
 
 ---
@@ -472,93 +529,91 @@ This block specifies experiments and protocols that can falsify specific Q109 en
 
 ### Experiment 1: Multi decade flow versus structural prediction
 
-*Goal:*
+Goal:
 Test whether a given encoding of `F_pred`, `DeltaS_flow`, and `Tension_MIG` can account for several decades of bilateral migration data without producing trivial or pathological tension patterns.
 
-*Setup:*
+Setup:
 
 * Data:
 
   * Use public global bilateral migration stocks or flows for at least two or three decades, such as from UN DESA and World Bank datasets.
   * Use region level drivers such as income per capita, population, conflict indices, and environmental stress proxies.
-
 * Encoding:
 
   * Choose a fixed region partition `R_set`, time windows `Tau_set`, and corridor library `C_lib` before inspecting tension outputs.
-  * Choose a structural prediction rule for `F_pred` and weights `(w_flow, w_feedback, w_imbalance)` before computing mismatches.
+  * Choose an encoding version identifier, for example `e_MIG_v1`, that specifies templates and parameter values for `F_pred`, `I_flow`, `I_feedback`, `I_imbalance`, and weights `(w_flow, w_feedback, w_imbalance)`.
+  * Fix `e_MIG_v1` before computing mismatches and tension values on the data.
 
-*Protocol:*
+Protocol:
 
 1. For each time window `tau` in `Tau_set`, construct a state `m_data(tau)` that encodes flows, driver indicators, and barrier summaries for that period, all restricted to the chosen libraries.
-
 2. For each `m_data(tau)` compute:
 
    * `DeltaS_flow(m_data(tau); i, j, tau)` for all `(i, j)` in `C_lib`,
    * `I_flow(m_data(tau))`,
-   * any available `DeltaS_feedback` contributions and `I_imbalance(m_data(tau))`,
-   * the overall `Tension_MIG(m_data(tau))`.
-
-3. Record the time series of `Tension_MIG` over all `tau` and its distribution across corridors.
-
+   * any available `DeltaS_feedback(m_data(tau); i, j, tau)` contributions and `I_feedback(m_data(tau))`,
+   * `I_imbalance(m_data(tau))`,
+   * the overall `Tension_MIG(m_data(tau); e_MIG_v1)`.
+3. Record the time series of `Tension_MIG(m_data(tau); e_MIG_v1)` over all `tau` and its distribution across corridors.
 4. Compare observed tension patterns with simple expectations, such as low tension during relatively stable periods and moderate peaks during known large shocks.
 
-*Metrics:*
+Metrics:
 
-* Range and variability of `Tension_MIG(m_data(tau))` over time.
+* Range and variability of `Tension_MIG(m_data(tau); e_MIG_v1)` over time.
 * Frequency and magnitude of high tension peaks.
 * Corridor level distribution of `DeltaS_flow` and `DeltaS_feedback`.
 
-*Falsification conditions:*
+Falsification conditions:
 
-* If, under the fixed encoding, `Tension_MIG(m_data(tau))` is almost always near zero, even during periods known to involve major migration crises, the encoding is considered trivial and rejected.
-* If, under the fixed encoding, `Tension_MIG(m_data(tau))` is almost always extremely large and insensitive to meaningful differences between periods, the encoding is considered non informative and rejected.
-* If small, justified changes in drivers or barriers produce arbitrarily large changes in `Tension_MIG`, while leaving flows nearly unchanged, the encoding is considered unstable and rejected.
+* If, under the fixed encoding `e_MIG_v1`, `Tension_MIG(m_data(tau); e_MIG_v1)` is almost always near zero, even during periods known to involve major migration crises, the encoding is considered trivial and rejected.
+* If, under the fixed encoding, `Tension_MIG(m_data(tau); e_MIG_v1)` is almost always extremely large and insensitive to meaningful differences between periods, the encoding is considered non informative and rejected.
+* If small, justified changes in drivers or barriers produce arbitrarily large changes in `Tension_MIG(m_data(tau); e_MIG_v1)`, while leaving flows nearly unchanged, the encoding is considered unstable and rejected.
 
-*Semantics implementation note:*
+Semantics implementation note:
 Region and time indices are treated as discrete labels, while flows, drivers, and tension values are real valued quantities. All computations respect this hybrid setting.
 
-*Boundary note:*
-Falsifying TU encoding != solving canonical statement. This experiment can reject or refine Q109 encodings in `E_MIG` but does not provide a definitive structural theory of global migration.
+Boundary note:
+Falsifying a TU encoding of Q109 does not mean solving the canonical problem. This experiment can reject or refine Q109 encodings in `E_MIG` but does not provide a definitive structural theory of global migration.
 
 ---
 
 ### Experiment 2: Weak versus strong feedback model worlds
 
-*Goal:*
+Goal:
 Check whether the Q109 encoding can reliably distinguish weak feedback migration models from strong feedback models at the effective layer.
 
-*Setup:*
+Setup:
 
 * Construct or select two families of simulation models:
 
   * Class W: models where migration flows respond mainly to slowly changing drivers and relatively fixed barriers, with weak feedback effects.
   * Class S: models where migration flows significantly alter future drivers and barriers, with strong feedback loops and possible cascades.
-
 * Generate multiple simulated histories for each class under similar initial driver conditions.
 
-*Protocol:*
+Protocol:
 
 1. For each simulated history in Class W and Class S, define a sequence of states `m_W(tau)` and `m_S(tau)` using the same `R_set`, `Tau_set`, and `C_lib` as in Experiment 1.
-2. Compute `DeltaS_flow`, `DeltaS_feedback`, `I_flow`, `I_feedback`, and `Tension_MIG` for each state.
-3. Build distributions of `Tension_MIG` values for Class W and Class S and compare them.
-4. Repeat for several reasonable encodings in `E_MIG` to test robustness.
+2. Choose an encoding version `e_MIG_v2` in `E_MIG` before looking at tension outputs on the simulations.
+3. Compute `DeltaS_flow`, `DeltaS_feedback`, `I_flow`, `I_feedback`, `I_imbalance`, and `Tension_MIG(m_W(tau); e_MIG_v2)` and `Tension_MIG(m_S(tau); e_MIG_v2)` for each state.
+4. Build distributions of `Tension_MIG` values for Class W and Class S and compare them.
+5. Repeat for several reasonable encodings in `E_MIG` to test robustness.
 
-*Metrics:*
+Metrics:
 
-* Mean and variance of `Tension_MIG` in Class W and Class S.
+* Mean and variance of `Tension_MIG(m_W(tau); e_MIG_v2)` and `Tension_MIG(m_S(tau); e_MIG_v2)`.
 * Separation between the two distributions, for example via simple summary statistics or classification performance of a threshold rule.
 * Stability of the separation under small changes in encoding parameters within `E_MIG`.
 
-*Falsification conditions:*
+Falsification conditions:
 
 * If the encoding produces nearly identical `Tension_MIG` distributions for Class W and Class S across a range of reasonable parameter settings, then the definition of `DeltaS_feedback` or the aggregation in `Tension_MIG` is considered insufficient and rejected.
 * If Class W consistently shows higher `Tension_MIG` than Class S despite being designed as a weak feedback family, the encoding is considered misaligned with the intended notion of feedback tension and must be revised.
 
-*Semantics implementation note:*
+Semantics implementation note:
 The simulation outputs are mapped into the same discrete region and time index sets as in data based experiments, with real valued flows and drivers, so that tension measures are computed in a consistent hybrid setting.
 
-*Boundary note:*
-Falsifying TU encoding != solving canonical statement. Success or failure on synthetic models tests the usefulness of Q109 encodings but does not settle the real world structure of migration.
+Boundary note:
+Falsifying a TU encoding of Q109 on synthetic models tests the usefulness of that encoding but does not settle the real world structure of migration.
 
 ---
 
@@ -587,8 +642,8 @@ We define several training signals derived from Q109 observables.
 
 4. `signal_regime_shift_alert`
 
-   * Definition: a binary or graded indicator that triggers when `Tension_MIG` crosses a preset high tension threshold.
-   * Purpose: nudge models to treat such contexts as regime shifts requiring special care in reasoning, rather than as minor fluctuations.
+   * Definition: a binary or graded indicator that triggers when `Tension_MIG(m; e_MIG)` crosses a preset high tension threshold for a described configuration.
+   * Purpose: nudge models to treat such contexts as regime shifts that require special care in reasoning, rather than as minor fluctuations.
 
 ### 7.2 Architectural patterns
 
@@ -597,17 +652,17 @@ We outline reusable architectural patterns that draw on Q109 without revealing a
 1. `MigrationFlowHead`
 
    * Role: an auxiliary head that, given a representation of a global or regional context, predicts coarse migration flows between abstract regions.
-   * Interface: input is an encoded context embedding; outputs are approximate flow magnitudes for a small set of representative corridors; internal losses are shaped by `signal_migration_flow_consistency`.
+   * Interface: input is an encoded context embedding. Outputs are approximate flow magnitudes for a small set of representative corridors. Internal losses are shaped by `signal_migration_flow_consistency`.
 
 2. `MigrationFeedbackMonitor`
 
    * Role: a module that estimates whether the described situation corresponds to weak or strong feedback in migration dynamics.
-   * Interface: input is a sequence of context embeddings; output is a feedback stability score influenced by `signal_migration_feedback_stability`.
+   * Interface: input is a sequence of context embeddings. Output is a feedback stability score influenced by `signal_migration_feedback_stability`.
 
 3. `SocioTechnicalTensionObserver`
 
    * Role: a generic observer that extracts tension like summaries from flows, drivers, and feedbacks in socio technical settings, reusing the structure of `Tension_MIG`.
-   * Interface: input is a structured representation of a socio technical system; outputs are scalar tension indicators and decomposed components.
+   * Interface: input is a structured representation of a socio technical system. Outputs are scalar tension indicators and decomposed components.
 
 ### 7.3 Evaluation harness
 
@@ -620,37 +675,37 @@ We propose a simple evaluation harness for AI systems using Q109 components.
 2. Conditions
 
    * Baseline condition: the model answers questions without explicit Q109 derived modules.
-   * TU condition: the model uses MigrationFlowHead, MigrationFeedbackMonitor, and the associated training signals.
+   * TU condition: the model uses `MigrationFlowHead`, `MigrationFeedbackMonitor`, and the associated training signals.
 
 3. Metrics
 
    * Factual accuracy on questions with known answers.
-   * Structural consistency: absence of obvious contradictions between described drivers, barriers, and implied flows.
-   * Regime awareness: ability to flag and treat high tension situations differently from low tension ones.
+   * Structural consistency, meaning absence of obvious contradictions between described drivers, barriers, and implied flows.
+   * Regime awareness, meaning the ability to flag and treat high tension situations differently from low tension ones.
 
 ### 7.4 60 second reproduction protocol
 
 A minimal protocol to let external users experience the effect of Q109 style encoding.
 
-* Baseline setup:
+Baseline setup:
 
-  * Prompt: ask an AI system to explain how global migration flows have changed over recent decades and what drives them, without mentioning tension or TU.
-  * Observation: record whether the explanation lists drivers but misses feedbacks, regime shifts, or structural imbalances.
+* Prompt: ask an AI system to explain how global migration flows have changed over recent decades and what drives them, without mentioning tension or TU.
+* Observation: record whether the explanation lists drivers but misses feedbacks, regime shifts, or structural imbalances.
 
-* TU encoded setup:
+TU encoded setup:
 
-  * Prompt: ask the same question but add an instruction to organize the explanation using flows, drivers, barriers, feedback, and migration tension; request explicit mention of stable versus unstable regimes.
-  * Observation: record whether the explanation becomes more structured, with clearer separation between low tension and high tension episodes.
+* Prompt: ask the same question but add an instruction to organize the explanation using flows, drivers, barriers, feedback, and migration tension. Request explicit mention of stable versus unstable regimes.
+* Observation: record whether the explanation becomes more structured, with clearer separation between low tension and high tension episodes.
 
-* Comparison metric:
+Comparison metric:
 
-  * Rate both answers on structure, explicit use of flows and drivers, treatment of feedback, and recognition of high tension regimes.
-  * Optionally use several independent evaluators.
+* Rate both answers on structure, explicit use of flows and drivers, treatment of feedback, and recognition of high tension regimes.
+* Optionally use several independent evaluators.
 
-* What to log:
+What to log:
 
-  * Prompts, full responses, and any auxiliary tension scores produced by Q109 modules.
-  * This log enables later analysis of how the encoding changes reasoning behavior.
+* Prompts, full responses, and any auxiliary tension scores produced by Q109 modules.
+* This log enables later analysis of how the encoding changes reasoning behavior.
 
 ---
 
@@ -700,14 +755,14 @@ This block describes the components that Q109 produces and how they transfer to 
    * Minimal interface:
 
      ```txt
-     inputs: I_flow(m), I_feedback(m), I_imbalance(m)
-     output: Tension_MIG(m) >= 0
+     inputs: I_flow(m), I_feedback(m), I_imbalance(m), e_MIG
+     output: Tension_MIG(m; e_MIG) >= 0
      ```
 
    * Preconditions:
 
      * `I_flow`, `I_feedback`, and `I_imbalance` are defined and finite for `m` in `M_reg`.
-     * Weights `(w_flow, w_feedback, w_imbalance)` are fixed for the encoding.
+     * Weights `(w_flow, w_feedback, w_imbalance)` and the encoding `e_MIG` are fixed for the evaluation.
 
 ### 8.2 Direct reuse targets
 
@@ -715,19 +770,19 @@ This block describes the components that Q109 produces and how they transfer to 
 
    * Reused components: `MigrationFlow_Field`, `MigrationFeedback_Kernel`.
    * Why it transfers: Q098 needs channels that move population and capacity between regions when environmental and economic conditions shift, and migration flows provide such channels.
-   * What changes: driver indicators are extended to include more detailed environmental metrics; feedback summaries include links between environmental policy and migration.
+   * What changes: driver indicators are extended to include more detailed environmental metrics. Feedback summaries include links between environmental policy and migration.
 
 2. Target: Q100 (Environmental drivers of pandemic risk)
 
    * Reused components: `MigrationFlow_Field`, `Tension_MIG_Functional`.
-   * Why it transfers: pathogen spread depends critically on human movements; high migration tension regimes often align with rapid changes in exposure networks.
+   * Why it transfers: pathogen spread depends critically on human movements. High migration tension regimes often align with rapid changes in exposure networks.
    * What changes: flows are combined with health specific factors, and tension is interpreted as joint stress on health systems and migration systems.
 
 3. Target: Q110 (Evolution of institutions)
 
    * Reused components: `MigrationFeedback_Kernel`, `Tension_MIG_Functional`.
    * Why it transfers: strong feedback loops between migration and institutions are a key driver of institutional change, which Q110 aims to encode.
-   * What changes: the tension output is used as one input into InstitutionalChange_Pressure instead of being a final observable.
+   * What changes: the tension output is used as one input into `InstitutionalChange_Pressure` instead of being a final observable.
 
 4. Target: Q125 (Multi agent AI dynamics)
 
@@ -759,7 +814,7 @@ To move from E1 to E2 for Q109, at least one of the following should be implemen
 
 1. A data based implementation of Experiment 1 on a multi decade global migration dataset, including:
 
-   * code that computes `Tension_MIG` over a chosen period,
+   * code that computes `Tension_MIG(m_data(tau); e_MIG)` over a chosen period,
    * published tension profiles for that period,
    * and at least one rejected encoding in `E_MIG` whose failures are clearly explained.
 
@@ -768,6 +823,8 @@ To move from E1 to E2 for Q109, at least one of the following should be implemen
    * at least one weak feedback model class and one strong feedback model class,
    * clear separation between tension distributions for the two classes under a chosen encoding,
    * and a public description of which aspects of the encoding were essential for that separation.
+
+In both cases, the encoding must remain within effective layer constraints and treat changes in reference sets or parameter grids as explicit version updates.
 
 ### 9.3 Long term role in the TU program
 
@@ -787,7 +844,7 @@ People move between countries for many reasons. They look for better jobs, safer
 
 The classical way to study migration is to collect data on who moves where and why, and to build theories that connect those flows to wages, populations, and policies. This has produced many useful ideas, but it is still difficult to see the global structure and to understand when the system is stable and when it is on the edge of crisis.
 
-In the Tension Universe view we do not try to directly model every individual decision. Instead we ask:
+In the Tension Universe view we do not try to directly model every individual decision. Instead we ask three questions.
 
 * How can we summarize flows between regions over time.
 * How can we summarize the main drivers, barriers, and feedbacks.
@@ -803,7 +860,7 @@ For each state we measure:
 
 * how much observed flows differ from what a simple structural model would predict,
 * how strongly past flows seem to change future drivers and barriers,
-* how unbalanced the system is, for example when stressed regions keep losing people without getting better.
+* how unbalanced the system is, for example when stressed regions keep losing people without becoming more livable.
 
 We combine these into a single number called migration tension. Low tension worlds are ones where flows and drivers match reasonably well and feedbacks mostly stabilize the system. High tension worlds are ones where flows keep surprising the structural model, feedbacks amplify problems, and imbalances grow.
 
@@ -814,3 +871,28 @@ This does not tell us exactly what will happen to global migration. It does not 
 * and a set of components that can be reused in other problems where human movement plays a central role.
 
 Q109 is the node in the Tension Universe that captures this view of global migration patterns. It is not a final answer, but a contract for how to describe, compare, and stress test different stories about how people move across the planet.
+
+---
+
+## Tension Universe effective layer footer
+
+This page is part of the WFGY and Tension Universe S problem collection.
+
+Scope of claims:
+
+* The goal of this document is to specify an effective layer encoding of Q109, the global migration patterns problem, inside the TU framework.
+* It does not claim to solve the canonical migration problem stated in Section 1.
+* It does not introduce any new theorem beyond what is already established in the cited literature.
+* It should not be cited as evidence that global migration has a complete or closed form structural theory.
+
+Effective layer boundary:
+
+* All objects used in this page, including state spaces, observables, invariants, tension scores, and counterfactual worlds, live at the TU effective layer.
+* No hidden generative rules or micro level decision models are introduced or assumed beyond what is needed to construct coherent summaries.
+* All encodings of Q109 are required to lie inside the finite encoding class `E_MIG` described in Section 3.4, with explicit versioning and non adaptive use in experiments.
+
+This page should be read together with the following charters:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
