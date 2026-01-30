@@ -1,3 +1,4 @@
+<!-- QUESTION_ID: TU-Q026 -->
 # Q026 · Quantum measurement problem
 
 ## 0. Header metadata
