@@ -19,7 +19,7 @@ Encoding_class: A_enc_DECOHERENCE_BOUND
 EncodingKey_Q027: A_enc_DECOHERENCE_BOUND_v1_2026_01_29
 LibraryKey_ref_Q027: LIB_DECOHERENCE_LIMITS_v1
 WeightKey_Q027: W_DECOHERENCE_DEFAULT_v1
-Last_updated: 2026-01-29
+Last_updated: 2026-01-30
 ````
 
 ---
@@ -1038,4 +1038,5 @@ This page should be read together with the following charters:
 * [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
 * [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
 * [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
+* [TU Global Guardrails](../Charters/TU_GLOBAL_GUARDRAILS.md)
 
