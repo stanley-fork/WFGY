@@ -15,7 +15,7 @@ Status: Open
 Semantics: continuous
 E_level: E1
 N_level: N1
-Last_updated: 2026-01-24
+Last_updated: 2026-01-30
 ```
 
 ---
@@ -1049,6 +1049,10 @@ This page is part of the **WFGY / Tension Universe** S-problem collection.
 
 ### Program-level references
 
-* TU Effective Layer Charter: [../Charters/TU_EFFECTIVE_LAYER_CHARTER.md](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
-* TU Encoding and Fairness Charter: [../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
-* TU Tension Scale Charter: [../Charters/TU_TENSION_SCALE_CHARTER.md](../Charters/TU_TENSION_SCALE_CHARTER.md)
+This page should be read together with the following charters:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
+* [TU Global Guardrails](../Charters/TU_GLOBAL_GUARDRAILS.md)
+
