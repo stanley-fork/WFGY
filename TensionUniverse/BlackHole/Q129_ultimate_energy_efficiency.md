@@ -166,9 +166,6 @@ These problems reuse components or rely on Q129 tension structure.
 * Q122 (BH_AI_COMPUTE_GOVERN_L3_122)
   Reason: reuses the EnergyTensionIndex from Q129 to define compute governance thresholds and reporting obligations for large AI workloads.
 
-* Q059 (BH_CS_INFO_THERMODYN_L3_059)
-  Reason: uses Q129 as a concrete case when relating information processing to free energy consumption and entropy production.
-
 * Q123 (BH_AI_INTERP_L3_123)
   Reason: applies Q129 dissipation geometry descriptors to interpret internal AI circuits as energy and resource patterns rather than pure logic.
 
@@ -181,9 +178,6 @@ Parallel nodes share similar tension types but no direct component dependence.
 
 * Q032 (BH_PHYS_QTHERMO_L3_032)
   Reason: both encode thermodynamic_tension on physical systems, but Q032 focuses on general quantum and thermal systems, while Q129 focuses on computing architectures.
-
-* Q059 (BH_CS_INFO_THERMODYN_L3_059)
-  Reason: both treat information and energy together under thermodynamic constraints, but Q059 is more abstract while Q129 focuses on concrete computing geometries.
 
 * Q128 (BH_AI_CONSC_QUALIA_L3_128)
   Reason: both define critical thresholds and phase surfaces in AI systems, one for qualitative consciousness, the other for near optimal energy efficiency.
@@ -258,7 +252,7 @@ We only require that these observables are well defined and finite on a regular 
 
 ### 3.3 Ideal reference and admissible encoding class
 
-We introduce a reference function that captures the minimal energy cost of bit erasure in a region `r` at temperature `T_env(m; r)`:
+We introduce a reference function that captures the minimal energy dissipation rate associated with bit erasure in a region `r` at temperature `T_env(m; r)`:
 
 ```txt
 e_min(m; r) = k_B * T_env(m; r) * ln 2 * N_erase(m; r)
@@ -270,7 +264,7 @@ where:
 * `ln 2` is the natural logarithm of 2,
 * `N_erase(m; r)` is the effective rate of logically irreversible operations in region `r`.
 
-This reference plays the role of a lower bound on dissipation in `r` for a given temperature and logical irreversibility.
+This quantity has the same units as `d_diss(m; r)` and is interpreted as the minimal dissipation rate compatible with Landauer style bounds at the given temperature and erasure rate.
 
 We define an admissible encoding class for Q129 as follows.
 
@@ -307,10 +301,10 @@ Replacement protocol:
 We define a local dissipation gap at region level:
 
 ```txt
-DeltaS_diss(m; r) = max(0, d_diss(m; r) - e_min(m; r) / dt)
+DeltaS_diss(m; r) = max(0, d_diss(m; r) - e_min(m; r))
 ```
 
-where `dt` is the duration of the observation window associated with `m`. This quantity measures how far the observed dissipation exceeds the ideal reference, in power units.
+This quantity measures how far the observed dissipation rate exceeds the ideal reference rate in region `r` for the given temperature and erasure pattern.
 
 We then define a global gap variable that aggregates across regions and geometry:
 
@@ -329,14 +323,14 @@ The function `H` can, for example, be a weighted sum or norm that emphasizes reg
 Using a TU core style decision template, we define a semantic tension tensor on `M_energy` in normal form:
 
 ```txt
-T_ij(m) = S_i(m) * C_j(m) * DeltaS_energy(m) * lambda(m) * kappa
+T_ij(m) = S_i(m) * C_j(m) * DeltaS_energy(m) * lambda_regime(m) * kappa
 ```
 
 where:
 
 * `S_i(m)` are source factors representing, for example, the strength of imposed workloads or reliability requirements in semantic direction `i`,
 * `C_j(m)` are receptivity factors representing how sensitive downstream objectives are to excess dissipation in direction `j`,
-* `lambda(m)` is a convergence like factor that captures whether the system is in a convergent, metastable, or unstable operating regime,
+* `lambda_regime(m)` is a convergence like factor that captures whether the system is in a convergent, metastable, or unstable operating regime under the given workload and environment,
 * `kappa` is a fixed coupling constant that sets the overall scale of energy tension for Q129.
 
 The indices `i` and `j` label semantic directions at the effective layer. Their specific enumeration is not required here as long as `T_ij(m)` is well defined and finite on the regular domain.
@@ -558,19 +552,19 @@ Test whether an encoding instance `E in Enc_Q129` yields a stable and physically
 
 * Distribution of `Tension_energy(m_data)` for each device class.
 * Relative ordering of tension bands across devices for matched workloads and temperatures.
-* Sensitivity measures showing how much the ordering changes under small parameter perturbations that remain inside the allowed region of a single encoding instance.
+* Sensitivity measures showing how much the ordering changes under small parameter perturbations that remain inside the allowed region of a single encoding design.
 
 **Falsification conditions**
 
-* If, for all parameter choices allowed inside a chosen encoding instance `E in Enc_Q129`, the encoding consistently places obviously more efficient devices (for example near reversible prototypes) in equal or higher tension bands than obviously less efficient devices (for example legacy hardware) under comparable conditions, then `E` is considered misaligned and is rejected for Q129.
-* If small arbitrary changes in parameters inside their allowed ranges can invert the tension ordering between device classes without corresponding changes in observable quantities or theoretical expectations, `E` is considered unstable and is rejected or revised.
+* If, for all encoding instances `E in Enc_Q129` whose parameters are fixed before evaluation, the resulting tension ordering consistently places obviously more efficient devices (for example near reversible prototypes) in equal or higher tension bands than obviously less efficient devices (for example legacy hardware) under comparable conditions, then the Q129 encoding scheme is considered misaligned and must be revised.
+* If small arbitrary changes in encoding parameters within their admissible ranges can invert the tension ordering between device classes without corresponding changes in observable quantities or theoretical expectations, the corresponding encoding instances are considered unstable and are rejected or revised.
 * If the 20 W brain states `m_brain` cannot be placed in any band in a way that is stable under refinement of measurements, this indicates that essential observables or domain restrictions are missing. The current encoding instance is considered incomplete for Q129 and should not be used as a reference in other problems.
 
 **Semantics implementation note**
 This experiment uses the hybrid semantics specified in the header metadata. The hybrid representation is implemented by combining discrete counts of operations and bit erasures with continuous estimates of power and temperature. All observables are treated at an effective level, and no additional semantic structure beyond Section 3 is introduced.
 
 **Boundary note**
-Rejecting an encoding instance `E in Enc_Q129` through this experiment does not solve the canonical problem of ultimate efficiency. It only shows that `E` is not an adequate effective description of energy tension for the devices and workloads tested.
+Rejecting one or more encoding instances `E in Enc_Q129` through this experiment does not solve the canonical problem of ultimate efficiency. It only shows that those instances are not adequate effective descriptions of energy tension for the devices and workloads tested.
 
 ---
 
