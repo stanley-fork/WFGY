@@ -1,3 +1,4 @@
+<!-- QUESTION_ID: TU-Q003 -->
 # Q003 · Birch and Swinnerton-Dyer Conjecture
 
 ## 0. Header metadata
