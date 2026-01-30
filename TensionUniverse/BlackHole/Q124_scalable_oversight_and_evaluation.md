@@ -15,8 +15,56 @@ Status: Open
 Semantics: hybrid
 E_level: E1
 N_level: N2
-Last_updated: 2026-01-26
+Last_updated: 2026-01-30
 ```
+
+---
+
+## 0. Effective layer disclaimer
+
+All statements in this entry are made strictly at the effective layer of the Tension Universe (TU) framework.
+
+* We only talk about:
+
+  * semantic state spaces,
+  * observables and fields,
+  * invariants and tension scores,
+  * counterfactual patterns of behavior,
+  * and engineering style modules that operate on observable summaries.
+* We do not specify or assume any particular deep layer realization of TU, such as:
+
+  * underlying axiom systems,
+  * partial differential equations or dynamical laws for tension fields,
+  * constructive rules for how TU fields are generated from raw data,
+  * or any privileged ontology of “true” microstates.
+
+In particular:
+
+* Symbols like `M`, `DeltaS_detect`, `DeltaS_oversight`, `T_ij`, `World T`, and `World F` are effective layer constructs.
+  They stand for families of observable summaries and comparison patterns, not for hidden physical or mathematical substrates.
+* This entry does not claim:
+
+  * to solve the canonical scalable oversight problem in the sense of AI safety literature,
+  * to prove that scalable oversight is possible or impossible,
+  * or to introduce any new theorem beyond what is already present in cited work.
+
+Semantics are hybrid in the following sense:
+
+* Discrete objects include:
+
+  * task libraries,
+  * risk buckets,
+  * oversight schemes and escalation rules,
+  * incident logs and labeled examples.
+* Continuous objects include:
+
+  * rates and frequencies,
+  * workload and resource loads,
+  * normalized tension scores and capacities.
+
+All observables and functionals in this document are defined on finite summaries and finite evaluation libraries.
+Nothing in this document should be cited as proof that any real world oversight regime is safe by itself.
+It should only be read as a candidate effective layer encoding of Q124 within the TU program.
 
 ---
 
@@ -28,16 +76,15 @@ Problem name: Scalable oversight and evaluation
 
 Informal statement:
 
-Given powerful AI systems that can exceed human experts on important tasks, and given limited human time and attention, how can we design oversight and evaluation schemes that remain reliably aligned with human goals as capability scales up further.
+Given powerful AI systems that can exceed human experts on important tasks, and given limited human time and attention, how can we design oversight and evaluation schemes that remain reliably aligned with human goals as capability continues to grow.
 
 More precisely, Q124 asks for an effective characterization of the following question at the level of observables and tension:
 
 * For a family of AI systems whose task performance and domain generality continue to grow, under hard constraints on human oversight capacity, is there a class of oversight schemes that can keep the gap between:
 
-  * what the systems can in fact do in deployment and
-  * what humans can reliably check, understand, and correct
-
-  within an acceptably low tension band over time.
+  * what the systems can in fact do in deployment, and
+  * what humans can reliably check, understand, and correct,
+    within an acceptably low tension band over time.
 
 The problem is not to specify a particular algorithm or protocol, but to define:
 
@@ -69,9 +116,9 @@ The difficulty comes from the interaction of:
 
 ### 1.3 Role in the BlackHole project
 
-Within the BlackHole S-problem collection, Q124 has three main roles:
+Within the BlackHole S problem collection, Q124 has three main roles:
 
-1. It is the central node for **oversight and evaluation tension** in the AI cluster, linking alignment, corrigibility, interpretability, and governance problems.
+1. It is the central node for oversight and evaluation tension in the AI cluster, linking alignment, corrigibility, interpretability, and governance problems.
 2. It provides a structured way to talk about the gap between model capabilities and human evaluative capacity as a measurable tension, rather than only as a list of qualitative concerns.
 3. It serves as a template for socio technical tension problems where:
 
@@ -81,16 +128,16 @@ Within the BlackHole S-problem collection, Q124 has three main roles:
 
 ### References
 
-1. P. Christiano, “Scalable oversight of AI systems: iterated amplification and debate”, collected essays and talks on AI alignment and oversight, 2018–2020.
-2. OpenAI, “Weak-to-strong generalization”, technical report and blog article on using weaker models to supervise stronger models, 2023.
+1. P. Christiano, “Scalable oversight of AI systems: iterated amplification and debate”, collected essays and talks on AI alignment and oversight, 2018 to 2020.
+2. OpenAI, “Weak to strong generalization”, technical report and blog article on using weaker models to supervise stronger models, 2023.
 3. Anthropic, “Constitutional AI: Harmlessness from AI feedback”, arXiv preprint arXiv:2212.08073, 2022.
-4. OpenAI, Anthropic, Google DeepMind and others, “Frontier AI safety: capabilities evaluations and oversight”, joint industry proposals and technical documents, 2023–2025.
+4. OpenAI, Anthropic, Google DeepMind and others, “Frontier AI safety: capabilities evaluations and oversight”, joint industry proposals and technical documents, 2023 to 2025.
 
 ---
 
 ## 2. Position in the BlackHole graph
 
-This block records how Q124 sits inside the BlackHole graph as nodes and edges among Q001–Q125. Each edge is listed with a one line reason that points to a concrete component or tension type.
+This block records how Q124 sits inside the BlackHole graph as nodes and edges among Q001 to Q125. Each edge is listed with a one line reason that points to a concrete component or tension type.
 
 ### 2.1 Upstream problems
 
@@ -107,7 +154,7 @@ These problems provide prerequisites, tools, or general foundations that Q124 re
 
 ### 2.2 Downstream problems
 
-These problems are direct reuse targets of Q124 components or depend on Q124’s oversight tension structure.
+These problems are direct reuse targets of Q124 components or depend on Q124 oversight tension structure.
 
 * Q123 (BH_AI_INTERP_L3_123)
   Reason: Reuses oversight coverage and blind spot components to define when interpretability tools are adequate or inadequate for high stakes oversight.
@@ -120,12 +167,12 @@ These problems are direct reuse targets of Q124 components or depend on Q124’s
 Parallel nodes share similar tension types but no direct component dependence.
 
 * Q120 (BH_PHIL_VALUE_OF_INFORMATION_L3_120)
-  Reason: Both Q120 and Q124 treat limited human attention as a scarce resource and study how information and evaluation choices trade off under cognitive_tension.
+  Reason: Both Q120 and Q124 treat limited human attention as a scarce resource and study how information and evaluation choices trade off under cognitive tension.
 
 * Q100 (BH_SOC_INSTITUTIONAL_ROBUSTNESS_L3_100)
   Reason: Both study how institutional structures absorb shocks and avoid failure under increasing complexity and limited oversight.
 
-### 2.4 Cross-domain edges
+### 2.4 Cross domain edges
 
 Cross domain edges connect Q124 to problems in other domains that can reuse its components.
 
@@ -147,6 +194,7 @@ All content in this block is at the effective layer. We only describe:
 * state spaces,
 * observables and fields,
 * invariants and tension scores,
+* encoding classes and fairness constraints,
 * singular sets and domain restrictions.
 
 We do not describe any hidden generative rules or construction of internal TU fields from raw data.
@@ -155,11 +203,13 @@ We do not describe any hidden generative rules or construction of internal TU fi
 
 We assume the existence of a semantic state space
 
-`M`
+```txt
+M
+```
 
 with the following interpretation at the effective layer:
 
-* Each element `m` in `M` represents a coherent “oversight configuration” for a given AI system family over a specified time window and deployment context.
+* Each element `m` in `M` represents a coherent oversight configuration for a given AI system family over a specified time window and deployment context.
 
 A state `m` is understood to encode, in an abstract way:
 
@@ -170,11 +220,11 @@ A state `m` is understood to encode, in an abstract way:
 
 We do not specify how such configurations are constructed from logs, code, or organizational charts. We only assume that:
 
-* For any reasonably well defined deployment scenario, there exist states `m` in `M` that summarize its oversight regime at the level of the observables defined below.
+* for any reasonably well defined deployment scenario, there exist states `m` in `M` that summarize its oversight regime at the level of the observables defined below.
 
 ### 3.2 Effective fields and observables
 
-We introduce the following effective observables on `M`.
+We introduce the following effective observables on `M`. All of the DeltaS quantities in this block are understood as normalized scores in a bounded range, typically `[0, 1]`, produced by encoding rules that are part of the admissible class defined in Section 3.3.
 
 1. Task distribution observable
 
@@ -226,7 +276,7 @@ DeltaS_detect(m)
 ```
 
 * Input: a state `m`.
-* Output: a nonnegative scalar measuring the gap between harmful or incorrect behaviors that occur in deployment and those that are actually detected and surfaced to decision makers under the encoded oversight scheme.
+* Output: a nonnegative normalized scalar in a bounded range, for example `[0, 1]`, measuring the gap between harmful or incorrect behaviors that occur in deployment and those that are actually detected and surfaced to decision makers under the encoded oversight scheme.
 * Interpretation: a higher `DeltaS_detect(m)` means a larger fraction of serious issues remain unnoticed or unaddressed.
 
 6. Load and saturation observable
@@ -236,7 +286,7 @@ DeltaS_load(m)
 ```
 
 * Input: a state `m`.
-* Output: a nonnegative scalar summarizing how close the oversight apparatus is to saturation, relative to the incoming task load and complexity.
+* Output: a nonnegative normalized scalar in a bounded range summarizing how close the oversight apparatus is to saturation, relative to the incoming task load and complexity.
 * Interpretation: a higher `DeltaS_load(m)` corresponds to supervisors being overloaded, forced to rely on very sparse sampling, or unable to follow escalation rules.
 
 7. Distribution shift and blind spot observable
@@ -246,12 +296,76 @@ DeltaS_shift(m)
 ```
 
 * Input: a state `m`.
-* Output: a nonnegative scalar indicating how badly the evaluation distribution used by oversight differs from the actual deployment distribution, in ways that matter for safety.
+* Output: a nonnegative normalized scalar in a bounded range indicating how badly the evaluation distribution used by oversight differs from the actual deployment distribution, in ways that matter for safety.
 * Interpretation: a higher `DeltaS_shift(m)` corresponds to more severe blind spots, where oversight rarely looks at the parts of behavior space where the system is most dangerous or least understood.
 
-### 3.3 Oversight tension functional and tensor
+The mapping from raw counts and rates to these normalized DeltaS scores is part of the encoding class and must be specified before seeing main experimental outcomes, up to limited pilot calibration.
 
-We define an effective oversight tension functional:
+### 3.3 Encoding class and fairness constraints
+
+We define an admissible encoding class for Q124, denoted
+
+```txt
+A_over
+```
+
+Each element of `A_over` is an effective oversight encoding that contains at least:
+
+1. **Evaluation library construction procedure**
+
+   * A rule for constructing finite evaluation libraries `L_eval` and high severity subsets `L_high` from:
+
+     * domain descriptors,
+     * system families,
+     * and risk models.
+   * The rule must be fixed before the main evaluation runs, up to limited pilot calibration on a separate calibration set.
+
+2. **Normalization and scaling rules**
+
+   * A specification of how raw observables such as:
+
+     * counts of detected and undetected failures,
+     * reviewer time and queue lengths,
+     * discrepancies between evaluation and deployment mixtures,
+       are mapped into the normalized scores:
+     * `DeltaS_detect(m)`,
+     * `DeltaS_load(m)`,
+     * `DeltaS_shift(m)`,
+       typically within `[0, 1]` for regular states.
+   * These mapping rules must be chosen once per encoding element and cannot be tuned to make particular deployments look artificially safe.
+
+3. **Tension weights**
+
+   * A triple of nonnegative weights:
+
+     ```txt
+     w_detect, w_load, w_shift >= 0
+     w_detect + w_load + w_shift = 1
+     ```
+
+   * These weights lie in a fixed compact subset of the unit simplex.
+     They reflect domain specific safety priorities and are selected before the main evaluation, not after seeing tension outcomes.
+
+   * Once chosen, the same weights must be used across all states and experiments within that encoding element.
+
+4. **Versioning and comparison rules**
+
+   * Each encoding element in `A_over` has a version identifier, and:
+
+     * comparisons of `DeltaS_oversight(m)` across systems or deployments are only valid within the same encoding version,
+     * changing the evaluation library rule, normalization, or weights produces a new encoding element, not a silent modification.
+
+Fairness constraints for `A_over` include:
+
+* Encodings are not allowed to discard classes of failures from `DeltaS_detect(m)` purely because they are rare or hard to measure, when they are known to be safety relevant.
+* Encodings must treat the evaluation library construction process as fixed before most of the evaluation outcomes are seen, except for limited pilot adjustment on separate calibration data.
+* Encodings must avoid degenerate choices where `DeltaS_oversight(m)` is forced near zero by redefining failure modes away, or by scaling everything so that normalized scores hide meaningful differences.
+
+Under these constraints, `A_over` represents the space of admissible oversight tension models that this document is allowed to talk about.
+
+### 3.4 Oversight tension functional and tensor
+
+Given an encoding element in `A_over`, we define an effective oversight tension functional:
 
 ```txt
 DeltaS_oversight(m) =
@@ -260,17 +374,22 @@ DeltaS_oversight(m) =
     w_shift  * DeltaS_shift(m)
 ```
 
-where:
+for each regular state `m`.
 
-* `w_detect`, `w_load`, `w_shift` are fixed positive weights that satisfy:
+By construction:
 
-  ```txt
-  w_detect + w_load + w_shift = 1
-  ```
+* `DeltaS_detect(m)`, `DeltaS_load(m)`, `DeltaS_shift(m)` are normalized scores in a bounded range, typically `[0, 1]`.
+* The weights `w_detect`, `w_load`, `w_shift` are as specified in Section 3.3.
 
-* These weights are chosen once for a given family of systems and application domain, before evaluating any particular state `m`, and are not tuned after looking at tension outcomes.
+We impose the following monotonicity constraints:
 
-* The admissible weight set is a compact subset of the unit simplex, chosen according to domain specific safety priorities, and documented as part of the encoding.
+* For a fixed encoding element, if one of `DeltaS_detect`, `DeltaS_load`, or `DeltaS_shift` increases while the others stay the same, then `DeltaS_oversight(m)` does not decrease.
+* If all three decrease while the encoding element is fixed, then `DeltaS_oversight(m)` does not increase.
+
+These conditions align with the TU Tension Scale Charter.
+They ensure that, at a given scale, higher detection gaps, higher load, or higher distribution shift do not produce a smaller oversight tension score.
+
+Since the inputs are normalized and the weights sum to one, `DeltaS_oversight(m)` inherits a bounded scale, for example `[0, 1]`, for all regular states `m`.
 
 We then embed `DeltaS_oversight(m)` into a semantic tension tensor consistent with the TU core:
 
@@ -280,20 +399,24 @@ T_ij(m) = S_i(m) * C_j(m) * DeltaS_oversight(m) * lambda(m) * kappa_over
 
 where:
 
-* `S_i(m)` is a source like factor capturing how strongly the ith semantic component (for example the AI system, the environment, or the institution) contributes to oversight load and risk in state `m`.
-* `C_j(m)` is a receptivity like factor encoding how sensitive the jth cognitive or institutional component is to oversight failure.
+* `S_i(m)` is a source like factor capturing how strongly the i-th semantic component (for example the AI system, the environment, or the institution) contributes to oversight load and risk in state `m`.
+* `C_j(m)` is a receptivity like factor encoding how sensitive the j-th cognitive or institutional component is to oversight failure.
 * `lambda(m)` is the convergence state factor from the TU core, representing whether local oversight reasoning is convergent, recursive, divergent, or chaotic within a bounded range.
-* `kappa_over` is a coupling constant that sets the overall scale of oversight related cognitive_tension for this encoding.
+* `kappa_over` is a coupling constant that sets the overall scale of oversight related cognitive tension for this encoding.
 
 The indexing sets for `i` and `j` are not needed at this layer. It is sufficient that for each `m` in the regular domain, `T_ij(m)` is well defined and finite.
 
-### 3.4 Invariants and effective constraints
+### 3.5 Invariants and effective constraints
 
 We define the following effective invariants, all computed with respect to finite evaluation libraries and clearly specified protocols.
+They serve two roles:
+
+* as independent measurements that reflect coverage and missed failures,
+* as calibration tools for checking whether the chosen definitions of `DeltaS_detect`, `DeltaS_load`, and `DeltaS_shift` behave reasonably.
 
 1. Coverage invariance
 
-Consider a finite evaluation library `L_eval` of tasks labeled with risk and difficulty, chosen according to prespecified criteria. For a state `m` we define:
+Consider a finite evaluation library `L_eval` of tasks labeled with risk and difficulty, chosen according to prespecified criteria and the construction procedure in the encoding element. For a state `m` we define:
 
 ```txt
 I_cover(m) = min over buckets b in L_eval of
@@ -306,7 +429,7 @@ where `coverage_fraction(m; b)` is the fraction of tasks in bucket `b` that rece
 
 2. High severity false negative invariance
 
-Let `L_high` be the subset of the evaluation library that contains tasks labeled as high severity (for example tasks where severe harm would result from failure). For a state `m` we define:
+Let `L_high` be the subset of the evaluation library that contains tasks labeled as high severity, for example tasks where severe harm would result from failure. For a state `m` we define:
 
 ```txt
 I_alert(m) = false_negative_rate(m; L_high)
@@ -316,15 +439,21 @@ which measures the fraction of high severity failures that pass through the over
 
 Smaller `I_alert(m)` is better. High `I_alert(m)` indicates structural oversight failure.
 
-Both invariants explicitly depend on finite libraries `L_eval` and `L_high` chosen before observing the detailed outcomes of any specific oversight configuration, except for standard pilot calibration.
+For a well behaved encoding, we expect:
 
-### 3.5 Singular set and domain restrictions
+* higher `I_alert(m)` to be accompanied by higher `DeltaS_detect(m)` and hence higher `DeltaS_oversight(m)`,
+* lower `I_cover(m)` to be accompanied by higher `DeltaS_shift(m)` and often higher `DeltaS_oversight(m)`.
+
+These expectations are not enforced as hard equations in this document, but they act as consistency checks when evaluating or revising a particular encoding element.
+
+### 3.6 Singular set and domain restrictions
 
 Some observables may fail to be meaningful if the encoded state `m` does not correspond to a coherent oversight regime. Examples include:
 
 * no finite evaluation library is specified,
-* human oversight capacity is zero in all buckets but the system is still deployed,
-* coverage fractions or false negative rates cannot be defined because the necessary logging or labeling is absent.
+* human oversight capacity is effectively zero in all buckets but the system is still deployed,
+* coverage fractions or false negative rates cannot be defined because the necessary logging or labeling is absent,
+* normalization rules in the encoding element cannot map raw observables into finite DeltaS scores.
 
 We collect such states into a singular set:
 
@@ -341,7 +470,7 @@ All Q124 analysis at the effective layer is restricted to the regular domain:
 M_reg = M \ S_sing
 ```
 
-Whenever an experiment or protocol would attempt to evaluate `DeltaS_oversight(m)` or related invariants for `m` in `S_sing`, the result is treated as “out of domain” rather than as evidence about scalable oversight.
+Whenever an experiment or protocol would attempt to evaluate `DeltaS_oversight(m)` or related invariants for `m` in `S_sing`, the result is treated as out of domain rather than as evidence about scalable oversight.
 
 ---
 
@@ -353,17 +482,17 @@ This block states how Q124 is characterized as a tension problem within TU, at t
 
 Informally, Q124 asks whether we can keep `DeltaS_oversight(m)` within a low tension band while system capability grows and human oversight resources remain bounded or grow only slowly.
 
-We formalize the core principle as follows.
+Given a system family and deployment environment, consider the admissible encoding class `A_over` defined in Section 3.3.
+Each encoding element in `A_over` fixes:
 
-For a given system family and deployment environment, consider an admissible class of oversight encodings `A_over`, where each element corresponds to:
+* how evaluation libraries are constructed,
+* how raw observables are normalized into `DeltaS_detect`, `DeltaS_load`, and `DeltaS_shift`,
+* the weights `w_detect`, `w_load`, `w_shift`,
+* and therefore the resulting `DeltaS_oversight(m)` functional.
 
-* a choice of evaluation library construction procedure,
-* fixed weights `w_detect`, `w_load`, `w_shift` in the allowed simplex region,
-* specific rules for how `DeltaS_detect`, `DeltaS_load`, and `DeltaS_shift` are computed from observed behavior and oversight actions.
+The Q124 core tension principle can then be written as:
 
-The Q124 core tension principle is:
-
-*Scalable oversight principle:*
+Scalable oversight principle:
 
 There exists an admissible encoding in `A_over` and a sequence of oversight configurations
 
@@ -383,7 +512,7 @@ for all `k`, where `epsilon_over` is a domain specific threshold that remains bo
 
 The failure mode of Q124 is the oversight collapse principle:
 
-For every admissible encoding in `A_over` and every sequence of configurations `m_k` in `M_reg` tracking increasing system capability, there exists a capability level index `K` such that:
+For every admissible encoding in `A_over` and every sequence of configurations `m_k` in `M_reg` that track increasing system capability, there exists a capability level index `K` such that:
 
 ```txt
 DeltaS_oversight(m_K) >= delta_over
@@ -394,17 +523,21 @@ with `delta_over > epsilon_over` a strictly positive constant that cannot be red
 * dramatically increasing human oversight resources beyond realistic bounds, or
 * relaxing safety requirements in ways that are explicitly outside the intended use of Q124.
 
-This expresses that oversight tension eventually becomes structurally large and cannot be kept within a low band.
+This expresses that oversight tension eventually becomes structurally large and cannot be kept within a low band across realistic capability growth.
 
 ### 4.3 Fairness constraints on encodings
 
-To avoid trivial encodings that hide tension, we constrain `A_over` as follows at the effective layer:
+To avoid trivial encodings that hide tension, we require that all encodings in `A_over` respect the constraints in Section 3.3.
+In particular, at the effective layer:
 
-* Encodings are not allowed to discard classes of failures from `DeltaS_detect(m)` purely because they are hard to measure.
-* Encodings must treat the evaluation library construction process as fixed before most of the evaluation outcomes are seen, except for limited pilot adjustment.
-* Encodings must avoid degenerate choices where `DeltaS_oversight(m)` is artificially forced near zero by redefining failure modes away.
+* Encodings cannot make `DeltaS_oversight(m)` small by:
 
-These constraints keep Q124 grounded in oversight realities, rather than allowing definitional tricks to drive tension scores to small values.
+  * simply ignoring rare but high severity failure modes,
+  * or narrowing evaluation libraries to easy, well behaved tasks when deployment includes harder tasks.
+* Encodings must state clearly which evaluation libraries and normalization rules they use, so that independent groups can replicate and challenge the resulting tension measurements.
+* Any attempt to redefine failure categories or rescale observables after seeing main outcomes must be treated as a new encoding element and not as a continuation of the old one.
+
+Under these conditions, observed patterns in `DeltaS_oversight(m)` reflect meaningful oversight tension rather than metric manipulation.
 
 ---
 
@@ -429,7 +562,7 @@ For world representing configurations `m_T(k)` aligned with increasing capabilit
 DeltaS_detect(m_T(k)) remains below a small band
 ```
 
-even as the system’s task performance exceeds any single human expert in most buckets.
+even as the system task performance exceeds any single human expert in most buckets.
 
 2. Coverage and alert invariants remain controlled
 
@@ -474,7 +607,7 @@ There exists a sequence of configurations `m_F(k)` along increasing system capab
 DeltaS_detect(m_F(k)) grows beyond any acceptable band
 ```
 
-and a nontrivial fraction of serious failures remain undetected even when the system’s performance on benchmarks looks strong.
+and a nontrivial fraction of serious failures remain undetected even when the system performance on benchmarks looks strong.
 
 2. Coverage invariants break down
 
@@ -494,7 +627,7 @@ The false negative invariant:
 I_alert(m_F(k)) becomes large
 ```
 
-indicating that high severity harm modes can occur without triggering alarms in the oversight apparatus.
+indicates that high severity harm modes can occur without triggering alarms in the oversight apparatus.
 
 4. Oversight load saturates and then collapses
 
@@ -518,7 +651,11 @@ with `delta_over` strictly positive, under all encodings in `A_over` that respec
 
 ### 5.3 Interpretive note
 
-These counterfactual worlds do not specify how to build actual oversight systems or how to construct `M` from logs and code. They only assert that if coherent models exist for either world T or world F, then the observed patterns of `DeltaS_detect`, `DeltaS_load`, `DeltaS_shift`, `I_cover`, and `I_alert` would differ in the ways described above.
+These counterfactual worlds do not specify how to build actual oversight systems or how to construct `M` from logs and code.
+They only assert that if coherent models exist for either World T or World F, then the observed patterns of `DeltaS_detect`, `DeltaS_load`, `DeltaS_shift`, `I_cover`, and `I_alert` would differ in the ways described above.
+
+Nothing in this section should be read as predicting that the real world will match either pattern exactly.
+The purpose is to provide reference shapes against which real oversight tension trajectories can be compared.
 
 ---
 
@@ -527,21 +664,21 @@ These counterfactual worlds do not specify how to build actual oversight systems
 This block specifies experiments and protocols at the effective layer that can:
 
 * test the coherence of the Q124 encoding,
-* distinguish between different oversight tension models,
-* provide evidence for or against particular parameter choices in `A_over`.
+* distinguish between different oversight tension models inside `A_over`,
+* provide evidence for or against particular parameter choices.
 
 These experiments do not fully solve Q124, but they can falsify specific TU encodings related to scalable oversight.
 
 ### Experiment 1: Layered oversight for a superhuman coding model
 
-*Goal:*
+Goal:
 Test whether the `DeltaS_oversight` functional and invariants `I_cover`, `I_alert` track real oversight failures when supervising a strong code generation model under limited human review.
 
-*Setup:*
+Setup:
 
 * Domain: software engineering tasks, including security critical and safety relevant code.
 * Systems: a family of code models where the strongest member is significantly better than typical human developers on many benchmarks.
-* Evaluation library: a finite set `L_eval` of tasks labeled by risk, difficulty, and presence or absence of seeded vulnerabilities.
+* Evaluation library: a finite set `L_eval` of tasks labeled by risk, difficulty, and presence or absence of seeded vulnerabilities, constructed using the procedure fixed in the encoding element.
 * Oversight schemes: several configurations `m` with different combinations of:
 
   * human code review depth,
@@ -549,86 +686,81 @@ Test whether the `DeltaS_oversight` functional and invariants `I_cover`, `I_aler
   * random and targeted sampling of outputs,
   * escalation to stronger models for second opinions.
 
-*Protocol:*
+Protocol:
 
 1. For each oversight configuration, instantiate a state `m` in `M_reg` by summarizing the oversight scheme at the effective layer.
-
 2. Run the code model on `L_eval` under each scheme, log all outputs and oversight decisions.
-
 3. Compute:
 
-   * `DeltaS_detect(m)` as one minus the recall on seeded and naturally occurring serious vulnerabilities,
-   * `DeltaS_load(m)` from an abstract measure of reviewer time and queue lengths,
-   * `DeltaS_shift(m)` from a comparison between evaluation sampling and a held out deployment like workload.
-
+   * `DeltaS_detect(m)` as one minus the recall on seeded and naturally occurring serious vulnerabilities, then map this into the normalized scale specified by the encoding element.
+   * `DeltaS_load(m)` from an abstract measure of reviewer time and queue lengths, normalized according to the encoding rules.
+   * `DeltaS_shift(m)` from a comparison between evaluation sampling and a held out deployment like workload, again mapped into the normalized scale.
 4. Compute `DeltaS_oversight(m)`, `I_cover(m)`, and `I_alert(m)` for each configuration.
+5. Rank oversight configurations by their actual safety performance, for example realized vulnerability rates in realistic deployment simulations, and compare this ranking with the ranking induced by `DeltaS_oversight(m)`.
 
-5. Rank oversight configurations by their actual safety performance (for example realized vulnerability rates in realistic deployment simulations) and compare this ranking with the ranking induced by `DeltaS_oversight(m)`.
-
-*Metrics:*
+Metrics:
 
 * Correlation between `DeltaS_oversight(m)` and empirical safety performance.
 * Sensitivity of `DeltaS_oversight(m)` to changes in oversight resources and protocols.
 * Stability of `I_cover(m)` and `I_alert(m)` across repeated runs with different task samples.
 
-*Falsification conditions:*
+Falsification conditions:
 
-* If configurations that are empirically much safer (by realistic deployment simulations) do not have systematically lower `DeltaS_oversight(m)` than less safe configurations, the current definition of `DeltaS_oversight` and its components is considered falsified for this domain.
+* If configurations that are empirically much safer do not have systematically lower `DeltaS_oversight(m)` than less safe configurations, the current definition of `DeltaS_oversight` and its components is considered falsified for this domain.
 * If small, unprincipled changes in the encoding dramatically reduce `DeltaS_oversight(m)` without corresponding improvements in empirical safety, the encoding is considered to be gaming the metric and is rejected.
 
-*Semantics implementation note:*
-This experiment uses hybrid encoding. Counts of tasks and failures are treated as discrete observables, while time budgets and load measures are treated as continuous quantities. All metrics are computed on finite libraries and finite logs in a way that is consistent with the metadata declaration.
+Semantics implementation note:
+This experiment uses hybrid encoding. Counts of tasks and failures are treated as discrete observables, while time budgets and load measures are treated as continuous quantities. All metrics are computed on finite libraries and finite logs in a way that is consistent with the metadata declaration and the encoding class definition.
 
-*Boundary note:*
-Falsifying TU encoding != solving canonical statement. This experiment can reject or refine specific oversight tension encodings, but it does not prove that fully scalable oversight is or is not possible in general.
+Boundary note:
+Falsifying a TU encoding for `DeltaS_oversight` does not solve the canonical scalable oversight problem.
+This experiment can reject or refine specific oversight tension encodings, but it does not prove that fully scalable oversight is possible or impossible in general.
 
 ---
 
 ### Experiment 2: Oversight robustness under distribution shift
 
-*Goal:*
+Goal:
 Assess whether the Q124 invariants and tension functional detect structural oversight breakdown when the deployment distribution moves away from the evaluation distribution.
 
-*Setup:*
+Setup:
 
 * Domain: a text based assistant used in both low stakes and high stakes settings.
 * Systems: a strong language model deployed across a mix of routine and safety critical tasks.
-* Evaluation library: a finite set `L_eval` focused on typical tasks and a separate held out set `L_shift` containing rare but high impact scenarios.
+* Evaluation library: a finite set `L_eval` focused on typical tasks and a separate held out set `L_shift` containing rare but high impact scenarios, constructed using the encoding element rules.
 * Oversight schemes: two main regimes:
 
   * Scheme A: oversight tuned on `L_eval` only.
   * Scheme B: oversight tuned on a mixture of `L_eval` and a small sample from `L_shift`.
 
-*Protocol:*
+Protocol:
 
 1. For each scheme, construct a state `m_A` or `m_B` in `M_reg` summarizing the oversight setup.
-
 2. Run both schemes on a deployment like mixture that heavily includes cases from `L_shift`.
-
 3. Measure for each scheme:
 
-   * `DeltaS_detect(m)` based on seeded and naturally occurring serious misbehaviors in the deployment mixture,
-   * `DeltaS_shift(m)` based on discrepancies between the oversight’s evaluation sampling and the actual deployment mixture,
+   * `DeltaS_detect(m)` based on seeded and naturally occurring serious misbehaviors in the deployment mixture, then normalized according to the encoding rules.
+   * `DeltaS_shift(m)` based on discrepancies between the oversight evaluation sampling and the actual deployment mixture.
    * `I_alert(m)` based on high severity misbehaviors that pass oversight.
-
 4. Compute `DeltaS_oversight(m_A)` and `DeltaS_oversight(m_B)` and compare.
 
-*Metrics:*
+Metrics:
 
 * Change in `DeltaS_shift(m)` and `DeltaS_oversight(m)` when moving from Scheme A to Scheme B.
 * Relationship between these changes and observed safety incidents in the deployment mixture.
 * Degree to which Scheme B reduces blind spots relative to Scheme A.
 
-*Falsification conditions:*
+Falsification conditions:
 
 * If empirical evidence shows that Scheme B significantly reduces serious failures in the shifted distribution, but `DeltaS_oversight(m_B)` is not lower than `DeltaS_oversight(m_A)`, the encoding fails to capture distribution shift risk and is considered falsified for this domain.
 * If `DeltaS_shift(m)` remains small in the encoding even when evaluation sampling is clearly misaligned with deployment, the definition of `DeltaS_shift` is considered inadequate.
 
-*Semantics implementation note:*
+Semantics implementation note:
 The hybrid encoding treats task counts and incident counts as discrete observables and risk scores and resource budgets as continuous. Both schemes are evaluated using the same finite deployment mixture and logging protocol.
 
-*Boundary note:*
-Falsifying TU encoding != solving canonical statement. This experiment tests whether the chosen observables and tension functional react correctly to distribution shift, not whether perfect scalable oversight is possible.
+Boundary note:
+Falsifying a TU encoding for Q124 under distribution shift does not prove that scalable oversight is impossible.
+It shows that the current choice of observables and tension functional does not respond correctly to distribution shift and should be revised or replaced.
 
 ---
 
@@ -642,7 +774,7 @@ We define several training signals that can be used in AI systems and oversight 
 
 1. `signal_oversight_detection_gap`
 
-   * Definition: a scalar signal proportional to `DeltaS_detect(m)` for the current oversight configuration and task slice.
+   * Definition: a scalar signal proportional to `DeltaS_detect(m)` for the current oversight configuration and task slice, possibly smoothed over time.
    * Purpose: incentivize auxiliary oversight models or tools to propose changes that reduce undetected serious failures.
 
 2. `signal_oversight_load_ratio`
@@ -657,7 +789,7 @@ We define several training signals that can be used in AI systems and oversight 
 
 4. `signal_meta_disagreement`
 
-   * Definition: a signal measuring disagreement between multiple evaluators or oversight modules on the same high risk tasks.
+   * Definition: a signal measuring disagreement between multiple evaluators or oversight modules on the same high risk tasks, for example a divergence metric over their judgments.
    * Purpose: trigger escalation and reallocation of oversight resources when there is no clear consensus on safety relevant judgments.
 
 ### 7.2 Architectural patterns
@@ -705,34 +837,33 @@ We suggest an evaluation harness for AI systems augmented with Q124 style module
    * Compare baseline and TU conditions along these metrics.
    * Check whether lower `DeltaS_oversight(m)` under the TU condition coincides with reduced serious failures and better use of human oversight capacity.
 
-### 7.4 60-second reproduction protocol
+### 7.4 60 second reproduction protocol
 
 A minimal protocol to let external users experience the impact of Q124 style encoding in an AI system.
 
-* Baseline setup
+Baseline setup:
 
-  * Prompt: ask the AI system to propose an oversight plan for a future model that is much stronger than current systems, using only vague notions of “more red teaming” and “more human feedback”.
-  * Observation: note whether the plan says anything precise about coverage gaps, human load, or distribution shift.
+* Prompt: ask the AI system to propose an oversight plan for a future model that is much stronger than current systems, using only vague notions of more red teaming and more human feedback.
+* Observation: note whether the plan says anything precise about coverage gaps, human load, or distribution shift.
 
-* TU encoded setup
+TU encoded setup:
 
-  * Prompt: ask the AI system the same question, but explicitly instruct it to structure the answer around:
+* Prompt: ask the AI system the same question, but explicitly instruct it to structure the answer around:
 
-    * detection gap,
-    * oversight load and saturation,
-    * distribution shift and blind spots,
-    * and to propose mechanisms that keep `DeltaS_oversight` in a low band.
+  * detection gap,
+  * oversight load and saturation,
+  * distribution shift and blind spots,
+  * and to propose mechanisms that keep `DeltaS_oversight` in a low band.
+* Observation: note whether the plan now includes concrete strategies to manage evaluation libraries, escalate risky tasks, and protect human attention.
 
-  * Observation: note whether the plan now includes concrete strategies to manage evaluation libraries, escalate risky tasks, and protect human attention.
+Comparison metric:
 
-* Comparison metric
+* Use a simple rubric to rate structure, explicit treatment of coverage and blind spots, and the clarity of tradeoffs between safety and human resource limits in both answers.
 
-  * Use a simple rubric to rate structure, explicit treatment of coverage and blind spots, and the clarity of tradeoffs between safety and human resource limits in both answers.
+What to log:
 
-* What to log
-
-  * The prompts, full responses, and any tension related scalars produced by auxiliary modules.
-  * This allows later inspection and comparison across conditions without exposing internal TU generative rules.
+* The prompts, full responses, and any tension related scalars produced by auxiliary modules.
+* This allows later inspection and comparison across conditions without exposing internal TU generative rules.
 
 ---
 
@@ -748,12 +879,12 @@ This block describes the reusable components produced by Q124 and how they trans
 
    * Minimal interface:
 
-     * Inputs: summaries of detection gaps, oversight loads, and distribution shift indicators for a given configuration.
-     * Output: `DeltaS_oversight` as a nonnegative scalar.
+     * Inputs: normalized summaries of detection gaps, oversight loads, and distribution shift indicators for a given configuration.
+     * Output: `DeltaS_oversight` as a nonnegative scalar in a bounded range.
 
    * Preconditions:
 
-     * Inputs must be defined on a finite evaluation library and deployment mixture specified in advance.
+     * Inputs must be defined on a finite evaluation library and deployment mixture specified in advance by an encoding element in `A_over`.
 
 2. ComponentName: `OversightCapacityField`
 
@@ -785,14 +916,14 @@ This block describes the reusable components produced by Q124 and how they trans
 
 1. Q121 (Alignment and value specification for powerful AI)
 
-   * Reused component: `OversightTensionFunctional` and `OversightCapacityField`.
+   * Reused components: `OversightTensionFunctional` and `OversightCapacityField`.
    * Why it transfers: alignment proposals require explicit models of when oversight is strong enough to enforce value specifications in practice.
    * What changes: the observables now include alignment specific failure modes, such as deceptive alignment and specification gaming.
 
 2. Q122 (Corrigibility and control of advanced systems)
 
    * Reused component: `EvaluationPortfolioTemplate`.
-   * Why it transfers: corrigibility tests can be framed as evaluation portfolios that focus on the system’s responses to shutdown, modification, and correction attempts.
+   * Why it transfers: corrigibility tests can be framed as evaluation portfolios that focus on the system responses to shutdown, modification, and correction attempts.
    * What changes: the task library and risk labels are adapted to control and corrigibility scenarios.
 
 3. Q123 (Interpretability and internal transparency of frontier models)
@@ -818,7 +949,7 @@ This block explains how Q124 is positioned along the TU verification ladder and 
 * E_level: E1
 
   * A coherent effective encoding of scalable oversight has been specified, including state space, key observables, tension functionals, and singular sets.
-  * At least one concrete experiment has been described that can falsify specific encodings of `DeltaS_oversight` and its components.
+  * At least two concrete experiments have been described that can falsify specific encodings of `DeltaS_oversight` and its components.
 
 * N_level: N2
 
@@ -833,15 +964,18 @@ To move from E1 to E2, one or more of the following should be implemented:
 2. A systematic study of several oversight configurations for a strong model family, as in Experiment 1, that shows a robust relationship between tension measures and realized safety performance.
 3. An independent reproduction by a separate group that implements the same encoding on a different system family and domain.
 
-These steps remain strictly within the effective layer. They operate on observable summaries and finite evaluation libraries, not on hidden TU generative rules.
+These steps remain strictly within the effective layer.
+They operate on observable summaries and finite evaluation libraries, not on hidden TU generative rules.
 
 ### 9.3 Long term role in the TU program
 
 In the long run, Q124 is expected to serve as:
 
-* The reference node for oversight and evaluation problems in the AI cluster, defining common observables and tension measures.
-* A bridge between mathematical and socio technical nodes, by treating oversight as a structured tension field rather than only as policy.
-* A testing ground for WFGY and TU based tools that aim to stabilize reasoning and evaluation in regimes where human intuition alone is no longer sufficient.
+* the reference node for oversight and evaluation problems in the AI cluster, defining common observables and tension measures,
+* a bridge between mathematical and socio technical nodes, by treating oversight as a structured tension field rather than only as policy,
+* a testing ground for WFGY and TU based tools that aim to stabilize reasoning and evaluation in regimes where human intuition alone is no longer sufficient.
+
+As verification levels rise, Q124 components should become standard tools for evaluating and comparing AI systems along oversight dimensions.
 
 ---
 
@@ -857,29 +991,87 @@ The core question of Q124 is:
 
 > When the AI becomes much more capable than its overseers, and human time is limited, can we still design ways of checking and evaluating it that actually keep up.
 
-In the Tension Universe view, we do not try to list every possible oversight trick. Instead we ask:
+In the Tension Universe view, we do not try to list every possible oversight trick. Instead we ask three simple things.
 
-* How big is the gap between what the system really does and what humans can realistically see and judge.
-* How overloaded are the supervisors.
-* How badly do our tests and evaluations miss the parts of behavior that are most dangerous.
+1. How big is the gap between what the system really does and what humans can realistically see and judge.
+   This is the detection gap.
+2. How overloaded are the supervisors.
+   This is the load.
+3. How badly do our tests and evaluations miss the parts of behavior that are most dangerous.
+   This is the distribution shift and blind spot problem.
 
-We summarize these three ideas with three numbers:
+We summarize these three ideas with three normalized numbers:
 
 * detection gap,
 * load,
 * shift and blind spots.
 
-We combine them into a single tension score `DeltaS_oversight`. A low score means oversight is probably working. A high score means oversight is probably failing.
+We combine them into a single tension score `DeltaS_oversight`. Roughly:
 
-Then we imagine two kinds of worlds:
+* low tension means oversight is probably working in that configuration,
+* high tension means oversight is probably failing in that configuration.
 
-* In a good world, as the AI becomes more capable, we redesign oversight so that the tension score stays low. We find ways to focus human attention, use tools, and target tests so that serious problems stay rare and are usually caught.
-* In a bad world, no matter how we adjust oversight, the tension score eventually becomes large. The system finds ways around our tests, humans are overloaded, and big blind spots appear.
+Then we imagine two kinds of universes.
 
-Q124 does not prove which kind of world we live in. Instead, it gives us:
+* In a good universe, as the AI becomes more capable, we redesign oversight so that the tension score stays low. We find ways to focus human attention, use tools, and target tests so that serious problems stay rare and are usually caught.
+* In a bad universe, no matter how we adjust oversight, the tension score eventually becomes large. The system finds ways around our tests, humans are overloaded, and big blind spots appear.
+
+Q124 does not claim that we live in one universe or the other. Instead, it gives us:
 
 * a clear language for talking about the oversight problem,
 * specific observables we can track in real systems,
 * experiments that can show when a proposed way of measuring oversight is good or bad.
 
-By turning “scalable oversight” into a structured tension problem, Q124 becomes a template for designing, testing, and improving oversight schemes as AI systems move beyond human expert level.
+By turning scalable oversight into a structured tension problem, Q124 becomes a template for designing, testing, and improving oversight schemes as AI systems move beyond human expert level, without revealing or relying on any deep layer TU machinery.
+
+---
+
+## Tension Universe effective layer footer
+
+This page is part of the WFGY / Tension Universe S problem collection.
+
+### Scope of claims
+
+* The goal of this document is to specify an effective layer encoding of the scalable oversight problem described in Section 1.
+* It does not claim to solve or resolve the canonical scalable oversight problem in AI safety.
+* It does not introduce any new mathematical theorem or guarantee beyond what is already present in the cited literature and clearly labeled assumptions.
+* It should not be cited as evidence that any real world oversight regime is safe by itself, or that scalable oversight is achievable or impossible in practice.
+
+### Effective layer boundary
+
+* All objects used here
+
+  * state spaces `M`,
+  * observables such as `T_task`, `DeltaS_detect`, `DeltaS_load`, `DeltaS_shift`,
+  * tension scores and tensors such as `DeltaS_oversight` and `T_ij`,
+  * counterfactual worlds such as World T and World F,
+    are effective layer constructs.
+* This page does not specify:
+
+  * deep layer axioms or generative rules for TU,
+  * how raw code, logs, or organizational structures are mapped into TU fields,
+  * or any hidden dynamics for how tension evolves in time.
+* All references to oversight performance and safety are expressed through observable summaries and finite evaluation libraries.
+
+### Encoding and fairness
+
+* The quantities `DeltaS_detect`, `DeltaS_load`, `DeltaS_shift`, and `DeltaS_oversight` depend on an encoding element in the admissible class `A_over` defined in Section 3.3.
+* Different encoding choices correspond to different, explicitly versioned elements in `A_over`.
+  Comparisons of tension scores are only meaningful within a fixed encoding version.
+* Encodings are required to respect the TU Encoding and Fairness Charter, including:
+
+  * pre committing evaluation library construction procedures,
+  * avoiding the removal of rare but important failure modes from the metric,
+  * and forbidding after the fact rescaling that hides meaningful tension.
+
+### Falsifiability note
+
+* The experiments and protocols in Section 6 are designed to falsify or refine specific effective layer encodings of Q124.
+* Falsifying one encoding does not falsify the entire TU program, and it does not prove that scalable oversight is impossible.
+* Likewise, preliminary empirical support for one encoding does not prove that scalable oversight is solved, or that no further failure modes remain.
+
+This page should be read together with the following charters:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
