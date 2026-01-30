@@ -15,7 +15,7 @@ Status: Open
 Semantics: continuous
 E_level: E1
 N_level: N2
-Last_updated: 2026-01-29
+Last_updated: 2026-01-30
 ```
 
 ---
@@ -1043,5 +1043,6 @@ This page is part of the WFGY / Tension Universe S problem collection.
   * [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
   * [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
   * [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
+  * [TU Global Guardrails](../Charters/TU_GLOBAL_GUARDRAILS.md)
 
 These charters specify the shared rules for effective layer encodings, fairness constraints on encodings and experiments, and the interpretation of tension scales that are used across the Tension Universe program.
