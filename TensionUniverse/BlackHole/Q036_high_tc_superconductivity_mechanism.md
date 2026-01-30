@@ -1,3 +1,4 @@
+<!-- QUESTION_ID: TU-Q036 -->
 # Q036 · Microscopic mechanism of high temperature superconductivity
 
 ## 0. Header metadata
