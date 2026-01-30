@@ -15,8 +15,33 @@ Status: Reframed_only
 Semantics: hybrid
 E_level: E1
 N_level: N2
-Last_updated: 2026-01-26
+Last_updated: 2026-01-30
 ```
+
+## 0. Effective layer disclaimer
+
+All content in this entry is written strictly at the effective layer of the Tension Universe (TU) framework.
+
+* The goal of Q116 is to specify an effective-layer encoding of the foundations-of-mathematics problem.
+* It does not claim to prove or disprove any canonical foundational thesis.
+* It does not introduce new theorems beyond what is already established in the cited literature.
+* It must not be cited as evidence that the foundational problem of mathematics has been solved.
+
+More specifically:
+
+* All objects used here (state spaces `M`, observables, invariants, tension scores, counterfactual “worlds”) are effective-layer constructs.
+* No TU core axioms, no deep generative rules, and no raw-data-to-field mappings are defined or assumed to be final.
+* All scalar quantities that represent tension or risk are interpreted on the TU tension scale described in the TU Tension Scale Charter. Values near the low band correspond to low structural tension, values near the higher bands correspond to persistent or problematic tension.
+
+This page implements, for Q116:
+
+* the TU Effective Layer Charter,
+* the TU Encoding and Fairness Charter, and
+* the TU Tension Scale Charter
+
+in a way that is compatible with the hybrid semantics declared in the header. Precise links to these charters are given in the footer.
+
+Falsifying any particular encoding or parameter choice described here does not decide which foundational stance is correct. It only shows that the tested encoding is not an adequate effective-layer model for Q116 under the TU charters.
 
 ---
 
@@ -33,41 +58,45 @@ The foundational problem of mathematics, in the sense used here, asks:
   * core results remain stable under extensions,
   * and the resulting system does not collapse under internal inconsistency or unmanageable independence phenomena?
 
-Classically, at least four major foundational stances are distinguished:
+Classically, at least four major foundational stances are distinguished.
 
 1. Set-theoretic foundations
-   Mathematics is built inside a set-theoretic universe, for example ZFC or ZFC extended by large cardinal axioms. Objects are sets, and other entities are coded in set language.
+   Mathematics is built inside a set-theoretic universe such as ZFC or ZFC extended by large cardinal axioms. Objects are sets, and other entities are coded in set language.
 
 2. Type-theoretic and proof-theoretic foundations
-   Mathematics is represented via typed systems (simple type theory, dependent type theory, Calculus of Constructions, etc.), often with constructive or intuitionistic features, and sometimes with additional principles like univalence.
+   Mathematics is represented via typed systems (for example simple type theory, dependent type theory, Calculus of Constructions), often with constructive or intuitionistic features, and sometimes with additional principles such as univalence.
 
 3. Category-theoretic foundations
-   Structures and morphisms are taken as primary; frameworks like ETCS (Elementary Theory of the Category of Sets) or higher topos theory provide an alternative to classical set theory as the base language.
+   Structures and morphisms are taken as primary. Frameworks such as ETCS (Elementary Theory of the Category of Sets) or higher topos theory provide an alternative to classical set theory as the base language.
 
 4. Pluralist and practice-based views
    Different areas of mathematics may legitimately use different foundational frameworks. What matters is the stability of practice, not a single privileged ontology.
 
-Q116 does not choose one of these as "true". Instead, it encodes how these candidate foundations generate and resolve consistency_tension when they are used to host the actual body of mathematics.
+Q116 does not choose one of these as “true”. Instead, it encodes how these candidate foundations generate and resolve consistency_tension when they are used to host the actual body of mathematics.
 
 ### 1.2 Status and difficulty
 
 From a traditional perspective:
 
 * There is no consensus on a single final foundation of mathematics.
-* ZFC remains the de facto base for much of pure mathematics, yet:
 
-  * independence results (for example Continuum Hypothesis, large cardinals) show that ZFC alone is not enough to settle many natural questions,
+* ZFC remains the de facto base for much of pure mathematics, but:
+
+  * independence results (for example around the Continuum Hypothesis or large cardinals) show that ZFC alone is not enough to settle many natural questions,
   * alternative foundations are actively developed and used in proof assistants and structural mathematics.
-* Philosophical debates (platonism, formalism, structuralism, etc.) remain unresolved.
 
-From the Tension Universe viewpoint, Q116 is not an "open problem" in the sense of a single theorem, but an ongoing structural question:
+* Philosophical debates (platonism, formalism, structuralism, and related views) remain unresolved.
+
+From the Tension Universe viewpoint, Q116 is not an “open problem” in the sense of a single theorem. It is an ongoing structural question:
 
 * How stable are different foundational frameworks under expansion of mathematical practice?
-* When do they produce low consistency_tension worlds, and when do they generate unavoidable high tension?
+* When do they produce low consistency_tension worlds, and when do they generate unavoidable high tension, even if they remain formally consistent?
+
+Q116, at E1 and N2, only reframes this as a tension-encoding problem. It does not claim to settle any philosophical debate about which foundation is ultimately correct.
 
 ### 1.3 Role in the BlackHole project
 
-Within the BlackHole S-problem collection, Q116 plays several roles:
+Within the BlackHole S-problem collection, Q116 plays several roles.
 
 1. It is the anchor node for foundations-of-mathematics questions, providing:
 
@@ -81,16 +110,16 @@ Within the BlackHole S-problem collection, Q116 plays several roles:
 
 3. It supplies reusable components:
 
-   * a FoundationProfileField for representing foundational choices,
-   * a FoundationTensionFunctional for quantifying tension between expressive power, consistency risk, practice alignment, and plurality.
+   * a `FoundationProfileField` for representing foundational choices,
+   * a `FoundationTensionFunctional` for quantifying tension between expressive power, consistency risk, practice alignment, and plurality.
 
 ### References
 
-1. Stanford Encyclopedia of Philosophy, "Foundations of Mathematics", latest revision, entry by multiple authors, covering set-theoretic, type-theoretic, and category-theoretic approaches.
-2. Stanford Encyclopedia of Philosophy, "Philosophy of Mathematics", latest revision, covering platonism, formalism, structuralism, and related positions.
-3. K. Kunen, "Set Theory: An Introduction to Independence Proofs", North-Holland, 1980.
-4. S. Mac Lane, "Categories for the Working Mathematician", 2nd edition, Springer, 1998.
-5. T. Coquand and G. Huet, early papers on the Calculus of Constructions and type-theoretic foundations (for example, "The Calculus of Constructions", Information and Computation, 1988).
+1. Stanford Encyclopedia of Philosophy, “Foundations of Mathematics”, latest revision, entry by multiple authors, covering set-theoretic, type-theoretic, and category-theoretic approaches.
+2. Stanford Encyclopedia of Philosophy, “Philosophy of Mathematics”, latest revision, covering platonism, formalism, structuralism, and related positions.
+3. K. Kunen, “Set Theory: An Introduction to Independence Proofs”, North-Holland, 1980.
+4. S. Mac Lane, “Categories for the Working Mathematician”, second edition, Springer, 1998.
+5. T. Coquand and G. Huet, early papers on the Calculus of Constructions and type-theoretic foundations, for example “The Calculus of Constructions”, Information and Computation, 1988.
 
 ---
 
@@ -106,7 +135,7 @@ These provide prerequisites and tools that Q116 reuses.
   Reason: Supplies set-theoretic background (ZFC, CH, independence) that Q116 treats as one major class of foundational systems.
 
 * Q115 (BH_PHIL_INDUCTION_L3_115)
-  Reason: Provides InductionTensionFunctional and inductive-consistency concepts used to describe how evidence and axioms interact in foundational choices.
+  Reason: Provides `InductionTensionFunctional` and inductive-consistency concepts used to describe how evidence and axioms interact in foundational choices.
 
 * Q119 (BH_PHIL_PROB_MEANING_L3_119)
   Reason: Supplies probability-of-meaning structures used to model belief profiles over foundational frameworks.
@@ -116,13 +145,13 @@ These provide prerequisites and tools that Q116 reuses.
 These reuse Q116 components or depend on its tension structure.
 
 * Q017 (BH_MATH_LARGE_CARDINALS_L3_017)
-  Reason: Reuses FoundationTensionFunctional to evaluate how large cardinal axioms change consistency and practice tension.
+  Reason: Reuses `FoundationTensionFunctional` to evaluate how large cardinal axioms change consistency and practice tension.
 
 * Q121 (BH_AI_ALIGNMENT_L3_121)
   Reason: Uses foundational tension components to analyze which formal systems AI safety arguments rely on.
 
 * Q122 (BH_AI_THEOREM_PROVING_L3_122)
-  Reason: Reuses FoundationProfileField and FoundationTensionFunctional to evaluate AI theorem-proving stacks and proof assistants.
+  Reason: Reuses `FoundationProfileField` and `FoundationTensionFunctional` to evaluate AI theorem-proving stacks and proof assistants.
 
 ### 2.3 Parallel problems
 
@@ -132,20 +161,20 @@ Parallel nodes share similar tension types but not direct component dependence.
   Reason: Both problems encode deep bridges between conceptual levels as consistency_tension on cognitive representations.
 
 * Q115 (BH_PHIL_INDUCTION_L3_115)
-  Reason: Both treat reasoning practices as sources of structural tension; Q115 focuses on empirical induction, Q116 on formal mathematical foundations.
+  Reason: Both treat reasoning practices as sources of structural tension. Q115 focuses on empirical induction, Q116 on formal mathematical foundations.
 
 ### 2.4 Cross-domain edges
 
 These connect Q116 to nodes in other domains that can reuse its components.
 
 * Q059 (BH_CS_INFO_THERMODYN_L3_059)
-  Reason: Uses FoundationTensionFunctional to relate foundational choices in mathematics to information-theoretic and thermodynamic limits of computation.
+  Reason: Uses `FoundationTensionFunctional` to relate foundational choices in mathematics to information-theoretic and thermodynamic limits of computation.
 
 * Q104 (BH_SOC_INEQUALITY_DYNAMICS_L3_104)
-  Reason: Uses EvidenceWorldGraph and foundation profiles to study how different mathematical models of inequality depend on foundational assumptions.
+  Reason: Uses `EvidenceWorldGraph` and foundation profiles to study how different mathematical models of inequality depend on foundational assumptions.
 
 * Q123 (BH_AI_INTERP_L3_123)
-  Reason: Reuses FoundationProfileField to interpret how AI internal representations encode or approximate particular foundational frameworks.
+  Reason: Reuses `FoundationProfileField` to interpret how AI internal representations encode or approximate particular foundational frameworks.
 
 ---
 
@@ -159,7 +188,7 @@ All content in this block is at the effective layer. We only describe:
 * singular set and domain restrictions,
 * admissible encoding class and fairness rules.
 
-No deep TU generative rule, no raw-data-to-field construction is specified.
+No deep TU generative rule and no raw-data-to-field construction are specified. All scalar quantities that represent tension or risk are intended to live on the TU tension scale described in the TU Tension Scale Charter. Values close to 0 belong to the low-tension band, values closer to 1 belong to higher-tension bands.
 
 ### 3.1 State space
 
@@ -169,25 +198,32 @@ We assume a semantic state space
 M
 ```
 
-where each state `m in M` represents a coherent "foundational configuration" at the effective layer. A state includes, in summarized form:
+where each state `m in M` represents a coherent “foundational configuration” at the effective layer. A state includes, in summarized form:
 
-* A finite code for one or more foundational systems:
+* A finite code for one or more foundational systems, for example:
 
-  * for example, "ZFC", "ZFC + large cardinals up to level L", "dependent type theory with univalence", "ETCS-style categorical foundation".
-* A description of which areas of mathematics are being hosted:
+  * “ZFC”,
+  * “ZFC with large cardinals up to level L”,
+  * “dependent type theory with univalence”,
+  * “ETCS-style categorical foundation”.
 
-  * for example, classical analysis, algebraic geometry, homotopy theory.
-* A profile of how working mathematicians in the modeled community actually reason:
+* A description of which areas of mathematics are being hosted, for example:
+
+  * classical analysis,
+  * algebraic geometry,
+  * homotopy theory.
+
+* A profile of how working mathematicians in the modeled community actually reason, for example:
 
   * whether they explicitly track foundations,
   * whether they freely mix set-theoretic and category-theoretic language,
   * whether they appeal to large cardinal axioms in practice.
 
-We do not specify how such states are constructed from surveys, libraries, or historical data. We only assume that for each modeled ecosystem there exist states `m` that encode these summaries in a stable, finite way.
+We do not specify how such states are constructed from surveys, libraries, or historical data. We only assume that for each modeled ecosystem there exist states `m` that encode these summaries in a stable, finite way, compatible with the declared hybrid semantics.
 
 ### 3.2 Effective fields and observables
 
-We introduce the following observables on `M`.
+We introduce the following observables on `M`. All normalized scalar observables below take values in the closed interval `[0, 1]` and are interpreted on the TU tension scale.
 
 1. Foundation system field
 
@@ -196,7 +232,7 @@ F_system(m)
 ```
 
 * Takes values in a finite or countable library `L_ref` of canonical foundational frameworks and their controlled combinations.
-* Encodes which foundational system(s) are explicitly adopted in state `m`.
+* Encodes which foundational system or systems are explicitly adopted in state `m`.
 
 2. Expressive power observable
 
@@ -204,7 +240,7 @@ F_system(m)
 Expressive_power(m)
 ```
 
-* A scalar in the closed interval `[0, 1]`.
+* A scalar in `[0, 1]`.
 * Intuitively: the fraction of mainstream mathematics that can be represented and proved in a reasonably natural way inside the foundation encoded by `F_system(m)`.
 
 3. Consistency risk observable
@@ -214,7 +250,7 @@ Consistency_risk(m)
 ```
 
 * A scalar in `[0, 1]`.
-* Low values indicate strong confidence in consistency (for example, conservative extensions, well-understood proof theory).
+* Low values indicate strong confidence in consistency (for example conservative extensions, well-understood proof theory).
 * High values indicate perceived or modeled risk, for example:
 
   * dependence on strong large cardinal axioms,
@@ -258,7 +294,7 @@ All these observables are assumed to be well defined and finite on a regular sub
 
 ### 3.3 Mismatch components
 
-We define three mismatch components that will later be combined into a single foundational tension measure.
+We define three mismatch components that will later be combined into a single foundational tension measure. Their values are also interpreted on the TU tension scale.
 
 We introduce constants:
 
@@ -267,7 +303,7 @@ c_tol in (0, 1]
 P_max > 0
 ```
 
-These are fixed when an encoding is chosen, and do not depend on which world is realized.
+These are fixed when an encoding is chosen and do not depend on which world is realized.
 
 1. Consistency mismatch
 
@@ -326,11 +362,11 @@ DeltaS_found(m) =
 + w_plurality   * DeltaS_plurality(m)
 ```
 
-This scalar lies in `[0, 1]` and measures overall foundational tension in state `m`.
+This scalar lies in `[0, 1]` on the TU tension scale and measures overall foundational tension in state `m`.
 
 ### 3.5 Effective tension tensor
 
-In line with the TU core, we assume an effective semantic tension tensor with entries:
+In line with the TU core format, we assume an effective semantic tension tensor with entries:
 
 ```txt
 T_ij(m) = S_i(m) * C_j(m) * DeltaS_found(m) * lambda(m) * kappa
@@ -338,13 +374,13 @@ T_ij(m) = S_i(m) * C_j(m) * DeltaS_found(m) * lambda(m) * kappa
 
 where:
 
-* `S_i(m)` is a source-like factor representing the strength of the ith foundational demand in configuration `m` (for example, pressure from a particular area of mathematics).
+* `S_i(m)` is a source-like factor representing the strength of the ith foundational demand in configuration `m` (for example pressure from a particular area of mathematics).
 * `C_j(m)` is a receptivity-like factor representing how sensitive the jth cognitive or institutional layer is to foundational instabilities.
 * `DeltaS_found(m)` is the scalar mismatch defined above.
-* `lambda(m)` is a convergence-state factor capturing local reasoning mode (convergent, recursive, divergent, chaotic).
+* `lambda(m)` is a convergence-state factor capturing local reasoning mode (for example convergent, recursive, divergent, chaotic).
 * `kappa` is a constant that sets the overall scale of foundational tension in this encoding.
 
-Indices `i` and `j` index effective-layer components, not deep generative elements. We only require that `T_ij(m)` be finite for states in the regular domain.
+Indices `i` and `j` index effective-layer components, not deep generative elements. We only require that `T_ij(m)` be finite for states in the regular domain and that increases in `DeltaS_found(m)` are reflected as increases in tension on the TU tension scale.
 
 ### 3.6 Singular set and domain restriction
 
@@ -368,14 +404,16 @@ We then restrict all Q116 analysis to:
 M_reg = M \ S_sing
 ```
 
-Any attempt to evaluate `DeltaS_found(m)` or `T_ij(m)` on `m in S_sing` is treated as "out of domain". Such failures are not evidence for or against any particular foundational stance; they only indicate that the encoding broke down.
+Any attempt to evaluate `DeltaS_found(m)` or `T_ij(m)` on `m in S_sing` is treated as “out of domain”. Such failures are not evidence for or against any particular foundational stance. They only indicate that the encoding broke down or that the effective-layer summaries are not defined well enough.
 
 ### 3.7 Admissible encoding class and refinement
 
-To prevent post hoc tuning and hidden bias, we define an admissible encoding class:
+The rules in this block implement the TU Encoding and Fairness Charter for Q116.
+
+To prevent post hoc tuning and hidden bias:
 
 * The library `L_ref` of candidate foundational systems is fixed before any particular world or dataset is analyzed.
-* Constants `c_tol`, `P_max`, and weights `w_consistency`, `w_practice`, `w_plurality` are fixed when the encoding is chosen, and are not adjusted to fit specific outcomes.
+* Constants `c_tol`, `P_max`, and weights `w_consistency`, `w_practice`, `w_plurality` are fixed when the encoding is chosen and are not adjusted to fit specific outcomes.
 * Refinement is modeled by a sequence of encodings indexed by an integer `k`:
 
 ```txt
@@ -388,7 +426,7 @@ Each `refine(k)`:
 * improves estimates of `Expressive_power(m)`, `Consistency_risk(m)`, `Practice_alignment(m)`, and `Plurality_pressure(m)`,
 * respects the same `L_ref`, `c_tol`, `P_max`, and weight values.
 
-An encoding is admissible only if, for world-representing states `m_k` at successive refinement levels, changes in `DeltaS_found(m_k)` reflect genuine changes in modeled information, not arbitrary retuning of parameters.
+An encoding is admissible only if, for world-representing states `m_k` at successive refinement levels, changes in `DeltaS_found(m_k)` reflect genuine changes in modeled information, not arbitrary retuning of parameters. Within the TU tension scale, admissible refinements may move specific states between bands, but they may not erase clearly persistent high-tension or low-tension patterns through parameter readjustment.
 
 ---
 
@@ -404,18 +442,16 @@ We define the foundational tension functional:
 Tension_found(m) = DeltaS_found(m)
 ```
 
-with `DeltaS_found(m)` as in Block 3.
+with `DeltaS_found(m)` as in Block 3, interpreted on the TU tension scale.
 
-Interpretation:
-
-* `Tension_found(m)` near 0:
+* `Tension_found(m)` near the low-tension band:
 
   * expressive foundations,
   * controlled consistency risk,
   * good alignment with practice,
   * manageable plurality.
 
-* `Tension_found(m)` near 1:
+* `Tension_found(m)` in medium or high bands:
 
   * strong expressive demands with high risk,
   * large gaps between explicit foundations and practice,
@@ -423,19 +459,21 @@ Interpretation:
 
 ### 4.2 Low-tension foundational regimes
 
-At the effective layer, we say that a foundational regime is in a low-tension zone if there exist world-representing states `m_T` along an admissible refinement chain such that:
+At the effective layer, we say that a foundational regime is in a low-tension zone if there exist world-representing states `m_T(k)` along an admissible refinement chain such that:
 
 ```txt
 Tension_found(m_T(k)) <= epsilon_found
 ```
 
-for all sufficiently large refinement levels `k`, with some fixed threshold `epsilon_found` in `(0, 1)` that does not grow without bound as `k` increases.
+for all sufficiently large refinement levels `k`, with some fixed threshold `epsilon_found` in `(0, 1)`.
+
+The threshold `epsilon_found` is chosen to lie in the low-tension band of the TU tension scale, as specified by the TU Tension Scale Charter. It is not allowed to grow without bound as `k` increases.
 
 In words:
 
 * as mathematics expands and more areas are incorporated,
 * and as the encoding becomes more fine-grained,
-* the combination of expressive power, consistency risk, practice alignment, and plurality remains acceptably balanced.
+* the combination of expressive power, consistency risk, practice alignment, and plurality remains acceptably balanced and does not leave the low-tension band for mature states.
 
 ### 4.3 High-tension foundational regimes
 
@@ -447,13 +485,15 @@ Tension_found(m_F(k)) >= delta_found
 
 for infinitely many refinement levels `k`, with `delta_found` independent of `k`.
 
+The constant `delta_found` is chosen to lie in a medium-to-high band on the TU tension scale, indicating persistent structural tension that does not vanish under refinement.
+
 In words:
 
 * as we incorporate more of mathematics and refine our view,
 * foundational conflicts, practice misalignments, or unmanageable plurality persist,
 * and cannot be tuned away within the admissible encoding class.
 
-Q116, at the effective layer, is the problem of understanding whether and how mathematics can inhabit low-tension versus high-tension foundational regimes, and how to measure that difference without choosing a specific foundational doctrine as "true".
+Q116, at the effective layer, is the problem of understanding whether and how mathematics can inhabit low-tension versus high-tension foundational regimes, and how to measure that difference without choosing a specific foundational doctrine as “true”.
 
 ---
 
@@ -482,14 +522,14 @@ In World T:
    Tension_found(m_T(k)) <= epsilon_found
    ```
 
-   for a small fixed threshold `epsilon_found` and all sufficiently large `k`.
+   for a small fixed threshold `epsilon_found` in the low-tension band and all sufficiently large `k`.
 
 3. Alternative foundational systems in `L_ref` may exist, but:
 
    * either they embed into the preferred foundation without much extra tension,
    * or they are clearly seen as local tools rather than competitors for the global role.
 
-World T does not assert that one particular named foundation (for example ZFC) is metaphysically correct. It only describes the existence of low-tension regimes under the chosen observables.
+World T does not assert that one particular named foundation, such as ZFC, is metaphysically correct. It only describes the existence of low-tension regimes under the chosen observables and the TU tension scale.
 
 ### 5.2 World F: structurally fragile foundations
 
@@ -510,11 +550,11 @@ In World F:
    Tension_found(m_F(k)) >= delta_found
    ```
 
-   for a strictly positive `delta_found` and infinitely many `k`.
+   for a strictly positive `delta_found` in a medium-to-high tension band and infinitely many `k`.
 
 3. No single foundational system, and no small tightly integrated cluster, can provide a stable home for the full scope of mathematics. Attempting to reduce plurality only shifts tension into other components.
 
-World F does not claim that our universe matches such a scenario; it serves as a contrastive case to stress-test the encoding.
+World F does not claim that our universe matches such a scenario. It serves as a contrastive case to stress-test the encoding.
 
 ### 5.3 Interpretive note
 
@@ -522,7 +562,7 @@ The distinction between World T and World F:
 
 * does not appeal to deep TU generative rules,
 * does not assert any metaphysical thesis about mathematical objects,
-* only relies on patterns in `Expressive_power`, `Consistency_risk`, `Practice_alignment`, `Plurality_pressure`, and `Tension_found(m)` over refinement chains.
+* only relies on patterns in `Expressive_power`, `Consistency_risk`, `Practice_alignment`, `Plurality_pressure`, and `Tension_found(m)` over refinement chains, interpreted through the TU tension scale.
 
 ---
 
@@ -539,16 +579,17 @@ These experiments do not solve the foundational problem. They only test TU encod
 ### Experiment 1: Synthetic foundational ecosystems
 
 *Goal:*
-Check whether `DeltaS_found(m)` tracks obvious differences between toy ecosystems with stable vs unstable foundations.
+Check whether `DeltaS_found(m)` tracks clear differences between toy ecosystems with stable and unstable foundations.
 
 *Setup:*
 
-* Construct several synthetic "mathematical ecosystems" with elements such as:
+* Construct several synthetic “mathematical ecosystems” with elements such as:
 
   * a list of theories (for example arithmetic, analysis, topology),
   * an explicit foundational system or combination from `L_ref`,
   * known independence or inconsistency issues,
   * a simple model of how mathematicians in that toy world actually reason.
+
 * For each ecosystem, construct a state `m` in `M_reg` with:
 
   * `F_system(m)` set to the chosen foundation or cluster,
@@ -560,32 +601,36 @@ Check whether `DeltaS_found(m)` tracks obvious differences between toy ecosystem
 *Protocol:*
 
 1. Define a small library `L_ref` of foundational frameworks used in the toy ecosystems.
+
 2. Choose admissible constants `c_tol`, `P_max`, and weights `w_consistency`, `w_practice`, `w_plurality` before inspecting the synthetic cases.
+
 3. For each ecosystem, compute:
 
    * `DeltaS_consistency(m)`,
    * `DeltaS_practice(m)`,
    * `DeltaS_plurality(m)`,
-   * `DeltaS_found(m)` and `Tension_found(m)`.
-4. Label each ecosystem by an independent human judgment as "stable" or "unstable" with respect to foundations.
-5. Compare the distribution of `Tension_found(m)` between stable and unstable cases.
+   * `DeltaS_found(m)` and `Tension_found(m)` on the TU tension scale.
+
+4. Label each ecosystem by an independent human judgment as “stable” or “unstable” with respect to foundations.
+
+5. Compare the distribution of `Tension_found(m)` between stable and unstable cases and inspect how they cluster across low and higher tension bands.
 
 *Metrics:*
 
-* Mean and variance of `Tension_found(m)` for stable vs unstable ecosystems.
-* Rate at which high-tension scores coincide with ecosystems that are clearly fragile by construction.
-* Robustness of rankings under small admissible changes in parameters.
+* Mean and variance of `Tension_found(m)` for stable and unstable ecosystems.
+* Rate at which high-tension scores (medium or high bands) coincide with ecosystems that are clearly fragile by construction.
+* Robustness of rankings and band assignments under small admissible changes in parameters.
 
 *Falsification conditions:*
 
-* If, across the toy ecosystems, there is no consistent separation between stable and unstable cases in terms of `Tension_found(m)`, then the current encoding of `DeltaS_found` is considered falsified at the effective layer.
-* If small admissible changes to `c_tol`, `P_max`, or weights can arbitrarily reverse the ordering of obviously stable and obviously unstable ecosystems, the encoding is considered too unstable and rejected.
+* If, across the toy ecosystems, there is no consistent separation between stable and unstable cases in terms of `Tension_found(m)` and their band assignments on the TU tension scale, then the current encoding of `DeltaS_found` is considered falsified at the effective layer.
+* If small admissible changes to `c_tol`, `P_max`, or weights can arbitrarily reverse the ordering of obviously stable and obviously unstable ecosystems, or move them between bands without clear structural reasons, the encoding is considered too unstable and rejected.
 
 *Semantics implementation note:*
-All observables are treated as hybrid: discrete choices of foundations and continuous scores for expressive power, risk, alignment, and plurality. No additional semantics regime is introduced beyond the metadata declaration.
+All observables are treated under the hybrid semantics declared in the header: discrete choices of foundations and continuous scores for expressive power, risk, alignment, and plurality. No additional semantics regime is introduced beyond this.
 
 *Boundary note:*
-Falsifying TU encoding != solving canonical statement. This experiment can reject or refine Q116 encodings, but it does not settle the philosophical question of which foundations are correct.
+Falsifying a TU encoding in this experiment does not decide which foundational system is correct. It only shows that the tested encoding is not an adequate effective-layer model for Q116 under the TU charters.
 
 ---
 
@@ -601,6 +646,7 @@ Test whether `DeltaS_found(m)` captures real-world differences between proof ass
   * a corpus based on set-theoretic foundations,
   * a corpus based on dependent type theory,
   * possibly a corpus organized around category-theoretic primitives.
+
 * For each corpus, construct a state `m` in `M_reg` summarizing:
 
   * the scope of formalized mathematics (coverage of mainstream topics),
@@ -611,35 +657,41 @@ Test whether `DeltaS_found(m)` captures real-world differences between proof ass
 *Protocol:*
 
 1. Define `L_ref` to contain the foundations corresponding to the selected proof assistants.
+
 2. Fix admissible `c_tol`, `P_max`, and weights in advance.
+
 3. For each corpus state `m`:
 
    * estimate `Expressive_power(m)` based on coverage and richness,
    * estimate `Consistency_risk(m)` from the strength of extra axioms and known meta-theorems,
    * estimate `Practice_alignment(m)` from how closely the formalization reflects working mathematics,
    * estimate `Plurality_pressure(m)` from translation friction and cross-system dependencies.
+
 4. Compute `DeltaS_consistency(m)`, `DeltaS_practice(m)`, `DeltaS_plurality(m)`, and `DeltaS_found(m)`.
-5. Compare tension scores with independent expert judgments about how coherent and stable each ecosystem feels in day-to-day work.
+
+5. Compare tension scores and their band placement on the TU tension scale with independent expert judgments about how coherent and stable each ecosystem feels in day-to-day work.
 
 *Metrics:*
 
-* Relative ranking of `Tension_found(m)` across corpora.
-* Correlation between high tension scores and:
+* Relative ranking of `Tension_found(m)` across corpora and their positions in low versus higher tension bands.
+
+* Correlation between high-tension bands and:
 
   * reported cross-foundation pain points,
   * difficulties in maintaining libraries as foundations evolve.
-* Sensitivity of tension rankings under coarse changes in the coverage threshold used to define `Expressive_power(m)`.
+
+* Sensitivity of tension rankings and band assignments under coarse changes in the coverage threshold used to define `Expressive_power(m)`.
 
 *Falsification conditions:*
 
-* If the encoding persistently assigns lower tension to ecosystems that are widely regarded as more fragmented or conflict-prone, compared with ecosystems known to be comparatively stable, the encoding is misaligned and rejected.
-* If tension rankings change arbitrarily under small admissible parameter changes, without clear explanatory patterns, the encoding is too fragile and must be revised.
+* If the encoding persistently assigns lower tension, or places in lower bands, those ecosystems that are widely regarded as more fragmented or conflict-prone, compared with ecosystems known to be comparatively stable, the encoding is misaligned and rejected.
+* If tension rankings and band placements change arbitrarily under small admissible parameter changes, without clear explanatory patterns, the encoding is too fragile and must be revised.
 
 *Semantics implementation note:*
-The hybrid semantics is implemented as discrete types for foundation choices and continuous values for observables. The same regime is used for all corpora, with no per-corpus semantics change.
+The hybrid semantics is implemented uniformly for all corpora: foundations are discrete labels, while observables are normalized continuous values. The same semantics regime is used for all cases, with no per-corpus changes.
 
 *Boundary note:*
-Falsifying TU encoding != solving canonical statement. These experiments test how well Q116 encodes foundational practice; they do not decide the ultimate status of any particular foundation.
+Falsifying a TU encoding in this experiment does not settle the foundational problem. It only tests how well Q116 encodes aspects of foundational practice and proof assistant ecosystems.
 
 ---
 
@@ -664,12 +716,12 @@ We define several training signals for AI models engaged in formal reasoning or 
 3. `signal_foundation_plurality`
 
    * Definition: proportional to `DeltaS_plurality(m)` whenever the model mixes multiple foundational languages without clear separation.
-   * Intended use: encourage explicit signaling when crossing foundational boundaries.
+   * Intended use: encourage explicit signaling when crossing foundational boundaries and discourage unnecessary plurality.
 
 4. `signal_foundation_clarity`
 
    * Definition: a bonus signal that increases when the model clearly states which foundational assumptions its reasoning depends on.
-   * Intended use: make foundational commitments more transparent to users.
+   * Intended use: make foundational commitments more transparent to users and downstream systems.
 
 ### 7.2 Architectural patterns
 
@@ -681,18 +733,19 @@ We sketch module patterns that reuse Q116 observables.
 
      * which foundational framework is being used,
      * approximate values for `Expressive_power(m)`, `Consistency_risk(m)`, `Practice_alignment(m)`, `Plurality_pressure(m)`.
+
    * Interface:
 
-     * Input: embeddings of current conversation or proof state.
-     * Output: discrete foundation label plus continuous scores.
+     * Input: embeddings of the current conversation or proof state.
+     * Output: a discrete foundation label plus continuous scores for the observables.
 
 2. `FoundationTensionMonitor`
 
-   * Role: given the outputs of FoundationProfileHead, computes approximate `DeltaS_found(m)` and exposes it as a diagnostic signal.
+   * Role: given the outputs of `FoundationProfileHead`, computes approximate `DeltaS_found(m)` and exposes it as a diagnostic signal.
    * Interface:
 
      * Input: foundation profile summary.
-     * Output: scalar tension and optional decomposition into consistency, practice, and plurality components.
+     * Output: scalar tension on the TU tension scale and an optional decomposition into consistency, practice, and plurality components.
 
 3. `FoundationBridgeModule`
 
@@ -700,7 +753,7 @@ We sketch module patterns that reuse Q116 observables.
    * Interface:
 
      * Input: a statement or proof fragment under foundation A.
-     * Output: a candidate translation to foundation B, plus an estimate of how the translation affects `DeltaS_found(m)`.
+     * Output: a candidate translation to foundation B, plus an estimate of how the translation affects `DeltaS_found(m)` and the tension-band placement.
 
 ### 7.3 Evaluation harness
 
@@ -710,63 +763,62 @@ A simple harness for evaluating AI models with Q116-based modules.
 
    * Choose tasks where the same theorem or concept can be expressed in multiple foundations, for example:
 
-     * sets vs types,
-     * higher category language vs set-theoretic encodings.
+     * sets versus types,
+     * higher-category language versus set-theoretic encodings.
 
 2. Conditions
 
    * Baseline:
 
-     * model answers questions without any explicit foundation-tracking modules.
+     * The model answers questions without any explicit foundation-tracking modules.
+
    * TU-augmented:
 
-     * model uses FoundationProfileHead and FoundationTensionMonitor to:
+     * The model uses `FoundationProfileHead` and `FoundationTensionMonitor` to:
 
        * track foundational assumptions,
-       * warn when tension is high,
+       * warn when tension is in a medium or high band,
        * optionally adjust reasoning paths.
 
 3. Metrics
 
-   * Frequency of unmarked foundation shifts in baseline vs TU-augmented runs.
+   * Frequency of unmarked foundation shifts in baseline versus TU-augmented runs.
    * Consistency of reasoning when users ask to switch foundations mid-conversation.
    * User-rated clarity about which foundational assumptions each answer relies on.
+   * Changes in the distribution of `Tension_found(m)` bands across answers.
 
 ### 7.4 60-second reproduction protocol
 
 This is a minimal protocol for external users to experience the effect of Q116 modules.
 
-* Baseline setup
+* Baseline setup:
 
-  * Prompt: ask the AI to explain the difference between "doing analysis in ZFC" and "doing analysis in a dependent type theory", with no mention of foundations tracking.
-  * Observation: record:
+  * Prompt: ask the AI to explain the difference between “doing analysis in ZFC” and “doing analysis in a dependent type theory”, with no mention of foundation tracking.
+  * Observation: record whether the explanation mixes languages, and whether foundational assumptions are unclear or mislabelled.
 
-    * whether the explanation mixes languages,
-    * whether foundational assumptions are unclear or mislabelled.
+* TU-encoded setup:
 
-* TU-encoded setup
+  * Prompt: ask the same question, but require the AI to:
 
-  * Prompt: ask the same question, but require:
+    * explicitly declare foundational assumptions,
+    * explicitly discuss expressive power, consistency risk, practice alignment, and plurality,
+    * report an approximate tension level using Q116 concepts.
 
-    * explicit declaration of foundational assumptions,
-    * explicit discussion of expressive power, consistency risk, practice alignment, and plurality.
-  * Observation: record:
+  * Observation: record how clearly the model separates the two regimes and whether it can comment on tradeoffs using Q116 language.
 
-    * how clearly the model separates the two regimes,
-    * whether it can comment on tradeoffs using Q116 concepts.
-
-* Comparison metric
+* Comparison metric:
 
   * Use a simple rubric that scores:
 
     * foundational clarity,
     * internal coherence,
     * coverage of key tradeoffs.
-  * Compare baseline vs TU-encoded runs.
 
-* What to log
+  * Compare baseline versus TU-encoded runs and note changes in perceived tension.
 
-  * Inputs, outputs, and the internal tension estimates from FoundationTensionMonitor.
+* What to log:
+
+  * Inputs, outputs, and the internal tension estimates from `FoundationTensionMonitor`.
   * These logs allow later inspection without revealing any deep TU generative rule.
 
 ---
@@ -780,6 +832,7 @@ This block lists reusable components from Q116 and their direct reuse targets.
 1. ComponentName: `FoundationTensionFunctional`
 
    * Type: functional
+
    * Minimal interface:
 
      * Inputs:
@@ -790,48 +843,57 @@ This block lists reusable components from Q116 and their direct reuse targets.
        * `Practice_alignment(m)`
        * `Plurality_pressure(m)`
        * `Belief_profile_foundation(m; s)`
+
      * Output:
 
-       * `DeltaS_found(m)` in `[0, 1]`
+       * `DeltaS_found(m)` in `[0, 1]` on the TU tension scale.
+
    * Preconditions:
 
-     * All observables defined and finite on `m`,
-     * encoding parameters fixed according to an admissible scheme.
+     * All observables defined and finite on `m`.
+     * Encoding parameters fixed according to an admissible scheme under the TU Encoding and Fairness Charter.
 
 2. ComponentName: `FoundationProfileField`
 
    * Type: field
+
    * Minimal interface:
 
      * Inputs:
 
        * encoded summary of a mathematical or AI reasoning ecosystem,
+
      * Output:
 
        * a structured record containing `F_system(m)` and the associated observables used by `FoundationTensionFunctional`.
+
    * Preconditions:
 
-     * ecosystem summaries must be coherent enough to support a well-defined profile.
+     * Ecosystem summaries must be coherent enough to support a well-defined profile in the hybrid semantics regime.
 
 3. ComponentName: `CounterfactualFoundationWorld_Template`
 
    * Type: experiment_pattern
+
    * Minimal interface:
 
      * Inputs:
 
        * a model of a mathematical ecosystem,
        * a set of candidate foundational configurations,
+
      * Output:
 
        * a pair of experiment designs corresponding to:
 
          * a low-tension World T configuration,
          * a high-tension World F configuration,
-       * each with specific observables and falsification criteria.
+
+       * each with specific observables and falsification criteria on the TU tension scale.
+
    * Preconditions:
 
-     * the ecosystem model must allow specifying candidate foundations and their coverage.
+     * The ecosystem model must allow specifying candidate foundations and their coverage.
 
 ### 8.2 Direct reuse targets
 
@@ -840,13 +902,15 @@ This block lists reusable components from Q116 and their direct reuse targets.
    * Reused component:
 
      * `FoundationTensionFunctional`
+
    * Why it transfers:
 
-     * large cardinal axioms significantly affect consistency risk and expressive power; their role can be analyzed by the same functional.
+     * Large cardinal axioms significantly affect consistency risk and expressive power. Their role can be analyzed by the same functional.
+
    * What changes:
 
-     * emphasis on `Consistency_risk(m)` increases,
-     * specific features of large cardinal hierarchies are added as inputs to `F_system(m)`.
+     * Emphasis on `Consistency_risk(m)` increases.
+     * Specific features of large cardinal hierarchies are added as inputs to `F_system(m)`.
 
 2. Q121 (BH_AI_ALIGNMENT_L3_121)
 
@@ -854,36 +918,42 @@ This block lists reusable components from Q116 and their direct reuse targets.
 
      * `FoundationProfileField`
      * `FoundationTensionFunctional`
+
    * Why it transfers:
 
-     * AI alignment proofs and guarantees often rely on formal systems; Q116 modules help track and measure the foundational load of those proofs.
+     * AI alignment proofs and guarantees often rely on formal systems. Q116 modules help track and measure the foundational load of those proofs.
+
    * What changes:
 
-     * observables now reflect how AI safety arguments move between formal systems and how robust they are under foundational changes.
+     * Observables now reflect how AI safety arguments move between formal systems and how robust they are under foundational changes.
 
 3. Q122 (BH_AI_THEOREM_PROVING_L3_122)
 
    * Reused component:
 
      * `FoundationProfileField`
+
    * Why it transfers:
 
-     * AI theorem provers and proof assistants operate within explicit foundations; their behavior can be summarized by foundation profiles.
+     * AI theorem provers and proof assistants operate within explicit foundations. Their behavior can be summarized by foundation profiles.
+
    * What changes:
 
-     * inputs are proof corpora and internal architecture details instead of philosophical narratives.
+     * Inputs are proof corpora and internal architecture details instead of philosophical narratives.
 
 4. Q059 (BH_CS_INFO_THERMODYN_L3_059)
 
    * Reused component:
 
      * `CounterfactualFoundationWorld_Template`
+
    * Why it transfers:
 
-     * comparative experiments between different foundations can be used to study information-theoretic costs and thermodynamic implications of formal reasoning.
+     * Comparative experiments between different foundations can be used to study information-theoretic costs and thermodynamic implications of formal reasoning.
+
    * What changes:
 
-     * outputs include computational and physical cost metrics, not only tension scores.
+     * Outputs include computational and physical cost metrics, not only tension scores.
 
 ---
 
@@ -900,7 +970,8 @@ This block explains how Q116 fits into the TU verification ladder and what the n
     * state space `M`,
     * observables,
     * mismatch components,
-    * a combined `DeltaS_found(m)` and `Tension_found(m)`.
+    * a combined `DeltaS_found(m)` and `Tension_found(m)` interpreted on the TU tension scale.
+
   * At least two concrete experiment patterns with explicit falsification conditions have been described.
 
 * N_level: N2
@@ -910,13 +981,13 @@ This block explains how Q116 fits into the TU verification ladder and what the n
 
 ### 9.2 Next measurable step toward E2
 
-To upgrade Q116 from E1 to E2, at least one of the following should be implemented:
+To upgrade Q116 from E1 to E2, at least one of the following should be implemented.
 
 1. A prototype pipeline that:
 
    * ingests descriptions of synthetic foundational ecosystems,
    * instantiates states `m`,
-   * computes `DeltaS_found(m)` and `Tension_found(m)`,
+   * computes `DeltaS_found(m)` and `Tension_found(m)` and their band placement,
    * publishes tension profiles for inspection and critique.
 
 2. A pilot study on real proof assistant corpora that:
@@ -925,22 +996,24 @@ To upgrade Q116 from E1 to E2, at least one of the following should be implement
    * computes tension scores using fixed admissible parameters,
    * compares results with expert assessments of foundational stability.
 
-Both steps are compatible with effective-layer constraints, because they only operate on observable summaries and fixed parameters.
+Both steps are compatible with effective-layer constraints, because they only operate on observable summaries and fixed parameters, and they only interpret outputs through the TU tension scale.
 
 ### 9.3 Long-term role in the TU program
 
 In the long run, Q116 is intended to serve as:
 
-* The central node organizing how TU talks about mathematical foundations.
-* A calibration tool for:
+* the central node organizing how TU talks about mathematical foundations,
+
+* a calibration tool for:
 
   * evaluating how much foundational complexity AI systems inherit,
-  * guiding which formal systems are best suited as bases for long-term AI reasoning.
-* A bridge between:
+  * guiding which formal systems are best suited as bases for long-term AI reasoning,
+
+* a bridge between:
 
   * philosophical debates about foundations,
   * concrete engineering decisions in AI and verification tools,
-  * and structural questions about the future growth of mathematics.
+  * structural questions about the future growth of mathematics.
 
 ---
 
@@ -948,52 +1021,101 @@ In the long run, Q116 is intended to serve as:
 
 This explanation is meant for readers with little background, while still respecting the effective-layer structure.
 
-Mathematicians need some basic rules and objects to work with. These are called "foundations". Different people prefer different foundations:
+Mathematicians need some basic rules and objects to work with. These are called “foundations”. Different people prefer different foundations:
 
 * some take everything to be sets (set theory),
 * some work with typed expressions and proofs (type theory),
 * some start from structures and maps between them (category theory).
 
-In practice, most mathematics seems to work fine no matter which language you use, but:
+In practice, most mathematics seems to work reasonably well no matter which language you use, but:
 
 * some questions depend on very strong axioms,
 * some areas of mathematics are easier to express in one foundation than another,
 * and often mathematicians do not think about foundations at all in their daily work.
 
-Q116 does not try to decide which foundation is the "true" one. Instead, it asks:
+Q116 does not try to decide which foundation is the “true” one. Instead, it asks a different question:
 
 * How much tension is created when we try to host all of mathematics in a given foundational system?
-* Can we measure that tension using simple quantities like:
 
-  * how much of mathematics the system can express,
-  * how risky its axioms seem,
-  * how closely it matches everyday practice,
-  * how many different foundations we need at once?
+To talk about this, Q116 introduces a few simple quantities.
 
-We package these ideas into a single number called `Tension_found(m)` for each summarized state `m`:
+For each summarized state `m` representing a mathematical community and its chosen foundations, the encoding looks at:
 
-* If `Tension_found(m)` is small, that means:
+* how much of mainstream mathematics the foundation can express and prove (`Expressive_power`),
+* how risky its axioms seem (`Consistency_risk`),
+* how closely it matches everyday practice (`Practice_alignment`),
+* how many different foundations must be kept in play at once (`Plurality_pressure`).
+
+From these numbers, it builds a single score `Tension_found(m)` that lives on a common tension scale.
+
+* If `Tension_found(m)` sits in a low band, that means:
 
   * the foundation is powerful,
   * its risks seem controlled,
   * practice and theory mostly agree,
-  * and we do not need too many extra foundations.
+  * and we do not need too many extra foundations to get work done.
 
-* If `Tension_found(m)` is large, that means:
+* If `Tension_found(m)` sits in a higher band, that means:
 
   * there are serious worries about consistency,
   * practice and official foundations do not line up,
   * or we have to juggle many different systems without a clear way to combine them.
 
-Then we look at two kinds of imagined worlds:
+Q116 then imagines two broad scenarios.
 
-* In a low-tension world, as mathematics grows and becomes more complex, we can still keep `Tension_found(m)` reasonably small by refining our understanding without constantly changing the rules.
+* In a relatively good world for foundations (World T), as mathematics grows and becomes more complex, we can still keep `Tension_found(m)` in a low band by refining our understanding.
+* In a fragile world (World F), no matter how we adjust, tension stays high or even grows as more mathematics is added.
 
-* In a high-tension world, no matter how we choose foundations, tension stays high or even grows as more mathematics is added.
+Experiments based on Q116 do things such as:
 
-Experiments based on Q116 do things like:
-
-* build toy mathematical worlds and check whether the tension measure correctly flags fragile foundations,
+* build toy mathematical worlds and check whether the tension measure correctly flags foundations that are obviously fragile,
 * compare real proof assistant ecosystems to see which ones look more stable according to the same criteria.
 
-None of this proves which foundation is right. Instead, it gives a structured way to talk about how different foundations behave when they are used in real mathematical practice and in AI systems that reason about mathematics.
+None of this proves which foundation is right. Instead, it gives a structured way to talk about how different foundations behave when they are used in real mathematical practice and in AI systems that reason about mathematics, while staying strictly within the effective layer.
+
+---
+
+## Tension Universe effective-layer footer
+
+This page is part of the WFGY / Tension Universe BlackHole S-problem collection.
+
+### Scope of claims
+
+* The goal of this document is to specify an effective-layer encoding of the named problem.
+* It does not claim to prove or disprove the canonical statement in Section 1.
+* It does not introduce any new theorem beyond what is already established in the cited literature.
+* It should not be cited as evidence that the corresponding open problem in the foundations of mathematics has been solved.
+
+### Effective-layer boundary
+
+* All objects used in this page (state spaces `M`, observables, invariants, tension scores, counterfactual “worlds”) live at the effective layer of the TU framework.
+* No TU core axioms or deep generative rules are defined or assumed to be final here.
+* No claim is made that the definitions in this entry exhaust the mathematical or physical reality of foundations. They are only candidate encodings for structured discussion.
+
+### Encoding and fairness
+
+* The encoding choices for Q116 implement the TU Encoding and Fairness Charter.
+* Reference libraries, parameters, and weights are fixed before inspecting particular worlds or datasets and are not tuned to rescue any specific foundational stance.
+* Refinement of the encoding is allowed only when it reflects genuine new information or broader coverage, not to hide persistent patterns of high or low tension.
+
+### Tension scale
+
+* All tension quantities in this document, including `DeltaS_found(m)` and `Tension_found(m)`, are interpreted on the TU tension scale defined in the TU Tension Scale Charter.
+* References to low-tension or high-tension regimes mean placement in the corresponding bands on that common scale.
+* Comparisons of tension across problems within the BlackHole collection are intended to be meaningful only through this shared scale.
+
+### Experiments and falsifiability
+
+* The experiments in Section 6 are designed to falsify or refine specific Q116 encodings, not to certify any foundational system as universally correct.
+* Failure of an encoding in these experiments indicates that the current effective-layer model is inadequate under the TU charters.
+* Success of an encoding means only that it passes specified tests so far. It does not upgrade Q116 beyond E1 or settle the foundational problem.
+
+### Relation to TU charters
+
+This page should be read together with the following charters:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
+
+These charters define the common rules that govern all effective-layer encodings in the WFGY / Tension Universe program.
