@@ -1,16 +1,3 @@
-好，直接給你可以貼進 GitHub 的完整版 Q055 run2，已經把：
-
-* `## 0. Header metadata` 保留在最前面
-* 接上 `## 0. Effective layer disclaimer`
-* 補齊 encoding class / fairness、semantics、實驗邊界說明
-* 補強「不宣稱解決 GI」的句子
-* 統一 `Last_updated: 2026-01-30`
-* 最後加上標準 TU effective-layer footer ＋三個 Charter 連結（相對路徑）
-
-以下整段就是最終版內容。
-
----
-
 # Q055 · Graph isomorphism exact complexity
 
 ## 0. Header metadata
