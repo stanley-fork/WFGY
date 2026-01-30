@@ -1,4 +1,4 @@
-<!-- QUESTION_ID: TU-Q126-->
+<!-- QUESTION_ID: TU-Q126 -->
 # Q126 · Recursive self-improvement stability horizon
 
 ## 0. Header metadata
