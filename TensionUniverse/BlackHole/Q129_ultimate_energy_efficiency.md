@@ -5,18 +5,53 @@
 ```txt
 ID: Q129
 Code: BH_AI_ENERGY_LIMIT_L3_129
-Domain: AI
+Domain: Artificial intelligence
 Family: AI energy efficiency and thermodynamic limits
 Rank: S
-Projection_dominance: I
+Projection: I
 Field_type: dynamical_field
 Tension_type: thermodynamic_tension
-Status: Open
+Status: Reframed_only
 Semantics: hybrid
 E_level: E1
 N_level: N1
-Last_updated: 2026-01-27
+Last_updated: 2026-01-30
 ````
+
+---
+
+## 0. Effective layer disclaimer
+
+All statements in this entry are made strictly at the effective layer of the Tension Universe (TU) framework.
+
+* This page reframes the canonical problem of near non dissipative computing in terms of effective observables, tension functionals, band structures, and experiment patterns.
+* It does not claim to prove or disprove the canonical statement about ultimate physical limits to computation.
+* It does not introduce any new theorem beyond what is already established in the cited literature on thermodynamics of computation and energy limits.
+* It does not specify any TU deep layer axioms, generating rules, or constructive derivations of TU itself.
+* It does not provide any explicit mapping from raw microstates, circuit layouts, or detailed biological data into TU internal fields. All such mappings are treated as external data preparation steps.
+
+Encoding related statements in this page are understood as properties of an effective encoding class:
+
+```txt
+Enc_Q129 = {
+  E : E is a concrete implementation of the state space M_energy,
+      the observable library, the gap variable DeltaS_energy(m),
+      the energy tension functional Tension_energy(m),
+      and the band thresholds, in full accordance with all constraints
+      specified in Section 3
+}
+```
+
+Whenever this page refers to an "encoding", it means a concrete encoding instance `E in Enc_Q129` that has been fixed before examining particular systems. Mentions of a "TU core decision" only appear as effective layer notation for a generic tension tensor template. No deep layer TU axioms are specified or used here.
+
+Within any given study, benchmark, or deployment that uses Q129:
+
+* All systems under comparison must share the same encoding instance `E in Enc_Q129`.
+* Any encoding instance that is falsified by Experiments in Section 6 is considered retired for Q129 purposes. A replacement encoding `E' in Enc_Q129` must:
+
+  * document which parts of the observable library, gap variable, or functional have changed,
+  * be fixed before new data are evaluated,
+  * and be evaluated on fresh or clearly separated data splits to avoid retrofitting.
 
 ---
 
@@ -39,12 +74,12 @@ describe and constrain the class of computing systems that:
 
 in such a way that:
 
-* the notion of “near non dissipative computing” is expressed as a geometric and thermodynamic boundary in a well defined state space, and
+* the notion of "near non dissipative computing" is expressed as a geometric and thermodynamic boundary in a well defined state space, and
 * this boundary allows meaningful comparison between very different substrates, including biological brains, conventional digital hardware, and speculative reversible or adiabatic devices.
 
 In plain terms, Q129 asks:
 
-*What does it mean, in precise physical and geometric terms, for a computing system to be “as energy efficient as possible” without violating thermodynamics, and how close is the 20 W human brain to that frontier compared to artificial computing architectures?*
+*What does it mean, in precise physical and geometric terms, for a computing system to be "as energy efficient as possible" without violating thermodynamics, and how close is the 20 W human brain to that frontier compared to artificial computing architectures?*
 
 The goal is not to design a single optimal machine, but to formalize:
 
@@ -58,11 +93,11 @@ On the physics side, there are well known results:
 
 * Landauer style bounds that relate minimal energy dissipation to bit erasure at a given temperature.
 * Reversible computing theory that shows that, in principle, logically reversible computation can evade Landauer dissipation at the cost of other resources.
-* Results that bound the maximal rate of computation per unit energy or unit spacetime volume.
+* Results that bound the maximal rate of computation per unit energy or per unit spacetime volume.
 
 On the biology and engineering side, there are empirical constraints:
 
-* Measurements that place the human brain’s average power draw around 20 W.
+* Measurements that place the human brain power draw around 20 W on average.
 * Energy budgets that attribute large fractions of this power to signaling, synaptic activity, and metabolic maintenance.
 * Hardware measurements showing that modern digital devices operate many orders of magnitude above the Landauer limit for their operating temperatures.
 
@@ -70,15 +105,15 @@ Despite this, it remains difficult to compare very different systems in a unifie
 
 * respects thermodynamics,
 * accounts for geometry and communication overheads,
-* captures reliability and error correction costs, and
-* avoids arbitrary rescaling or post hoc parameter tuning.
+* captures reliability and error correction costs,
+* and avoids arbitrary rescaling or post hoc parameter tuning.
 
-The difficulty of Q129 at the canonical level is therefore twofold:
+The difficulty of Q129 at the canonical level is therefore twofold.
 
-1. Conceptually, to define a notion of “energy optimal computing” that is not tied to a single substrate, yet remains tightly anchored to physical limits.
+1. Conceptually, to define a notion of "energy optimal computing" that is not tied to a single substrate, yet remains tightly anchored to physical limits.
 2. Practically, to identify observables and protocols that can be measured or estimated across real systems, including brains and large scale AI hardware, in order to locate them relative to this frontier.
 
-No generally accepted, substrate independent framework currently exists that satisfies these constraints at the level required for Q129.
+No generally accepted, substrate independent framework currently exists that satisfies these constraints at the level required for Q129. This entry provides an effective layer reframing and an experiment pattern, not a canonical solution.
 
 ### 1.3 Role in the BlackHole project
 
@@ -89,17 +124,17 @@ Within the BlackHole collection, Q129 serves several roles.
 3. It offers a test bed for Tension Universe encodings that must bridge:
 
    * microscopic physical bounds,
-   * macroscopic architectural geometry, and
-   * effective computing behavior,
+   * macroscopic architectural geometry,
+   * and effective computing behavior,
 
-   without relying on ad hoc notions of “efficiency” that cannot be measured or falsified.
+   without relying on ad hoc notions of "efficiency" that cannot be measured or falsified.
 
 ### References
 
-1. R. Landauer, 1961. “Irreversibility and heat generation in the computing process.” IBM Journal of Research and Development, 5(3), 183–191.
-2. C. H. Bennett, 1982. “The thermodynamics of computation.” International Journal of Theoretical Physics, 21(12), 905–940.
-3. S. Lloyd, 2000. “Ultimate physical limits to computation.” Nature, 406, 1047–1054.
-4. D. Attwell and S. B. Laughlin, 2001. “An energy budget for signaling in the grey matter of the brain.” Journal of Cerebral Blood Flow and Metabolism, 21(10), 1133–1145.
+1. R. Landauer, 1961. "Irreversibility and heat generation in the computing process." IBM Journal of Research and Development, 5(3), 183 to 191.
+2. C. H. Bennett, 1982. "The thermodynamics of computation." International Journal of Theoretical Physics, 21(12), 905 to 940.
+3. S. Lloyd, 2000. "Ultimate physical limits to computation." Nature, 406, 1047 to 1054.
+4. D. Attwell and S. B. Laughlin, 2001. "An energy budget for signaling in the grey matter of the brain." Journal of Cerebral Blood Flow and Metabolism, 21(10), 1133 to 1145.
 
 ---
 
@@ -125,7 +160,7 @@ These problems provide prerequisites or tools that Q129 relies on at the effecti
 
 ### 2.2 Downstream problems
 
-These problems reuse components or rely on Q129’s tension structure.
+These problems reuse components or rely on Q129 tension structure.
 
 * Q122 (BH_AI_COMPUTE_GOVERN_L3_122)
   Reason: reuses the EnergyTensionIndex from Q129 to define compute governance thresholds and reporting obligations for large AI workloads.
@@ -134,7 +169,7 @@ These problems reuse components or rely on Q129’s tension structure.
   Reason: uses Q129 as a concrete case when relating information processing to free energy consumption and entropy production.
 
 * Q123 (BH_AI_INTERP_L3_123)
-  Reason: applies Q129’s dissipation geometry descriptors to interpret internal AI circuits as energy and resource patterns rather than pure logic.
+  Reason: applies Q129 dissipation geometry descriptors to interpret internal AI circuits as energy and resource patterns rather than pure logic.
 
 * Q125 (BH_AI_MULTIAGENT_L3_125)
   Reason: extends Q129 single system efficiency limits to multiagent or multi datacenter energy coupling patterns.
@@ -157,19 +192,19 @@ Parallel nodes share similar tension types but no direct component dependence.
 Cross domain edges connect Q129 to problems in other domains where its components transfer.
 
 * Q032 (BH_PHYS_QTHERMO_L3_032)
-  Reason: Q129’s EnergyTensionIndex and DissipationGeometryField transfer as concrete examples of thermodynamic cost in driven physical systems.
+  Reason: Q129 EnergyTensionIndex and DissipationGeometryField transfer as concrete examples of thermodynamic cost in driven physical systems.
 
 * Q091 (BH_EARTH_CLIMATE_SENS_L3_091)
   Reason: uses Q129 tension bands to relate global compute energy use and dissipation to climate energy budgets.
 
 * Q001 (BH_MATH_NUM_L3_001)
-  Reason: Q129 provides a model for “near optimal use of resources” when thinking about how close reasoning procedures can come to ideal complexity bounds.
+  Reason: Q129 provides a model for "near optimal use of resources" when thinking about how close reasoning procedures can come to ideal complexity bounds.
 
 ---
 
 ## 3. Tension Universe encoding (effective layer)
 
-This block defines the effective layer encoding of Q129. It only introduces state spaces, observables, invariants, tension functionals, and singular sets. It does not describe any hidden generative rules or mappings from raw data or microstates to internal Tension Universe fields.
+This block defines the effective layer encoding of Q129. It only introduces state spaces, observables, invariants, tension functionals, band structures, and singular sets. It does not describe any hidden generative rules or mappings from raw data or microstates to internal Tension Universe fields.
 
 ### 3.1 State space
 
@@ -185,7 +220,7 @@ with the following interpretation.
 * The configuration includes, in summarized form:
 
   * architecture geometry (for example distribution of compute units, wiring depth, locality of communication),
-  * workload distribution (for example which units are active, average rate of useful operations),
+  * workload distribution (for example which units are active and the average rate of useful operations),
   * energy and heat flow summaries at a finite resolution,
   * environmental parameters such as operating temperature and supply voltage.
 
@@ -197,7 +232,7 @@ The state space itself is treated as a set equipped with enough structure to sup
 
 ### 3.2 Observable library
 
-We fix a finite library of effective observables on `M_energy`. All tension functionals and invariants for Q129 must be built from this library and simple compositions thereof.
+We fix a finite library of effective observables on `M_energy`. All tension functionals and invariants for Q129 must be built from this library and simple compositions of it.
 
 For a state `m` in `M_energy`, a region `r` in the device, and a cut `C` across the device, we define:
 
@@ -230,7 +265,7 @@ e_min(m; r) = k_B * T_env(m; r) * ln 2 * N_erase(m; r)
 
 where:
 
-* `k_B` is Boltzmann like constant treated as a fixed parameter in the encoding,
+* `k_B` is a Boltzmann like constant treated as a fixed parameter in the encoding,
 * `ln 2` is the natural logarithm of 2,
 * `N_erase(m; r)` is the effective rate of logically irreversible operations in region `r`.
 
@@ -238,13 +273,33 @@ This reference plays the role of a lower bound on dissipation in `r` for a given
 
 We define an admissible encoding class for Q129 as follows.
 
-* All observables must be drawn from the library in 3.2, or built from them by continuous, monotone functions with fixed parameters.
-* The reference `e_min` must be computed using `T_env` and `N_erase` with fixed constants such as `k_B` and `ln 2`; no extra fudge factors are allowed.
-* Any global weight or scaling factor used in the tension functional must lie in a fixed interval, such as `[c_min, c_max]`, determined before examining particular systems.
-* Encoding choices are not allowed to depend on labels like “brain”, “GPU”, or “ASIC”. They may only depend on the values of observables and a small set of fixed environmental constants.
-* Once an encoding is fixed, it must be applied uniformly across all systems and workloads under study. Post hoc adjustment of parameters to favor a particular system is not permitted.
+* All observables must be drawn from the library in Section 3.2, or built from them by continuous, monotone functions with fixed parameters.
+* The reference `e_min` must be computed using `T_env` and `N_erase` with fixed constants such as `k_B` and `ln 2`. No additional compensating factors or target specific offsets are allowed.
+* Any global weight or scaling factor used in the tension functional must lie in a fixed interval such as `[c_min, c_max]`, determined before examining particular systems.
+* Encoding choices are not allowed to depend on labels like "brain", "GPU", or "ASIC". They may only depend on the values of observables and a small set of fixed environmental constants.
+* Once an encoding instance is fixed, it must be applied uniformly across all systems and workloads under study. Post hoc adjustment of parameters to favor a particular system is not permitted.
+* Within any given benchmark or policy study that uses Q129, all systems must share the same encoding instance `E in Enc_Q129`. Encoding cannot change between systems inside the same comparison set.
 
-This admissible class ensures that the tension functional cannot be tuned separately for each device in order to create artificial notions of optimality.
+We summarize the encoding class with the following notation.
+
+```txt
+Enc_Q129 = {
+  E : E implements M_energy, the observables in Section 3.2,
+      the reference e_min(m; r), the gap variable DeltaS_energy(m),
+      the energy tension functional Tension_energy(m),
+      and the band thresholds, while satisfying all fairness
+      and stability constraints listed in this section
+}
+```
+
+Replacement protocol:
+
+* If Experiments in Section 6 falsify an encoding instance `E in Enc_Q129`, then `E` is retired for Q129 purposes.
+* A new encoding instance `E' in Enc_Q129` must:
+
+  * document which parts of the mapping from observables to `DeltaS_energy` and `Tension_energy` have changed,
+  * be fixed before any new systems are evaluated,
+  * and be tested on fresh or clearly separated data splits to avoid retrofitting past failures.
 
 ### 3.4 Gap variables and tension tensor
 
@@ -265,12 +320,12 @@ DeltaS_energy(m) = H( {DeltaS_diss(m; r)}, G_geom(m), {I_coupling(m; C)} )
 where:
 
 * the set `{DeltaS_diss(m; r)}` runs over a finite partition of the device into regions,
-* `{I_coupling(m; C)}` runs over a finite set of cuts in the device, and
-* `H` is a non negative function chosen from the admissible encoding class.
+* `{I_coupling(m; C)}` runs over a finite set of cuts in the device,
+* `H` is a non negative function chosen from the admissible encoding class, with parameters fixed by a chosen encoding instance `E in Enc_Q129`.
 
-The function `H` can, for example, be a weighted sum or norm that emphasizes regions and cuts where dissipation is concentrated or where geometric constraints make cooling and communication difficult. Its parameters must be fixed once for the entire class of systems considered.
+The function `H` can, for example, be a weighted sum or norm that emphasizes regions and cuts where dissipation is concentrated or where geometric constraints make cooling and communication difficult. Its parameters must be fixed once for the entire class of systems considered under a given encoding instance.
 
-Using the TU core decision, we define a semantic tension tensor on `M_energy` in normal form:
+Using a TU core style decision template, we define a semantic tension tensor on `M_energy` in normal form:
 
 ```txt
 T_ij(m) = S_i(m) * C_j(m) * DeltaS_energy(m) * lambda(m) * kappa
@@ -283,17 +338,19 @@ where:
 * `lambda(m)` is a convergence like factor that captures whether the system is in a convergent, metastable, or unstable operating regime,
 * `kappa` is a fixed coupling constant that sets the overall scale of energy tension for Q129.
 
-The indices `i` and `j` label semantic directions at the effective layer; their specific enumeration is not required here as long as `T_ij(m)` is well defined and finite on the regular domain.
+The indices `i` and `j` label semantic directions at the effective layer. Their specific enumeration is not required here as long as `T_ij(m)` is well defined and finite on the regular domain.
+
+Mentions of this tensor pattern do not reveal or rely on any TU deep layer axioms. They are treated as a generic effective layer template.
 
 ### 3.5 Scale, refinement, and singular set
 
 We introduce a discrete scale parameter `k` that indexes the resolution at which the system is observed.
 
 * For each `k`, the device and time window are partitioned into a finite set of regions `r_k` and subwindows with bounded size.
-* The observables in 3.2 and the local gap `DeltaS_diss(m; r_k)` are defined for each such region and window.
+* The observables in Section 3.2 and the local gap `DeltaS_diss(m; r_k)` are defined for each such region and window.
 * The global gap `DeltaS_energy(m)` is defined as either:
 
-  * a limit of `H_k` applied to `DeltaS_diss(m; r_k)` as `k` increases, when this limit exists and is finite, or
+  * a limit of `H_k` applied to `DeltaS_diss(m; r_k)` as `k` increases when this limit exists and is finite, or
   * a stabilized value of `H_k` once further refinement changes the result by less than a fixed small tolerance.
 
 We identify a singular set:
@@ -312,7 +369,7 @@ and restrict all Q129 statements to the regular domain:
 M_reg = M_energy \ S_sing
 ```
 
-When an experiment attempts to evaluate `DeltaS_energy` for a state in `S_sing`, the outcome is treated as “out of domain for this encoding”, not as positive or negative evidence about the possibility of near non dissipative computing.
+When an experiment attempts to evaluate `DeltaS_energy` for a state in `S_sing`, the outcome is treated as "out of domain for this encoding instance", not as positive or negative evidence about the possibility of near non dissipative computing.
 
 ---
 
@@ -322,7 +379,7 @@ This block states how Q129 is characterized as a tension problem in the effectiv
 
 ### 4.1 Core energy tension functional
 
-We define an energy tension functional:
+For a fixed encoding instance `E in Enc_Q129` we define an energy tension functional:
 
 ```txt
 Tension_energy(m) = f_energy( DeltaS_energy(m), R_geom(m) )
@@ -330,7 +387,7 @@ Tension_energy(m) = f_energy( DeltaS_energy(m), R_geom(m) )
 
 where:
 
-* `DeltaS_energy(m)` is the global dissipation gap defined in 3.4,
+* `DeltaS_energy(m)` is the global dissipation gap defined in Section 3.4,
 * `R_geom(m)` is a simple dimensionless descriptor derived from `G_geom(m)` that captures key geometric difficulty, for example a function of average path length, fan out, and depth.
 
 A simple admissible choice for `f_energy` is:
@@ -339,7 +396,7 @@ A simple admissible choice for `f_energy` is:
 Tension_energy(m) = alpha * DeltaS_energy(m) * (1 + beta * R_geom(m))
 ```
 
-with fixed parameters `alpha > 0` and `beta >= 0` chosen once for the entire class of systems.
+with fixed parameters `alpha > 0` and `beta >= 0` chosen once for the entire class of systems under the encoding instance `E`.
 
 The functional must satisfy:
 
@@ -349,7 +406,7 @@ The functional must satisfy:
 
 ### 4.2 Band structure and critical surfaces
 
-We introduce two thresholds:
+For a fixed encoding instance `E in Enc_Q129` we introduce two thresholds:
 
 ```txt
 theta_low  > 0
@@ -364,15 +421,15 @@ and three qualitative bands for `m` in `M_reg`:
 
 2. **Near optimal band**
    `theta_low <= Tension_energy(m) <= theta_high`
-   Systems here reside close enough to the theoretical frontier that further reductions in dissipation require qualitative changes, such as new device physics, drastic geometry changes, or radical workload restructuring.
+   Systems in this band reside close enough to the theoretical frontier that further reductions in dissipation require qualitative changes, such as new device physics, drastic geometry changes, or radical workload restructuring.
 
 3. **Unphysical claim band**
    `Tension_energy(m) < theta_low`
    Configurations placed here are interpreted as suspicious with respect to the encoding, since they appear to claim performance that outperforms known physical limits or use unrealistic assumptions. In practice, such states suggest missing observables, measurement errors, or an invalid model.
 
-The thresholds `theta_low` and `theta_high` are fixed once for a given encoding and are chosen based on:
+The thresholds `theta_low` and `theta_high` are fixed once for a given encoding instance and are chosen based on:
 
-* theory informed estimates of how close any real system can approach the Landauer reference at practical temperatures, and
+* theory informed estimates of how close any real system can approach the Landauer reference at practical temperatures,
 * empirical data from the best known low energy computing prototypes.
 
 ### 4.3 The 20 W brain as a reference configuration
@@ -385,14 +442,11 @@ m_brain in M_reg
 
 constructed from empirical energy budgets and effective estimators for `p_comp`, `N_erase`, and `G_geom`.
 
-Without describing the construction, we posit that:
-
-* at the effective layer, the encoding can locate `m_brain` in one of the three tension bands defined above, and
-* Q129 asks whether it is possible to constrain the location of `m_brain` in a way that is stable across plausible choices of encoding within the admissible class.
+At the effective layer, the encoding instance `E in Enc_Q129` can locate `m_brain` in one of the three tension bands defined above. Q129 asks whether it is possible to constrain the location of `m_brain` in a way that is stable across plausible choices of encoding within `Enc_Q129`.
 
 The core tension principle for Q129 can then be stated as:
 
-*For a given workload class and thermodynamic environment, the combination of physical laws and geometric constraints induces critical surfaces in `M_reg` that separate unconstrained computing, near optimal computing, and unphysical claims, and the 20 W brain occupies a specific region relative to these surfaces.*
+*For a given workload class and thermodynamic environment, the combination of physical laws and geometric constraints induces critical surfaces in `M_reg` that separate unconstrained computing, near optimal computing, and unphysical claims. The 20 W brain occupies a specific region relative to these surfaces when evaluated under any encoding instance `E in Enc_Q129` that survives falsification tests.*
 
 ---
 
@@ -410,7 +464,7 @@ In World N:
    Tension_energy(m_N) can be made arbitrarily small
    ```
 
-   by evolving architectures along allowed directions within the admissible encoding class. These directions include reversible logic, adiabatic processes, and geometries that minimize communication overheads.
+   by evolving architectures along allowed directions within an encoding instance `E in Enc_Q129`. These directions include reversible logic, adiabatic processes, and geometries that minimize communication overheads.
 
 2. For physically realistic temperatures and noise constraints, there are known architectures whose tension lies firmly in the near optimal band, and these architectures are robust under refinement of measurement and modeling.
 
@@ -445,11 +499,11 @@ In World G:
 
 1. There is a structural geometric gap between microscopic bounds and macroscopic realizations. For example, communication delays and noise in large scale systems impose extra dissipation that scales with system size.
 
-2. In this world, there exist small, tightly integrated systems for which `Tension_energy(m)` can be made modestly small, but as system size grows, geometric factors drive tension up, and the near optimal band shrinks or disappears.
+2. There exist small, tightly integrated systems for which `Tension_energy(m)` can be made modestly small, but as system size grows, geometric factors drive tension up, and the near optimal band shrinks or disappears.
 
 3. The 20 W brain occupies a region that is closer to the frontier than most artificial systems at comparable scale, but still separated from the absolute limits by a geometry locked gap.
 
-4. Any realistic encoding within the admissible class places large scale data centers and very deep neural networks in the unconstrained band, with significant slack between current dissipation and what would be theoretically possible in an ideal geometry.
+4. Any realistic encoding instance in `Enc_Q129` places large scale data centers and very deep neural networks in the unconstrained band, with significant slack between current dissipation and what would be theoretically possible in an ideal geometry.
 
 These worlds do not claim to describe the actual universe. They clarify what kinds of tension patterns would be observed in the effective layer under different high level scenarios.
 
@@ -459,17 +513,17 @@ These worlds do not claim to describe the actual universe. They clarify what kin
 
 This block specifies experiments and protocols in the effective layer that can:
 
-* test the coherence and stability of the Q129 encoding, and
-* discriminate between different tension models or parameter choices.
+* test the coherence and stability of Q129 encoding instances,
+* and discriminate between different tension models or parameter choices.
 
-These experiments cannot prove or disprove any specific claim about the ultimate limits of computing, but they can falsify particular encodings of energy tension.
+These experiments cannot prove or disprove any specific claim about the ultimate limits of computing. They can falsify particular encoding instances in `Enc_Q129`.
 
 ### Experiment 1: device class ordering
 
-*Goal:*
-Test whether the EnergyTensionIndex encoding yields a stable and physically plausible ordering of different device classes with respect to energy efficiency.
+**Goal**
+Test whether an encoding instance `E in Enc_Q129` yields a stable and physically plausible ordering of different device classes with respect to energy efficiency.
 
-*Setup:*
+**Setup**
 
 * Select representative devices from several classes:
 
@@ -485,53 +539,53 @@ Test whether the EnergyTensionIndex encoding yields a stable and physically plau
   * approximate rates of useful operations and logically irreversible updates,
   * basic geometry descriptors such as size, depth, and communication structure.
 
-* Fix an admissible encoding, including constants and weights in `H`, `f_energy`, and `R_geom`, before computing any tension values.
+* Fix an encoding instance `E in Enc_Q129`, including constants and weights in `H`, `f_energy`, and `R_geom`, before computing any tension values.
 
-*Protocol:*
+**Protocol**
 
-1. For each device and workload, construct an effective state `m_data` in `M_reg` using observable estimates. The construction method is not specified in TU terms; it is treated as an external data preparation step.
+1. For each device and workload, construct an effective state `m_data` in `M_reg` using observable estimates. The construction method is not specified in TU terms. It is treated as an external data preparation step.
 2. Compute `DeltaS_diss(m_data; r)` for a chosen partition of each device and time window.
-3. Aggregate to `DeltaS_energy(m_data)` using the fixed function `H`.
-4. Compute `Tension_energy(m_data)` using the fixed function `f_energy`.
+3. Aggregate to `DeltaS_energy(m_data)` using the fixed function `H` from the encoding instance `E`.
+4. Compute `Tension_energy(m_data)` using the fixed function `f_energy` and geometry descriptor `R_geom`.
 5. Compare the tension values across device classes, paying attention to:
 
    * whether near Landauer style devices appear in a lower tension band than conventional CMOS at similar workloads,
-   * where neuromorphic and brain like systems fall in relation to both, and
-   * how sensitive these results are to small changes in encoding parameters within their allowed intervals.
+   * where neuromorphic and brain like systems fall in relation to both,
+   * and how sensitive these results are to small changes in encoding parameters that remain within the admissible ranges of `Enc_Q129`.
 
-*Metrics:*
+**Metrics**
 
 * Distribution of `Tension_energy(m_data)` for each device class.
 * Relative ordering of tension bands across devices for matched workloads and temperatures.
-* Sensitivity measures showing how much the ordering changes under small parameter perturbations that remain within the admissible class.
+* Sensitivity measures showing how much the ordering changes under small parameter perturbations that remain inside the allowed region of a single encoding instance.
 
-*Falsification conditions:*
+**Falsification conditions**
 
-* If, for all parameter choices within the admissible class, the encoding consistently places obviously more efficient devices (for example near reversible prototypes) in equal or higher tension bands than obviously less efficient devices (for example legacy hardware) under comparable conditions, then the encoding is considered misaligned and rejected.
-* If small arbitrary changes in parameters can invert the tension ordering between device classes without corresponding changes in observable quantities or theoretical expectations, the encoding is considered unstable and rejected.
-* If the 20 W brain states `m_brain` cannot be placed in any band in a way that is stable under refinement of measurements, this indicates that essential observables or domain restrictions are missing, and the current encoding is considered incomplete for Q129.
+* If, for all parameter choices allowed inside a chosen encoding instance `E in Enc_Q129`, the encoding consistently places obviously more efficient devices (for example near reversible prototypes) in equal or higher tension bands than obviously less efficient devices (for example legacy hardware) under comparable conditions, then `E` is considered misaligned and is rejected for Q129.
+* If small arbitrary changes in parameters inside their allowed ranges can invert the tension ordering between device classes without corresponding changes in observable quantities or theoretical expectations, `E` is considered unstable and is rejected or revised.
+* If the 20 W brain states `m_brain` cannot be placed in any band in a way that is stable under refinement of measurements, this indicates that essential observables or domain restrictions are missing. The current encoding instance is considered incomplete for Q129 and should not be used as a reference in other problems.
 
-*Semantics implementation note:*
-In this experiment, the hybrid representation is implemented by combining discrete counts of operations and bit erasures with continuous estimates of power and temperature. All observables are treated at an effective level, and no claims are made about the underlying microstates.
+**Semantics implementation note**
+This experiment uses the hybrid semantics specified in the header metadata. The hybrid representation is implemented by combining discrete counts of operations and bit erasures with continuous estimates of power and temperature. All observables are treated at an effective level, and no additional semantic structure beyond Section 3 is introduced.
 
-*Boundary note:*
-Falsifying TU encoding != solving canonical statement. This experiment can reject specific tension encodings or parameterizations, but it does not settle the question of whether near non dissipative computing is ultimately achievable.
+**Boundary note**
+Rejecting an encoding instance `E in Enc_Q129` through this experiment does not solve the canonical problem of ultimate efficiency. It only shows that `E` is not an adequate effective description of energy tension for the devices and workloads tested.
 
 ---
 
 ### Experiment 2: geometry and scaling
 
-*Goal:*
-Assess whether the Q129 encoding captures geometry dependent constraints on energy efficiency, and whether it can distinguish architectures that are structurally closer to or farther from the thermodynamic frontier.
+**Goal**
+Assess whether an encoding instance `E in Enc_Q129` captures geometry dependent constraints on energy efficiency, and whether it can distinguish architectures that are structurally closer to or farther from the thermodynamic frontier.
 
-*Setup:*
+**Setup**
 
 * Fix a simple workload class, such as a repeated arithmetic kernel or a standard neural network inference task.
 
 * For this workload, consider a set of architectures that differ primarily in geometry:
 
-  * locally connected vs globally connected designs,
-  * shallow vs deep communication trees,
+  * locally connected versus globally connected designs,
+  * shallow versus deep communication trees,
   * varying physical sizes and aspect ratios.
 
 * For each architecture, obtain or model:
@@ -540,31 +594,31 @@ Assess whether the Q129 encoding captures geometry dependent constraints on ener
   * operation rates and bit erasure counts,
   * geometry descriptors and communication patterns.
 
-*Protocol:*
+**Protocol**
 
 1. For each architecture and the fixed workload, construct an effective state `m_geom` in `M_reg` using the observable estimates.
-2. For each state, compute `DeltaS_diss(m_geom; r)` over a chosen partition, and aggregate to `DeltaS_energy(m_geom)` with the fixed function `H`.
+2. For each state, compute `DeltaS_diss(m_geom; r)` over a chosen partition, and aggregate to `DeltaS_energy(m_geom)` with the fixed function `H` belonging to the encoding instance `E`.
 3. Compute `R_geom(m_geom)` from `G_geom(m_geom)` using a fixed rule, for example a function of average path length and maximum depth.
-4. Evaluate `Tension_energy(m_geom)` for all architectures.
+4. Evaluate `Tension_energy(m_geom)` for all architectures under `E`.
 5. Analyze how `Tension_energy` scales with geometric difficulty and system size.
 
-*Metrics:*
+**Metrics**
 
 * Dependence of `Tension_energy(m_geom)` on `R_geom(m_geom)` for the chosen workload.
 * Separation in tension between architectures that are geometrically close to and far from ideal communication structures.
-* Robustness of these patterns under refinement of measurement resolution and modest changes in encoding parameters.
+* Robustness of these patterns under refinement of measurement resolution and modest changes in encoding parameters that remain inside the allowed region of `Enc_Q129`.
 
-*Falsification conditions:*
+**Falsification conditions**
 
-* If the encoding assigns nearly identical tension values to architectures with very different geometric constraints and dissipation patterns, this indicates that geometry is not being captured effectively, and the encoding is rejected.
-* If small geometry preserving perturbations of the observables produce large, unexplained swings in `Tension_energy`, this suggests that the encoding is overly sensitive or ill conditioned, and it is rejected or revised.
-* If architectures with clearly better observed energy to computation ratios and shorter communication distances are consistently assigned higher tension than worse architectures under the same encoding, this indicates a misalignment between the functional and physical intuition, and the encoding is rejected.
+* If the encoding instance `E` assigns nearly identical tension values to architectures with very different geometric constraints and dissipation patterns, this indicates that geometry is not captured effectively, and `E` is rejected or revised.
+* If small geometry preserving perturbations of the observables produce large, unexplained swings in `Tension_energy`, this suggests that `E` is overly sensitive or ill conditioned, and it is rejected or revised.
+* If architectures with clearly better observed energy to computation ratios and shorter communication distances are consistently assigned higher tension than worse architectures under the same encoding instance, this indicates a misalignment between the functional and physical intuition, and `E` is rejected.
 
-*Semantics implementation note:*
-Here, the hybrid representation combines discrete summaries of network structure with continuous fields of energy and dissipation. The encoding treats geometry through coarse descriptors rather than detailed layouts, consistent with the effective layer.
+**Semantics implementation note**
+This experiment also uses the hybrid semantics indicated in the metadata. The hybrid representation combines discrete summaries of network structure with continuous fields of energy and dissipation. Geometry is represented through coarse descriptors rather than detailed layouts, consistent with the effective layer description in Section 3.
 
-*Boundary note:*
-Falsifying TU encoding != solving canonical statement. Even a well performing encoding in this experiment does not prove that the ultimate physical limits are reachable, only that the encoding is a useful tool for comparing architectures.
+**Boundary note**
+A well performing encoding instance `E in Enc_Q129` in this experiment does not prove that ultimate physical limits are reachable. It only shows that `E` is a useful tool for comparing architectures and for reasoning about geometry dependent energy tension.
 
 ---
 
@@ -574,7 +628,7 @@ This block describes how Q129 can be used in AI and WFGY engineering without rev
 
 ### 7.1 Training signals
 
-We define several training signals for AI models and agents.
+For a fixed encoding instance `E in Enc_Q129`, we define several training signals for AI models and agents.
 
 1. `signal_energy_tension`
 
@@ -583,12 +637,12 @@ We define several training signals for AI models and agents.
 
 2. `signal_efficiency_band`
 
-   * Definition: a categorical or continuous signal that indicates the current band (unconstrained, near optimal, or unphysical claim) for `m` under the chosen encoding.
+   * Definition: a categorical or continuous signal that indicates the current band (unconstrained, near optimal, or unphysical claim) for `m` under `E`.
    * Use: used to enforce that certain deployments or training configurations must remain below a target band threshold.
 
 3. `signal_brain_20W_relative`
 
-   * Definition: a scalar that measures the ratio between `Tension_energy(m)` for a given workload and `Tension_energy(m_brain)` for a comparable computational task, using the same encoding and environmental assumptions.
+   * Definition: a scalar that measures the ratio between `Tension_energy(m)` for a given workload and `Tension_energy(m_brain)` for a comparable computational task, using the same encoding instance `E` and environmental assumptions.
    * Use: used as a simple interpretive metric to express how close an AI system is, in energy terms, to the 20 W brain reference for a similar task class.
 
 4. `signal_stability_under_refinement`
@@ -596,13 +650,15 @@ We define several training signals for AI models and agents.
    * Definition: a measure of how much `Tension_energy(m)` changes when the resolution scale `k` is refined within a certain range.
    * Use: used to penalize encodings or architectures that rely on resolution sensitive artifacts rather than robust energy advantages.
 
+These signals can be implemented as auxiliary loss terms or monitoring channels without exposing any TU deep layer structure.
+
 ### 7.2 Architectural patterns
 
-We outline module patterns that can reuse Q129 structures.
+We outline module patterns that can reuse Q129 structures under a fixed encoding instance.
 
 1. `EnergyTensionMonitor`
 
-   * Role: a module that, given logs about workload, hardware metrics, and coarse geometry, produces an estimate of `Tension_energy(m)` and band membership.
+   * Role: a module that, given logs about workload, hardware metrics, and coarse geometry, produces an estimate of `Tension_energy(m)` and band membership under `E`.
    * Interface:
 
      * Inputs: processed logs summarizing `p_comp`, power, temperature, geometry descriptors.
@@ -624,7 +680,7 @@ We outline module patterns that can reuse Q129 structures.
      * Inputs: pool of hardware descriptions, workload queue, current tension estimates.
      * Outputs: scheduled assignments and migration plans.
 
-These modules use the Q129 encoding as a scoring mechanism. They do not require access to any deep TU mappings from raw data to internal fields.
+These modules use Q129 encoding as a scoring mechanism. They do not require access to any TU deep layer mappings from raw data to internal fields.
 
 ### 7.3 Evaluation harness
 
@@ -637,7 +693,7 @@ We propose an evaluation harness to test the impact of Q129 based signals and mo
 2. **Conditions**
 
    * Baseline condition: training and deployment without any Q129 based signals or modules.
-   * TU condition: training and deployment with `signal_energy_tension`, `signal_efficiency_band`, and `EnergyTensionMonitor` integrated into the pipeline.
+   * TU condition: training and deployment with `signal_energy_tension`, `signal_efficiency_band`, and `EnergyTensionMonitor` integrated into the pipeline under a fixed encoding instance `E in Enc_Q129`.
 
 3. **Metrics**
 
@@ -654,27 +710,27 @@ We propose an evaluation harness to test the impact of Q129 based signals and mo
 
 A minimal protocol for external users to experience Q129 encoding in practice.
 
-*Baseline setup*
+**Baseline setup**
 
-* Input: a short description of a workload (for example “standard transformer model with N parameters on dataset D”) and a rough description of the hardware (for example GPU type, number of devices, and typical power draw).
+* Input: a short description of a workload (for example "standard transformer model with N parameters on dataset D") and a rough description of the hardware (for example GPU type, number of devices, and typical power draw).
 * Task: ask a system to estimate energy use and discuss efficiency qualitatively.
-* Observation: note that explanations often remain vague or do not clearly relate energy to thermodynamic limits or geometry.
+* Observation: answers often remain vague and do not clearly relate energy to thermodynamic limits or geometry.
 
-*TU encoded setup*
+**TU encoded setup**
 
 * Input: the same workload and hardware descriptions, plus an instruction to the system to:
 
   * construct an effective state `m` in `M_energy`,
-  * estimate `Tension_energy(m)` and band membership using the Q129 observables, and
+  * estimate `Tension_energy(m)` and band membership using an encoding instance `E in Enc_Q129`,
   * compare this result to the 20 W brain reference and to theoretical physical limits.
 
 * Observation: the answer should provide:
 
   * an approximate tension band for the configuration,
-  * a discussion of how geometry and dissipation shape this band, and
+  * a discussion of how geometry and dissipation shape this band,
   * a relative position compared to the brain and to best known prototypes.
 
-*What to log*
+**What to log**
 
 * The input descriptions, tension estimates, band labels, and textual explanations for both setups.
 * These logs allow later inspection of how Q129 encoding changes the structure and interpretability of energy related explanations.
@@ -683,7 +739,7 @@ A minimal protocol for external users to experience Q129 encoding in practice.
 
 ## 8. Cross problem transfer template
 
-This block describes Q129’s reusable components and how they transfer to other problems.
+This block describes Q129 reusable components and how they transfer to other problems.
 
 ### 8.1 Reusable components produced by this problem
 
@@ -706,8 +762,12 @@ This block describes Q129’s reusable components and how they transfer to other
 
    * Preconditions:
 
-     * Inputs must include enough information to compute `DeltaS_energy(m)` for some state `m` in `M_reg` under a fixed encoding.
+     * Inputs must include enough information to compute `DeltaS_energy(m)` for some state `m` in `M_reg` under an encoding instance `E in Enc_Q129`.
      * Environment summaries must contain temperature and relevant physical limits.
+
+   * Relation to internal quantities:
+
+     * `EnergyTensionIndex` is a packaged implementation of the functional `Tension_energy(m)` defined in Section 4. It exposes only the scalar tension value and band label, not the full internal tensor structure.
 
 2. ComponentName: `DissipationGeometryField`
 
@@ -748,32 +808,32 @@ This block describes Q129’s reusable components and how they transfer to other
 
    * Preconditions:
 
-     * Device classes must be sufficiently described to estimate the observables in 3.2.
+     * Device classes must be sufficiently described to estimate the observables in Section 3.2.
      * Measurement protocols must specify time windows and spatial resolutions.
 
 ### 8.2 Direct reuse targets
 
 1. Q059 (BH_CS_INFO_THERMODYN_L3_059)
 
-   * Which component is reused: `EnergyTensionIndex` and `DissipationGeometryField`.
+   * Reused components: `EnergyTensionIndex`, `DissipationGeometryField`.
    * Why it transfers: Q059 studies the relation between information processing and thermodynamic cost. The Q129 components provide concrete implementations of this link for computing systems.
    * What changes: Q059 extends the functional to more abstract models of computation and broader classes of information processing beyond explicit hardware.
 
 2. Q032 (BH_PHYS_QTHERMO_L3_032)
 
-   * Which component is reused: `NearLimitExperimentTemplate`.
+   * Reused component: `NearLimitExperimentTemplate`.
    * Why it transfers: Q032 investigates thermal behavior and energy cost in physical systems driven by information like processes. The template helps design experiments that test how close such systems can move toward their thermodynamic frontiers.
    * What changes: the devices under study are now general physical systems, such as quantum engines or molecular machines, rather than explicit computing devices.
 
 3. Q074 (BH_NEURO_ENERGY_BUDGET_L3_074)
 
-   * Which component is reused: `DissipationGeometryField`.
+   * Reused component: `DissipationGeometryField`.
    * Why it transfers: Q074 focuses on how energy is distributed and used in brain tissue. The field descriptor provides a structured way to summarize where neural dissipation occurs and how it relates to cognitive function.
    * What changes: geometry descriptors and observables are tuned to brain anatomy and signaling rather than manufactured hardware.
 
 4. Q122 (BH_AI_COMPUTE_GOVERN_L3_122)
 
-   * Which component is reused: `EnergyTensionIndex`.
+   * Reused component: `EnergyTensionIndex`.
    * Why it transfers: governance of compute requires quantitative metrics to bound energy use and dissipation. The index provides a substrate neutral measure that supports policy rules.
    * What changes: the focus shifts from physical design toward regulatory thresholds, reporting formats, and compliance checks.
 
@@ -796,7 +856,7 @@ Interpretation:
 
 * **E1**
 
-  * A coherent effective encoding has been specified, including:
+  * A coherent effective encoding has been specified on paper, including:
 
     * a state space `M_energy`,
     * an observable library,
@@ -805,7 +865,7 @@ Interpretation:
     * a singular set `S_sing` and regular domain `M_reg`,
     * at least one experiment family with clear falsification conditions.
 
-  * No claim is made that full scale implementations or comprehensive datasets already exist.
+  * No claim is made that full scale implementations, public code, or comprehensive datasets already exist. The design is at the blueprint level rather than at an implemented prototype level.
 
 * **N1**
 
@@ -814,20 +874,20 @@ Interpretation:
 
 ### 9.2 Next measurable step toward E2
 
-To raise Q129 from E1 to E2, at least one of the following must be realized in practice:
+To raise Q129 from E1 to E2, at least one of the following must be realized in practice and documented as public evidence.
 
 1. A prototype implementation of `EnergyTensionIndex` that:
 
    * takes public benchmark data for several hardware platforms and workloads,
-   * computes `Tension_energy(m)` and band labels under a fixed encoding, and
+   * computes `Tension_energy(m)` and band labels under a fixed encoding instance `E in Enc_Q129`,
    * publishes the resulting tension distributions and sensitivity analyses as open data.
 
 2. A set of small scale experiments following Experiments 1 and 2 that:
 
    * collect comparable energy and performance data for at least three distinct device classes,
-   * apply the same encoding to all devices,
-   * demonstrate stable and physically plausible tension orderings, and
-   * document failures or instabilities that lead to encoding revisions.
+   * apply the same encoding instance to all devices,
+   * demonstrate stable and physically plausible tension orderings,
+   * and document failures or instabilities that lead to encoding revision.
 
 Once such results exist and can be reproduced by independent groups, Q129 can be upgraded to E2 while remaining strictly at the effective layer.
 
@@ -836,16 +896,14 @@ Once such results exist and can be reproduced by independent groups, Q129 can be
 In the long term, Q129 is expected to act as:
 
 1. The central node for energy related constraints on AI and computing within the Tension Universe.
-
 2. A bridge between:
 
    * microscopic thermodynamic bounds,
-   * macroscopic energy and climate budgets, and
-   * concrete AI engineering decisions about architecture and deployment.
-
+   * macroscopic energy and climate budgets,
+   * and concrete AI engineering decisions about architecture and deployment.
 3. A template for how to handle other resource limits, such as memory, bandwidth, and latency, by defining analogous tension functionals and bands.
 
-As Q129 moves through higher E and N levels, it will not attempt to prove ultimate impossibility or possibility results. Instead, it will refine the observables, bands, and experiment patterns that make discussions about “energy efficient AI” quantitatively meaningful and falsifiable.
+As Q129 moves through higher E and N levels, it will not attempt to prove ultimate impossibility or possibility results. Instead, it will refine the observables, bands, and experiment patterns that make discussions about "energy efficient AI" quantitatively meaningful and falsifiable.
 
 ---
 
@@ -853,13 +911,13 @@ As Q129 moves through higher E and N levels, it will not attempt to prove ultima
 
 This block provides an accessible explanation while remaining aligned with the effective layer description.
 
-Computers use energy. Some of that energy goes into doing useful work, and some of it is converted into heat that must be removed. There are deep physical reasons why this happens. Every time information is erased in a certain way, there is a minimal amount of heat that must be produced, depending on temperature. This is one of the basic messages of Landauer style results.
+Computers use energy. Some of that energy goes into doing useful work, and some of it turns into heat that must be removed. There are deep physical reasons for this. Every time information is erased in a certain way, there is a minimal amount of heat that must be produced, depending on temperature. This is one of the basic messages of Landauer style results.
 
 Engineers and scientists often ask:
 
 *How close can a real computing system come to this physical limit?*
 
-We can see that modern chips are very far from it, in terms of Joules per operation. At the same time, the human brain seems to do impressive computation on about 20 W of power. Q129 tries to make this comparison precise without favoring any particular device or biology from the start.
+Modern chips are very far from this limit in terms of Joules per operation. At the same time, the human brain seems to do impressive computation on about 20 W of power. Q129 tries to make this comparison precise without favoring any particular device or biology from the start.
 
 The Tension Universe view does the following.
 
@@ -867,14 +925,14 @@ The Tension Universe view does the following.
 
    * what a system looks like physically,
    * how energy and heat move through it,
-   * how many useful operations it performs, and
-   * in what environment it operates.
+   * how many useful operations it performs,
+   * and in what environment it operates.
 
 2. For each state, it measures:
 
    * a lower bound on how much heat must be produced, based on temperature and how much information is erased,
-   * how much heat is actually produced in different parts of the system, and
-   * how the system’s geometry makes it easier or harder to move energy around.
+   * how much heat is actually produced in different parts of the system,
+   * how the system geometry makes it easier or harder to move energy around.
 
 3. From these measurements, it builds a number called the energy tension. This number is small if the system is close to the physical limit and large if there is a lot of wasted energy.
 
@@ -888,4 +946,47 @@ Within this picture, the brain at 20 W is not automatically declared optimal or 
 
 *When we use the same rules for everyone, which band does the brain fall into, and how does that compare to different kinds of hardware?*
 
-Q129 does not answer this question on its own. It sets up a precise way to talk about it, with observables that can be measured, experiments that can succeed or fail, and encodings that can be falsified when they stop matching reality. This makes debates about “energy efficient AI” much harder to reduce to slogans, and much easier to connect to concrete physical and geometric facts.
+Q129 does not answer this question on its own. It sets up a precise way to talk about it, with observables that can be measured, experiments that can succeed or fail, and encoding instances that can be falsified when they stop matching reality. This makes debates about "energy efficient AI" harder to reduce to slogans and easier to connect to concrete physical and geometric facts.
+
+---
+
+## Tension Universe effective-layer footer
+
+This page is part of the **WFGY / Tension Universe** S-problem collection.
+
+### Scope of claims
+
+* The goal of this document is to specify an effective layer encoding of the named problem and to describe tension based experiment patterns.
+* It does not claim to prove or disprove the canonical problem statement in Section 1.
+* It does not introduce any new theorem beyond what is already established in the cited literature.
+* It should not be cited as evidence that the corresponding open problem has been solved, nor that ultimate physical limits are known.
+
+### Effective-layer boundary
+
+* All objects used here (state spaces such as `M_energy`, observables, invariants, tension scores, counterfactual worlds) live at the effective layer of the Tension Universe framework.
+* No TU deep layer axioms, generative rules, or constructive encodings from raw data into TU fields are specified.
+* Any mention of "TU core" or tensor patterns is purely notational and refers only to generic effective layer templates.
+* Implementations are required to treat all mappings from raw logs, circuit layouts, and biological measurements into effective observables as external data preparation steps.
+
+### Encoding and fairness
+
+* Q129 uses an explicit encoding class `Enc_Q129` as defined in Section 3.3.
+* Within any single benchmark, deployment, or policy study, all systems under comparison must share the same encoding instance `E in Enc_Q129`.
+* Parameters of an encoding instance must be fixed before observing tension outcomes for particular systems and cannot be retuned on a per system basis.
+* If an encoding instance fails the falsification tests in Section 6, it is retired for Q129 purposes and may only be replaced by a new instance that:
+
+  * documents the changes in observables, gap variables, or functionals,
+  * is evaluated on fresh or clearly separated data,
+  * and continues to obey all fairness constraints.
+
+### Tension scale and interpretation
+
+* Energy tension values and bands defined in this document are diagnostic and comparative. They do not by themselves guarantee safety, optimality, or correctness.
+* The unphysical claim band is intended as a warning that the encoding, the measurements, or both are incomplete for the systems under study. It is not proof that a given device or architecture is impossible.
+* Cross problem transfers of components such as `EnergyTensionIndex` and `DissipationGeometryField` must respect their stated preconditions. Using these components outside their domain of validity can produce misleading tension values.
+
+This page should be read together with the following charters:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
