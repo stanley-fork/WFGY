@@ -1,3 +1,4 @@
+<!-- QUESTION_ID: TU-Q102 -->
 # Q102 · Home bias in portfolios
 
 ## 0. Header metadata
