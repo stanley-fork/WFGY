@@ -1,3 +1,4 @@
+<!-- QUESTION_ID: TU-Q059 -->
 # Q059 · Ultimate thermodynamic cost of information processing
 
 ## 0. Header metadata
