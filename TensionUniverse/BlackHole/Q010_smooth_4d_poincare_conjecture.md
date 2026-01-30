@@ -1,4 +1,4 @@
-# Q010 · Smooth 4 dimensional Poincaré conjecture · run 2 (effective layer)
+# Q010 · Smooth 4 dimensional Poincaré conjecture
 
 ## 0. Header metadata
 
@@ -1323,3 +1323,4 @@ This page should be read together with the following Tension Universe charters:
 * [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
 * [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
 * [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
+* [TU Global Guardrails](../Charters/TU_GLOBAL_GUARDRAILS.md)
