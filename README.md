@@ -1,3 +1,6 @@
+> **WFGY 3.0 · Singularity Demo** is scheduled to go live on **2026-01-31**.  
+> verify sha256, then run the 60s reproduction.
+
 <details>
 <summary><strong>🧭 Lost or curious? Open the WFGY Compass & ⭐ Star Unlocks</strong></summary>
   
@@ -1369,6 +1372,7 @@ It treats alignment as a living semantic contract — not just accuracy, but mea
 [![Blow](https://img.shields.io/badge/Blow-Game%20Logic-purple?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS/BlowBlowBlow)
 &nbsp;
 </div>
+
 
 
 
