@@ -1,3 +1,4 @@
+<!-- QUESTION_ID: TU-Q042 -->
 # Q042 · Dark energy and cosmic acceleration
 
 ## 0. Header metadata
