@@ -1,3 +1,4 @@
+<!-- QUESTION_ID: TU-Q048 -->
 # Q048 · Hubble constant tension
 
 ## 0. Header metadata
