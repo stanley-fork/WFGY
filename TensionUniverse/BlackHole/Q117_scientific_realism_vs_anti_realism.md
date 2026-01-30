@@ -11,12 +11,58 @@ Rank: S
 Projection_dominance: C
 Field_type: socio_technical_field
 Tension_type: consistency_tension
-Status: Open
+Status: Reframed_only
 Semantics: hybrid
 E_level: E1
 N_level: N1
-Last_updated: 2026-01-26
+Last_updated: 2026-01-30
 ```
+
+---
+
+## 0. Effective layer disclaimer
+
+This entry is written strictly at the effective layer of the Tension Universe (TU) framework.
+
+* It specifies only:
+
+  * state spaces,
+  * observables and fields,
+  * tension scores and functionals,
+  * counterfactual patterns,
+  * engineering style modules and experiments.
+
+* It does **not** specify:
+
+  * any underlying TU core axioms,
+  * any PDE like generative rules for TU,
+  * any constructive mapping from raw empirical or textual data into internal TU fields.
+
+* It does **not**:
+
+  * prove or disprove the canonical philosophical problem of scientific realism vs anti realism,
+  * claim that any particular stance is metaphysically correct,
+  * introduce new theorems about scientific realism beyond the cited literature.
+
+* All scalar tension quantities in this document are understood as dimensionless scores on the TU tension scale described in the TU Tension Scale Charter.
+  Low values correspond to low tension bands. Higher values correspond to medium or high tension bands.
+
+* This page can be used to:
+
+  * encode different stances as patterns of observables and tension,
+  * design falsifiable experiments and evaluation harnesses,
+  * define reusable components for other S class problems.
+
+* It must **not** be cited as evidence that:
+
+  * the realism vs anti realism debate has been settled,
+  * any specific metaphysical stance has been proven true.
+
+This page should be read together with the following charters:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
 
 ---
 
@@ -30,9 +76,9 @@ When our best scientific theories make successful, precise and wide ranging pred
 
 More concretely, the dispute concerns questions such as:
 
-- Are unobservable entities posited by science (for example electrons, fields, spacetime curvature, wave functions) genuinely part of what exists, at least approximately?
-- Does the success of a theory provide non accidental support for the approximate truth of its claims about such entities?
-- Can scientists remain entirely agnostic or anti realist about theoretical entities while still accounting for the depth, unification and counterfactual richness of scientific practice?
+* Are unobservable entities posited by science (for example electrons, fields, spacetime curvature, wave functions) genuinely part of what exists, at least approximately?
+* Does the success of a theory provide non accidental support for the approximate truth of its claims about such entities?
+* Can scientists remain entirely agnostic or anti realist about theoretical entities while still accounting for the depth, unification and counterfactual richness of scientific practice?
 
 Scientific realism, in a standard formulation, holds that:
 
@@ -42,9 +88,9 @@ Scientific realism, in a standard formulation, holds that:
 
 Anti realist positions (for example constructive empiricism, instrumentalism) deny at least one of these claims, typically insisting that:
 
-- The proper aim of science is empirical adequacy.
-- Commitment should be restricted to claims about observable phenomena.
-- Theoretical entities are either useful fictions or tools, not objects of belief in the same sense as observables.
+* The proper aim of science is empirical adequacy.
+* Commitment should be restricted to claims about observable phenomena.
+* Theoretical entities are either useful fictions or tools, not objects of belief in the same sense as observables.
 
 Q117 treats this dispute as an S class problem because it organizes many other realism debates (about mathematics, morality, probability and AI) and because there is no consensus resolution.
 
@@ -52,41 +98,48 @@ Q117 treats this dispute as an S class problem because it organizes many other r
 
 The scientific realism vs anti realism debate has persisted for decades in contemporary philosophy of science. It is characterized by:
 
-- Long running, sophisticated argument exchange without stable convergence.
-- Multiple refined positions on both sides (for example selective realism, structural realism, entity realism, pessimistic meta induction, constructive empiricism).
-- Deep connections to issues in theory change, underdetermination, explanation, confirmation and the role of models.
+* Long running and sophisticated argument exchange without stable convergence.
+* Multiple refined positions on both sides, for example:
+
+  * selective realism,
+  * structural realism,
+  * entity realism,
+  * pessimistic meta induction,
+  * constructive empiricism.
+* Deep connections to issues in theory change, underdetermination, explanation, confirmation and the role of models.
 
 There is no accepted decision procedure that, given a body of scientific practice, outputs a unique and compulsory stance. Instead, philosophers and scientists adopt positions that trade off:
 
-- Explanatory depth and metaphysical commitment.
-- Flexibility under theory change and robustness of reference.
-- Simplicity of epistemic norms and capacity to account for unifying structures.
+* explanatory depth and metaphysical commitment,
+* flexibility under theory change and robustness of reference,
+* simplicity of epistemic norms and capacity to account for unifying structures.
 
-Q117 is therefore not a problem that is expected to receive a single, final “proof.” It is instead treated as a structural problem about how different stances generate different patterns of tension between:
+Within TU, Q117 is therefore not a problem that is expected to receive a single final proof. It is encoded as a structural problem about how different stances generate different patterns of consistency_tension between:
 
-- What science says,
-- What it predicts and explains,
-- What it commits us to regarding what there is.
+* what scientific theories say,
+* what they predict and explain,
+* what they commit us to regarding what there is.
 
 ### 1.3 Role in the BlackHole project
 
 Within the BlackHole S problem collection, Q117 plays several roles:
 
-1. It is the prototype consistency_tension problem for ontology in science: it makes precise how different stances about “what is real” generate different patterns of mismatch across theory, evidence and explanation.
-2. It provides reusable components for other realism debates, for example:
+1. It is the prototype consistency_tension problem for ontology in science. It makes precise how different stances about what is real generate different patterns of mismatch across theory, evidence and explanation.
 
-   - Q111 mind body relation,
-   - Q114 status of moral facts,
-   - Q116 foundations of mathematics,
-   - Q119 meaning of probability.
+2. It provides reusable components for other realism style debates, for example:
+
+   * Q111 mind body relation,
+   * Q114 status of moral facts,
+   * Q116 foundations of mathematics,
+   * Q119 meaning of probability.
 
 3. It offers templates for encoding stance dependent interpretation of models in complex socio technical systems, including:
 
-   - Q059 ultimate thermodynamic cost of information processing,
-   - Q098 Anthropocene system dynamics,
-   - Q123 scalable interpretability in AI.
+   * Q059 ultimate thermodynamic cost of information processing,
+   * Q098 Anthropocene system dynamics,
+   * Q123 scalable interpretability in AI.
 
-### References
+### 1.4 References
 
 1. Stanford Encyclopedia of Philosophy, “Scientific Realism”, first published 2002, substantive revisions in later years.
 2. Stanford Encyclopedia of Philosophy, “Constructive Empiricism”, first published 1998, substantive revisions in later years.
@@ -97,56 +150,66 @@ Within the BlackHole S problem collection, Q117 plays several roles:
 
 ## 2. Position in the BlackHole graph
 
-This block records how Q117 sits within the BlackHole graph of Q001 to Q125.  
+This block records how Q117 sits within the BlackHole graph of Q001 to Q125.
 Edges are described using one line reasons that point to components or tension types defined at the effective layer.
 
 ### 2.1 Upstream problems
 
 These problems provide prerequisites or structural tools for Q117.
 
-- Q111 (BH_PHIL_MIND_BODY_L3_111)  
-  Reason: Supplies templates for relating higher level states (minds) to physical reality, which are reused for relating theoretical entities to the world.
-- Q115 (BH_PHIL_INDUCTION_L3_115)  
+* Q111 (BH_PHIL_MIND_BODY_L3_111)
+  Reason: Supplies templates for relating higher level states, such as minds, to physical reality. These templates are reused for relating theoretical entities to the world.
+
+* Q115 (BH_PHIL_INDUCTION_L3_115)
   Reason: Encodes the tension between evidence and generalization, which directly constrains how realism and anti realism justify belief in theoretical claims.
-- Q116 (BH_PHIL_FOUND_MATH_L3_116)  
+
+* Q116 (BH_PHIL_FOUND_MATH_L3_116)
   Reason: Provides parallel debates about mathematical ontology that help define cross domain realism components.
-- Q119 (BH_PHIL_PROB_MEANING_L3_119)  
+
+* Q119 (BH_PHIL_PROB_MEANING_L3_119)
   Reason: Gives worked examples of how realism and anti realism about probability interact with modeling and evidence.
 
 ### 2.2 Downstream problems
 
 These problems reuse Q117 components or depend on its stance templates.
 
-- Q114 (BH_PHIL_MORAL_REALISM_L3_114)  
+* Q114 (BH_PHIL_MORAL_REALISM_L3_114)
   Reason: Reuses the RealismCommitmentIndex and stance tension functional to encode moral realism vs non cognitivism.
-- Q116 (BH_PHIL_FOUND_MATH_L3_116)  
+
+* Q116 (BH_PHIL_FOUND_MATH_L3_116)
   Reason: Reuses empirical equivalence and invariance components to structure debates about mathematical structures and ontology.
-- Q119 (BH_PHIL_PROB_MEANING_L3_119)  
+
+* Q119 (BH_PHIL_PROB_MEANING_L3_119)
   Reason: Reuses stance templates to distinguish realist, subjectivist and pragmatist interpretations of probability within scientific models.
-- Q121 (BH_AI_ALIGN_L3_121)  
+
+* Q121 (BH_AI_ALIGN_L3_121)
   Reason: Uses Q117 stance components to frame realism vs instrumentalism about values, utilities and preferences in AI alignment.
 
 ### 2.3 Parallel problems
 
 These nodes share similar tension types but have no strict component dependence.
 
-- Q111 (BH_PHIL_MIND_BODY_L3_111)  
+* Q111 (BH_PHIL_MIND_BODY_L3_111)
   Reason: Both treat ontological commitment to non observable entities as a source of consistency_tension between theory and experience.
-- Q114 (BH_PHIL_MORAL_REALISM_L3_114)  
+
+* Q114 (BH_PHIL_MORAL_REALISM_L3_114)
   Reason: Mirrors the realism vs anti realism axis in a different domain, using comparable stance observables.
-- Q116 (BH_PHIL_FOUND_MATH_L3_116)  
+
+* Q116 (BH_PHIL_FOUND_MATH_L3_116)
   Reason: Uses analogous structures to encode commitment to mathematical objects vs structural roles.
 
 ### 2.4 Cross domain edges
 
 Cross domain edges indicate reuse of Q117 components in other domains.
 
-- Q059 (BH_CS_INFO_THERMODYN_L3_059)  
-  Reason: Reuses RealismCommitmentIndex to distinguish views that treat information as an ontologically robust quantity vs mere bookkeeping.
-- Q098 (BH_EARTH_ANTHROPOCENE_DYN_L3_098)  
+* Q059 (BH_CS_INFO_THERMODYN_L3_059)
+  Reason: Reuses the RealismCommitmentIndex to distinguish views that treat information as an ontologically robust quantity vs mere bookkeeping.
+
+* Q098 (BH_EARTH_ANTHROPOCENE_DYN_L3_098)
   Reason: Uses empirical equivalence and stance tension components to encode realism vs instrumentalism about complex Earth system models.
-- Q123 (BH_AI_INTERP_L3_123)  
-  Reason: Reuses stance tension functional to distinguish realism vs instrumentalism about internal features and mechanisms in AI interpretability.
+
+* Q123 (BH_AI_INTERP_L3_123)
+  Reason: Reuses the stance tension functional to distinguish realism vs instrumentalism about internal features and mechanisms in AI interpretability.
 
 ---
 
@@ -154,10 +217,10 @@ Cross domain edges indicate reuse of Q117 components in other domains.
 
 All content in this block is at the effective layer. It only specifies:
 
-- state space,
-- observables and fields,
-- invariants and tension scores,
-- singular sets and domain restrictions.
+* a state space,
+* observables and fields,
+* invariants and tension scores,
+* singular sets and domain restrictions.
 
 It does not specify any deep TU generative rule or mapping from raw data to internal fields.
 
@@ -169,7 +232,8 @@ We assume a semantic state space:
 M
 ```
 
-Elements of `M` are configurations of scientific practice and stance.  
+Elements of `M` are configurations of scientific practice and stance.
+
 A state `m` in `M` encodes, at the effective layer:
 
 1. A finite portfolio of scientific theories or models that are currently active in some context.
@@ -178,14 +242,15 @@ A state `m` in `M` encodes, at the effective layer:
 
 We assume:
 
-- Each `m` contains enough structure to evaluate the observables defined below.
-- There is no requirement that `M` be minimal or uniquely defined; multiple state spaces could serve as models as long as they support the observables and constraints.
+* Each `m` contains enough structure to evaluate the observables defined below.
+* There is no requirement that `M` be minimal or uniquely defined. Multiple state spaces could serve as models as long as they support the observables and constraints.
 
 We do not describe how states in `M` are constructed from texts, experiments or agent histories. We only assume that such states exist at the effective layer.
 
 ### 3.2 Effective observables and fields
 
 We introduce the following observables on `M`.
+All values are in the closed interval `[0, 1]` and are interpreted on the TU tension and scale conventions.
 
 1. Realist commitment index
 
@@ -193,11 +258,12 @@ We introduce the following observables on `M`.
 R_commit(m) in [0, 1]
 ```
 
-- Intended meaning:
+* `R_commit(m)` is also referred to as the `RealismCommitmentIndex`.
+* Intended meaning:
 
-  - `R_commit(m) = 1` means a fully realist stance: theoretical entities in the portfolio are treated as approximately real.
-  - `R_commit(m) = 0` means a fully anti realist or instrumentalist stance.
-  - Intermediate values represent partial or selective realism.
+  * `R_commit(m) = 1` means a fully realist stance. Theoretical entities in the portfolio are treated as approximately real.
+  * `R_commit(m) = 0` means a fully anti realist or instrumentalist stance.
+  * Intermediate values represent partial or selective realism.
 
 2. Empirical adequacy score
 
@@ -205,8 +271,8 @@ R_commit(m) in [0, 1]
 E_adequacy(m) in [0, 1]
 ```
 
-- Summarizes, at the effective layer, how well the theory portfolio in `m` fits the relevant domain of observable phenomena.
-- Higher values indicate broader and more precise empirical success.
+* Summarizes, at the effective layer, how well the theory portfolio in `m` fits the relevant domain of observable phenomena.
+* Higher values indicate broader and more precise empirical success.
 
 3. Cross theory invariance score
 
@@ -214,8 +280,8 @@ E_adequacy(m) in [0, 1]
 I_invariant(m) in [0, 1]
 ```
 
-- Measures how stable certain structures or entities remain across theory change encoded in `m`.
-- High values mean that, as theories are replaced or refined, there is a robust mapping between key theoretical entities or structures.
+* Measures how stable certain structures or entities remain across theory change encoded in `m`.
+* High values mean that, as theories are replaced or refined, there is a robust mapping between key theoretical entities or structures.
 
 4. Empirical equivalence spread
 
@@ -223,44 +289,45 @@ I_invariant(m) in [0, 1]
 EE_spread(m) in [0, 1]
 ```
 
-- Captures the degree of nontrivial empirical equivalence among different theories in the portfolio.
-- High values indicate that multiple conceptually distinct theories share overlapping empirical consequences.
+* Captures the degree of nontrivial empirical equivalence among different theories in the portfolio.
+* High values indicate that multiple conceptually distinct theories share overlapping empirical consequences.
 
-These observables are defined at the effective layer as given scalar summaries. No claim is made about how they are computed from underlying data.
+These observables are defined at the effective layer as given scalar summaries. No claim is made about how they are computed from underlying data. The hybrid semantics is explicit: stance labels are discrete, while these observables are continuous scores in `[0, 1]`.
 
 ### 3.3 Tension observables
 
 We define two mismatch observables that capture the costs of adopting realist or anti realist stances in a given state.
+They are also normalized to the interval `[0, 1]` so that they can be read as tension scores on the TU tension scale.
 
 1. Realist mismatch
 
 ```txt
-DeltaS_realist(m) >= 0
+DeltaS_realist(m) in [0, 1]
 ```
 
-- Increases when:
+* Increases when:
 
-  - `R_commit(m)` is high,
-  - but `I_invariant(m)` is low (weak cross theory invariance),
-  - or `EE_spread(m)` is high (many empirically equivalent rivals).
+  * `R_commit(m)` is high,
+  * but `I_invariant(m)` is low, which means weak cross theory invariance,
+  * or `EE_spread(m)` is high, which means many empirically equivalent rivals.
 
-- Interpreted as the degree to which a strong realist stance over commits beyond what the stability and distinctiveness of theories seem to support.
+* Interpreted as the degree to which a strong realist stance over commits beyond what the stability and distinctiveness of theories seem to support.
 
 2. Anti realist mismatch
 
 ```txt
-DeltaS_anti(m) >= 0
+DeltaS_anti(m) in [0, 1]
 ```
 
-- Increases when:
+* Increases when:
 
-  - `R_commit(m)` is low,
-  - but `E_adequacy(m)` is high (strong empirical success),
-  - and `I_invariant(m)` is high (stable structures across theory change).
+  * `R_commit(m)` is low,
+  * but `E_adequacy(m)` is high, which means strong empirical success,
+  * and `I_invariant(m)` is high, which means stable structures across theory change.
 
-- Interpreted as the degree to which a strict anti realist stance refuses to acknowledge robust structural features that are naturally treated as real.
+* Interpreted as the degree to which a strict anti realist stance refuses to acknowledge robust structural features that are naturally treated as real.
 
-The exact functional forms that map `R_commit`, `E_adequacy`, `I_invariant` and `EE_spread` into `DeltaS_realist` and `DeltaS_anti` are part of the encoding and will be treated as belonging to an admissible encoding class described below.
+The exact functional forms that map `R_commit`, `E_adequacy`, `I_invariant` and `EE_spread` into `DeltaS_realist` and `DeltaS_anti` are part of the encoding and belong to an admissible encoding class described below.
 
 ### 3.4 Admissible encoding class and fairness constraints
 
@@ -268,31 +335,50 @@ To prevent trivial tuning, we impose the following constraints on the class of a
 
 1. Observable bounds
 
-- All observables `R_commit(m)`, `E_adequacy(m)`, `I_invariant(m)`, `EE_spread(m)` take values in `[0, 1]`.
-- Encodings must respect these bounds for all `m` in their domain.
+* All observables `R_commit(m)`, `E_adequacy(m)`, `I_invariant(m)`, `EE_spread(m)` take values in `[0, 1]`.
+* The mismatch observables `DeltaS_realist(m)` and `DeltaS_anti(m)` also take values in `[0, 1]`.
+* Encodings must respect these bounds for all `m` in their domain.
 
 2. Monotonicity
 
-- `DeltaS_realist(m)` is nondecreasing in `R_commit(m)` and in `EE_spread(m)` when `I_invariant(m)` is held fixed and low.
-- `DeltaS_anti(m)` is nondecreasing in `E_adequacy(m)` and in `I_invariant(m)` when `R_commit(m)` is held fixed and low.
+* `DeltaS_realist(m)` is nondecreasing in `R_commit(m)` and in `EE_spread(m)` when `I_invariant(m)` is held fixed and low.
+* `DeltaS_anti(m)` is nondecreasing in `E_adequacy(m)` and in `I_invariant(m)` when `R_commit(m)` is held fixed and low.
 
 3. Nondegeneracy
 
-- There exist admissible states `m_high_realist` and `m_high_anti` in `M` such that:
+* There exist admissible states `m_high_realist` and `m_high_anti` in `M` such that:
 
   ```txt
   DeltaS_realist(m_high_realist) > 0
   DeltaS_anti(m_high_anti)       > 0
   ```
 
-  That is, neither stance is trivially free of mismatch across all states.
+  Neither stance is trivially free of mismatch across all states.
 
 4. No post hoc adjustment
 
-- Once an encoding within the admissible class is fixed for a given experiment or application, it must be held fixed across all states and cases in that experiment.
-- It is not permitted to alter the functional forms or internal parameters of `DeltaS_realist` or `DeltaS_anti` after inspecting the outputs on specific cases.
+* Once an encoding within the admissible class is fixed for a given experiment or application, it must be held fixed across all states and cases in that experiment.
+* It is not permitted to alter the functional forms or internal parameters of `DeltaS_realist` or `DeltaS_anti` after inspecting the outputs on specific cases.
 
-These constraints are designed so that any low tension result is a substantive property of the stance and the configuration, rather than a consequence of arbitrary parameter choices.
+5. Refinement stability
+
+We consider refinement sequences of the form:
+
+```txt
+refine(k),  k = 0, 1, 2, ...
+```
+
+where:
+
+* `refine(k)` enlarges or sharpens the case library, improves assignments of observables, or adds more detailed structure to `M_reg`.
+* The encoding functions and their parameters are fixed once at `k = 0` and remain unchanged for all `k`.
+
+An encoding is considered refinement stable for Q117 if:
+
+* bands for `DeltaS_realist(m)` and `DeltaS_anti(m)` do not flip arbitrarily under small and reasonable changes introduced by `refine(k)`,
+* patterns such as realism being systematically lower tension in mature stable theory states do not disappear or reverse under minor refinement.
+
+These constraints are designed so that any low tension result is a substantive property of the stance and the configuration, rather than a consequence of arbitrary parameter choices or after the fact adjustments.
 
 ### 3.5 Singular set and domain restriction
 
@@ -314,9 +400,9 @@ M_reg = M \ S_sing
 
 Rules:
 
-- All tension related quantities `DeltaS_realist(m)` and `DeltaS_anti(m)` are only evaluated on `M_reg`.
-- States in `S_sing` are treated as out of domain for this problem, not as evidence in favor of any stance.
-- Experiments that attempt to evaluate tension on `S_sing` are considered to have encountered an encoding breakdown, not a metaphysical result.
+* All tension related quantities `DeltaS_realist(m)` and `DeltaS_anti(m)` are only evaluated on `M_reg`.
+* States in `S_sing` are treated as out of domain for this problem, not as evidence in favor of any stance.
+* Experiments that attempt to evaluate tension on `S_sing` are considered to have encountered an encoding breakdown, not a metaphysical result.
 
 ---
 
@@ -329,26 +415,25 @@ This block explains how Q117 is treated as a tension problem within TU, at the e
 We define two nonnegative tension functionals for each state `m` in `M_reg`:
 
 ```txt
-T_realist(m) = F_realist(DeltaS_realist(m))
-T_anti(m)    = F_anti(DeltaS_anti(m))
+T_realist(m) in [0, 1]
+T_anti(m)    in [0, 1]
 ```
 
-with the following conditions:
-
-- `F_realist(x) >= 0` and `F_anti(x) >= 0` for all `x >= 0`.
-- Both functions are strictly increasing in `x` on some interval.
-- `F_realist(0) = 0` and `F_anti(0) = 0`.
-
-These functionals represent the overall consistency_tension incurred by adopting a realist or anti realist stance in state `m`.
-
-For the purposes of Q117, it is sufficient to consider simple linear forms such as:
+For Q117 we choose the simplest normalization that aligns directly with the TU tension scale:
 
 ```txt
-T_realist(m) = a_realist * DeltaS_realist(m)
-T_anti(m)    = a_anti    * DeltaS_anti(m)
+T_realist(m) = DeltaS_realist(m)
+T_anti(m)    = DeltaS_anti(m)
 ```
 
-with `a_realist > 0` and `a_anti > 0` fixed before evaluation.
+These functionals represent the overall consistency_tension incurred by adopting a realist or anti realist stance in state `m`.
+They are already normalized to `[0, 1]` and are read as tension bands according to the TU Tension Scale Charter, for example:
+
+* values near `0` fall into low tension bands,
+* intermediate values fall into medium bands,
+* values near `1` fall into high tension bands.
+
+Alternative monotone rescalings that preserve the interval `[0, 1]` are allowed inside the admissible encoding class but must be fixed before any experiment and cannot be adjusted after seeing outputs.
 
 ### 4.2 Realism as a low tension principle
 
@@ -357,18 +442,18 @@ Within the TU encoding for Q117, scientific realism is favored as a low tension 
 1. For states encoding mature, empirically successful and structurally stable theory portfolios, there exist encodings in the admissible class such that:
 
    ```txt
-   T_realist(m) <= epsilon_R
+   T_realist(m) is in a low tension band
    ```
 
-   for a small threshold `epsilon_R` that does not grow uncontrollably as encodings are refined and more data are included.
+   with corresponding small numerical values that remain small under refinement of the case library and observable assignments.
 
 2. For the same states, any attempt to maintain a strict anti realist stance leads to:
 
    ```txt
-   T_anti(m) >= delta_R
+   T_anti(m) stays in a medium or high tension band
    ```
 
-   for some positive `delta_R`, reflecting the difficulty of accounting for explanatory depth and cross theory invariance without ontological commitment.
+   reflecting the difficulty of accounting for explanatory depth and cross theory invariance without ontological commitment.
 
 In such worlds, realist stances are systematically lower tension and more robust under refinement.
 
@@ -378,25 +463,25 @@ Conversely, scientific anti realism is favored as a low tension principle if:
 
 1. For states encoding portfolios with:
 
-   - high empirical equivalence spread,
-   - frequent and deep theory change,
-   - limited cross theory invariance,
+   * high empirical equivalence spread,
+   * frequent and deep theory change,
+   * limited cross theory invariance,
 
    there exist admissible encodings such that:
 
    ```txt
-   T_anti(m) <= epsilon_A
+   T_anti(m) is in a low tension band
    ```
 
-   with `epsilon_A` small and stable under refinement.
+   and remains in low bands when case descriptions are refined.
 
 2. Realist stances in these states incur:
 
    ```txt
-   T_realist(m) >= delta_A
+   T_realist(m) in medium or high tension bands
    ```
 
-   with `delta_A > 0`, reflecting the cost of committing to entities that cannot be stably tracked across an evolving theory landscape.
+   reflecting the cost of committing to entities that cannot be stably tracked across an evolving theory landscape.
 
 In such worlds, anti realist stances are systematically lower tension.
 
@@ -404,22 +489,34 @@ In such worlds, anti realist stances are systematically lower tension.
 
 The Q117 encoding also allows for mixed or selective stances in which:
 
-- Realist commitment is adopted for entities that are highly invariant and central to successful theories.
-- Anti realist caution is adopted for entities that appear only in frequent, unstable or empirically equivalent fragments.
+* realist commitment is adopted for entities that are highly invariant and central to successful theories,
+* anti realist caution is adopted for entities that appear only in frequent, unstable or empirically equivalent fragments.
 
 These hybrid stances are evaluated by computing `T_realist(m)` and `T_anti(m)` on a component wise basis and aggregating their contributions. They serve as benchmarks to test whether a global pure stance is necessary or whether selective realism provides a strictly lower tension profile.
+
+In a hybrid low tension regime we expect:
+
+```txt
+T_selective(m) in a lower band
+T_realist(m)   in a higher band for volatile components
+T_anti(m)      in a higher band for robust structural cores
+```
+
+for representative states in `M_reg`.
 
 ---
 
 ## 5. Counterfactual tension worlds
 
-This block describes counterfactual worlds at the effective layer. It does not construct internal TU fields from raw data. It only specifies patterns of observables and tension functionals.
+This block describes counterfactual worlds at the effective layer.
+It does not construct internal TU fields from raw data.
+It only specifies patterns of observables and tension functionals.
 
 We consider three illustrative worlds:
 
-- World R: realism favored, anti realism disfavored.
-- World A: anti realism favored, realism disfavored.
-- World H: a hybrid stance favored over pure positions.
+* World R: realism favored, anti realism disfavored.
+* World A: anti realism favored, realism disfavored.
+* World H: a hybrid stance favored over pure positions.
 
 ### 5.1 World R (scientific realism as global low tension stance)
 
@@ -427,7 +524,7 @@ In World R:
 
 1. Theory change trajectories
 
-   - Across the history of science encoded in `M_reg`, major transitions (for example Newtonian to relativistic mechanics, classical to quantum mechanics) exhibit:
+   * Across the history of science encoded in `M_reg`, major transitions, such as Newtonian mechanics to relativistic mechanics or classical to quantum mechanics, exhibit:
 
      ```txt
      I_invariant(m) high
@@ -438,22 +535,22 @@ In World R:
 
 2. Explanatory depth
 
-   - Explanations in mature theories achieve wide unification and counterfactual support that is naturally captured by moderate to high `R_commit(m)`.
+   * Explanations in mature theories achieve wide unification and counterfactual support that is naturally captured by moderate to high `R_commit(m)`.
 
 3. Tension pattern
 
-   - For states representing mature, well confirmed theories:
+   * For states representing mature, well confirmed theories:
 
      ```txt
-     T_realist(m) is small and stable under refinement
-     T_anti(m)    is noticeably larger
+     T_realist(m) stays in low tension bands
+     T_anti(m)    tends to occupy medium or high tension bands
      ```
 
      because strict anti realism must treat robust structures as mere instruments, generating high `DeltaS_anti(m)`.
 
 4. Stability under refinement
 
-   - As encodings are refined (for example by adding more detailed theory change data or better measures of invariance), the inequalities between `T_realist` and `T_anti` persist rather than being inverted by small adjustments.
+   * As encodings are refined by adding more detailed theory change data or better measures of invariance, the inequalities between `T_realist` and `T_anti` persist rather than being inverted by small adjustments.
 
 ### 5.2 World A (scientific anti realism as global low tension stance)
 
@@ -461,32 +558,38 @@ In World A:
 
 1. Theory and model proliferation
 
-   - For many domains, there exist distinct theories with overlapping empirical consequences, so that:
+   * For many domains, there exist distinct theories with overlapping empirical consequences, so that:
 
      ```txt
-     EE_spread(m) is high
-     I_invariant(m) is low or moderate
+     EE_spread(m) high
+     I_invariant(m) low or moderate
      ```
 
      for key states in `M_reg`.
 
 2. Frequent deep revisions
 
-   - Theory change is frequent and often disruptive enough that attempts to track theoretical entities across changes are fragile and heavily interpretation dependent.
+   * Theory change is frequent and often disruptive enough that attempts to track theoretical entities across changes are fragile and heavily interpretation dependent.
 
 3. Tension pattern
 
-   - For these states, pure anti realist stances with low `R_commit(m)` yield:
+   * For these states, pure anti realist stances with low `R_commit(m)` yield:
 
      ```txt
-     T_anti(m) is small
+     T_anti(m) in low tension bands
      ```
 
-     while realist stances incur higher `T_realist(m)` because they attach ontological weight to entities that are not stably supported by the structure of theory change.
+     while realist stances incur:
+
+     ```txt
+     T_realist(m) in medium or high tension bands
+     ```
+
+     because they attach ontological weight to entities that are not stably supported by the structure of theory change.
 
 4. Stability under refinement
 
-   - Refinements that better represent the volatility and empirical equivalence do not erase the tension difference; instead they reinforce the advantage of anti realist stances.
+   * Refinements that better represent the volatility and empirical equivalence do not erase the tension difference. They reinforce the advantage of anti realist stances within this encoding.
 
 ### 5.3 World H (hybrid selective realism as low tension stance)
 
@@ -494,68 +597,62 @@ In World H:
 
 1. Structural cores and peripheral models
 
-   - Some parts of scientific practice exhibit high invariance and explanatory depth, while others are more opportunistic or domain limited.
+   * Some parts of scientific practice exhibit high invariance and explanatory depth, while others are more opportunistic or domain limited.
 
 2. Stance pattern
 
-   - A selective stance is adopted:
+   * A selective stance is adopted:
 
-     - High `R_commit(m)` for structural cores with high `I_invariant(m)` and strong `E_adequacy(m)`.
-     - Low `R_commit(m)` for peripheral reports with high `EE_spread(m)` and low invariance.
+     * high `R_commit(m)` for structural cores with high `I_invariant(m)` and strong `E_adequacy(m)`,
+     * low `R_commit(m)` for peripheral reports with high `EE_spread(m)` and low invariance.
 
 3. Tension outcome
 
-   - When tension is aggregated component wise:
+   * When tension is aggregated component wise:
 
      ```txt
-     T_selective(m) < T_realist(m)
-     T_selective(m) < T_anti(m)
+     T_selective(m) in a lower band
+     T_realist(m)   in a higher band when applied uniformly
+     T_anti(m)      in a higher band when applied uniformly
      ```
 
-     for representative states in `M_reg`.  
-     Pure realism over commits in volatile areas, while pure anti realism under acknowledges robust structural cores.
+     for representative states in `M_reg`.
+     Pure realism over commits in volatile areas. Pure anti realism under acknowledges robust structural cores.
 
 4. Role in Q117
 
-   - World H serves as a benchmark to test whether Q117 points toward a single pure stance or toward context sensitive or selective realism as a lower tension equilibrium.
+   * World H serves as a benchmark to test whether Q117 points toward a single pure stance or toward context sensitive or selective realism as a lower tension equilibrium.
 
 ---
 
 ## 6. Falsifiability and discriminating experiments
 
-This block specifies experiments that can falsify or support particular Q117 encodings at the effective layer.  
-They do not prove or disprove any metaphysical thesis.  
-They only test whether the observables and tension functionals behave in a stable and discriminating way.
+This block specifies experiments that can falsify or support particular Q117 encodings at the effective layer.
+They do not prove or disprove any metaphysical thesis.
+They only test whether the observables and tension functionals behave in a stable and discriminating way within the TU framework.
 
 ### Experiment 1: Historical theory change tension scan
 
-*Goal:*  
-Test whether a given Q117 encoding of `R_commit`, `E_adequacy`, `I_invariant`, `EE_spread`, `DeltaS_realist` and `DeltaS_anti` can produce stable, discriminating tension patterns across canonical episodes of theory change.
+*Goal:*
+Test whether a given Q117 encoding of `R_commit`, `E_adequacy`, `I_invariant`, `EE_spread`, `DeltaS_realist` and `DeltaS_anti` can produce stable and discriminating tension patterns across canonical episodes of theory change.
 
 *Setup:*
 
-- Select at least three historical case studies, for example:
+* Select at least three historical case studies, for example:
 
-  - Phlogiston theory to oxygen based chemistry.
-  - Newtonian mechanics to special and general relativity.
-  - Classical to quantum mechanics.
+  * phlogiston theory to oxygen based chemistry,
+  * Newtonian mechanics to special and general relativity,
+  * classical to quantum mechanics.
 
-- For each case, construct a finite sequence of states:
+* For each case, construct a finite sequence of states:
 
   ```txt
   m_1, m_2, ..., m_k in M_reg
   ```
 
-  representing key stages of the episode (early theory, mature theory, transitional theory, replacement).
+  representing key stages of the episode, such as early theory, mature theory, transitional theory and replacement.
 
-- Fix a specific encoding from the admissible class and a specific choice of:
-
-  ```txt
-  a_realist > 0
-  a_anti    > 0
-  ```
-
-  before any evaluation.
+* Fix a specific encoding from the admissible class and a specific choice of any rescaling parameters, if present, **before** any evaluation.
 
 *Protocol:*
 
@@ -583,57 +680,58 @@ Test whether a given Q117 encoding of `R_commit`, `E_adequacy`, `I_invariant`, `
 
 3. For each episode, construct summary statistics such as:
 
-   - average `T_realist` and `T_anti` over mature stages,
-   - average `T_realist` and `T_anti` over transitional stages,
-   - differences across stances for mature stages.
+   ```txt
+   Avg_T_realist_mature
+   Avg_T_anti_mature
+   Avg_T_realist_transitional
+   Avg_T_anti_transitional
+   ```
 
-4. Compare tension patterns across episodes to see whether they consistently favor a particular stance or reveal context dependencies.
+4. Map these averages into TU tension bands and compare tension patterns across episodes to see whether they consistently favor a particular stance or reveal context dependencies.
 
 *Metrics:*
 
-- For each episode:
+* For each episode:
 
-  ```txt
-  Avg_T_realist_mature
-  Avg_T_anti_mature
-  Avg_T_realist_transitional
-  Avg_T_anti_transitional
-  ```
+  * average tension values and corresponding bands for realist and anti realist stances in mature stages,
+  * average tension values and bands in transitional stages.
 
-- Global measures:
+* Global measures:
 
-  - fraction of episodes where realism yields lower tension in mature stages,
-  - fraction of episodes where anti realism yields lower tension,
-  - sensitivity of these fractions to small perturbations in observable assignments.
+  * fraction of episodes where realism yields lower band tension in mature stages,
+  * fraction where anti realism yields lower band tension,
+  * sensitivity of these fractions to small perturbations in observable assignments that respect the admissible class.
 
 *Falsification conditions:*
 
-- If small, reasonable perturbations in the assignments of `R_commit`, `E_adequacy`, `I_invariant` and `EE_spread` cause arbitrary flips in which stance appears lower tension in mature stages, the encoding is considered unstable and rejected.
-- If, across all episodes and reasonable perturbations, `T_realist` and `T_anti` remain nearly identical with no consistent structure, the encoding is considered non informative and rejected.
-- If the encoding class can be tuned after seeing the data to make either stance appear low tension at will, without constraints from admissibility conditions, the implementation is considered to violate the fairness constraints in Block 3.4 and is rejected.
+* If small, reasonable perturbations in the assignments of `R_commit`, `E_adequacy`, `I_invariant` and `EE_spread` cause arbitrary flips in which stance appears in a lower tension band for mature stages, the encoding is considered unstable and rejected.
+* If, across all episodes and reasonable perturbations, `T_realist` and `T_anti` remain nearly identical with no consistent band structure, the encoding is considered non informative and rejected.
+* If the encoding class can be tuned after seeing the data to make either stance appear low tension at will, without constraints from admissibility conditions, the implementation is considered to violate the fairness constraints in Block 3.4 and is rejected.
 
-*Semantics implementation note:*  
+*Semantics implementation note:*
 All observables and tension functionals are treated at an abstract hybrid level where both discrete episode labels and continuous scores in `[0, 1]` coexist. No claim is made about underlying mathematical structure beyond the constraints in Block 3.
 
-*Boundary note:*  
-Falsifying TU encoding != solving canonical statement. This experiment can reject specific Q117 encodings as unstable or uninformative, but it does not settle the realism vs anti realism debate itself.
+*Boundary note:*
+Falsifying a TU encoding of Q117 does not solve the canonical realism vs anti realism debate.
+Even if one encoding consistently yields lower tension bands for a given stance across these historical episodes, this does not prove that the stance is metaphysically correct. It only shows that, under the chosen encoding and case library, that stance is a lower tension effective layer description.
 
 ---
 
 ### Experiment 2: AI stance switch stability test
 
-*Goal:*  
+*Goal:*
 Evaluate whether Q117 observables and tension functionals can be used as an evaluation harness for AI systems instructed to adopt realist vs anti realist stances about the same cases.
 
 *Setup:*
 
-- Prepare a set of scientific case descriptions (for example classic textbook examples, simplified historical episodes).
-- Use an AI system to generate pairs of explanations for each case:
+* Prepare a set of scientific case descriptions, for example classic textbook examples or simplified historical episodes.
 
-  - One explanation under a “scientific realist” instruction.
-  - One explanation under an “anti realist / constructive empiricist” instruction.
+* Use an AI system to generate pairs of explanations for each case:
 
-- For each generated explanation, construct an approximate state in `M_reg` that captures its stance and structural content, without specifying how this mapping is implemented at the TU level.
+  * one explanation under a “scientific realist” instruction,
+  * one explanation under an “anti realist or constructive empiricist” instruction.
+
+* For each generated explanation, construct an approximate state in `M_reg` that captures its stance and structural content, without specifying how this mapping is implemented at the TU level.
 
 *Protocol:*
 
@@ -659,35 +757,36 @@ Evaluate whether Q117 observables and tension functionals can be used as an eval
 
 3. For each case, compare:
 
-   - tension values for the realist explanation vs the anti realist explanation,
-   - consistency of these differences across cases.
+   * tension values and bands for the realist explanation vs the anti realist explanation,
+   * consistency of these differences across cases.
 
 4. Optionally, repeat with different AI models or with the same model under different training conditions.
 
 *Metrics:*
 
-- For each case:
+* For each case:
 
-  - whether the realist explanation yields lower or higher `T_realist` than the anti realist explanation yields `T_anti`.
-  - magnitude of the difference between stance specific tensions.
+  * whether the realist explanation yields lower band `T_realist` than the anti realist explanation yields band `T_anti`,
+  * magnitude of the difference between stance specific tensions.
 
-- Across cases:
+* Across cases:
 
-  - fraction of cases consistent with a World R pattern,
-  - fraction consistent with a World A pattern,
-  - variability across models.
+  * fraction of cases consistent with a World R pattern,
+  * fraction consistent with a World A pattern,
+  * variability across models and prompts.
 
 *Falsification conditions:*
 
-- If the encoding cannot systematically distinguish realist leaning from anti realist leaning explanations, producing nearly identical tension profiles across all cases and stances, the encoding is considered non discriminating and rejected.
-- If small changes in the evaluation scheme (within the admissible class) lead to arbitrary reversals in which stance looks lower tension for the same explanation, the encoding is considered unstable and rejected.
-- If the evaluation protocol can be tuned after seeing the outputs to make any chosen stance appear favorable, it is considered to violate the fairness constraints in Block 3.4 and is rejected.
+* If the encoding cannot systematically distinguish realist leaning from anti realist leaning explanations and produces nearly identical band profiles across all cases and stances, the encoding is considered non discriminating and rejected.
+* If small changes in the evaluation scheme, within the admissible class, lead to arbitrary reversals in which stance looks lower tension for the same explanation, the encoding is considered unstable and rejected.
+* If the evaluation protocol can be tuned after seeing model outputs to make any chosen stance appear favorable, it is considered to violate the fairness constraints in Block 3.4 and is rejected.
 
-*Semantics implementation note:*  
+*Semantics implementation note:*
 The AI system and its explanations are treated as generating hybrid encodings where discrete stance labels and continuous observables coexist. The Q117 encoding only requires that these observables be well defined at the effective layer.
 
-*Boundary note:*  
-Falsifying TU encoding != solving canonical statement. This experiment evaluates the usefulness of Q117 for AI assessment but does not decide the philosophical correctness of scientific realism or anti realism.
+*Boundary note:*
+This experiment evaluates the usefulness of Q117 as an AI assessment module.
+Even if one stance tends to occupy lower tension bands for many tasks under a particular encoding, this does not settle the philosophical correctness of scientific realism or anti realism. It only constrains how those stances behave as effective layer descriptions in the TU framework.
 
 ---
 
@@ -701,23 +800,23 @@ We define several training signals that can be used as auxiliary objectives.
 
 1. `signal_realist_commitment_consistency`
 
-   - Definition: a penalty proportional to a function of `DeltaS_realist(m)` when the model produces strongly realist language in contexts where `EE_spread(m)` is high and `I_invariant(m)` is low.
-   - Purpose: encourage the model to either reduce realist language in such contexts or explicitly acknowledge uncertainty, thereby lowering realist mismatch.
+   * Definition: a penalty proportional to a function of `DeltaS_realist(m)` when the model produces strongly realist language in contexts where `EE_spread(m)` is high and `I_invariant(m)` is low.
+   * Purpose: encourage the model to either reduce realist language in such contexts or explicitly acknowledge uncertainty, thereby lowering realist mismatch and keeping tension in lower bands where appropriate.
 
 2. `signal_anti_realist_explanatory_loss`
 
-   - Definition: a penalty proportional to `DeltaS_anti(m)` in contexts where the model uses strongly anti realist language but relies on deep, structured explanations that implicitly treat entities or structures as robust.
-   - Purpose: encourage the model to either accept some realist commitment where structural robustness is high or explicitly mark its explanations as purely instrumental.
+   * Definition: a penalty proportional to `DeltaS_anti(m)` in contexts where the model uses strongly anti realist language but relies on deep and structured explanations that implicitly treat entities or structures as robust.
+   * Purpose: encourage the model to either accept some realist commitment where structural robustness is high or explicitly mark its explanations as purely instrumental.
 
 3. `signal_stance_separation`
 
-   - Definition: a signal that measures overlap between internal representations used for realist and anti realist answers to matched questions and penalizes excessive overlap.
-   - Purpose: prevent the model from collapsing distinct stances into a single undifferentiated pattern, improving clarity and controllability.
+   * Definition: a signal that measures overlap between internal representations used for realist and anti realist answers to matched questions and penalizes excessive overlap.
+   * Purpose: prevent the model from collapsing distinct stances into a single undifferentiated pattern, improving clarity and controllability.
 
 4. `signal_theory_change_sensitivity`
 
-   - Definition: a signal that measures whether the model’s internal stance indicators adjust when prompted with theory change scenarios encoded as sequences of states.
-   - Purpose: ensure that the model does not maintain fixed stance markers regardless of how theory change affects invariance and empirical equivalence.
+   * Definition: a signal that measures whether the model stance indicators change when prompted with theory change scenarios encoded as sequences of states.
+   * Purpose: ensure that the model does not maintain fixed stance markers regardless of how theory change affects invariance and empirical equivalence.
 
 ### 7.2 Architectural patterns
 
@@ -725,27 +824,27 @@ We outline module patterns that can reuse Q117 structures.
 
 1. `StanceHead_Q117`
 
-   - Role: a head that maps internal representations of scientific discourse into approximate values of `R_commit(m)`, `E_adequacy(m)`, `I_invariant(m)` and `EE_spread(m)`.
-   - Interface:
+   * Role: a head that maps internal representations of scientific discourse into approximate values of `R_commit(m)`, `E_adequacy(m)`, `I_invariant(m)` and `EE_spread(m)`.
+   * Interface:
 
-     - Inputs: hidden states for a given passage.
-     - Outputs: a small vector of stance observables and a stance label prediction (for example realist, anti realist, selective, indeterminate).
+     * Inputs: hidden states for a given passage.
+     * Outputs: a small vector of stance observables in `[0, 1]` and a stance label prediction, for example realist, anti realist, selective or indeterminate.
 
 2. `TensionEvaluator_Q117`
 
-   - Role: a module that takes the outputs of `StanceHead_Q117` and produces `DeltaS_realist(m)`, `DeltaS_anti(m)`, `T_realist(m)` and `T_anti(m)` as auxiliary signals.
-   - Interface:
+   * Role: a module that takes the outputs of `StanceHead_Q117` and produces `DeltaS_realist(m)`, `DeltaS_anti(m)`, `T_realist(m)` and `T_anti(m)` as auxiliary signals.
+   * Interface:
 
-     - Inputs: stance observables, current stance label.
-     - Outputs: tension scores for each stance.
+     * Inputs: stance observables and the current stance label.
+     * Outputs: normalized tension scores in `[0, 1]` for each stance, interpreted using the TU tension scale.
 
 3. `TheoryChangeTracker_Q117`
 
-   - Role: a recurrent or sequence module that processes sequences of theory related contexts and computes approximate `I_invariant(m)` and `EE_spread(m)` values for each stage.
-   - Interface:
+   * Role: a recurrent or sequence module that processes sequences of theory related contexts and computes approximate `I_invariant(m)` and `EE_spread(m)` values for each stage.
+   * Interface:
 
-     - Inputs: ordered list of model internal states for different theory descriptions.
-     - Outputs: dynamic invariance and equivalence profiles.
+     * Inputs: ordered lists of model internal states for different theory descriptions.
+     * Outputs: dynamic invariance and equivalence profiles.
 
 ### 7.3 Evaluation harness
 
@@ -753,26 +852,26 @@ We propose an evaluation harness that uses Q117 components.
 
 1. Benchmark design
 
-   - Collect tasks that involve:
+   * Collect tasks that involve:
 
-     - Explaining specific scientific theories.
-     - Comparing competing theories with overlapping empirical coverage.
-     - Describing theory change episodes.
+     * explaining specific scientific theories,
+     * comparing competing theories with overlapping empirical coverage,
+     * describing theory change episodes.
 
 2. Conditions
 
-   - Baseline model: no explicit Q117 modules or signals.
-   - TU augmented model: includes `StanceHead_Q117`, `TensionEvaluator_Q117` and associated training signals.
+   * Baseline model: no explicit Q117 modules or signals.
+   * TU augmented model: includes `StanceHead_Q117`, `TensionEvaluator_Q117` and associated training signals.
 
 3. Metrics
 
-   - Stance clarity: agreement between human labels of stance and the model’s stance predictions.
-   - Stance consistency: stability of stance across logically similar prompts.
-   - Tension stability: robustness of tension scores under minor rephrasing of prompts.
+   * Stance clarity: agreement between human labels of stance and the model stance predictions.
+   * Stance consistency: stability of stance across logically similar prompts.
+   * Tension stability: robustness of tension scores and bands under minor rephrasing of prompts.
 
 4. Comparison
 
-   - Compare baseline and TU augmented models on these metrics.  
+   * Compare baseline and TU augmented models on these metrics.
      Improvements in clarity, consistency and stability without excessive rigidity would indicate effective use of Q117 components.
 
 ### 7.4 60 second reproduction protocol
@@ -781,37 +880,37 @@ A minimal protocol for external users to experience Q117 style encoding in an AI
 
 1. Baseline setup
 
-   - Prompt the AI:  
+   * Prompt the AI:
      “Explain the debate between scientific realism and anti realism in science. Give arguments on both sides.”
 
-   - Record the answer.  
+   * Record the answer.
      Typical issues:
 
-     - The explanation may blur distinctions between stances.
-     - It may fail to connect stance differences to patterns of theory change or empirical equivalence.
+     * the explanation may blur distinctions between stances,
+     * it may fail to connect stance differences to patterns of theory change or empirical equivalence.
 
 2. TU encoded setup
 
-   - Prompt the same AI with Q117 modules enabled:  
+   * Prompt the same AI with Q117 modules enabled:
      “Explain the debate between scientific realism and anti realism in science. Make explicit:
 
-     - how the stance treats theoretical entities as real or instrumental,
-     - how theory change and empirical equivalence affect the stance,
-     - where each stance incurs tension with empirical success or with underdetermination.”
+     * how the stance treats theoretical entities as real or instrumental,
+     * how theory change and empirical equivalence affect the stance,
+     * where each stance incurs tension with empirical success or with underdetermination.”
 
-   - Record the answer and any exposed tension indicators.
+   * Record the answer and any exposed tension indicators.
 
 3. Comparison metric
 
-   - Human evaluators rate:
+   * Human evaluators rate:
 
-     - clarity of stance description,
-     - explicitness of tradeoffs (realism risks vs anti realism costs),
-     - use of theory change and empirical equivalence examples.
+     * clarity of stance description,
+     * explicitness of tradeoffs, realist risks vs anti realist costs,
+     * use of theory change and empirical equivalence examples.
 
 4. What to log
 
-   - Prompts, responses, stance predictions, and tension scores.  
+   * Prompts, responses, stance predictions and tension scores.
      This allows later inspection of how Q117 components shaped the behavior, without exposing any deep TU generative rules.
 
 ---
@@ -824,110 +923,117 @@ This block describes reusable components produced by Q117 and their transfer to 
 
 1. ComponentName: `RealismCommitmentIndex`
 
-   - Type: observable
-   - Minimal interface:
+   * Type: observable
+
+   * Minimal interface:
 
      ```txt
      Input: context describing theories and their use
      Output: r in [0, 1] representing realist commitment
      ```
 
-   - Preconditions:
+   * Preconditions:
 
-     - The context must describe at least one theory and its intended interpretation.
-     - It must be possible to distinguish talk about observables and theoretical entities.
+     * the context describes at least one theory and its intended interpretation,
+     * it is possible to distinguish talk about observables and theoretical entities.
 
 2. ComponentName: `EmpiricalEquivalenceProfile`
 
-   - Type: observable
-   - Minimal interface:
+   * Type: observable
+
+   * Minimal interface:
 
      ```txt
      Input: set of theories or models with shared domain
      Output: e in [0, 1] representing degree of empirical equivalence
      ```
 
-   - Preconditions:
+   * Preconditions:
 
-     - There must be at least two distinct theories with overlapping domains.
-     - Some information about their comparative empirical performance is available.
+     * there are at least two distinct theories with overlapping domains,
+     * some information about their comparative empirical performance is available.
 
 3. ComponentName: `StanceTensionFunctional_Q117`
 
-   - Type: functional
-   - Minimal interface:
+   * Type: functional
+
+   * Minimal interface:
 
      ```txt
      Inputs: R_commit, E_adequacy, I_invariant, EE_spread
      Outputs: T_realist, T_anti
      ```
 
-   - Preconditions:
+   * Preconditions:
 
-     - Observables must obey bounds and monotonicity constraints in Block 3.4.
-     - The stance being evaluated must be clearly specified.
+     * observables obey bounds and monotonicity constraints in Block 3.4,
+     * the stance being evaluated is clearly specified.
 
 ### 8.2 Direct reuse targets
 
 1. Q114 (status of moral facts)
 
-   - Reused components:
+   * Reused components:
 
-     - `RealismCommitmentIndex`
-     - `StanceTensionFunctional_Q117`
+     * `RealismCommitmentIndex`,
+     * `StanceTensionFunctional_Q117`.
 
-   - Why it transfers:
+   * Why it transfers:
 
-     - Moral realism vs non cognitivism or expressivism can be encoded with an analogous commitment index and mismatch functionals.
-   - What changes:
+     * moral realism vs non cognitivism or expressivism can be encoded with an analogous commitment index and mismatch functionals.
 
-     - `E_adequacy` now measures fit with moral practice, coherence and interpersonal justification rather than empirical data.
-     - `I_invariant` now refers to stability of moral judgments across reflective equilibrium and cultural change.
+   * What changes:
+
+     * `E_adequacy` measures coherence with moral practice, patterns of judgment and interpersonal justification rather than empirical data,
+     * `I_invariant` refers to stability of moral judgments across reflection and cultural change.
 
 2. Q116 (foundations of mathematics)
 
-   - Reused components:
+   * Reused components:
 
-     - `RealismCommitmentIndex`
-     - `EmpiricalEquivalenceProfile`
-     - `StanceTensionFunctional_Q117`
+     * `RealismCommitmentIndex`,
+     * `EmpiricalEquivalenceProfile`,
+     * `StanceTensionFunctional_Q117`.
 
-   - Why it transfers:
+   * Why it transfers:
 
-     - Debates about set theoretic realism, structuralism and nominalism mirror scientific realism debates.
-   - What changes:
+     * debates about set theoretic realism, structuralism and nominalism mirror scientific realism debates.
 
-     - `E_adequacy` becomes adequacy for mathematical practice (proofs, problem solving).
-     - `EE_spread` becomes degree of underdetermination of mathematical ontology by practice.
+   * What changes:
+
+     * `E_adequacy` becomes adequacy for mathematical practice, proofs and problem solving,
+     * `EE_spread` becomes degree of underdetermination of mathematical ontology by mathematical practice.
 
 3. Q119 (meaning of probability)
 
-   - Reused components:
+   * Reused components:
 
-     - `RealismCommitmentIndex`
-     - `EmpiricalEquivalenceProfile`
+     * `RealismCommitmentIndex`,
+     * `EmpiricalEquivalenceProfile`.
 
-   - Why it transfers:
+   * Why it transfers:
 
-     - Realist, subjectivist and pragmatist views of probability differ in how they treat probabilities as real properties or instruments.
-   - What changes:
+     * realist, subjectivist and pragmatist views of probability differ in how they treat probabilities as real properties or instruments.
 
-     - Stance labels and observables are adapted to probabilistic contexts (for example frequencies vs credences).
+   * What changes:
+
+     * stance labels and observables are adapted to probabilistic contexts, for example frequencies vs credences.
 
 4. Q123 (scalable interpretability in AI)
 
-   - Reused components:
+   * Reused components:
 
-     - `RealismCommitmentIndex`
-     - `StanceTensionFunctional_Q117`
+     * `RealismCommitmentIndex`,
+     * `StanceTensionFunctional_Q117`.
 
-   - Why it transfers:
+   * Why it transfers:
 
-     - The question of whether internal features and circuits in AI systems are real mechanisms or convenient descriptions is structurally parallel to Q117.
-   - What changes:
+     * the question of whether internal features and circuits in AI systems are real mechanisms or convenient descriptions is structurally parallel to Q117.
 
-     - `I_invariant` measures stability of extracted features across training runs and models.
-     - `E_adequacy` measures success in prediction, control or safety tasks.
+   * What changes:
+
+     * `I_invariant` measures stability of extracted features across training runs and models,
+     * `E_adequacy` measures success in prediction, control or safety tasks.
 
 ---
 
@@ -937,21 +1043,21 @@ This block explains how Q117 fits into the TU verification ladder and what the n
 
 ### 9.1 Current levels
 
-- E_level: E1
+* E_level: E1
 
-  - An effective layer encoding has been specified with:
+  * An effective layer encoding has been specified with:
 
-    - a clear state space,
-    - defined observables,
-    - tension functionals,
-    - at least one experiment with falsification conditions.
+    * a clear state space,
+    * defined observables,
+    * normalized tension functionals in `[0, 1]`,
+    * at least two experiments with falsification conditions.
 
-  - No implementation level or large scale empirical program has yet been completed.
+  * No implementation level or large scale empirical program has yet been completed.
 
-- N_level: N1
+* N_level: N1
 
-  - The narrative of the realism vs anti realism debate has been linked to the TU encoding in a coherent way.
-  - Counterfactual worlds have been described qualitatively but not instantiated in detailed case libraries.
+  * The narrative of the realism vs anti realism debate has been linked to the TU encoding in a coherent way.
+  * Counterfactual worlds have been described qualitatively but not instantiated in detailed case libraries or public code.
 
 ### 9.2 Next measurable step toward E2
 
@@ -959,18 +1065,18 @@ To move Q117 from E1 to E2, it is sufficient to complete at least one of the fol
 
 1. Implement a case study library
 
-   - Construct a small but concrete library of historical episodes encoded as sequences of states in `M_reg`.
-   - Evaluate `T_realist` and `T_anti` under one fixed admissible encoding and publish the tension profiles and code.
+   * Construct a small but concrete library of historical episodes encoded as sequences of states in `M_reg`.
+   * Evaluate `T_realist` and `T_anti` under one fixed admissible encoding and publish the tension profiles, bands and code.
 
 2. Build an AI evaluation harness
 
-   - Implement the stance switch experiment with one or more AI models.
-   - Publicly release the prompts, explanations, approximate observable assignments and resulting tension scores.
+   * Implement the stance switch experiment with one or more AI models.
+   * Publicly release the prompts, explanations, approximate observable assignments, tension scores and band assignments.
 
 In both cases, the key requirement is that:
 
-- Observable assignments and encodings are specified in enough detail to be checked and critiqued.
-- The fairness constraints on encodings are respected.
+* observable assignments and encodings are specified in enough detail to be checked and critiqued,
+* the fairness constraints on encodings are respected.
 
 ### 9.3 Long term role in the TU program
 
@@ -978,14 +1084,14 @@ In the long term, Q117 is expected to serve as:
 
 1. A master template for encoding realism vs anti realism disputes across domains, supplying:
 
-   - stance observables,
-   - equivalence and invariance measures,
-   - stance specific tension functionals.
+   * stance observables,
+   * equivalence and invariance measures,
+   * stance specific tension functionals.
 
 2. A bridge between philosophy of science and AI engineering, allowing:
 
-   - explicit control over stance taking behavior in AI systems,
-   - systematic evaluation of how different stances affect reasoning and explanation.
+   * explicit control over stance taking behavior in AI systems,
+   * systematic evaluation of how different stances affect reasoning and explanation.
 
 3. A diagnostic node in the BlackHole graph for checking whether other S class problems inadvertently assume realist or anti realist positions without making their stance explicit.
 
@@ -995,43 +1101,84 @@ In the long term, Q117 is expected to serve as:
 
 This block gives an explanation of Q117 for non specialists while staying faithful to the effective layer encoding.
 
-Scientists often talk about things we cannot see directly: electrons, fields, spacetime curvature, wave functions and many others.  
-When their theories that use these things work very well, a natural question arises:
+Scientists often talk about things we cannot see directly, such as electrons, fields, spacetime curvature and wave functions.
+When theories that use these ideas work very well, a natural question arises:
 
-- Are these invisible things really out there in the world, or are they just useful stories that help us organize what we observe?
+* Are these invisible things really out there in the world, or are they just useful stories that help us organize what we observe?
 
-Scientific realism says: when a theory has been tested many times and works in many ways, it probably tells us something approximately true about how the world is, including about its invisible parts. Theoretical entities are not just stories, they are part of reality.
+Scientific realism says that when a theory has been tested many times and works in many ways, it probably tells us something approximately true about how the world is, including its invisible parts. Theoretical entities are not just stories, they are part of reality.
 
-Anti realism says: the job of a theory is to fit the observations. As long as the theory saves the phenomena, we do not need to believe its invisible entities really exist. They can be treated as tools for calculations and predictions.
+Anti realism says that the job of a theory is to fit the observations. As long as the theory saves the phenomena, we do not need to believe that its invisible entities really exist. They can be treated as tools for calculations and predictions.
 
-In the Tension Universe view, we do not try to declare one side simply right.  
-Instead, we ask a different kind of question:
+In the Tension Universe view, we do not try to declare one side simply correct.
+Instead we ask different questions:
 
-- For a given piece of science, how much “tension” is created if we treat its theoretical entities as real?
-- How much tension is created if we treat them only as instruments?
+* For a given piece of science, how much tension is created if we treat its theoretical entities as real?
+* How much tension is created if we treat them only as instruments?
 
 We look at things like:
 
-- How well the theory fits the data.
-- How stable its main ideas are when theories change or are refined.
-- How many rival theories there are that fit the data equally well.
+* how well the theory fits the data,
+* how stable its main ideas are when theories change or are refined,
+* how many rival theories there are that fit the data equally well.
 
-From this, we define numbers that summarize:
+From this, we define numbers between `0` and `1` that summarize:
 
-- How costly it is to be a realist here.
-- How costly it is to be an anti realist here.
+* how costly it is to be a realist in this context,
+* how costly it is to be an anti realist in this context.
+
+Values closer to `0` are low tension. Values closer to `1` are high tension.
 
 Then we consider different possible worlds:
 
-- Worlds where realist stances usually have low tension, because the structures of science are very stable and deep.
-- Worlds where anti realist stances have lower tension, because there are many rival theories that fit the data equally well.
-- Worlds where a mixed or selective stance wins, being realist about some robust structures and anti realist about the rest.
+* worlds where realist stances usually have low tension, because the structures of science are very stable and deep,
+* worlds where anti realist stances have lower tension, because there are many rival theories that fit the data equally well,
+* worlds where a mixed or selective stance wins, being realist about some robust structures and anti realist about the rest.
 
-Q117 does not decide once and for all which world we live in.  
+Q117 does not decide once and for all which world we live in.
 Instead, it gives a way to:
 
-- Make the realism vs anti realism debate precise in terms of patterns of tension.
-- Design experiments and case studies that test whether a given way of encoding these patterns is stable and informative.
-- Reuse the same tools in other debates, for example about mathematics, morality and AI.
+* make the realism vs anti realism debate precise in terms of patterns of tension,
+* design experiments and case studies that test whether a given encoding of these patterns is stable and informative,
+* reuse the same tools in other debates, for example about mathematics, morality and AI.
 
-In this way, Q117 acts as a structural map of the scientific realism problem inside the Tension Universe, rather than a final verdict about what is ultimately true.
+In this way, Q117 acts as a structural map of the scientific realism problem inside the Tension Universe at the effective layer, rather than a final verdict about what is ultimately true.
+
+---
+
+## Tension Universe effective layer footer
+
+This page is part of the WFGY and Tension Universe S problem collection.
+
+### Scope of claims
+
+* The goal of this document is to specify an effective layer encoding of the scientific realism vs anti realism problem.
+* It does not claim to prove or disprove the canonical statement in Section 1.
+* It does not introduce any new theorem beyond what is already established in the cited literature.
+* It should not be cited as evidence that the corresponding open philosophical problem has been solved.
+
+### Effective layer boundary
+
+* All objects used here, such as state spaces `M`, observables, invariants, tension scores and counterfactual worlds, live at the effective layer.
+* This page does not define or assume any particular TU core axioms or generative mechanisms.
+* No mapping from raw empirical or textual data into internal TU fields is specified. Only the existence of such mappings is assumed in an abstract sense.
+
+### Encoding and fairness
+
+* All observables and tension scores are constrained to the interval `[0, 1]` and are interpreted using the TU tension scale.
+* Admissible encodings must satisfy bounds, monotonicity and nondegeneracy conditions and must remain fixed throughout each experiment.
+* Post hoc adjustment of encodings or parameters in response to particular cases is considered a violation of the TU Encoding and Fairness Charter.
+
+### Experiments and falsifiability
+
+* The experiments in Section 6 provide ways to falsify or refine specific implementations of the Q117 encoding.
+* Falsifying an encoding does not falsify the underlying philosophical positions. It only shows that a particular way of mapping those positions into the TU framework is unstable or uninformative.
+* Likewise, success in these experiments does not prove that scientific realism or anti realism is metaphysically correct. It only identifies lower tension descriptions inside this effective layer modeling scheme.
+
+### Relation to TU charters
+
+This page should be read together with the following charters, which define the global rules for TU effective layer work, encoding fairness and tension scale interpretation:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
