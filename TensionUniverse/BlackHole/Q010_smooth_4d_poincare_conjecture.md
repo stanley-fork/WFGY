@@ -1,7 +1,3 @@
-下面是 Q010 run2 最終版全文，你可以直接整段貼進對應的 GitHub 檔案覆蓋目前內容。
-
----
-
 # Q010 · Smooth 4 dimensional Poincaré conjecture · run 2 (effective layer)
 
 ## 0. Header metadata
@@ -20,7 +16,7 @@ Semantics: discrete
 E_level: E1
 N_level: N2
 Encoding_version: 2
-Last_updated: 2026-01-28
+Last_updated: 2026-01-30
 ```
 
 ---
