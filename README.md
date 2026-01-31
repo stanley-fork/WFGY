@@ -9,7 +9,8 @@
 
 ## 60s quickstart
 
-1. **Download (TXT)**  [WFGY-3.0_Singularity demo TXT file](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-demo_say-hello-world-to-boot.txt) 
+1. **Download (TXT)**  [WFGY-3.0_Singularity demo TXT file](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt
+) 
    > download from GitHub 
 
 2. **Upload**  
@@ -127,5 +128,6 @@ WFGY 3.0 details → [Event Horizon](https://github.com/onestardao/WFGY/blob/mai
 ---
 
 > WFGY 3.0 · MIT License · Open, verifiable, reproducible · developed by PSBigBig · onestardao
+
 
 
