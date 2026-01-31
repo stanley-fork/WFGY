@@ -28,7 +28,7 @@
 # WFGY: Civilization Starter — The WanFaGuiYi Engine  
 ## One upload. Zero setup. [Real $1M-level](https://github.com/onestardao/WFGY/blob/main/value_manifest/README.md) reasoning begins.
 
-> 👑 **Early Stargazers: [See the Hall of Fame](https://github.com/onestardao/WFGY/tree/main/stargazers)** — Verified by real engineers · 🏆 **Terminal-Bench: [Public Exam — Coming Soon](https://github.com/onestardao/WFGY/blob/main/core/README.md#terminal-bench-proof)** 🧪 **Tension Universe (candidate): [Internal Stress Test in Progress](https://github.com/onestardao/WFGY/tree/main/TensionUniverse)** — exploring structural limits beyond scaling
+> 👑 **Early Stargazers: [See the Hall of Fame](https://github.com/onestardao/WFGY/tree/main/stargazers)** — Verified by real engineers · 🌌 **WFGY 3.0 Singularity demo: [Public live view](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)**
 
 
 ![CIVILIZATION_STARTTER](https://github.com/user-attachments/assets/89d25fee-f6e5-46e8-8911-a73fe4753ccd)
