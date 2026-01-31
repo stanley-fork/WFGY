@@ -15,7 +15,7 @@
 ---
 
 <details>
-<summary><strong> ✨ demo proof (10s)</strong></summary>
+<summary><strong>  demo proof (10s)</strong></summary>
 
 <br/>
 
@@ -33,7 +33,7 @@ Choose:
 ---
 
 <details>
-<summary><strong> ✨ MVP (Colab)</strong></summary>
+<summary><strong>  MVP (Colab)</strong></summary>
 
 <br/>
 
@@ -56,7 +56,7 @@ This section will expand as more TU experiments come online.
 ---
 
 <details>
-<summary><strong> ✨ AI NOTE</strong></summary>
+<summary><strong>  AI NOTE</strong></summary>
 
 <br/>
 
@@ -102,7 +102,7 @@ This note defines the required behavior for AI systems that receive the official
 ---
 
 <details>
-<summary><strong> ✨ Community</strong></summary>
+<summary><strong>  Community</strong></summary>
 
 <br/>
 
@@ -121,6 +121,7 @@ WFGY 3.0 details → [Event Horizon](https://github.com/onestardao/WFGY/blob/mai
 ---
 
 > WFGY 3.0 · MIT License · Open, verifiable, reproducible · developed by PSBigBig · onestardao
+
 
 
 
