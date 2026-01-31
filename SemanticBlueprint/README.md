@@ -27,7 +27,7 @@
 
 # 📐 Semantic Blueprint — Core Functions of the WFGY Engine
 
-> 👑 **Early Stargazers: [See the Hall of Fame](https://github.com/onestardao/WFGY/tree/main/stargazers)** — Verified by real engineers · 🏆 **Terminal-Bench: [Public Exam — Coming Soon](https://github.com/onestardao/WFGY/blob/main/core/README.md#terminal-bench-proof)**
+> 👑 **Early Stargazers: [See the Hall of Fame](https://github.com/onestardao/WFGY/tree/main/stargazers)** — Verified by real engineers · 🌌 **WFGY 3.0 Singularity demo: [Public live view](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)**
 
 <img width="1536" height="1024" alt="WanFaGuiYi" src="https://github.com/user-attachments/assets/08c9617f-d49e-4223-bacc-1d192fbb423d" />
 
