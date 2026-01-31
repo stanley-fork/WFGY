@@ -450,7 +450,6 @@ All files live in [`../BlackHole`](../BlackHole).
 - [Q130 · OOD Grounding and Common Sense](../BlackHole/Q130_ood_grounding_and_common_sense.md)  
 - [Q131 · Tension Free Energy](../BlackHole/Q131_tension_free_energy.md)  
 
-
 ---
 
 ## More WFGY pages
@@ -458,3 +457,58 @@ All files live in [`../BlackHole`](../BlackHole).
 - WFGY 1.x to 2.x legacy: [legacy](https://github.com/onestardao/WFGY/tree/main/legacy)  
 - WFGY 2.0 core: [core](https://github.com/onestardao/WFGY/blob/main/core/README.md)  
 - WFGY 3.0 details: [Event Horizon](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)
+
+## Road to WFGY 3.0 (Conceptual Evolution)
+
+WFGY has evolved through multiple iterations, each addressing concrete limitations observed in the previous stage. Rather than replacing earlier ideas, each version refines and generalizes the same core intuition: making semantic deviation explicit, measurable, and controllable.
+
+### WFGY 1.x — Residual-based semantic deviation
+
+The early WFGY 1.x series focused on identifying *semantic residue* between an internal state and a reference or target.  
+Deviation was modeled as an explicit residual term (e.g. difference vectors or their norms), which enabled basic stability control and boundary detection.
+
+At this stage, the emphasis was on **detectability**:
+- Can we tell when a system is drifting away from an intended semantic target?
+- Can this deviation be quantified in a way that supports feedback and correction?
+
+This version established the foundational idea that semantic failure should be treated as a *measurable signal*, not a subjective judgment.
+
+---
+
+### WFGY 2.0 — Normalized tension and unified scales
+
+WFGY 2.0 generalized the residual concept into a normalized scalar form (`delta_s`), typically bounded to `[0,1]`.  
+This made it possible to compare semantic deviation across tasks, prompts, and contexts using a shared scale.
+
+Key advances in this stage include:
+- Normalization of deviation into a consistent range
+- Introduction of zones (safe / transit / risk / danger)
+- Coupling deviation dynamics with control logic (hysteresis, progression guards)
+
+The goal of WFGY 2.0 was **operational consistency**:
+- Different tasks could be analyzed under the same tension language
+- Stability decisions no longer depended on ad-hoc heuristics
+
+---
+
+### WFGY 3.0 — Multi-observable tension and auditability
+
+WFGY 3.0 extends the previous scalar approach into a structured *family of observable deviations* (`DeltaS_*`).  
+Instead of forcing all semantic risk into a single number, each task defines explicit, named observables (e.g. reference grounding, outcome stability, constraint adherence), which are then aggregated under fixed, pre-declared rules.
+
+This version emphasizes **auditability and robustness**:
+- Each `DeltaS_*` must be explicitly defined, normalized, and locked
+- Aggregation rules cannot be altered per model or per experiment
+- Guardrails prevent post-hoc adjustment or hidden tuning
+
+In WFGY 3.0, tension is no longer just a control signal; it becomes a **verifiable interface** between reasoning behavior and system constraints.
+
+---
+
+### Summary
+
+Across all versions, the core idea remains unchanged:
+> Semantic failure should be observable, quantifiable, and constrained — not corrected implicitly through weight updates or opaque rewards.
+
+WFGY 3.0 represents a maturation of this idea into a form suitable for reproducible experiments, comparative evaluation, and cross-model analysis, while remaining conceptually continuous with earlier versions.
+
