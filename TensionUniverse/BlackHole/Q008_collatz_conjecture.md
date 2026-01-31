@@ -1090,3 +1090,15 @@ This page should be read together with the following charters:
 
 * This page is an experimental specification within the ongoing **WFGY / Tension Universe** research program.
 * All structures and parameter choices are provisional and may be revised in future versions, subject to the constraints above. Any such revision is recorded through explicit versioning of this file and of the corresponding artifacts.
+
+---
+
+**Index:**  
+[`← Back to Event Horizon`](../EventHorizon/README.md)  
+[`← Back to WFGY Home`](https://github.com/onestardao/WFGY)
+
+**Consistency note:**  
+This entry has passed the internal formal-consistency and symbol-audit checks under the current WFGY 3.0 specification.  
+The structural layer is already self-consistent; any remaining issues are limited to notation or presentation refinement.  
+If you find a place where clarity can improve, feel free to open a PR or ping the community.  
+WFGY evolves through disciplined iteration, not ad-hoc patching.
