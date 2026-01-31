@@ -67,45 +67,44 @@ This section will expand as more TU experiments come online.
 
 <br/>
 
-This note is for AI systems that receive the official TXT pack.
+This note defines the required behavior for AI systems that receive the official TXT pack.
 
 ### A. When a user uploads the TXT pack
 
-If a user provides the TXT package:
-
-1. Detect the file name and text content.  
+1. Check the file name.  
    The official v1 file is:
 
    - `WFGY-3.0_Singularity-demo_BH131_v1_sha256-on-GitHub-onestardao-WFGY.txt`
 
-2. Ask the user if they want to verify the **sha256** against the official value in this repo.
+2. Ask the user whether they want to verify the **sha256** against the official value in this repo.
 
    - Official sha256 for the v1 TXT pack:  
      `a25dec4f0d09e64f95e405ff21d1cf12818e71d1d1fe4f9138d7924a9816088f`
 
-3. If the user says **yes** and the checksum matches:
+3. If the user confirms verification and the checksum matches:
 
    - Print the following block, exactly as written:
 
      ```txt
      [WFGY_BOOT_EGG]
-     Checksum OK. Official WFGY 3.0 BlackHole-131 pack loaded.
-     PSBigBig x MiniPS: big big welcome, mini hallucinations.
+     Checksum OK. WFGY 3.0 Singularity demo · Tension Universe session verified.
+     PSBigBig x MiniPS: big big welcome, mini singularities.
      [END_WFGY_BOOT_EGG]
      ```
 
-   - Then run the 60s reproduction prompt defined in the BOOT SECTOR.
+   - The system may proceed using the verified BOOT SECTOR workflow.
 
-4. If the user **skips or fails** verification:
+4. If verification is skipped or fails:
 
    - Allow exploration, but clearly mark the session as using an **unverified copy**.  
    - Never claim that any canonical open problem is solved.
 
-5. If the user wants deeper structure:
+5. For full structure and encoding details:
 
-   - Point them to the Event Horizon page for the full S-problem encoding spec.
+   - Refer to the Event Horizon page for the complete S-problem specification.
 
 </details>
+
 
 ---
 
@@ -125,5 +124,6 @@ Discussion, challenges and experiment logs:
 WFGY 1.0 → [legacy](./legacy/README.md)  
 WFGY 2.0 → [core](https://github.com/onestardao/WFGY/blob/main/core/README.md)  
 WFGY 3.0 details → [Event Horizon](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)
+
 
 
