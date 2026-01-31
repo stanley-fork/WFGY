@@ -15,7 +15,7 @@ Status: Partial
 Semantics: hybrid
 E_level: E1
 N_level: N2
-Last_updated: 2026-01-30
+Last_updated: 2026-01-31
 ````
 
 ---
@@ -513,13 +513,19 @@ where:
 * `r` is the refinement level,
 * `w_res`, `w_noise`, `w_bound` are the fixed weights from Section 3.5.
 
-We then define an aggregate tension at a chosen reference refinement level `r_star` by:
+We fix a reference refinement level `r_star` in the admissible range and define:
+
+```txt
+Tension_Qinfo_r_star(m) := Tension_Qinfo_r(m) evaluated at r = r_star.
+```
+
+We then define an aggregate tension at this chosen reference refinement level `r_star` by:
 
 ```txt
 Tension_Qinfo(m) = Tension_Qinfo_r_star(m)
 ```
 
-with `r_star` selected to be high enough to capture relevant trade-offs but still practically estimable.
+with `r_star` selected to be high enough to capture relevant trade-offs but still practically estimable. The choice of `r_star` is part of the precommitted encoding instance and is held fixed for all evaluations under that instance.
 
 Properties:
 
