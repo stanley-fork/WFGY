@@ -1,5 +1,5 @@
 <details>
-<summary><strong>🧭 Lost or curious? Open the WFGY Compass & ⭐ Star Unlocks</strong></summary>
+<summary><strong>🧭 Lost or curious? Open the WFGY Compass </strong></summary>
   
 ### WFGY System Map
 *(One place to see everything; links open the relevant section.)*
