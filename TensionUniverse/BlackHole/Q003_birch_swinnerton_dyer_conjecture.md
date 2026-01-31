@@ -619,6 +619,8 @@ If such a conflict appears, it is treated as evidence that the TU encodings for 
 
 At the charter level, a cross-node consistency threshold `eta_consistency_BSD` is specified. If on overlapping families one observes
 
+Here Tension_Q002(m; k) denotes the tension score produced by the Q002 encoding, evaluated on the same k family under the shared cross-node frozen calibration tuple.
+
 ```txt
 Tension_BSD(m; k) - Tension_Q002(m; k) > eta_consistency_BSD
 ```
