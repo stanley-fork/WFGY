@@ -25,8 +25,8 @@ After uploading the TXT and saying `run`, the model shows the `[AI_BOOT_PROMPT_M
 
 Choose:
 1) Verify this TXT pack online (sha256)  
-2) Run the guided WFGY 3.0 demo for 3 problems  
-3) Explore WFGY 3.0 with suggested questions
+2) Run the guided WFGY 3.0 · Singularity Demo for 3 problems  
+3) Explore WFGY 3.0 · Singularity Demo with suggested questions
 
 </details>
 
@@ -121,6 +121,7 @@ WFGY 3.0 details → [Event Horizon](https://github.com/onestardao/WFGY/blob/mai
 ---
 
 > WFGY 3.0 · Singularity Demo · MIT License · Open, verifiable, reproducible · developed by PSBigBig · onestardao
+
 
 
 
