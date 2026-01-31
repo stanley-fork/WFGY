@@ -120,7 +120,8 @@ WFGY 3.0 details → [Event Horizon](https://github.com/onestardao/WFGY/blob/mai
 
 ---
 
-> WFGY 3.0 · MIT License · Open, verifiable, reproducible · developed by PSBigBig · onestardao
+> WFGY 3.0 · Singularity Demo · MIT License · Open, verifiable, reproducible · developed by PSBigBig · onestardao
+
 
 
 
