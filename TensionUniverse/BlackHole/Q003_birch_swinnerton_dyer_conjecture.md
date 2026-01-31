@@ -16,7 +16,7 @@ Status: Open
 Semantics: hybrid
 E_level: E2
 N_level: N2
-Last_updated: 2026-01-30
+Last_updated: 2026-01-31
 ```
 
 ## 0. Effective layer disclaimer
