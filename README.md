@@ -9,14 +9,14 @@
 
 ## 60s quickstart
 
-1. **Download (TXT)**  [WFGY-3.0_Singularity demo TXT file](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-demo_BH131_v1_sha256-on-GitHub-onestardao-WFGY.txt) 
+1. **Download (TXT)**  [WFGY-3.0_Singularity demo TXT file](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-demo_say-hello-world-to-boot.txt) 
    > download from GitHub 
 
 2. **Upload**  
    > upload the TXT pack to any LLM that supports file input
 
 3. **Run**  
-   > say `run` to open the demo menu
+   > say `run` to trigger the demo (say `hello world` to boot)
 
 ---
 
@@ -127,3 +127,4 @@ WFGY 3.0 details → [Event Horizon](https://github.com/onestardao/WFGY/blob/mai
 ---
 
 > WFGY 3.0 · MIT License · Open, verifiable, reproducible · developed by PSBigBig · onestardao
+
