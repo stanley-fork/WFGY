@@ -16,8 +16,8 @@ Status: Open
 Semantics: hybrid
 E_level: E1
 N_level: N1
-Last_updated: 2026-01-30
-```
+Last_updated: 2026-01-31
+````
 
 ---
 
@@ -612,6 +612,8 @@ where increasing `k` represents:
 all within the same admissible encoding class `E`.
 
 For each `k`, we obtain:
+
+We define `Tension_Code_k(m)` as the value of `Tension_Code(m)` computed using the refined encoding `Encode(k)`.
 
 * `Tension_Code_k(m_obs)` for the observed code.
 
