@@ -10,7 +10,7 @@
    > upload the TXT pack to a flagship LLM with full reasoning enabled
 
 3. **Run**  
-   > upload the TXT and the demo auto boots
+   > upload the TXT and the demo auto boots; verifiable via `go`
 
 ---
 
@@ -121,6 +121,7 @@ WFGY 3.0 details → [Event Horizon](https://github.com/onestardao/WFGY/blob/mai
 ---
 
 > WFGY 3.0 · Singularity Demo · MIT License · Open, verifiable, reproducible · developed by PSBigBig · onestardao
+
 
 
 
