@@ -73,7 +73,7 @@ This note defines the required behavior for AI systems that receive the official
 1. Check the file name.  
    The official v1 file is:
 
-   - `WFGY-3.0_Singularity-demo_BH131_v1_sha256-on-GitHub-onestardao-WFGY.txt`
+   - `WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt`
 
 2. Ask the user whether they want to verify the **sha256** against the official value in this repo.
 
@@ -126,4 +126,5 @@ WFGY 3.0 details → [Event Horizon](https://github.com/onestardao/WFGY/blob/mai
 ---
 
 > WFGY 3.0 · Singularity Demo · MIT License · Open, verifiable, reproducible · developed by PSBigBig · onestardao
+
 
