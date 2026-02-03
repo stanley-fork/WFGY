@@ -28,17 +28,42 @@
 
 ![W3](https://github.com/user-attachments/assets/460b1fca-c1b2-4814-adde-60433fcbaa40)
 
-## Tension Universe· BlackHole S problem collection
+## 60s quickstart (newcomer friendly)
+
+If you arrived here directly, start here.  
+No background knowledge is required.
+
+1. **Download (TXT)**  
+   [WFGY-3.0_Singularity Demo TXT file](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt)  
+   > download directly from GitHub
+
+2. **Upload**  
+   > upload the TXT pack to any flagship LLM with full reasoning enabled
+
+3. **Run**  
+   > the demo auto boots after upload; type `go` to start a verifiable run
+
+This is the fastest way to experience what WFGY 3.0 actually does.  
+You do not need to understand the framework first. You can verify it first.
+
+---
+
+## Tension Universe · BlackHole S problem collection
+
 This folder is the public viewing window for **WFGY 3.0 Singularity demo**.  
-It is not a loose set of notes. It is a frozen, versioned **effective layer specification** of how the **Tension Universe** framework encodes 131 cross domain S class problems.
+It is not a loose set of notes. It is a frozen, versioned **effective layer specification** of how the **Tension Universe** framework encodes 131 cross-domain S-class problems.
 
 - **Public online date**: 2026-01-31  
 - **Problems covered**: Q001 to Q131  
-- **Intent**: demonstrate that one tension based encoding language can survive across many hard problems without changing definitions, adding hidden parameters, or doing post hoc tuning.
+- **Intent**: demonstrate that one tension-based encoding language can survive across many hard problems without changing definitions, adding hidden parameters, or doing post hoc tuning
 
-If you want to discuss, attack, or extend this work, you are invited to join the community:
+What you just ran in the quickstart is a reproducible entry point into this specification.
 
-> **Discord**: <https://discord.gg/KRxBsr6GYx>
+---
+
+If you want to discuss, attack, audit, or extend this work, you are invited to join the community:
+
+> **Discord**: https://discord.gg/KRxBsr6GYx
 
 ---
 
@@ -55,10 +80,12 @@ Read this once. It prevents future misunderstandings.
 ### What is NOT open source here
 
 - **WFGY 3.0 production engine** is not published here.
-- **Tension Universe AI** as a product level system is not promised to be open sourced.
+- **Tension Universe AI** as a product-level system is not promised to be open sourced.
 - Any hosted service, paid offering, private runtime, private model control logic, or commercial deployment version is out of scope of this repository.
 
-This repo is a demo window and a spec. It is not a commitment to open source the commercial engine.
+This repository is a demo window and a specification.  
+It is not a commitment to open source the commercial engine.
+
 
 ---
 
