@@ -37,10 +37,7 @@
    > Upload the TXT pack to a high-capability model (reasoning mode on, if supported).
 
 3. **Run**  
-   > upload the TXT and the demo auto boots; verifiable via `go`
-
-This is the fastest way to experience what WFGY 3.0 actually does.  
-You do not need to understand the framework first. You can verify it first.
+   > Follow the menu; say `go` when prompted to reproduce the evaluation.
 
 ---
 
