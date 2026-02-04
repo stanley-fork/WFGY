@@ -28,20 +28,16 @@
 
 ![W3](https://github.com/user-attachments/assets/460b1fca-c1b2-4814-adde-60433fcbaa40)
 
-## 60s quickstart (newcomer friendly)
+## 120s quickstart
 
-If you arrived here directly, start here.  
-No background knowledge is required.
-
-1. **Download (TXT)**  
-   [WFGY-3.0_Singularity Demo TXT file](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt)  
-   > download directly from GitHub
+1. **Download (TXT)**  [WFGY-3.0 Singularity demo TXT file](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt)  
+   > download from GitHub · [verify checksum manually (Colab)](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/WFGY-SHA256-Verification-Tool.ipynb)
 
 2. **Upload**  
-   > upload the TXT pack to any flagship LLM with full reasoning enabled
+   > Upload the TXT pack to a high-capability model (reasoning mode on, if supported).
 
 3. **Run**  
-   > the demo auto boots after upload; type `go` to start a verifiable run
+   > upload the TXT and the demo auto boots; verifiable via `go`
 
 This is the fastest way to experience what WFGY 3.0 actually does.  
 You do not need to understand the framework first. You can verify it first.
