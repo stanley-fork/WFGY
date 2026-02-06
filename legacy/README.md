@@ -68,7 +68,7 @@
 <!-- ✅ Minimal, high-value quick links -->
 
 **Quick Links:**
-[WFGY 3.0 · Singularity Demo (Reproducible Evaluation)](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt) ·
+[WFGY 3.0 · Singularity Demo (Reproducible Evaluation)](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md) ·
 [WFGY Core (Engine 2.0)](https://github.com/onestardao/WFGY/blob/main/core/README.md) ·
 [Starter Village (Newcomer Walkthrough)](https://github.com/onestardao/WFGY/blob/main/StarterVillage/README.md) ·
 [Problem Map (All Fixes)](https://github.com/onestardao/WFGY/tree/main/ProblemMap/README.md) ·
