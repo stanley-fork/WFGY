@@ -204,7 +204,7 @@ So this is a demo of encoding discipline. It is not a claim of solving anything.
 
 ### Charters
 
-Located in [`./Charters/`](./Charters):
+Located in [`../Charters/`](../Charters):
 
 - [`TU_EFFECTIVE_LAYER_CHARTER.md`](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)  
 - [`TU_ENCODING_AND_FAIRNESS_CHARTER.md`](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)  
