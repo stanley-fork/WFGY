@@ -24,9 +24,13 @@
 
 </details>
 
-# WFGY 3.0 · Singularity Demo 
+## WFGY 3.0 · Singularity Demo
 
 ![W3](https://github.com/user-attachments/assets/460b1fca-c1b2-4814-adde-60433fcbaa40)
+
+Before you start:
+
+> If it works, nothing before it matters.
 
 ## 120s quickstart
 
